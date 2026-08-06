@@ -120,6 +120,48 @@ edit a price and the findings change. Three things are deliberate:
   rather than as risers, because a young archive cannot tell new activity from a previously
   missed brand.
 
+## Sentiment — what is and is not here
+
+The dashboard reports **press tone**: how trade and consumer press write about a brand, read
+from headline wording with a keyword lexicon (`TONE_POS` / `TONE_NEG` in `scripts/analysis.py`).
+Brands under eight headlines are marked unreliable and greyed out, because at that sample size
+the score is noise.
+
+**It is not consumer sentiment, and it is labelled that way everywhere it appears.** It cannot
+read sarcasm, it weights a Vogue headline the same as an SEO listicle, and it scores "brand cuts
+prices" as negative when that may be deliberate strategy.
+
+Real user sentiment is a separate pipeline, not a field derivable from a news feed. It would
+need retailer review corpora (Sephora, Ulta, Boots, Ounass), Trustpilot, Reddit and app-store
+reviews — each with its own access terms — plus a model doing aspect-level classification
+(scent, longevity, packaging, value) rather than a bag of words. That is a real build and it is
+deliberately not faked here.
+
+## Following a PR moment to the source
+
+Every headline links out. Three routes into the evidence:
+
+- **News tab** — the full feed, grouped by week, filterable by brand, region and initiative type.
+- **Initiative matrix** (PR tab) — click any filled cell to jump to the headlines behind that
+  brand-and-initiative combination.
+- **Brand profile** — open any brand name; the drawer lists its PR moments grouped by initiative
+  with links, its press tone, and its full coverage.
+
+## Keeping the feed clean
+
+News search matches loosely, so a query for "Machete" returned machete attacks and one for "HEM"
+returned Indian politics. Three defences, in order:
+
+1. **Query overrides** — brands whose names are ordinary English words carry a `news_query` in
+   `brands.json` (Method, Dove, Chunks, Machete, HEM, Aesop and others).
+2. **Scope-appropriate screening** — trade feeds are edited by beauty publications and are not
+   screened; brand queries use a blocklist (an allowlist there discarded real stories); topic
+   queries use the keyword allowlist.
+3. **History is re-screened every run**, so tightening a rule purges what earlier runs let in.
+
+The grocery/FMCG feed that produced a Coca-Cola headline has been retired and is parked in
+`trade_feeds_broken` with the reason.
+
 ## Derived metrics
 
 - **`norm_usd`** — price on a comparable basis (per 100 ml/g, per stick, or per unit), so a

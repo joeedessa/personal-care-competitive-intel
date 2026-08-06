@@ -559,8 +559,21 @@ function renderPr() {
     TAG_KEYS.forEach((k) => {
       const n = grid[b.id][k] || 0;
       const td = el("td", n ? "on" : "");
-      if (n) td.dataset.n = n;
-      bindTip(td, `<div class="t-title">${esc(b.name)}</div><div class="t-row"><span>${esc(TAG_LABEL[k])}</span><b>${n} headline${n === 1 ? "" : "s"}</b></div>`, true);
+      if (n) {
+        td.dataset.n = n;
+        td.style.cursor = "pointer";
+        td.setAttribute("role", "button");
+        const openEvidence = () => {
+          state.brand = b.id; state.tag = k;
+          $("#f-brand").value = b.id; $("#f-tag").value = k;
+          setTab("news"); scrollTo({ top: 0, behavior: "smooth" });
+        };
+        td.addEventListener("click", openEvidence);
+        td.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openEvidence(); }
+        });
+      }
+      bindTip(td, `<div class="t-title">${esc(b.name)}</div><div class="t-row"><span>${esc(TAG_LABEL[k])}</span><b>${n} headline${n === 1 ? "" : "s"}</b></div>${n ? '<div class="t-row"><span></span><b>click to read them</b></div>' : ""}`, true);
       tr.append(td);
     });
     tb.append(tr);
@@ -662,6 +675,56 @@ function renderMomentum() {
       `treat as a prompt to look, not as a finding.`));
     box.append(s);
   }
+}
+
+
+/* ---------- press tone (NOT consumer sentiment — see the card copy) ---------- */
+function renderTone() {
+  const rows = (D.tone || []).filter((t) =>
+    (!state.q || t.name.toLowerCase().includes(state.q.toLowerCase())) &&
+    (!state.tier || (D.brands.find((b) => b.id === t.id) || {}).tier === state.tier) &&
+    (!state.role || (D.brands.find((b) => b.id === t.id) || {}).role === state.role));
+  const box = $("#tone"); box.innerHTML = "";
+  if (!rows.length) { box.append(el("div", "empty", "No brand has enough headlines to read a tone yet.")); return; }
+
+  const reliable = rows.filter((r) => r.reliable);
+  const thin = rows.filter((r) => !r.reliable);
+
+  const draw = (list, heading, muted) => {
+    if (!list.length) return;
+    box.append(el("h3", null, heading));
+    list.forEach((t) => {
+      const row = el("div", "bar-row");
+      if (muted) row.style.opacity = ".55";
+      row.append(el("div", "bar-name", `<b class="brand-link" data-brand="${esc(t.id)}">${esc(t.name)}</b>`));
+      // A stacked share bar — the mix is the story, not the single score.
+      const track = el("div", "track");
+      const stack = el("div");
+      stack.style.cssText = "display:flex;width:100%;gap:2px;height:9px";
+      [["positive", "var(--good)"], ["neutral", "var(--rule-strong)"], ["negative", "var(--critical)"]]
+        .forEach(([k, col]) => {
+          if (!t[k]) return;
+          const seg = el("div");
+          seg.style.cssText = `width:${t[k] / t.total * 100}%;background:${col}`;
+          stack.append(seg);
+        });
+      track.append(stack); row.append(track);
+      row.append(el("div", "bar-val", `${t.score > 0 ? "+" : ""}${t.score}`));
+      bindTip(row, `
+        <div class="t-title">${esc(t.name)} — press tone</div>
+        <div class="t-row"><span>Positive</span><b>${t.positive}</b></div>
+        <div class="t-row"><span>Neutral</span><b>${t.neutral}</b></div>
+        <div class="t-row"><span>Negative</span><b>${t.negative}</b></div>
+        <div class="t-row"><span>Headlines read</span><b>${t.total}</b></div>
+        ${t.reliable ? "" : '<div class="t-row"><span>Sample</span><b>too thin to trust</b></div>'}`);
+      box.append(row);
+    });
+  };
+
+  draw(reliable, `Readable — 8 or more headlines (${reliable.length} brands)`, false);
+  draw(thin, `Too thin to read — under 8 headlines (${thin.length} brands)`, true);
+  box.append(el("p", "chart-foot",
+    "Green positive, grey neutral, red negative. Most coverage is neutral, which is what you would expect from trade press — a brand with visible red is the one to open."));
 }
 
 /* ---------- radar ---------- */
@@ -971,8 +1034,42 @@ function openBrand(id) {
   }
 
   if (news.length) {
+    // What the brand is actually DOING, grouped by initiative, each one a link.
+    const byTag = {};
+    news.forEach((n) => (n.tags || []).forEach((t) => (byTag[t] = byTag[t] || []).push(n)));
+    const tagKeys = Object.keys(byTag).sort((a, b) => byTag[b].length - byTag[a].length);
+    if (tagKeys.length) {
+      const sp = el("section");
+      sp.append(el("h3", null, "PR moments & initiatives"));
+      tagKeys.forEach((t) => {
+        sp.append(el("div", null,
+          `<div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:16px 0 4px">${esc(TAG_LABEL[t] || t)} · ${byTag[t].length}</div>`));
+        byTag[t].slice(0, 4).forEach((n) => {
+          const line = el("div", "sku-line");
+          line.innerHTML =
+            `<span class="nm"><a href="${esc(n.url)}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none">${esc(n.title)}</a></span>` +
+            `<span class="sz">${esc(n.source || "")}</span>`;
+          sp.append(line);
+        });
+      });
+      body.append(sp);
+    }
+
+    const tone = (D.tone || []).find((t) => t.id === id);
+    if (tone) {
+      const st = el("section");
+      st.append(el("h3", null, "Press tone"));
+      st.insertAdjacentHTML("beforeend",
+        `<p style="font-size:12.5px;color:var(--ink-2);line-height:1.6;margin:0">` +
+        `${tone.positive} positive, ${tone.neutral} neutral, ${tone.negative} negative across ${tone.total} headlines ` +
+        `(score ${tone.score > 0 ? "+" : ""}${tone.score}).` +
+        `${tone.reliable ? "" : " <b>Sample too thin to rely on.</b>"}` +
+        ` Headline wording only — not what customers think.</p>`);
+      body.append(st);
+    }
+
     const s4 = el("section");
-    s4.append(el("h3", null, `Recent coverage — ${news.length}`));
+    s4.append(el("h3", null, `All coverage — ${news.length}`));
     news.slice(0, 10).forEach((n) => {
       const line = el("div", "sku-line");
       line.innerHTML = `<span class="nm"><a href="${esc(n.url)}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none">${esc(n.title)}</a></span><span class="sz">${esc(n.published || "")}</span>`;
@@ -1190,7 +1287,7 @@ function renderAll() {
   if (state.tab === "compare") renderCompare();
   if (state.tab === "pricing") { renderLadder(); renderSpread(); renderAed(); renderMatrix(); renderSkuTable(); }
   if (state.tab === "news") renderNews();
-  if (state.tab === "pr") { renderPr(); renderWeekly(); renderMomentum(); }
+  if (state.tab === "pr") { renderPr(); renderWeekly(); renderMomentum(); renderTone(); }
   if (state.tab === "radar") renderRadar();
   if (state.tab === "brands") renderBrands();
   upgradeBrandLinks();

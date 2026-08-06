@@ -28,7 +28,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from analysis import (build_findings, build_positioning, weekly_activity,  # noqa: E402
-                      brand_momentum, momentum_finding)
+                      brand_momentum, momentum_finding, press_tone, tone_of)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -193,6 +193,7 @@ def main() -> int:
     for item in news:
         bid = item.get("brand")
         item["brand_name"] = brands[bid]["name"] if bid in brands else None
+        item["tone"] = tone_of(f"{item.get('title', '')} {item.get('summary', '')}")
 
     # Brand rollup
     brand_rows = []
@@ -237,6 +238,7 @@ def main() -> int:
         "positioning": positioning,
         "momentum": momentum,
         "weekly": weekly_activity(news),
+        "tone": press_tone(news, brand_rows),
         "fx": {"rates": rates, **fx_meta, "uae": strip_comments(uae_cfg)},
         "brands": brand_rows,
         "categories": sorted(categories, key=lambda c: c["label"]),

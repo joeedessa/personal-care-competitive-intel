@@ -246,8 +246,25 @@
         <div class="spacer"></div>
         <span class="chip plain" id="pr-count"></span>
       </header>
-      <p class="note">Which brands are active on which fronts. A brand heavy on <b>retail expansion</b> and light on <b>sustainability</b> is telling you where its money is going this year. Empty columns across the whole set mark a theme nobody has claimed.</p>
+      <p class="note">Which brands are active on which fronts. A brand heavy on <b>retail expansion</b> and light on <b>sustainability</b> is telling you where its money is going this year. Empty columns across the whole set mark a theme nobody has claimed. <b>Click any filled cell</b> to read the headlines behind it.</p>
       <div class="matrix-scroll"><div id="pr-matrix"></div></div>
+    </div>
+
+    <div class="card">
+      <header><h2>Press tone</h2><div class="spacer"></div><span class="chip plain">not consumer sentiment</span></header>
+      <p class="note">
+        <b>What this is.</b> How the press is writing about each brand, read from headline
+        wording with a keyword lexicon. Positive words like <i>award</i>, <i>cult</i>,
+        <i>sell-out</i>; negative ones like <i>recall</i>, <i>lawsuit</i>, <i>backlash</i>.<br><br>
+        <b>What it is not.</b> It is <b>not what customers think</b>. It cannot read sarcasm,
+        it weights a Vogue headline the same as a listicle, and it will score
+        "brand cuts prices" as negative when that may be deliberate strategy. Brands with fewer
+        than eight headlines are greyed out because the number is noise at that sample size.<br><br>
+        <b>Real user sentiment would need a different pipeline</b> — retailer reviews from Sephora,
+        Ulta, Boots and Ounass, plus Trustpilot and Reddit. That is a separate build with its own
+        terms-of-use questions, and it is not in this repo. See the README for what it would take.
+      </p>
+      <div id="tone"></div>
     </div>
   </section>
 

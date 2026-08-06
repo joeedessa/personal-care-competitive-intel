@@ -476,3 +476,79 @@ def momentum_finding(momentum):
         "refs": [top["id"]],
         "tab": "news", "focus": {"brand": top["id"]},
     }]
+
+
+# ---------------------------------------------------------------------------
+# Press tone
+#
+# THIS IS NOT CONSUMER SENTIMENT. It is a lexicon read of how the trade and
+# consumer press is writing about a brand, computed from headlines only. It
+# cannot detect sarcasm, cannot weight a Vogue headline above a listicle, and
+# treats "Aesop cuts prices" as negative when it may be strategy.
+#
+# Real user sentiment needs a different pipeline entirely: retailer reviews
+# (Sephora, Ulta, Boots, Ounass), Trustpilot, Reddit and app-store corpora,
+# each with its own terms of use. That is a separate build, not a field we can
+# derive from a news feed - so this is labelled as press tone everywhere it
+# appears, and never as what customers think.
+# ---------------------------------------------------------------------------
+
+TONE_POS = [
+    "best", "wins", "won", "award", "acclaimed", "cult", "sell-out", "sold out",
+    "growth", "grows", "surge", "soars", "soar", "expands", "expansion", "record",
+    "success", "beloved", "favourite", "favorite", "must-have", "raves", "rave",
+    "praised", "hit", "boom", "rises", "strong", "top-selling", "bestselling",
+    "viral", "obsessed", "love", "iconic", "breakthrough", "milestone",
+]
+TONE_NEG = [
+    "recall", "recalled", "lawsuit", "sues", "sued", "closes", "closing", "shuts",
+    "shut down", "administration", "bankrupt", "insolven", "layoff", "job cuts",
+    "slashed", "falls", "fell", "decline", "declines", "warning", "criticis",
+    "criticiz", "backlash", "boycott", "controversy", "allegation", "counterfeit",
+    "greenwash", "profit warning", "struggles", "struggling", "loses", "loss",
+    "downturn", "slump", "disappointing", "probe", "investigation", "banned",
+]
+
+
+def tone_of(text: str) -> str:
+    low = (text or "").lower()
+    pos = sum(1 for w in TONE_POS if w in low)
+    neg = sum(1 for w in TONE_NEG if w in low)
+    if pos > neg:
+        return "positive"
+    if neg > pos:
+        return "negative"
+    return "neutral"
+
+
+def press_tone(news, brands):
+    """Per-brand tally of headline tone, with the sample size attached.
+
+    Sample size matters more than the score here: a brand with four headlines
+    has no measurable tone, and the UI has to be able to say so.
+    """
+    tallies = defaultdict(lambda: {"positive": 0, "neutral": 0, "negative": 0})
+    for n in news:
+        b = n.get("brand")
+        if not b:
+            continue
+        tallies[b][n.get("tone") or "neutral"] += 1
+
+    by_id = {b["id"]: b for b in brands}
+    rows = []
+    for bid, t in tallies.items():
+        b = by_id.get(bid)
+        if not b:
+            continue
+        total = t["positive"] + t["neutral"] + t["negative"]
+        if total < 3:
+            continue
+        rows.append({
+            "id": bid, "name": b["name"], "total": total,
+            "positive": t["positive"], "neutral": t["neutral"], "negative": t["negative"],
+            "score": round((t["positive"] - t["negative"]) / total * 100),
+            # Below ~8 headlines the score is noise; the UI greys these out.
+            "reliable": total >= 8,
+        })
+    rows.sort(key=lambda r: (r["score"], r["total"]), reverse=True)
+    return rows
