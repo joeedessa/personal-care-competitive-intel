@@ -128,13 +128,33 @@ function renderHeader() {
 
   const s = D.stats;
   const widest = [...D.categories].filter((c) => c.spread_multiple).sort((a, b) => b.spread_multiple - a.spread_multiple)[0];
+  const find = (kind) => (D.findings || []).find((f) => f.kind === kind);
+
+  // Coverage is credibility, not insight — it belongs in the meta line.
+  const cov = $("#meta-coverage");
+  if (cov) cov.textContent = `${s.brands} brands · ${s.skus} SKUs · ${s.categories} categories`;
+
+  // The band answers "what should I know before I look at anything else?"
+  const ceiling = [...D.brands].filter((b) => b.avg_price_index && b.sku_count >= 3)
+    .sort((a, b) => b.avg_price_index - a.avg_price_index)[0];
+  const gap = find("same_tier_gap");
+  const uae = find("uae_gap");
+  const crowded = [...D.categories].sort((a, b) => b.brand_count - a.brand_count)[0];
+
+  const weekAgo = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
+  const recent = D.news.filter((n) => (n.published || "") >= weekAgo).length;
+
   const tiles = [
-    { label: "Brands", value: s.brands, foot: `${D.brands.filter((b) => b.role === "core_competitor").length} core competitors` },
-    { label: "SKUs priced", value: s.skus, foot: `across ${s.categories} categories` },
-    { label: "Widest spread", value: widest ? widest.spread_multiple + "×" : "—", foot: widest ? widest.label.toLowerCase() : "" },
-    { label: "Signals", value: s.news_items, foot: "refreshed daily" },
-    { label: "On the radar", value: s.watchlist, foot: "emerging & scaling" },
-    { label: "Verified prices", value: s.verified_pct + "%", foot: `${s.verified_prices} of ${s.skus} sourced` },
+    { label: "Price ceiling", value: ceiling ? ceiling.avg_price_index : "—",
+      foot: ceiling ? `${ceiling.name} vs category median` : "" },
+    { label: "Widest spread", value: widest ? widest.spread_multiple + "×" : "—",
+      foot: widest ? widest.label.toLowerCase() : "" },
+    { label: "Steepest same-tier gap", value: gap ? gap.metric : "—",
+      foot: gap ? "two brands, one claim" : "" },
+    { label: "Most contested", value: crowded ? crowded.brand_count : "—",
+      foot: crowded ? `brands in ${crowded.label.toLowerCase()}` : "" },
+    { label: "No UAE route", value: uae ? uae.metric : "—", foot: "premium brands, no Gulf channel" },
+    { label: "Signals this week", value: recent, foot: `${s.news_items} collected in all` },
   ];
   const box = $("#tiles"); box.innerHTML = "";
   tiles.forEach((t) => {
@@ -734,13 +754,34 @@ function renderMap() {
     dot.addEventListener("click", () => openBrand(d.id));
   });
 
-  // label only the brands worth naming — the outliers and the broad players
-  const notable = [...rows].sort((a, b) =>
-    (b.breadth * 30 + b.index) - (a.breadth * 30 + a.index)).slice(0, 12);
-  notable.forEach((d) => {
-    const t = add("text", { x: x(d.breadth) + r(d.skus) + 6, y: y(d.index) + 4 }, "map-label");
-    t.textContent = d.name.length > 22 ? d.name.slice(0, 21) + "…" : d.name;
-  });
+  // Label only the brands worth naming, and only where the label fits. Candidates
+  // are tried in order of how notable they are; anything that would collide with
+  // an already-placed label is dropped rather than allowed to overlap.
+  const placed = [];
+  const fits = (box) => !placed.some((p) =>
+    box.x < p.x + p.w && box.x + box.w > p.x && box.y < p.y + p.h && box.y + box.h > p.y);
+
+  [...rows]
+    .sort((a, b) => (b.breadth * 30 + b.index) - (a.breadth * 30 + a.index))
+    .slice(0, 26)
+    .forEach((d) => {
+      const label = d.name.length > 20 ? d.name.slice(0, 19) + "…" : d.name;
+      const w = label.length * 5.6, h = 13;
+      const cx = x(d.breadth), cy = y(d.index), rad = r(d.skus);
+      // try right of the dot, then left, then above
+      const spots = [
+        { x: cx + rad + 6, y: cy - h / 2, anchor: "start", ty: cy + 4 },
+        { x: cx - rad - 6 - w, y: cy - h / 2, anchor: "end", ty: cy + 4 },
+        { x: cx - w / 2, y: cy - rad - 6 - h, anchor: "middle", ty: cy - rad - 8 },
+      ];
+      const spot = spots.find((s) =>
+        s.x > M.l - 40 && s.x + w < W + 30 && s.y > 0 && fits({ ...s, w, h }));
+      if (!spot) return;
+      placed.push({ x: spot.x, y: spot.y, w, h });
+      const t = add("text", { x: spot.anchor === "start" ? spot.x : spot.anchor === "end" ? spot.x + w : cx,
+                              y: spot.ty, "text-anchor": spot.anchor }, "map-label");
+      t.textContent = label;
+    });
 
   box.append(svg);
 }
@@ -1122,6 +1163,9 @@ function init() {
     readUrl(); reflectStateToControls(); setTab(state.tab || "overview");
     urlLock = false;
   });
+
+  const lede = document.querySelector(".lede");
+  if (lede) lede.addEventListener("click", () => lede.classList.toggle("expanded"));
 
   renderHeader();
   setTab(state.tab || "overview");

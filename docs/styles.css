@@ -462,11 +462,24 @@ footer.foot p { max-width: 86ch; }
 }
 
 @media (max-width: 760px) {
-  .wrap { padding: 22px 16px 72px; }
-  h1 { font-size: 30px; }
-  .lede { font-size: 14px; }
-  .header-grid { gap: 20px; }
-  .meta-row { gap: 12px; margin-top: 18px; font-size: 10px; }
+  .wrap { padding: 20px 16px 72px; }
+  h1 { font-size: 29px; margin-bottom: 12px; }
+  .overline { margin-bottom: 10px; }
+  /* The lede is orientation, not content — three lines is enough above the fold.
+     Tapping it reveals the rest. */
+  .lede {
+    font-size: 13.5px; line-height: 1.55;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    overflow: hidden; cursor: pointer;
+  }
+  .lede.expanded { -webkit-line-clamp: unset; }
+  header.top { padding-bottom: 18px; }
+  .header-grid { gap: 14px; flex-direction: column-reverse; align-items: stretch; }
+  /* flex-basis is a HEIGHT once the container is a column — without this the
+     desktop `flex: 1 1 480px` inflates the mobile header by ~330px of nothing. */
+  .header-grid > div:first-child, .header-grid > div:last-child { flex: 0 0 auto; }
+  .header-grid > div:last-child { display: flex; justify-content: flex-end; }
+  .meta-row { gap: 10px 14px; margin-top: 14px; font-size: 9.5px; }
 
   /* stat band: 2 columns, no dead space */
   .tiles { grid-template-columns: 1fr 1fr; border-bottom: 0; }
@@ -556,9 +569,11 @@ footer.foot p { max-width: 86ch; }
   #tip { display: none; }  /* touch devices get the drawer instead */
 }
 
-@media (max-width: 380px) {
-  .tiles { grid-template-columns: 1fr; }
-  .tile:nth-child(odd) { border-right: 0; }
+@media (max-width: 400px) {
+  .tile { padding: 14px 12px; }
+  .tile .value { font-size: 25px; margin-top: 6px; }
+  .tile .label { font-size: 9px; letter-spacing: .14em; }
+  .tile .foot { font-size: 10.5px; line-height: 1.4; }
 }
 
 @media (prefers-reduced-motion: reduce) {
