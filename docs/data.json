@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T06:14:40+00:00",
+  "generated_at": "2026-08-06T06:17:52+00:00",
   "findings": [
     {
       "kind": "same_tier_gap",
@@ -167,10 +167,10 @@
     },
     {
       "kind": "momentum",
-      "headline": "NIVEA is generating 3.6× the median brand's coverage",
+      "headline": "NIVEA is generating 3.3× the median brand's coverage",
       "detail": "20 headlines against a median of 6 across the 68 brands with any coverage. Volume is not sentiment — but a brand this loud is either launching, being acquired, or in trouble.",
       "metric": "20",
-      "magnitude": 54.54545454545455,
+      "magnitude": 53.333333333333336,
       "refs": [
         "nivea"
       ],
@@ -182,10 +182,10 @@
     },
     {
       "kind": "accelerating",
-      "headline": "Le Labo has taken 2.2× more share of category coverage in the last 30 days",
-      "detail": "4.6% of all headlines in the last 30 days, against 1.9% in the 30 before (12 vs 2 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 2 brands are gaining share on this measure. Volume is not sentiment.",
-      "metric": "2.2×",
-      "magnitude": 51.0,
+      "headline": "Le Labo has taken 2.22× more share of category coverage in the last 30 days",
+      "detail": "4.5% of all headlines in the last 30 days, against 1.8% in the 30 before (12 vs 2 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 2 brands are gaining share on this measure. Volume is not sentiment.",
+      "metric": "2.22×",
+      "magnitude": 51.1,
       "refs": [
         "le-labo"
       ],
@@ -198,9 +198,9 @@
     {
       "kind": "initiative",
       "headline": "Retail expansion accounts for 32% of everything the category is talking about",
-      "detail": "66 of 208 tagged headlines. The quietest front is awards & press at 1 — a theme nobody has claimed is either irrelevant or unoccupied.",
+      "detail": "67 of 211 tagged headlines. The quietest front is awards & press at 1 — a theme nobody has claimed is either irrelevant or unoccupied.",
       "metric": "32%",
-      "magnitude": 37.69230769230769,
+      "magnitude": 37.70142180094787,
       "refs": [],
       "tab": "pr",
       "focus": {
@@ -289,7 +289,7 @@
       "index": 238,
       "skus": 7,
       "uae": "boutique",
-      "news": 12
+      "news": 13
     },
     {
       "id": "aesop",
@@ -333,7 +333,7 @@
       "index": 86,
       "skus": 4,
       "uae": "retail",
-      "news": 8
+      "news": 9
     },
     {
       "id": "rituals",
@@ -388,7 +388,7 @@
       "index": 162,
       "skus": 4,
       "uae": "boutique",
-      "news": 11
+      "news": 12
     },
     {
       "id": "malin-goetz",
@@ -531,7 +531,7 @@
       "index": 26,
       "skus": 1,
       "uae": "boutique",
-      "news": 3
+      "news": 4
     },
     {
       "id": "loewe-home-scents",
@@ -641,7 +641,7 @@
       "index": 25,
       "skus": 1,
       "uae": "retail",
-      "news": 6
+      "news": 7
     },
     {
       "id": "sabon",
@@ -784,7 +784,7 @@
       "index": 118,
       "skus": 1,
       "uae": "retail",
-      "news": 15
+      "news": 16
     },
     {
       "id": "gisou",
@@ -927,7 +927,7 @@
       "index": 464,
       "skus": 3,
       "uae": "retail",
-      "news": 15
+      "news": 16
     },
     {
       "id": "tom-ford-beauty",
@@ -982,7 +982,7 @@
       "index": 42,
       "skus": 1,
       "uae": "retail",
-      "news": 3
+      "news": 4
     },
     {
       "id": "la-roche-posay",
@@ -1070,7 +1070,7 @@
       "index": 106,
       "skus": 3,
       "uae": "retail",
-      "news": 5
+      "news": 6
     },
     {
       "id": "necessaire",
@@ -1125,7 +1125,7 @@
       "index": 148,
       "skus": 2,
       "uae": "boutique",
-      "news": 12
+      "news": 13
     },
     {
       "id": "maison-balzac",
@@ -1166,12 +1166,12 @@
       "id": "k18",
       "name": "K18",
       "tier": "premium",
-      "recent": 15,
+      "recent": 16,
       "prior": 0,
-      "delta": 15,
-      "share_recent": 5.8,
+      "delta": 16,
+      "share_recent": 6.1,
       "share_prior": 0.0,
-      "ratio": 16.0,
+      "ratio": 17.0,
       "basis": "newly_covered"
     },
     {
@@ -1181,7 +1181,7 @@
       "recent": 9,
       "prior": 0,
       "delta": 9,
-      "share_recent": 3.5,
+      "share_recent": 3.4,
       "share_prior": 0.0,
       "ratio": 10.0,
       "basis": "newly_covered"
@@ -1193,21 +1193,21 @@
       "recent": 14,
       "prior": 1,
       "delta": 13,
-      "share_recent": 5.4,
+      "share_recent": 5.3,
       "share_prior": 0.9,
-      "ratio": 4.34,
+      "ratio": 4.38,
       "basis": "newly_covered"
     },
     {
-      "id": "montroi",
-      "name": "MONTROI",
+      "id": "la-mer",
+      "name": "La Mer",
       "tier": "luxury",
-      "recent": 3,
-      "prior": 0,
-      "delta": 3,
-      "share_recent": 1.2,
-      "share_prior": 0.0,
-      "ratio": 4.0,
+      "recent": 13,
+      "prior": 1,
+      "delta": 12,
+      "share_recent": 4.9,
+      "share_prior": 0.9,
+      "ratio": 4.09,
       "basis": "newly_covered"
     },
     {
@@ -1217,21 +1217,21 @@
       "recent": 3,
       "prior": 0,
       "delta": 3,
-      "share_recent": 1.2,
+      "share_recent": 1.1,
       "share_prior": 0.0,
       "ratio": 4.0,
       "basis": "newly_covered"
     },
     {
-      "id": "la-mer",
-      "name": "La Mer",
+      "id": "montroi",
+      "name": "MONTROI",
       "tier": "luxury",
-      "recent": 12,
-      "prior": 1,
-      "delta": 11,
-      "share_recent": 4.6,
-      "share_prior": 0.9,
-      "ratio": 3.77,
+      "recent": 3,
+      "prior": 0,
+      "delta": 3,
+      "share_recent": 1.1,
+      "share_prior": 0.0,
+      "ratio": 4.0,
       "basis": "newly_covered"
     },
     {
@@ -1243,19 +1243,7 @@
       "delta": 9,
       "share_recent": 3.8,
       "share_prior": 0.9,
-      "ratio": 3.19,
-      "basis": "newly_covered"
-    },
-    {
-      "id": "byredo",
-      "name": "Byredo",
-      "tier": "luxury",
-      "recent": 9,
-      "prior": 1,
-      "delta": 8,
-      "share_recent": 3.5,
-      "share_prior": 0.9,
-      "ratio": 2.9,
+      "ratio": 3.21,
       "basis": "newly_covered"
     },
     {
@@ -1265,9 +1253,9 @@
       "recent": 12,
       "prior": 2,
       "delta": 10,
-      "share_recent": 4.6,
-      "share_prior": 1.9,
-      "ratio": 2.2,
+      "share_recent": 4.5,
+      "share_prior": 1.8,
+      "ratio": 2.22,
       "basis": "gaining_share"
     },
     {
@@ -1278,21 +1266,9 @@
       "prior": 2,
       "delta": 9,
       "share_recent": 4.2,
-      "share_prior": 1.9,
-      "ratio": 2.03,
+      "share_prior": 1.8,
+      "ratio": 2.05,
       "basis": "gaining_share"
-    },
-    {
-      "id": "ouai",
-      "name": "OUAI",
-      "tier": "premium",
-      "recent": 6,
-      "prior": 1,
-      "delta": 5,
-      "share_recent": 2.3,
-      "share_prior": 0.9,
-      "ratio": 2.03,
-      "basis": "newly_covered"
     },
     {
       "id": "ds-durga",
@@ -1303,7 +1279,19 @@
       "delta": 5,
       "share_recent": 2.3,
       "share_prior": 0.9,
-      "ratio": 2.03,
+      "ratio": 2.05,
+      "basis": "newly_covered"
+    },
+    {
+      "id": "ouai",
+      "name": "OUAI",
+      "tier": "premium",
+      "recent": 6,
+      "prior": 1,
+      "delta": 5,
+      "share_recent": 2.3,
+      "share_prior": 0.9,
+      "ratio": 2.05,
       "basis": "newly_covered"
     },
     {
@@ -1313,9 +1301,21 @@
       "recent": 9,
       "prior": 2,
       "delta": 7,
-      "share_recent": 3.5,
-      "share_prior": 1.9,
-      "ratio": 1.69,
+      "share_recent": 3.4,
+      "share_prior": 1.8,
+      "ratio": 1.71,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "byredo",
+      "name": "Byredo",
+      "tier": "luxury",
+      "recent": 9,
+      "prior": 2,
+      "delta": 7,
+      "share_recent": 3.4,
+      "share_prior": 1.8,
+      "ratio": 1.71,
       "basis": "gaining_share"
     },
     {
@@ -1325,9 +1325,9 @@
       "recent": 13,
       "prior": 3,
       "delta": 10,
-      "share_recent": 5.0,
+      "share_recent": 4.9,
       "share_prior": 2.8,
-      "ratio": 1.67,
+      "ratio": 1.69,
       "basis": "gaining_share"
     },
     {
@@ -1337,9 +1337,9 @@
       "recent": 16,
       "prior": 4,
       "delta": 12,
-      "share_recent": 6.2,
-      "share_prior": 3.8,
-      "ratio": 1.57,
+      "share_recent": 6.1,
+      "share_prior": 3.7,
+      "ratio": 1.59,
       "basis": "gaining_share"
     },
     {
@@ -1351,7 +1351,19 @@
       "delta": 3,
       "share_recent": 1.5,
       "share_prior": 0.9,
-      "ratio": 1.45,
+      "ratio": 1.46,
+      "basis": "newly_covered"
+    },
+    {
+      "id": "bamford",
+      "name": "Bamford",
+      "tier": "luxury",
+      "recent": 4,
+      "prior": 1,
+      "delta": 3,
+      "share_recent": 1.5,
+      "share_prior": 0.9,
+      "ratio": 1.46,
       "basis": "newly_covered"
     },
     {
@@ -1361,57 +1373,21 @@
       "recent": 3,
       "prior": 1,
       "delta": 2,
-      "share_recent": 1.2,
+      "share_recent": 1.1,
       "share_prior": 0.9,
-      "ratio": 1.16,
-      "basis": "newly_covered"
-    },
-    {
-      "id": "bamford",
-      "name": "Bamford",
-      "tier": "luxury",
-      "recent": 3,
-      "prior": 1,
-      "delta": 2,
-      "share_recent": 1.2,
-      "share_prior": 0.9,
-      "ratio": 1.16,
+      "ratio": 1.17,
       "basis": "newly_covered"
     },
     {
       "id": "bioderma",
       "name": "Bioderma",
       "tier": "masstige",
-      "recent": 2,
+      "recent": 3,
       "prior": 1,
-      "delta": 1,
-      "share_recent": 0.8,
+      "delta": 2,
+      "share_recent": 1.1,
       "share_prior": 0.9,
-      "ratio": 0.87,
-      "basis": "newly_covered"
-    },
-    {
-      "id": "nest-new-york",
-      "name": "NEST New York",
-      "tier": "premium",
-      "recent": 2,
-      "prior": 1,
-      "delta": 1,
-      "share_recent": 0.8,
-      "share_prior": 0.9,
-      "ratio": 0.87,
-      "basis": "newly_covered"
-    },
-    {
-      "id": "chunks",
-      "name": "Chunks",
-      "tier": "premium",
-      "recent": 2,
-      "prior": 1,
-      "delta": 1,
-      "share_recent": 0.8,
-      "share_prior": 0.9,
-      "ratio": 0.87,
+      "ratio": 1.17,
       "basis": "newly_covered"
     },
     {
@@ -1423,7 +1399,31 @@
       "delta": 1,
       "share_recent": 0.8,
       "share_prior": 0.9,
-      "ratio": 0.87,
+      "ratio": 0.88,
+      "basis": "newly_covered"
+    },
+    {
+      "id": "chunks",
+      "name": "Chunks",
+      "tier": "premium",
+      "recent": 2,
+      "prior": 1,
+      "delta": 1,
+      "share_recent": 0.8,
+      "share_prior": 0.9,
+      "ratio": 0.88,
+      "basis": "newly_covered"
+    },
+    {
+      "id": "nest-new-york",
+      "name": "NEST New York",
+      "tier": "premium",
+      "recent": 2,
+      "prior": 1,
+      "delta": 1,
+      "share_recent": 0.8,
+      "share_prior": 0.9,
+      "ratio": 0.88,
       "basis": "newly_covered"
     },
     {
@@ -1434,7 +1434,19 @@
       "prior": 2,
       "delta": 2,
       "share_recent": 1.5,
-      "share_prior": 1.9,
+      "share_prior": 1.8,
+      "ratio": 0.86,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "davines",
+      "name": "Davines",
+      "tier": "premium",
+      "recent": 6,
+      "prior": 3,
+      "delta": 3,
+      "share_recent": 2.3,
+      "share_prior": 2.8,
       "ratio": 0.85,
       "basis": "gaining_share"
     },
@@ -1447,19 +1459,7 @@
       "delta": 3,
       "share_recent": 2.3,
       "share_prior": 2.8,
-      "ratio": 0.84,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "davines",
-      "name": "Davines",
-      "tier": "premium",
-      "recent": 6,
-      "prior": 3,
-      "delta": 3,
-      "share_recent": 2.3,
-      "share_prior": 2.8,
-      "ratio": 0.84,
+      "ratio": 0.85,
       "basis": "gaining_share"
     },
     {
@@ -1470,20 +1470,8 @@
       "prior": 4,
       "delta": 3,
       "share_recent": 2.7,
-      "share_prior": 3.8,
-      "ratio": 0.74,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "bath-body-works",
-      "name": "Bath & Body Works",
-      "tier": "mass",
-      "recent": 12,
-      "prior": 7,
-      "delta": 5,
-      "share_recent": 4.6,
-      "share_prior": 6.6,
-      "ratio": 0.72,
+      "share_prior": 3.7,
+      "ratio": 0.75,
       "basis": "gaining_share"
     },
     {
@@ -1495,6 +1483,18 @@
       "delta": 2,
       "share_recent": 1.9,
       "share_prior": 2.8,
+      "ratio": 0.73,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "bath-body-works",
+      "name": "Bath & Body Works",
+      "tier": "mass",
+      "recent": 12,
+      "prior": 7,
+      "delta": 5,
+      "share_recent": 4.5,
+      "share_prior": 6.4,
       "ratio": 0.72,
       "basis": "gaining_share"
     },
@@ -1505,21 +1505,9 @@
       "recent": 3,
       "prior": 2,
       "delta": 1,
-      "share_recent": 1.2,
-      "share_prior": 1.9,
+      "share_recent": 1.1,
+      "share_prior": 1.8,
       "ratio": 0.68,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "loccitane",
-      "name": "L'Occitane en Provence",
-      "tier": "premium",
-      "recent": 4,
-      "prior": 3,
-      "delta": 1,
-      "share_recent": 1.5,
-      "share_prior": 2.8,
-      "ratio": 0.6,
       "basis": "gaining_share"
     },
     {
@@ -1547,6 +1535,18 @@
       "basis": "gaining_share"
     },
     {
+      "id": "loccitane",
+      "name": "L'Occitane en Provence",
+      "tier": "premium",
+      "recent": 4,
+      "prior": 3,
+      "delta": 1,
+      "share_recent": 1.5,
+      "share_prior": 2.8,
+      "ratio": 0.6,
+      "basis": "gaining_share"
+    },
+    {
       "id": "summer-fridays",
       "name": "Summer Fridays",
       "tier": "premium",
@@ -1554,7 +1554,7 @@
       "prior": 5,
       "delta": 1,
       "share_recent": 2.3,
-      "share_prior": 4.7,
+      "share_prior": 4.6,
       "ratio": 0.53,
       "basis": "gaining_share"
     },
@@ -1566,20 +1566,8 @@
       "prior": 2,
       "delta": 0,
       "share_recent": 0.8,
-      "share_prior": 1.9,
+      "share_prior": 1.8,
       "ratio": 0.51,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "grown-alchemist",
-      "name": "Grown Alchemist",
-      "tier": "premium",
-      "recent": 3,
-      "prior": 4,
-      "delta": -1,
-      "share_recent": 1.2,
-      "share_prior": 3.8,
-      "ratio": 0.37,
       "basis": "gaining_share"
     },
     {
@@ -1590,8 +1578,20 @@
       "prior": 8,
       "delta": -2,
       "share_recent": 2.3,
-      "share_prior": 7.5,
+      "share_prior": 7.3,
       "ratio": 0.34,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "grown-alchemist",
+      "name": "Grown Alchemist",
+      "tier": "premium",
+      "recent": 3,
+      "prior": 5,
+      "delta": -2,
+      "share_recent": 1.1,
+      "share_prior": 4.6,
+      "ratio": 0.31,
       "basis": "gaining_share"
     },
     {
@@ -1611,11 +1611,11 @@
       "name": "Amouage",
       "tier": "luxury",
       "recent": 3,
-      "prior": 7,
-      "delta": -4,
-      "share_recent": 1.2,
-      "share_prior": 6.6,
-      "ratio": 0.22,
+      "prior": 8,
+      "delta": -5,
+      "share_recent": 1.1,
+      "share_prior": 7.3,
+      "ratio": 0.2,
       "basis": "gaining_share"
     },
     {
@@ -1642,7 +1642,7 @@
     },
     {
       "week": "2026-W21",
-      "count": 22
+      "count": 24
     },
     {
       "week": "2026-W22",
@@ -1650,7 +1650,7 @@
     },
     {
       "week": "2026-W23",
-      "count": 18
+      "count": 19
     },
     {
       "week": "2026-W24",
@@ -1658,15 +1658,15 @@
     },
     {
       "week": "2026-W25",
-      "count": 29
+      "count": 30
     },
     {
       "week": "2026-W26",
-      "count": 37
+      "count": 38
     },
     {
       "week": "2026-W27",
-      "count": 22
+      "count": 23
     },
     {
       "week": "2026-W28",
@@ -1678,11 +1678,11 @@
     },
     {
       "week": "2026-W30",
-      "count": 61
+      "count": 63
     },
     {
       "week": "2026-W31",
-      "count": 83
+      "count": 86
     },
     {
       "week": "2026-W32",
@@ -1691,18 +1691,18 @@
   ],
   "tone": [
     {
-      "id": "molton-brown",
-      "name": "Molton Brown",
-      "total": 3,
-      "positive": 2,
+      "id": "zara-home",
+      "name": "Zara Home",
+      "total": 4,
+      "positive": 3,
       "neutral": 1,
       "negative": 0,
-      "score": 67,
+      "score": 75,
       "reliable": false
     },
     {
-      "id": "zara-home",
-      "name": "Zara Home",
+      "id": "molton-brown",
+      "name": "Molton Brown",
       "total": 3,
       "positive": 2,
       "neutral": 1,
@@ -1781,14 +1781,14 @@
       "reliable": true
     },
     {
-      "id": "amouage",
-      "name": "Amouage",
-      "total": 12,
-      "positive": 4,
-      "neutral": 8,
+      "id": "bamford",
+      "name": "Bamford",
+      "total": 6,
+      "positive": 2,
+      "neutral": 4,
       "negative": 0,
       "score": 33,
-      "reliable": true
+      "reliable": false
     },
     {
       "id": "necessaire",
@@ -1797,16 +1797,6 @@
       "positive": 3,
       "neutral": 2,
       "negative": 1,
-      "score": 33,
-      "reliable": false
-    },
-    {
-      "id": "bioderma",
-      "name": "Bioderma",
-      "total": 3,
-      "positive": 1,
-      "neutral": 2,
-      "negative": 0,
       "score": 33,
       "reliable": false
     },
@@ -1831,6 +1821,16 @@
       "reliable": false
     },
     {
+      "id": "amouage",
+      "name": "Amouage",
+      "total": 13,
+      "positive": 4,
+      "neutral": 9,
+      "negative": 0,
+      "score": 31,
+      "reliable": true
+    },
+    {
       "id": "the-body-shop",
       "name": "The Body Shop",
       "total": 7,
@@ -1843,22 +1843,32 @@
     {
       "id": "la-mer",
       "name": "La Mer",
-      "total": 15,
+      "total": 16,
       "positive": 4,
-      "neutral": 11,
+      "neutral": 12,
       "negative": 0,
-      "score": 27,
+      "score": 25,
       "reliable": true
     },
     {
       "id": "acqua-di-parma",
       "name": "Acqua di Parma",
-      "total": 11,
+      "total": 12,
       "positive": 3,
-      "neutral": 8,
+      "neutral": 9,
       "negative": 0,
-      "score": 27,
+      "score": 25,
       "reliable": true
+    },
+    {
+      "id": "bioderma",
+      "name": "Bioderma",
+      "total": 4,
+      "positive": 1,
+      "neutral": 3,
+      "negative": 0,
+      "score": 25,
+      "reliable": false
     },
     {
       "id": "briogeo",
@@ -1888,16 +1898,6 @@
       "neutral": 13,
       "negative": 1,
       "score": 21,
-      "reliable": true
-    },
-    {
-      "id": "k18",
-      "name": "K18",
-      "total": 15,
-      "positive": 4,
-      "neutral": 10,
-      "negative": 1,
-      "score": 20,
       "reliable": true
     },
     {
@@ -1941,14 +1941,14 @@
       "reliable": false
     },
     {
-      "id": "bamford",
-      "name": "Bamford",
-      "total": 5,
-      "positive": 1,
-      "neutral": 4,
-      "negative": 0,
-      "score": 20,
-      "reliable": false
+      "id": "k18",
+      "name": "K18",
+      "total": 16,
+      "positive": 4,
+      "neutral": 11,
+      "negative": 1,
+      "score": 19,
+      "reliable": true
     },
     {
       "id": "neutrogena",
@@ -2031,8 +2031,8 @@
       "reliable": true
     },
     {
-      "id": "grown-alchemist",
-      "name": "Grown Alchemist",
+      "id": "aveda",
+      "name": "Aveda",
       "total": 8,
       "positive": 1,
       "neutral": 7,
@@ -2041,13 +2041,13 @@
       "reliable": true
     },
     {
-      "id": "aveda",
-      "name": "Aveda",
-      "total": 8,
+      "id": "grown-alchemist",
+      "name": "Grown Alchemist",
+      "total": 9,
       "positive": 1,
-      "neutral": 7,
+      "neutral": 8,
       "negative": 0,
-      "score": 12,
+      "score": 11,
       "reliable": true
     },
     {
@@ -2073,9 +2073,9 @@
     {
       "id": "byredo",
       "name": "Byredo",
-      "total": 12,
+      "total": 13,
       "positive": 0,
-      "neutral": 12,
+      "neutral": 13,
       "negative": 0,
       "score": 0,
       "reliable": true
@@ -2143,11 +2143,11 @@
     {
       "id": "dr-bronners",
       "name": "Dr. Bronner's",
-      "total": 6,
+      "total": 7,
       "positive": 1,
-      "neutral": 3,
+      "neutral": 4,
       "negative": 2,
-      "score": -17,
+      "score": -14,
       "reliable": false
     },
     {
@@ -2351,7 +2351,7 @@
       ],
       "median_norm_usd": 39.58,
       "avg_price_index": 238,
-      "news_count": 12,
+      "news_count": 13,
       "latest_news": {
         "title": "Soft, Comforting and Clean—These 9 Perfumes Smell Just Like Fresh Laundry - Who What Wear",
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ELWZTWTVlak80YmhETnJZaGYtS19ESXlIaDVUbWJTVnhjQmN5dklsOWZFbF83TUpjbDZTcVZTTkMtZ0hEZDZ2VlN4YVBJRnBTV2hhZUlCY0s3WHV0dHMteFRqdGlDRkpvOWxobUEtQjdqelE4Vmc?oc=5",
@@ -2557,7 +2557,7 @@
       ],
       "median_norm_usd": 14.16,
       "avg_price_index": 86,
-      "news_count": 8,
+      "news_count": 9,
       "latest_news": {
         "title": "Tomorrowland releases skin, body and hair care collection - DJ Mag",
         "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNWTg0ckZwSzZuOHRrcGg3VVh2SWhYVXVJbHJ0S0xjTjlQZkEwWjRHNWRZajhiYlJyUHdOUXh2cjRwclY2cHp5LXZ0NWZUM2pDN21NMGI0SGdsVFpSemticUtRZkdWSGotbmk2MDRaSUtHVmdmWE9leklYTHEyUm5Wak9XSHZQdw?oc=5",
@@ -2829,7 +2829,7 @@
       ],
       "median_norm_usd": 39.0,
       "avg_price_index": 162,
-      "news_count": 11,
+      "news_count": 12,
       "latest_news": {
         "title": "These are the 3 best beauty products we tried this week. Here's why - Vancouver Sun",
         "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPY1Voc3oxNHhiUS00cDlUWDc1QnBtNFhtVzJhWTVZVy1jTlpLcURqNGVpR1FSQlhmd21MckNRWTNJLVR2Uk5odVJYLWhaNWRYblIyVm5ZeXBqYzZXTjN0ekRuUUFzYUczaDlqOFNGcEhCMGJ3bk1FLWpiYmpRWUxQRnFUX3pHakFQOUZnWmFGVmY0YlV2ajM0NF92MC1vejZ1?oc=5",
@@ -3438,7 +3438,7 @@
       ],
       "median_norm_usd": 10.0,
       "avg_price_index": 26,
-      "news_count": 3,
+      "news_count": 4,
       "latest_news": {
         "title": "Hammerson signs Ireland’s first standalone Zara Home at Dundrum Town - Estates Gazette",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPWDNSdVNUaXlhVURiTTF3S0xuNjVkQWlZUlVxcnpZOW05d1JIU0FKOFdFckp2cW9hWTNMbDVGRTNxTHB5VmNrUzZQR19XVnc4N1daX1JvTGs1SkFrZmwtOTZtZllvZ0tmd04wOWRUWnd1N0VoSGhjR2o1ZXZNcklMa0pxQi1kZmttRC1IanpteV9sYTFNQmIxa0oxelR5ODhsMDlTSk1DNW5xZw?oc=5",
@@ -3961,7 +3961,7 @@
       ],
       "median_norm_usd": 2.75,
       "avg_price_index": 25,
-      "news_count": 6,
+      "news_count": 7,
       "latest_news": {
         "title": "Dr. Bronner’s soap mixes Israeli and Palestinian olive oil — and dodges product boycotts - The Forward",
         "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPc0FkY3I2NnV2NjViLVdzX1QwbldDaWxFSTA2TmIzd0piZ0Jxd0ZySDdhSC0tSGgyRUkwOUZNRHVZUDZ4RXdoczlXMU5vdGpiTi1VeV8wbHJ4NmZoQ05nTmtRbEdPdXJnc0p4Qm1CMnVFNkRhWXR1aGNnOXNBUVFkYWZLZkIxejV0aURxNnh1dlBFU1JrVEE?oc=5",
@@ -4550,7 +4550,7 @@
       ],
       "median_norm_usd": 16.0,
       "avg_price_index": 118,
-      "news_count": 15,
+      "news_count": 16,
       "latest_news": {
         "title": "Grays? Shedding? This Breakthrough Serum Reverses Both — and Grows 19,000 More Hairs - Us Weekly",
         "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPS1FoYjBGSGo0ek5GNE02TmczenUyVmFEc1RBZVpLMFZ1RXh3bVJIZGtacmpIeHlpUV9RNmFvM1A2MHlkRENDSFpmRl95V25nR3ctRTFwaTRHNlNUV01ZMXBjQWRwSGxDOXBDR2FUMWxFRHp0enZMR3VqYmJSX0dwbDh0MmdRWUJOSFV2WThpWQ?oc=5",
@@ -5136,7 +5136,7 @@
       ],
       "median_norm_usd": 130.0,
       "avg_price_index": 464,
-      "news_count": 15,
+      "news_count": 16,
       "latest_news": {
         "title": "Shoppers Prefer This $6 Eye Cream Over Pricey La Mer - Real Simple",
         "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPakotOUF4eEFLbkFqY09CRDFNMl9XZE5TMHlvaEN0SUh2VU82enZLbENZbHBZLXBnbmhrMlVnZU8xNzkzenk5dmh2RG44SWphTFBRU3ZNM19ULXhpMWxVWWVXWFJyTC1XUm56TmZKMENjR05IM2tHWUMxMkZWREZQYUZGME9CUk15ODdndWEtZ01BdGVtZ3dzMnQ3N09Ta1UxMHJ2cVh0WXIyc28?oc=5",
@@ -5393,7 +5393,7 @@
       ],
       "median_norm_usd": 66.67,
       "avg_price_index": 42,
-      "news_count": 3,
+      "news_count": 4,
       "latest_news": {
         "title": "Contest: Try Bioderma's Latest Launch Before Anyone Else! - ELLE Canada Magazine",
         "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZXlpNnFCY0NaeWUzNVA4dnc3Q1JJLTE5Ymxic25yR2dPVUcxVEQ1dGZTM185elBPWFM3Z3EwUGVBMkt0ZnBwWXpSR2lyM3I2bFJaT0RYdmNKX05TXzkxZUVjbWJOSV82N1luQ19qRmJ5N1QwSUNzNlA5TEJubVd6X3dINC1Mb2RobnRtMU02Vm8xQk55?oc=5",
@@ -5770,7 +5770,7 @@
       ],
       "median_norm_usd": 22.0,
       "avg_price_index": 106,
-      "news_count": 5,
+      "news_count": 6,
       "latest_news": {
         "title": "Going to Hawaii to feel restored? Here are 4 new wellness programs to try - East Bay Times",
         "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQVNmNTdkQTRpUzk1MmpZWnlxTkV5bFBCckZBOGtuZHNBV21NQmk5VkxIWTAzWW1HX2RCaUdUb1ZhY0drdGlYWTNTQmNzRFROSVA0bzJtOEt1RXV2YmgxZDVIQ1dKSFIweXdXVFRzUExGczZweVdoLWZRWlljcVJHSnhTWdIBgwFBVV95cUxPQVNmNTdkQTRpUzk1MmpZWnlxTkV5bFBCckZBOGtuZHNBV21NQmk5VkxIWTAzWW1HX2RCaUdUb1ZhY0drdGlYWTNTQmNzRFROSVA0bzJtOEt1RXV2YmgxZDVIQ1dKSFIweXdXVFRzUExGczZweVdoLWZRWlljcVJHSnhTWQ?oc=5",
@@ -5990,7 +5990,7 @@
       ],
       "median_norm_usd": 73.2,
       "avg_price_index": 148,
-      "news_count": 12,
+      "news_count": 13,
       "latest_news": {
         "title": "Inside Amouage’s Two-Year Journey To Bottle A Senegalese Heritage Root - graziamagazine.com",
         "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1kWG1ocHhwR3gyQ1ktazN4SlJyMWFZYXJTaDhUTGNUQWp5TzZiMUh6MkZpUWFwMVVTUmZuRjdJVmo5Ti12Z0VYUHRkR0lYSm9GWHBIREpmYjk1aHNnVldzMElORjdjRWs5cnkwM0Zrb0RpNUxzZHpPYmR5MHc?oc=5",
@@ -18043,6 +18043,36 @@
       "tone": "neutral"
     },
     {
+      "title": "3 new beach clubs that are opening soon in Dubai - timeoutdubai.com",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1BSGJFWE9EcklwVmNFMUVlTUpIZWhBTFdTaXUyWEJMNUtfZFJhNDBPeE43Yk9URjZFUzVlc2d1ekM2MW5sMkEwOVVReDZTb0tScXhyODNDUDN2cjdNZFByWnJfdTIyX0hrdWc?oc=5",
+      "published": "2026-07-30",
+      "brand": "la-mer",
+      "source": "timeoutdubai.com",
+      "region": "uae",
+      "scope": "brand",
+      "summary": "3 new beach clubs that are opening soon in Dubai &nbsp;&nbsp; timeoutdubai.com",
+      "tags": [
+        "retail_expansion"
+      ],
+      "brand_name": "La Mer",
+      "tone": "neutral"
+    },
+    {
+      "title": "The rise of refill: Cosmetics industry moves beyond disposability as regulations loom - packaginginsights.com",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNUEIyOFVLVWlfVGdIZTVfMFN0SHIyQnI2QTNmbnZkdGsyVXBGMWYxNTVlQWRRcjBuTnJmZFJmTnlVeUt5SDhUMGRsRFg4SW5lYVNyanZLUTJCakFMeURRZFBMM242UTFDNVNQcnRtX0FrRTJ1cGhFNWZuelBtVmk1X1lpQQ?oc=5",
+      "published": "2026-07-30",
+      "brand": null,
+      "source": "packaginginsights.com",
+      "region": "global",
+      "scope": "topic",
+      "summary": "The rise of refill: Cosmetics industry moves beyond disposability as regulations loom &nbsp;&nbsp; packaginginsights.com",
+      "tags": [
+        "sustainability"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
       "title": "Santa Maria Novella Opens New Fragrance Store at JR Nagoya Takashimaya on August 1 - haveagood-holiday.com",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUFVyVzNZSmZjWENGZTVtUk1NY1VzRHFKWFpPOURfWnlaS0k2N0ZFTmZZWE1zNE9PVktDNWZaQTZOekJmWnRqRGlhdk8xUElEWWRNcm56ZEdNZ2M5Z0kwY0VvSm9Oc3k5aG1LdXF2STdqWDh1aHMxakZEQ2lETmlhSjZrdkxGVmM1ZDVjZmZEY0s0bllmWWhSWVpHZGwydw?oc=5",
       "published": "2026-07-29",
@@ -18466,6 +18496,19 @@
       "tone": "positive"
     },
     {
+      "title": "1 Hotel Melbourne Review: Best Wellness Hotel in the City - beauticate.com",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBuOGo2aHVieEs5VV9QdkoyTE9KQnhEbG1MdTdERVl6MG9uNFVTU1JtUExsNnRxTTMzYjlqdU1tM09heXZHR3NlZjFNTHM4aTg2cHljOTNYRzA0RWUwTFVob0ZMbkFaV1BSUTMtc1pYc3lkWXFXSGc?oc=5",
+      "published": "2026-07-27",
+      "brand": "bamford",
+      "source": "beauticate.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "1 Hotel Melbourne Review: Best Wellness Hotel in the City &nbsp;&nbsp; beauticate.com",
+      "tags": [],
+      "brand_name": "Bamford",
+      "tone": "positive"
+    },
+    {
       "title": "This Week in Retail: Saks Fifth Avenue Stages Odyssey Windows, Louis Vuitton Opens Miami Boutique, Jacquemus Maps Mediterranean Trail, lululemon Debuts Global Concept,Aesop Turns Stores Into Libraries - RETAILBOSS | Substack",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9yNjFTNWJ2bFd3NlJDakx3VnliaHRqWm0tbnRGaWJQWEpLaHNvSDA5cUNTYUpVQTluaWNDS1BTX0o3Z3Y4NW1kTG81Q1hzTHU0ZlQ4UkNQeGpaVlh2cHZPdGl6NUJHdGpsYi1JVnE4akJpR1FYY2hrbTFYVQ?oc=5",
       "published": "2026-07-26",
@@ -18839,6 +18882,19 @@
       "tone": "neutral"
     },
     {
+      "title": "Bioderma’s new lotion - pharmacydaily.com.au",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBOUFBSZWJrNFVfSE9kSWN2NUlld2xUeEJCNDBwX0gyS3R1c0pkMUpPYTNrajluX2ZpOU1LdzZPSlhwV1Z4SUV5SUY5d0RDeVhxdzZOaUlNaWdtWFQ4Y2tna2pIMk5URE81UEhRbmpn?oc=5",
+      "published": "2026-07-23",
+      "brand": "bioderma",
+      "source": "pharmacydaily.com.au",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Bioderma’s new lotion &nbsp;&nbsp; pharmacydaily.com.au",
+      "tags": [],
+      "brand_name": "Bioderma",
+      "tone": "neutral"
+    },
+    {
       "title": "The Most Unexpected Scent Trend of 2026 Is…Salt?! - PureWow",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5vQy1WQ0t1aFNMNjlNa0tlSTE1VWl6U0pXRWZzZzNJaEtBbWpORFFTUDlZb3hEVFJZcGM4NmxnOGNaQ1RzeUJGdHNuUlBoMmNEM0hTeWxndk0?oc=5",
       "published": "2026-07-22",
@@ -19196,6 +19252,21 @@
       "scope": "brand",
       "summary": "\"Fewer greys. More volume\": meet the new scalp serum that helps reverse hair ageing &nbsp;&nbsp; Harper's BAZAAR",
       "tags": [],
+      "brand_name": "K18",
+      "tone": "neutral"
+    },
+    {
+      "title": "K18 Introduces FutureIQ Serum for Hair Longevity - cosmeticsandtoiletries.com",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQakQ2bURmajNaTkUyQWM5R3JEeGxEWFIteTNMMm5LNDlzTTRvOFl5ZkpCNVJ6U1JOaHpFU0hqbERWSEpPLXNiNXRMZUd2TFJqLVpNVy1SSXlsaFVLNWtncU50NjdFWUZrUFJBOHhMenVndy1MZjd1Zkc4T1Qzdk5UMGFPbUJaUzFhWlltNVFPTnVwdEtJdnp3bkdZSnRCVHo5bEtkallZU3AzN3REVnJPaHZKNW1FVTZ6RGVvZjVZbTJBeFI3bWhlWjRYRGQweGRfUnBFTA?oc=5",
+      "published": "2026-07-21",
+      "brand": "k18",
+      "source": "cosmeticsandtoiletries.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "K18 Introduces FutureIQ Serum for Hair Longevity &nbsp;&nbsp; cosmeticsandtoiletries.com",
+      "tags": [
+        "product_launch"
+      ],
       "brand_name": "K18",
       "tone": "neutral"
     },
@@ -20394,6 +20465,19 @@
       "tone": "neutral"
     },
     {
+      "title": "Grown Alchemist’s New Range Is Your Answer to Staying Energized at Tomorrowland - hypebeast.com",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNR2EwdzhmbFF4LU51VE9iREZaWUI1UGUwSFhxb2RSMzlyU3Z5WmxIQzJWMzFuZVlNd01mdU50SFJ5eVM0dEwwLWdNUjRkXzRvM0xENjRkSElTNHoybGpnV25jM3EyUTN2WXF3YUJ3Vml4aFN2bzEySGRLQTF0VjFHTzFKYzBuNG03aW5kdEZzQ21Tdlct?oc=5",
+      "published": "2026-07-02",
+      "brand": "grown-alchemist",
+      "source": "hypebeast.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Grown Alchemist’s New Range Is Your Answer to Staying Energized at Tomorrowland &nbsp;&nbsp; hypebeast.com",
+      "tags": [],
+      "brand_name": "Grown Alchemist",
+      "tone": "neutral"
+    },
+    {
       "title": "Two Le Labo Veterans Launch Annual Leave To Bottle Summer Nostalgia - Beauty Independent",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQb0tLcHpJd1Juc0Mzb1BpTThlakFYb3Bnai1tcksyQzA1Yndwd1B5ZkNVZW1sVEhCbkNQV0R2UVZ3YWxYUTJLQWN2NEpncmRwNVg5YTFPSnZmc21tX2ZrcFlUeDRLSkdjckQ2SUozXzZNQTN3TmdhSFhnNkdGTkNTTHVScTBOeG4wby11YUQyaXZmc1R4enAzT2M0Y0ZMUU1j?oc=5",
       "published": "2026-07-01",
@@ -20799,6 +20883,19 @@
       "tags": [],
       "brand_name": "Dove",
       "tone": "positive"
+    },
+    {
+      "title": "Byredo’s “Late Lunch” Fragrance Captures the Windswept Romance of a Mediterranean Afternoon - hypebeast.com",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAyYWpuS0pqSHFBcFlwMXhrQVV3Z2xkaTI2ZWRTVkVmeU00UlpkNFNrZXdDaThzY09Eay1RQVlvR19XcnB2TGw2QV9PMS1wZDAxcHZnM1RxMTZFRVZOMmxqdkxZc2RJc2RTTkRQSEZJdjF0dlFZNmF3dWhNMDd5QQ?oc=5",
+      "published": "2026-06-25",
+      "brand": "byredo",
+      "source": "hypebeast.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Byredo’s “Late Lunch” Fragrance Captures the Windswept Romance of a Mediterranean Afternoon &nbsp;&nbsp; hypebeast.com",
+      "tags": [],
+      "brand_name": "Byredo",
+      "tone": "neutral"
     },
     {
       "title": "Prime Day Delivers on Premium Beauty and Wellness: Dr. Barbara Sturm, Aesop and Oura Ring Lead Deals - The Hollywood Reporter",
@@ -21505,6 +21602,19 @@
       "tone": "neutral"
     },
     {
+      "title": "How Amouage builds a fragrance around perfumery’s most elusive flower - lampoonmagazine.com",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWVdqeTc4QXlucXpITWwzcjVkaXA4eWlKS0xwUURPZ010S2FSTk5wYi14RVczZmQ2cEFheFNxVnJUX2xoUjVZd1RPUTRBVFdNWFNGdXB0SXF4WU5tU1I4Ni1qNXQ5M0QzanctdnV5b3VNOGVCd3ZfNVBqa19NVWJPWTdhSFN1MDJFUkRYYmNwZzVPUkk?oc=5",
+      "published": "2026-06-15",
+      "brand": "amouage",
+      "source": "lampoonmagazine.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "How Amouage builds a fragrance around perfumery’s most elusive flower &nbsp;&nbsp; lampoonmagazine.com",
+      "tags": [],
+      "brand_name": "Amouage",
+      "tone": "neutral"
+    },
+    {
       "title": "L’Occitane en Provence Celebrates 50th Anniversary with Airport Promotion - Happi | Household And Personal Products Industry",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUTBzT1hKN1FkUU5vUFF4N183N2Q4VFNFZFBtNHFQRnZSQktTdWFNeU1Wa1hfOHdxV01Rak9JMmljY1dmZEFnVG1sSFVRVnFCZjNUNVZIVGxWODNSMi1lWUZKZWF2ZG5QQzZMeW40YktfdTkxUFoxR2JLblRGN2hHR1BaMnMzeG40VzVCWTNGazhQQkRoSnI3VTJWMlZhYXRiMF8yVFFVMU0?oc=5",
       "published": "2026-06-14",
@@ -21831,6 +21941,19 @@
         "retail_expansion"
       ],
       "brand_name": "LANEIGE",
+      "tone": "neutral"
+    },
+    {
+      "title": "Acqua di Parma’s “La Caletta” Collection Evokes the Charm of Secluded Italian Summers - hypebeast.com",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNTFhSUhPS19iMGZ2VUlXQkVqVTNSNjdlRkJJNm9XcGNRUFVwU1ZZMlFzM2R6RlpNd0JDbDlEaHNhNW9veGVvLUlxTWtLV1BzbG14SFdnZE1NVGtCX2VONmFpajM3UjdEMWZOejlRcHRKcnExc3VkcUhncDVQcVYtQ1BwRjk3T0JLUXNhSGhOYVJsbkk?oc=5",
+      "published": "2026-06-05",
+      "brand": "acqua-di-parma",
+      "source": "hypebeast.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Acqua di Parma’s “La Caletta” Collection Evokes the Charm of Secluded Italian Summers &nbsp;&nbsp; hypebeast.com",
+      "tags": [],
+      "brand_name": "Acqua di Parma",
       "tone": "neutral"
     },
     {
@@ -22422,6 +22545,19 @@
       "tone": "positive"
     },
     {
+      "title": "How to Access Iconic Design Pieces on A Budget: WWD’s Top Finds at Ikea, H&M, Muji and Zara - WWD",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPUFhJVDZEQVBfUnFLWUw3NEJ3VnhSZlNDUmRkRjNPWVIzZ1NoWl9QdHJEeU95d1ExcnBiRktHakpQTm1MS0JzMFlJaEx1UXh6V0R3bm1rcEtHSS1pMWxxTFMyRFNMZXhacEliaWtkXzl3U3E3R3M5Q2ltQnNQN2dtRUw4bFM2QmhfOW5yekczdndSd3YyM3phRWxwckdmVDRUdl8zUy1PYw?oc=5",
+      "published": "2026-05-21",
+      "brand": "zara-home",
+      "source": "WWD",
+      "region": "global",
+      "scope": "brand",
+      "summary": "How to Access Iconic Design Pieces on A Budget: WWD’s Top Finds at Ikea, H&amp;M, Muji and Zara &nbsp;&nbsp; WWD",
+      "tags": [],
+      "brand_name": "Zara Home",
+      "tone": "positive"
+    },
+    {
       "title": "EXCLUSIVE: Acqua di Parma Gears Up for Summer With Collaborations - WWD",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUlBLbzNiWFp3Y1VDenRMMl80WlFOU0ZoeVNmVkhtXzlNaG9QbUM4SnNuOUR2eldILUF5VXc2UmV2ZzJvUkh1NkxZX0VlZlVOYnFhSzU1UEZjc1Z4LUZNdi1YVVJTb1Vlek1ja0dPcW01dUtRc2dicjcyLTdtOVo5Q0ppanFLWUhHX2d3TlZxYnd0cC0zQmFGazdwRmJhaXJEN0VVQ2RnM1RrdmpPUkltVUVmNkRLQnIxZTVYNmloWjRTc2lseEE?oc=5",
       "published": "2026-05-20",
@@ -22538,6 +22674,19 @@
       "region": "global",
       "scope": "brand",
       "summary": "Business Case Study: Dr. Bronner’s &nbsp;&nbsp; Causeartist",
+      "tags": [],
+      "brand_name": "Dr. Bronner's",
+      "tone": "neutral"
+    },
+    {
+      "title": "Business Case Study: Dr. Bronner’s - causeartist.com",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1sT3c1SU5JSlpjb0RRX2NrcVljZjJsTkpHZ2FhWjNkbGJSSXFvQ2lMOGdNM3NQQ3c2UmZIOEtUM1JGQ2RWT3RVN2pMa2xMcE1BenhKVFRSRUxGWk9HOElQZmtn?oc=5",
+      "published": "2026-05-19",
+      "brand": "dr-bronners",
+      "source": "causeartist.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Business Case Study: Dr. Bronner’s &nbsp;&nbsp; causeartist.com",
       "tags": [],
       "brand_name": "Dr. Bronner's",
       "tone": "neutral"
@@ -23284,14 +23433,14 @@
       "tone": "neutral"
     }
   ],
-  "news_generated_at": "2026-08-06T06:11:53+00:00",
+  "news_generated_at": "2026-08-06T06:17:52+00:00",
   "tag_counts": {
     "collaboration": 20,
     "corporate": 31,
-    "retail_expansion": 66,
+    "retail_expansion": 67,
     "campaign_pr": 25,
-    "product_launch": 49,
-    "sustainability": 16,
+    "product_launch": 50,
+    "sustainability": 17,
     "awards_press": 1
   },
   "stats": {
@@ -23301,7 +23450,7 @@
     "verified_prices": 0,
     "verified_pct": 0,
     "aed_observed": 2,
-    "news_items": 539,
+    "news_items": 550,
     "watchlist": 17
   }
 }
