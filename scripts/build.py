@@ -27,7 +27,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from analysis import build_findings, build_positioning  # noqa: E402
+from analysis import (build_findings, build_positioning, weekly_activity,  # noqa: E402
+                      brand_momentum, momentum_finding)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -222,13 +223,20 @@ def main() -> int:
         "product_launch": "Product launch", "collaboration": "Collaboration",
         "campaign_pr": "Campaign & PR", "corporate": "Corporate & M&A", "awards_press": "Awards & press",
     }
+    momentum = brand_momentum(news, brand_rows, datetime.now(timezone.utc).date())
     findings = build_findings(products, brand_rows, categories, news, tag_labels)
+    findings += momentum_finding(momentum)
+    findings.sort(key=lambda f: f["magnitude"], reverse=True)
+    for i, f in enumerate(findings):
+        f["rank"] = i + 1
     positioning = build_positioning(products, brand_rows)
 
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "findings": findings,
         "positioning": positioning,
+        "momentum": momentum,
+        "weekly": weekly_activity(news),
         "fx": {"rates": rates, **fx_meta, "uae": strip_comments(uae_cfg)},
         "brands": brand_rows,
         "categories": sorted(categories, key=lambda c: c["label"]),

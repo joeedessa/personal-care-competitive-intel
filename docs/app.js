@@ -462,7 +462,18 @@ function renderNews() {
     box.append(el("div", "empty", "No headlines match. If it is empty everywhere, run <code>python3 scripts/collect_news.py</code> then rebuild."));
     return;
   }
+  // Group by ISO week so the feed has a spine — "this week" is the question
+  // people actually arrive with.
+  let lastWeek = null;
   items.slice(0, 250).forEach((n) => {
+    const wk = isoWeekOf(n.published);
+    if (wk !== lastWeek) {
+      lastWeek = wk;
+      const count = items.filter((i) => isoWeekOf(i.published) === wk).length;
+      const h = el("div", "week-head");
+      h.innerHTML = `<span>${esc(weekLabel(wk))}</span><span class="wk-n">${count} headline${count === 1 ? "" : "s"}</span>`;
+      box.append(h);
+    }
     const s = el("div", "signal");
     s.append(el("time", null, esc(n.published || "undated")));
     const body = el("div");
@@ -548,6 +559,101 @@ function renderPr() {
   });
   t.append(tb);
   box.append(t);
+}
+
+
+/* ---------- week helpers ---------- */
+function isoWeekOf(dstr) {
+  if (!dstr) return "undated";
+  const d = new Date(dstr + "T00:00:00Z");
+  if (isNaN(d)) return "undated";
+  const t = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  t.setUTCDate(t.getUTCDate() + 4 - (t.getUTCDay() || 7));
+  const yStart = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  const wk = Math.ceil(((t - yStart) / 864e5 + 1) / 7);
+  return `${t.getUTCFullYear()}-W${String(wk).padStart(2, "0")}`;
+}
+function weekLabel(wk) {
+  if (wk === "undated") return "Undated";
+  const thisWeek = isoWeekOf(new Date().toISOString().slice(0, 10));
+  if (wk === thisWeek) return "This week";
+  const [y, w] = wk.split("-W");
+  const jan4 = new Date(Date.UTC(+y, 0, 4));
+  const mon = new Date(jan4);
+  mon.setUTCDate(jan4.getUTCDate() - ((jan4.getUTCDay() || 7) - 1) + (+w - 1) * 7);
+  return `Week of ${mon.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}`;
+}
+
+/* ---------- coverage over time + share momentum ---------- */
+function renderWeekly() {
+  const wk = D.weekly || [];
+  const box = $("#weekly"); box.innerHTML = "";
+  if (!wk.length) { box.append(el("div", "empty", "No dated headlines yet.")); return; }
+  $("#weekly-span").textContent = `${wk.length} weeks`;
+  const max = Math.max(...wk.map((w) => w.count));
+  wk.forEach((w, i) => {
+    const row = el("div", "bar-row");
+    row.append(el("div", "bar-name", esc(weekLabel(w.week))));
+    const track = el("div", "track");
+    const fill = el("div", "fill");
+    fill.style.width = (w.count / max * 100) + "%";
+    fill.style.background = "var(--accent)";
+    track.append(fill); row.append(track);
+    const extreme = i === wk.length - 1 || w.count === max;
+    row.append(el("div", "bar-val", extreme ? `<b>${w.count}</b>` : String(w.count)));
+    bindTip(row, `<div class="t-title">${esc(weekLabel(w.week))}</div><div class="t-row"><span>Headlines</span><b>${w.count}</b></div>`);
+    box.append(row);
+  });
+}
+
+function renderMomentum() {
+  const rows = D.momentum || [];
+  const box = $("#momentum"); box.innerHTML = "";
+  const gaining = rows.filter((m) => m.basis === "gaining_share");
+  const fresh = rows.filter((m) => m.basis === "newly_covered");
+
+  if (!gaining.length && !fresh.length) {
+    box.append(el("div", "empty", "Not enough archive yet. Momentum needs two comparable 30-day windows — it fills in as the daily collector runs."));
+    return;
+  }
+
+  if (gaining.length) {
+    box.append(el("h3", null, "Gaining or losing share — brands with a real prior baseline"));
+    const max = Math.max(...gaining.map((m) => Math.max(m.share_recent, m.share_prior)));
+    gaining.slice(0, 14).forEach((m) => {
+      const row = el("div", "bar-row");
+      row.append(el("div", "bar-name", `<b class="brand-link" data-brand="${esc(m.id)}">${esc(m.name)}</b>`));
+      const track = el("div", "track");
+      track.style.flexDirection = "column";
+      track.style.gap = "3px";
+      const b1 = el("div", "fill"); b1.style.height = "6px";
+      b1.style.width = (m.share_prior / max * 100) + "%"; b1.style.background = "var(--rule-strong)";
+      const b2 = el("div", "fill"); b2.style.height = "6px";
+      b2.style.width = (m.share_recent / max * 100) + "%";
+      b2.style.background = m.ratio >= 1 ? "var(--accent)" : "var(--div-low)";
+      track.append(b1, b2); row.append(track);
+      row.append(el("div", "bar-val", `<b>${m.ratio}×</b>`));
+      bindTip(row, `
+        <div class="t-title">${esc(m.name)}</div>
+        <div class="t-row"><span>Share, prior 30 days</span><b>${m.share_prior}%</b></div>
+        <div class="t-row"><span>Share, last 30 days</span><b>${m.share_recent}%</b></div>
+        <div class="t-row"><span>Articles</span><b>${m.prior} → ${m.recent}</b></div>`);
+      box.append(row);
+    });
+    box.append(el("p", "chart-foot", "Upper bar is the prior 30 days, lower bar the last 30. A ratio above 1 means the brand took a larger slice of a fixed pie."));
+  }
+
+  if (fresh.length) {
+    const names = fresh.slice(0, 12).map((m) => `${esc(m.name)} (${m.recent})`).join(", ");
+    const s = el("div");
+    s.style.marginTop = "28px";
+    s.append(el("h3", null, `Newly appearing — ${fresh.length} brands`));
+    s.append(el("p", "only-in",
+      `${names}${fresh.length > 12 ? ", and others" : ""}. These had no meaningful coverage in the prior window. ` +
+      `With a young archive that may mean genuinely new activity, or simply that the earlier search did not surface them — ` +
+      `treat as a prompt to look, not as a finding.`));
+    box.append(s);
+  }
 }
 
 /* ---------- radar ---------- */
@@ -1066,7 +1172,7 @@ function renderAll() {
   if (state.tab === "compare") renderCompare();
   if (state.tab === "pricing") { renderLadder(); renderSpread(); renderAed(); renderMatrix(); renderSkuTable(); }
   if (state.tab === "news") renderNews();
-  if (state.tab === "pr") renderPr();
+  if (state.tab === "pr") { renderPr(); renderWeekly(); renderMomentum(); }
   if (state.tab === "radar") renderRadar();
   if (state.tab === "brands") renderBrands();
 }

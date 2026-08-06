@@ -360,3 +360,97 @@ def build_positioning(products, brands):
             "news": b.get("news_count", 0),
         })
     return [r for r in rows if r["index"] is not None]
+
+
+def _iso_week(datestr):
+    """'2026-08-06' -> '2026-W32' (Monday-anchored)."""
+    from datetime import date
+    try:
+        y, m, d = (int(x) for x in datestr.split("-"))
+        iso = date(y, m, d).isocalendar()
+        return f"{iso[0]}-W{iso[1]:02d}"
+    except Exception:
+        return None
+
+
+def weekly_activity(news):
+    """Headlines per ISO week — the shape of the category's news cycle."""
+    counts = defaultdict(int)
+    for n in news:
+        w = _iso_week(n.get("published") or "")
+        if w:
+            counts[w] += 1
+    return [{"week": w, "count": c} for w, c in sorted(counts.items())]
+
+
+def brand_momentum(news, brands, today):
+    """Coverage in the last 30 days against the 30 before it.
+
+    Volume is not sentiment, and a spike is not necessarily good news — but a
+    brand whose coverage has doubled is doing something, and a brand that has
+    gone silent has stopped.
+    """
+    from datetime import timedelta
+    cut_recent = (today - timedelta(days=30)).isoformat()
+    cut_prior = (today - timedelta(days=60)).isoformat()
+
+    recent, prior = defaultdict(int), defaultdict(int)
+    for n in news:
+        b, d = n.get("brand"), n.get("published")
+        if not b or not d:
+            continue
+        if d >= cut_recent:
+            recent[b] += 1
+        elif d >= cut_prior:
+            prior[b] += 1
+
+    # Google News returns far denser coverage for recent weeks than older ones, so
+    # raw counts always "accelerate" - that would be measuring the collector, not
+    # the market. Momentum is therefore SHARE of each period's total coverage, which
+    # is invariant to how much the window returned overall.
+    tot_r, tot_p = sum(recent.values()), sum(prior.values())
+    by_id = {b["id"]: b for b in brands}
+    rows = []
+    for bid in set(recent) | set(prior):
+        b = by_id.get(bid)
+        if not b:
+            continue
+        r, p = recent[bid], prior[bid]
+        if r + p < 3:
+            continue
+        sr = r / tot_r if tot_r else 0
+        sp = p / tot_p if tot_p else 0
+        eps = 1 / max(tot_r, tot_p, 1)
+        rows.append({
+            "id": bid, "name": b["name"], "tier": b["tier"],
+            "recent": r, "prior": p, "delta": r - p,
+            "share_recent": round(sr * 100, 1), "share_prior": round(sp * 100, 1),
+            "ratio": round((sr + eps) / (sp + eps), 2),
+            # With a young archive the prior window is thinly sampled, so a brand at
+            # 0 -> 11 may simply not have been returned before. Only a brand with a
+            # real prior baseline can be said to be GAINING share; the rest are
+            # newly appearing, which is a weaker claim and labelled as such.
+            "basis": "gaining_share" if p >= 2 else "newly_covered",
+        })
+    rows.sort(key=lambda x: (x["ratio"], x["recent"]), reverse=True)
+    return rows
+
+
+def momentum_finding(momentum):
+    risers = [m for m in momentum if m["ratio"] >= 1.8 and m["recent"] >= 4
+              and m["basis"] == "gaining_share"]
+    if not risers:
+        return []
+    top = risers[0]
+    return [{
+        "kind": "accelerating",
+        "headline": f"{top['name']} has taken {top['ratio']}× more share of category coverage in the last 30 days",
+        "detail": f"{top['share_recent']}% of all headlines in the last 30 days, against {top['share_prior']}% in the 30 before "
+                  f"({top['recent']} vs {top['prior']} articles). Measured as share, not raw count, because the collector "
+                  f"returns denser recent coverage — raw counts would rise for everyone. "
+                  f"{len(risers)} brands are gaining share on this measure. Volume is not sentiment.",
+        "metric": f"{top['ratio']}×",
+        "magnitude": 42 + top["ratio"] * 4,
+        "refs": [top["id"]],
+        "tab": "news", "focus": {"brand": top["id"]},
+    }]
