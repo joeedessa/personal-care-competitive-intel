@@ -36,6 +36,7 @@ One file per category. `category` and `label` at the top; `products[]` below.
 | `px.home` | number / null | in the brand's home currency |
 | `px.usd` | number / null | US market price |
 | `px.aed` | number / null | **observed** UAE shelf price. Leave null and the builder derives an expectation instead |
+| `off_ladder` | bool (optional) | Same measurement basis but a different product format — a 75 ml diffuser is not a 190 g candle. Keeps it out of the like-for-like ladder and out of the category median; it still appears in the "as sold" view and the table |
 | `conf` | `est` \| `ver` | `ver` requires `src` |
 | `src` | url / null | where the price was read |
 | `notes` | string / null | the competitive point, not a description |

@@ -11,10 +11,23 @@ request, and the recommended next additions.
 
 | Tab | Answers |
 |---|---|
-| **Price & range** | Where every SKU sits on a normalised price ladder; how wide each category's spread is; where UAE shelf prices diverge from FX parity; which brands play in which categories (and where the white space is) |
-| **Signals, PR & comms** | What brands are doing, auto-tagged into initiative buckets; share of voice; a filterable timeline |
+| **Price & range** | Where every SKU sits on the ladder — in two views (below); how much premium each category tolerates; what a UAE shelf price should be and which SKUs still need verifying; which brands play in which categories |
+| **News** | Every headline collected across the brand set, newest first, filterable by brand, region and initiative type |
+| **PR & initiatives** | What brands are *doing*, auto-tagged into seven buckets; share of voice; a brand × initiative matrix showing where each brand is spending its attention |
 | **Emerging radar** | Brands under ~5 years old that are setting price or winning doors, ranked by momentum and threat |
 | **Brand directory** | All ~85 brands with tier, owner, UAE channel presence, SKU coverage and average price index |
+
+### Two price views
+
+- **Like for like** — everything rebased to a common basis (per 100 ml/g, per stick, per unit) so
+  pack size cannot flatter anyone. Answers *who is expensive?*
+- **As sold** — the actual price of the actual pack at the size the brand chose to sell it in.
+  Answers *what does the customer hand over?*
+
+They disagree, and the disagreement is the point: Aesop's 500 ml hand wash and Diptyque's 250 ml
+both sit at $45 as sold — like-for-like shows Diptyque is twice the price per millilitre.
+
+The header carries an **Auto / Light / Dark** theme switch; the choice persists.
 
 ## How the data gets in
 
@@ -63,7 +76,22 @@ Every price ships as a labelled estimate. To make one quotable:
 
 Then `make build`. Filling `px.aed` with a real observed price is the highest-value edit you
 can make — it turns on the UAE price-gap chart, which compares what the shelf actually charges
-against FX parity plus the tier uplift in `data/fx.json`.
+against FX parity plus the tier uplift in `data/fx.json`. Until then the UAE card shows a
+**verification queue**: the hero SKUs with no observed price, ranked by expected AED value, so
+you always know which one to check next. Brands that price in AED natively (Ajmal, The Camel
+Soap Factory) are excluded from the gap — for them the comparison is circular.
+
+## Design system
+
+Warm ivory / ink surfaces, a Didot-class display serif for headings and figures, and a
+single-hue **bronze ordinal ramp** for brand tier (mass → luxury). Lightness carries the order,
+which is what makes the ramp safe for colour-vision deficiency without relying on hue.
+
+Colours are not chosen by eye. `scripts/check_palette.py` validates, per mode: monotonic
+lightness across the ramp, ≥8 OKLab ΔE between adjacent steps, ≥2:1 contrast for the step
+nearest the surface, ≥3:1 for every mark, ≥90° hue separation between the diverging poles, and
+WCAG contrast on all three text roles. **Run it before changing any colour** — `make check`
+does, and it exits non-zero on failure.
 
 ## Derived metrics
 

@@ -10,14 +10,24 @@
 <div class="wrap">
 
   <header class="top">
-    <p class="eyebrow">Competitive intelligence</p>
-    <h1>High-end personal care, soap &amp; home scent</h1>
-    <p class="sub">Price architecture, range coverage, comms &amp; PR signals, and an emerging-brand radar — across soap, hand cream, body lotion, shampoo, conditioner, lip balm, incense, candles, hair brushes and hair accessories. Priced three ways: brand home market, US, and UAE.</p>
+    <div class="header-grid">
+      <div>
+        <p class="overline">Competitive intelligence</p>
+        <h1>High-end personal care,<br>soap &amp; home scent</h1>
+        <p class="lede">Price architecture, range coverage, comms and PR, and an emerging-brand radar — across soap, hand cream, body lotion, shampoo, conditioner, lip balm, incense, candles, hair brushes and hair accessories. Every product priced three ways: the brand's home market, the US, and the UAE in AED.</p>
+      </div>
+      <div>
+        <div class="theme-switch" role="group" aria-label="Theme">
+          <button data-theme-set="auto" aria-pressed="true">Auto</button>
+          <button data-theme-set="light" aria-pressed="false">Light</button>
+          <button data-theme-set="dark" aria-pressed="false">Dark</button>
+        </div>
+      </div>
+    </div>
     <div class="meta-row">
       <span id="meta-generated"></span>
       <span id="meta-fx"></span>
       <span id="meta-news"></span>
-      <span class="spacer"></span>
     </div>
   </header>
 
@@ -25,14 +35,20 @@
 
   <nav class="tabs" role="tablist">
     <button role="tab" data-tab="pricing" aria-selected="true">Price &amp; range</button>
-    <button role="tab" data-tab="signals" aria-selected="false">Signals, PR &amp; comms</button>
+    <button role="tab" data-tab="news" aria-selected="false">News</button>
+    <button role="tab" data-tab="pr" aria-selected="false">PR &amp; initiatives</button>
     <button role="tab" data-tab="radar" aria-selected="false">Emerging radar</button>
     <button role="tab" data-tab="brands" aria-selected="false">Brand directory</button>
   </nav>
 
-  <!-- one filter row, scopes every panel below it -->
   <div class="filters" id="filters">
-    <div><label for="f-cat">Category</label><select id="f-cat"></select></div>
+    <div id="w-cat"><label for="f-cat">Category</label><select id="f-cat"></select></div>
+    <div id="w-view"><label>View</label>
+      <div class="segmented" role="group" aria-label="Price view">
+        <button data-view="norm" aria-pressed="true">Like for like</button>
+        <button data-view="asis" aria-pressed="false">As sold</button>
+      </div>
+    </div>
     <div><label for="f-tier">Tier</label><select id="f-tier">
       <option value="">All tiers</option>
       <option value="luxury">Luxury</option>
@@ -47,17 +63,15 @@
       <option value="benchmark">Benchmark</option>
       <option value="regional_incumbent">Regional incumbent (GCC)</option>
     </select></div>
-    <div><label for="f-cur">Currency</label><select id="f-cur">
+    <div id="w-cur"><label for="f-cur">Currency</label><select id="f-cur">
       <option value="usd">USD</option>
-      <option value="aed">AED (UAE expected)</option>
+      <option value="aed">AED</option>
       <option value="home">Brand home currency</option>
     </select></div>
-    <div class="grow"><label for="f-q">Search</label><input id="f-q" type="search" placeholder="Brand or product…"></div>
-    <div class="spacer"></div>
-    <button class="btn" id="toggle-table" aria-pressed="false">Table view</button>
+    <div class="grow"><label for="f-q">Search</label><input id="f-q" type="search" placeholder="Brand, product or owner…"></div>
   </div>
 
-  <!-- ============ PRICING ============ -->
+  <!-- ============ PRICE & RANGE ============ -->
   <section id="panel-pricing">
     <div class="card">
       <header>
@@ -65,29 +79,38 @@
         <div class="spacer"></div>
         <span id="ladder-basis" class="chip"></span>
       </header>
-      <p class="note">Normalised so different pack sizes are comparable — a 500 ml hand wash and a 250 ml one are shown at the same basis. The vertical rule is the category median; the index in the tooltip is that SKU against 100 = median.</p>
-      <div class="legend" id="tier-legend">
+      <p class="note" id="ladder-note"></p>
+      <div class="legend">
         <span><i class="swatch" style="background:var(--tier-luxury)"></i> Luxury</span>
         <span><i class="swatch" style="background:var(--tier-premium)"></i> Premium</span>
         <span><i class="swatch" style="background:var(--tier-masstige)"></i> Masstige</span>
         <span><i class="swatch" style="background:var(--tier-mass)"></i> Mass (benchmark)</span>
       </div>
       <div id="ladder" class="bars"></div>
-      <p class="median-caption" id="ladder-foot"></p>
+      <p class="chart-foot" id="ladder-foot"></p>
     </div>
 
-    <div class="grid-2">
-      <div class="card">
-        <header><h2>Category spread</h2></header>
-        <p class="note">How many times the cheapest option the dearest one costs, on the same basis. A wide spread means the category tolerates a premium; a narrow one means you are competing on something other than price.</p>
-        <div id="spread" class="bars"></div>
-      </div>
+    <div class="card">
+      <header><h2>Category spread — how much premium each category tolerates</h2></header>
+      <p class="note">
+        <b>What it measures.</b> Within one category, on a like-for-like basis, how many times the
+        cheapest option the dearest one costs. Body lotion at <b>41×</b> means the most expensive
+        body lotion tracked costs 41 times the cheapest per 100 ml.<br><br>
+        <b>How to read it.</b> A <b>wide spread</b> means customers in that category already accept
+        an enormous premium for brand — the ceiling is high and there is room to price up.
+        A <b>narrow spread</b> means price is compressed and everyone is clustered: you would be
+        competing on distribution, design or story rather than on where you sit on the ladder.<br><br>
+        <b>The caveat.</b> Spread is driven by its endpoints, so a single mass benchmark at the
+        bottom stretches it. The named brands at each end tell you whether the number is real or
+        an artefact — filter to <i>Luxury + Premium</i> to see the spread among genuine competitors.
+      </p>
+      <div id="spread"></div>
+    </div>
 
-      <div class="card">
-        <header><h2>UAE price gap</h2></header>
-        <p class="note">Observed AED shelf price against the FX-parity expectation (US price × 3.6725 × tier uplift). Positive means the UAE consumer pays more than parity — pricing power, or a grey-market opening. Fill <code>px.aed</code> in the data files as you verify real shelf prices.</p>
-        <div id="aedgap"></div>
-      </div>
+    <div class="card">
+      <header><h2>UAE pricing</h2></header>
+      <p class="note" id="aed-note"></p>
+      <div id="aedgap"></div>
     </div>
 
     <div class="card">
@@ -96,37 +119,51 @@
       <div class="matrix-scroll"><div id="matrix"></div></div>
     </div>
 
-    <div class="card hidden" id="card-table">
+    <div class="card">
       <header><h2>All tracked SKUs</h2></header>
-      <p class="note">Every price here is a seeded estimate unless the confidence column says <b>verified</b>. Replace with real figures and a source URL in <code>data/products/*.json</code>.</p>
+      <p class="note">The full table behind every chart above — the same numbers, without the encoding. Prices are seeded estimates unless the confidence column says <b>verified</b>.</p>
       <div class="table-scroll"><table class="data" id="sku-table"></table></div>
     </div>
   </section>
 
-  <!-- ============ SIGNALS ============ -->
-  <section id="panel-signals" class="hidden">
+  <!-- ============ NEWS ============ -->
+  <section id="panel-news" class="hidden">
+    <div class="card">
+      <header>
+        <h2>Newsroom</h2>
+        <div class="spacer"></div>
+        <select id="f-brand"><option value="">All brands</option></select>
+        <select id="f-region"><option value="">All regions</option><option value="uae">UAE / GCC only</option><option value="global">Global</option></select>
+        <select id="f-tag"><option value="">All initiative types</option></select>
+      </header>
+      <p class="note">Every headline collected across the tracked brand set, newest first — brand coverage, trade press and topic queries. Refreshed daily. Deduped by title; a brand tag means the headline surfaced against that brand's query, not that the brand is the subject.</p>
+      <div id="news-list"></div>
+    </div>
+  </section>
+
+  <!-- ============ PR & INITIATIVES ============ -->
+  <section id="panel-pr" class="hidden">
     <div class="grid-2">
       <div class="card">
         <header><h2>What brands are doing</h2></header>
-        <p class="note">Headlines auto-tagged into initiative buckets by keyword. Useful as a shape-of-activity read, not as a precise count — tune the keyword rules in <code>data/feeds.json</code>.</p>
+        <p class="note">Headlines auto-tagged into initiative buckets by keyword. A shape-of-activity read, not a precise count — tune the rules in <code>data/feeds.json</code>.</p>
         <div id="tagchart" class="bars"></div>
       </div>
       <div class="card">
         <header><h2>Share of voice</h2></header>
-        <p class="note">Volume of coverage picked up per brand over the collection window. Volume is not sentiment — read it as who is generating news, not who is winning.</p>
+        <p class="note">Volume of coverage picked up per brand. Volume is not sentiment — read it as who is generating news, not who is winning.</p>
         <div id="sovchart" class="bars"></div>
       </div>
     </div>
 
     <div class="card">
       <header>
-        <h2>Signal timeline</h2>
+        <h2>Initiative matrix</h2>
         <div class="spacer"></div>
-        <select id="f-tag"><option value="">All initiative types</option></select>
-        <select id="f-region"><option value="">All regions</option><option value="uae">UAE / GCC only</option><option value="global">Global</option></select>
+        <span class="chip plain" id="pr-count"></span>
       </header>
-      <p class="note">Brand news, trade press and topic queries, newest first.</p>
-      <div id="timeline"></div>
+      <p class="note">Which brands are active on which fronts. A brand heavy on <b>retail expansion</b> and light on <b>sustainability</b> is telling you where its money is going this year. Empty columns across the whole set mark a theme nobody has claimed.</p>
+      <div class="matrix-scroll"><div id="pr-matrix"></div></div>
     </div>
   </section>
 
@@ -134,12 +171,12 @@
   <section id="panel-radar" class="hidden">
     <div class="card">
       <header><h2>Emerging &amp; scaling brands</h2></header>
-      <p class="note">Brands outside the established set that are taking share, setting price, or inventing a mechanic worth copying. Momentum is a judgement call (1–5), not a measured figure — it is there to force a ranking, and should be revised whenever the signals change.</p>
+      <p class="note">Brands outside the established set that are taking share, setting price, or inventing a mechanic worth copying. Momentum is a judgement call (1–5), not a measured figure — it exists to force a ranking, and should be revised whenever the signals change.</p>
       <div class="legend">
         <span><i class="dot" style="background:var(--critical)"></i> High threat</span>
         <span><i class="dot" style="background:var(--serious)"></i> Medium</span>
         <span><i class="dot" style="background:var(--good)"></i> Low</span>
-        <span style="color:var(--text-muted)">— threat = how directly it competes with a premium soap / scent / body proposition</span>
+        <span style="color:var(--ink-3)">Threat = how directly it competes with a premium soap / scent / body proposition</span>
       </div>
       <div class="radar-grid" id="radar"></div>
     </div>
@@ -149,13 +186,13 @@
   <section id="panel-brands" class="hidden">
     <div class="card">
       <header><h2>Brand directory</h2></header>
-      <p class="note">Click a column to sort. <b>Avg index</b> is that brand's average position against the median of each category it plays in (100 = median). Rows flagged <i>review</i> carry metadata seeded from model knowledge that has not been confirmed against a source.</p>
+      <p class="note">Click a column to sort. <b>Avg index</b> is that brand's average position against the median of each category it plays in — 100 is the median, 200 means it prices at twice the category middle. Rows flagged <i>review</i> carry metadata seeded from model knowledge that has not been confirmed against a source.</p>
       <div class="table-scroll"><table class="data" id="brand-table"></table></div>
     </div>
   </section>
 
   <footer class="foot">
-    <p><b>Data confidence.</b> Prices marked <i>est</i> are seeded estimates for structure and shape — they are close enough to reason about a price ladder and wrong enough that you must not quote them. Verify against the brand's own storefront, set <code>conf</code> to <code>"ver"</code> and record the <code>src</code> URL. News is collected automatically; product and pricing data is curated by hand, on purpose.</p>
+    <p><b>Data confidence.</b> Prices marked <i>est</i> are seeded estimates for structure and shape — close enough to reason about a price ladder, and wrong enough that you must not quote them. Verify against the brand's own storefront, set <code>conf</code> to <code>"ver"</code> and record the <code>src</code> URL. News is collected automatically; product and pricing data is curated by hand, on purpose.</p>
     <p id="foot-counts"></p>
   </footer>
 </div>

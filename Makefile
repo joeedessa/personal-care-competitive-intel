@@ -18,9 +18,10 @@ serve: build
 	@echo "http://localhost:8000"
 	@cd docs && python3 -m http.server 8000
 
-# Validate the curated data layer before committing.
+# Validate the curated data layer and the palette before committing.
 check:
 	@python3 -c "import json,glob,sys; \
 	[json.load(open(f)) for f in glob.glob('data/*.json')+glob.glob('data/products/*.json')]; \
 	print('JSON OK')"
+	@python3 scripts/check_palette.py
 	@python3 scripts/build.py

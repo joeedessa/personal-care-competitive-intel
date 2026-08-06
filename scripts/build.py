@@ -107,9 +107,13 @@ def main() -> int:
             tier_uplift = uplift.get(brand["tier"], 0.15)
             aed_parity = round(usd * aed_rate, 2) if usd is not None else None
             aed_exp = round(aed_parity * (1 + tier_uplift), 2) if aed_parity is not None else None
+            # A gap only means something for an imported brand. For an AED-native
+            # brand (Ajmal, The Camel Soap Factory) the "observed vs FX parity"
+            # comparison is circular - its home price IS the UAE price.
+            aed_native = home_cur == "AED"
             aed_gap = (
                 round((aed_obs - aed_exp) / aed_exp * 100, 1)
-                if (aed_obs is not None and aed_exp) else None
+                if (aed_obs is not None and aed_exp and not aed_native) else None
             )
             us_vs_home = (
                 round((usd - home_usd) / home_usd * 100, 1)
@@ -134,6 +138,8 @@ def main() -> int:
                 "price_aed_parity": aed_parity,
                 "price_aed_expected": aed_exp,
                 "aed_gap_pct": aed_gap,
+                "aed_native": aed_native,
+                "aed_uplift_pct": round(tier_uplift * 100),
                 "us_vs_home_pct": us_vs_home,
                 "basis_label": basis_label,
                 "basis_kind": basis_kind,

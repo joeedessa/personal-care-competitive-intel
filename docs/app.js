@@ -1,7 +1,12 @@
 /* Personal care competitive intelligence — view layer.
    Data comes from data.js (window.__CI_DATA__), produced by scripts/build.py.
-   Bar length is ALWAYS normalised USD: it is the only axis every brand shares.
-   The currency selector changes the figures shown, never the scale. */
+
+   Two price views:
+     "norm"  like-for-like — everything rebased to per 100ml/g, per stick, per unit.
+             Answers "who is expensive?" Bar length is normalised USD.
+     "asis"  as sold — the actual shelf price of the actual pack.
+             Answers "what does the customer hand over?" Bar length is the
+             selected single currency; mixed home currencies never share an axis. */
 
 const D = window.__CI_DATA__;
 const $ = (s) => document.querySelector(s);
@@ -21,30 +26,41 @@ const TAG_LABEL = {
   product_launch: "Product launch", collaboration: "Collaboration", campaign_pr: "Campaign & PR",
   corporate: "Corporate & M&A", awards_press: "Awards & press",
 };
+const TAG_KEYS = Object.keys(TAG_LABEL);
 
-const state = { cat: "", tier: "", role: "", cur: "usd", q: "", tag: "", region: "", table: false, tab: "pricing", sort: { key: "sku_count", dir: -1 } };
+const state = {
+  cat: "", tier: "", role: "", cur: "usd", q: "", tag: "", region: "", brand: "",
+  view: "norm", tab: "pricing", sort: { key: "sku_count", dir: -1 },
+};
 
-/* ---------- formatting ---------- */
+/* ---------- theme ---------- */
+function applyTheme(mode) {
+  if (mode === "auto") document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme", mode);
+  try { localStorage.setItem("ci-theme", mode); } catch (e) { /* private mode */ }
+  document.querySelectorAll("[data-theme-set]").forEach((b) =>
+    b.setAttribute("aria-pressed", String(b.dataset.themeSet === mode)));
+}
+
+/* ---------- money ---------- */
 const CUR_SYMBOL = { USD: "$", EUR: "€", GBP: "£", AUD: "A$", AED: "AED ", SEK: "SEK ", JPY: "¥", KRW: "₩", INR: "₹", CAD: "C$", ILS: "₪", CHF: "CHF ", BRL: "R$", OMR: "OMR " };
 function money(v, cur) {
   if (v == null) return "—";
   const sym = CUR_SYMBOL[cur] ?? cur + " ";
-  const dp = v >= 100 || ["JPY", "KRW", "INR"].includes(cur) ? 0 : v >= 10 ? 0 : 2;
+  const dp = v >= 10 || ["JPY", "KRW", "INR"].includes(cur) ? 0 : 2;
   return sym + v.toLocaleString(undefined, { minimumFractionDigits: dp, maximumFractionDigits: dp });
 }
+const sizeLabel = (p) => (p.unit === "unit" ? "each" : `${p.size} ${p.unit}`);
 
-/* Which figure to *display* for a product, per the currency selector. */
-function displayPrice(p) {
-  if (state.cur === "home") return { v: p.price_home, cur: p.home_currency, norm: null, tagText: "home" };
-  if (state.cur === "aed") {
-    const observed = p.price_aed_observed != null;
-    return {
-      v: observed ? p.price_aed_observed : p.price_aed_expected,
-      cur: "AED", norm: p.norm_aed_expected,
-      tagText: observed ? "observed" : "expected",
-    };
-  }
-  return { v: p.price_usd, cur: "USD", norm: p.norm_usd, tagText: "US" };
+/* Figure to display, and the value the bar is drawn from. */
+function priceOf(p, cur) {
+  if (cur === "aed") return { v: p.price_aed_observed ?? p.price_aed_expected, cur: "AED", derived: p.price_aed_observed == null };
+  if (cur === "home") return { v: p.price_home, cur: p.home_currency, derived: false };
+  return { v: p.price_usd, cur: "USD", derived: false };
+}
+function normOf(p, cur) {
+  if (cur === "aed") return p.norm_aed_expected;
+  return p.norm_usd;
 }
 
 /* ---------- filtering ---------- */
@@ -66,41 +82,53 @@ function showTip(e, html) {
   tip.innerHTML = html;
   tip.style.opacity = "1";
   const r = tip.getBoundingClientRect();
-  let x = e.clientX + 14, y = e.clientY + 14;
-  if (x + r.width > innerWidth - 8) x = e.clientX - r.width - 14;
-  if (y + r.height > innerHeight - 8) y = e.clientY - r.height - 14;
-  tip.style.left = x + "px"; tip.style.top = y + "px";
+  let x = e.clientX + 16, y = e.clientY + 16;
+  if (x + r.width > innerWidth - 10) x = e.clientX - r.width - 16;
+  if (y + r.height > innerHeight - 10) y = e.clientY - r.height - 16;
+  tip.style.left = Math.max(8, x) + "px"; tip.style.top = Math.max(8, y) + "px";
 }
 const hideTip = () => { tip.style.opacity = "0"; };
 function bindTip(node, html) {
   node.addEventListener("mousemove", (e) => showTip(e, html));
   node.addEventListener("mouseleave", hideTip);
   node.tabIndex = 0;
-  node.addEventListener("focus", (e) => {
+  node.addEventListener("focus", () => {
     const b = node.getBoundingClientRect();
-    showTip({ clientX: b.left + 20, clientY: b.top + b.height }, html);
+    showTip({ clientX: b.left + 24, clientY: b.top + b.height }, html);
   });
   node.addEventListener("blur", hideTip);
 }
 
+function productTip(p) {
+  return `
+    <div class="t-title">${esc(p.brand_name)} — ${esc(p.name)}</div>
+    <div class="t-row"><span>Pack size</span><b>${esc(sizeLabel(p))}</b></div>
+    <div class="t-row"><span>US price</span><b>${esc(money(p.price_usd, "USD"))}</b></div>
+    <div class="t-row"><span>Home (${esc(p.home_currency)})</span><b>${esc(money(p.price_home, p.home_currency))}</b></div>
+    <div class="t-row"><span>UAE ${p.price_aed_observed != null ? "observed" : "expected"}</span><b>${esc(money(p.price_aed_observed ?? p.price_aed_expected, "AED"))}</b></div>
+    <div class="t-row"><span>${esc(p.basis_label)}</span><b>${esc(money(p.norm_usd, "USD"))}</b></div>
+    ${p.price_index != null ? `<div class="t-row"><span>Index vs category</span><b>${p.price_index}</b></div>` : ""}
+    ${p.us_vs_home_pct != null ? `<div class="t-row"><span>US vs home market</span><b>${p.us_vs_home_pct > 0 ? "+" : ""}${p.us_vs_home_pct}%</b></div>` : ""}
+    <div class="t-row"><span>${TIER_LABEL[p.brand_tier]}</span><b>${p.verified ? "verified" : "estimate"}</b></div>`;
+}
+
 /* ---------- header ---------- */
 function renderHeader() {
-  const gen = new Date(D.generated_at);
-  $("#meta-generated").textContent = "Built " + gen.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
-  $("#meta-fx").textContent = `FX ${D.fx.as_of} · ${D.fx.source}`;
+  $("#meta-generated").textContent = "Built " + new Date(D.generated_at).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+  $("#meta-fx").textContent = `FX ${D.fx.as_of}`;
   $("#meta-news").textContent = D.news_generated_at
-    ? `Signals collected ${new Date(D.news_generated_at).toLocaleDateString(undefined, { dateStyle: "medium" })}`
-    : "Signals not yet collected — run scripts/collect_news.py";
+    ? `Signals ${new Date(D.news_generated_at).toLocaleDateString(undefined, { dateStyle: "medium" })}`
+    : "Signals not yet collected";
 
   const s = D.stats;
   const widest = [...D.categories].filter((c) => c.spread_multiple).sort((a, b) => b.spread_multiple - a.spread_multiple)[0];
   const tiles = [
-    { label: "Brands tracked", value: s.brands, foot: `${D.brands.filter((b) => b.role === "core_competitor").length} core competitors` },
+    { label: "Brands", value: s.brands, foot: `${D.brands.filter((b) => b.role === "core_competitor").length} core competitors` },
     { label: "SKUs priced", value: s.skus, foot: `across ${s.categories} categories` },
-    { label: "Widest price spread", value: widest ? widest.spread_multiple + "×" : "—", foot: widest ? widest.label.toLowerCase() : "" },
-    { label: "Signals collected", value: s.news_items, foot: D.news_generated_at ? "auto-refreshed daily" : "run the collector" },
+    { label: "Widest spread", value: widest ? widest.spread_multiple + "×" : "—", foot: widest ? widest.label.toLowerCase() : "" },
+    { label: "Signals", value: s.news_items, foot: "refreshed daily" },
     { label: "On the radar", value: s.watchlist, foot: "emerging & scaling" },
-    { label: "Prices verified", value: s.verified_pct + "%", foot: `${s.verified_prices} of ${s.skus} sourced` },
+    { label: "Verified prices", value: s.verified_pct + "%", foot: `${s.verified_prices} of ${s.skus} sourced` },
   ];
   const box = $("#tiles"); box.innerHTML = "";
   tiles.forEach((t) => {
@@ -115,61 +143,80 @@ function renderHeader() {
 /* ---------- price ladder ---------- */
 function renderLadder() {
   const cat = D.categories.find((c) => c.id === state.cat);
-  // Off-basis SKUs (an incense holder priced per unit, beside sticks priced per stick)
-  // are excluded: putting them on the same axis would be a comparison, not a chart.
-  const all = filtered().filter((p) => p.norm_usd != null);
-  const rows = all.filter((p) => !p.off_basis).sort((a, b) => b.norm_usd - a.norm_usd);
-  const excluded = all.length - rows.length;
-  $("#ladder-title").textContent = cat ? `Price ladder — ${cat.label}` : "Price ladder — all categories";
-  $("#ladder-basis").textContent = rows.length ? rows[0].basis_label : "—";
+  const all = filtered();
+  const asis = state.view === "asis";
+  const curKey = asis && state.cur === "home" ? "home" : state.cur;
+
+  // Like-for-like drops SKUs measured on a different basis. As-sold keeps
+  // everything: an incense holder next to a stick pack is a real shelf fact.
+  let rows, excluded = 0;
+  if (asis) {
+    rows = all.filter((p) => priceOf(p, curKey).v != null);
+  } else {
+    const withNorm = all.filter((p) => normOf(p, curKey) != null);
+    rows = withNorm.filter((p) => !p.off_basis);
+    excluded = withNorm.length - rows.length;
+  }
+
+  // Home currency cannot share an axis with itself across brands — a value in
+  // KRW and one in EUR are not comparable lengths. Bars fall back to USD.
+  const mixedHome = asis && state.cur === "home";
+  const barVal = (p) => (asis ? (mixedHome ? p.price_usd : priceOf(p, curKey).v) : normOf(p, curKey));
+  rows = rows.filter((p) => barVal(p) != null).sort((a, b) => barVal(b) - barVal(a));
+
+  $("#ladder-title").textContent =
+    (asis ? "Shelf price — " : "Price ladder — ") + (cat ? cat.label : "all categories");
+  $("#ladder-basis").textContent = asis ? "as sold" : (rows.length ? rows[0].basis_label : "—");
+  $("#ladder-note").innerHTML = asis
+    ? `<b>As sold.</b> The actual price of the actual pack, at the size the brand chose to sell it in — no rebasing. This is what the customer hands over, and it is the number a shopper compares. A 500 ml Aesop hand wash and a 250 ml Diptyque sit side by side here at their real prices; switch to <b>like for like</b> to see which is genuinely dearer per millilitre.`
+    : `<b>Like for like.</b> Everything rebased to a common basis — per 100 ml or 100 g, per stick, or per unit — so pack size cannot flatter anyone. The vertical rule is the category median. Switch to <b>as sold</b> for real shelf prices.`;
 
   const box = $("#ladder"); box.innerHTML = "";
   if (!rows.length) { box.append(el("div", "empty", "Nothing matches these filters.")); $("#ladder-foot").textContent = ""; return; }
 
-  const max = rows[0].norm_usd;
-  const median = cat ? cat.median_norm_usd : null;
+  const max = barVal(rows[0]);
+  const median = !asis && cat ? (curKey === "aed" ? null : cat.median_norm_usd) : null;
+
   rows.forEach((p, i) => {
-    const dp = displayPrice(p);
     const row = el("div", "bar-row");
-    row.append(el("div", "bar-name", `<b>${esc(p.brand_name)}</b> ${esc(p.name)}`));
+    row.append(el("div", "bar-name",
+      `<b>${esc(p.brand_name)}</b> ${esc(p.name)}${asis ? ` <span class="sz">· ${esc(sizeLabel(p))}</span>` : ""}`));
 
     const track = el("div", "track");
-    if (median && state.cat) {
+    if (median) {
       const rule = el("div", "median-rule");
       rule.style.left = (median / max * 100) + "%";
       track.append(rule);
     }
     const fill = el("div", "fill");
-    fill.style.width = Math.max(0.4, p.norm_usd / max * 100) + "%";
+    fill.style.width = Math.max(0.4, barVal(p) / max * 100) + "%";
     fill.style.background = `var(${TIER_VAR[p.brand_tier]})`;
     track.append(fill);
     row.append(track);
 
-    // Selective direct labels: the extremes carry the number in bold, the rest read normally.
+    const dp = priceOf(p, curKey);
+    const label = asis ? money(dp.v, dp.cur) : money(normOf(p, curKey), curKey === "aed" ? "AED" : "USD");
     const extreme = i === 0 || i === rows.length - 1;
-    const label = state.cur === "home"
-      ? money(dp.v, dp.cur)
-      : money(dp.norm ?? dp.v, dp.cur);
     row.append(el("div", "bar-val", extreme ? `<b>${esc(label)}</b>` : esc(label)));
 
-    bindTip(row, `
-      <div class="t-title">${esc(p.brand_name)} — ${esc(p.name)}</div>
-      <div class="t-row"><span>Size</span><b>${p.size}${p.unit === "unit" ? "" : " " + p.unit}</b></div>
-      <div class="t-row"><span>US price</span><b>${esc(money(p.price_usd, "USD"))}</b></div>
-      <div class="t-row"><span>Home (${esc(p.home_currency)})</span><b>${esc(money(p.price_home, p.home_currency))}</b></div>
-      <div class="t-row"><span>UAE ${p.price_aed_observed != null ? "observed" : "expected"}</span><b>${esc(money(p.price_aed_observed ?? p.price_aed_expected, "AED"))}</b></div>
-      <div class="t-row"><span>Normalised (${esc(p.basis_label)})</span><b>${esc(money(p.norm_usd, "USD"))}</b></div>
-      ${p.price_index != null ? `<div class="t-row"><span>Index vs category</span><b>${p.price_index}</b></div>` : ""}
-      ${p.us_vs_home_pct != null ? `<div class="t-row"><span>US vs home market</span><b>${p.us_vs_home_pct > 0 ? "+" : ""}${p.us_vs_home_pct}%</b></div>` : ""}
-      <div class="t-row"><span>${TIER_LABEL[p.brand_tier]}</span><b>${p.verified ? "verified" : "estimate"}</b></div>
-    `);
+    bindTip(row, productTip(p));
     box.append(row);
   });
 
-  const exclNote = excluded ? ` ${excluded} SKU${excluded === 1 ? "" : "s"} on a different basis excluded — see the table view.` : "";
-  $("#ladder-foot").textContent = (cat && median
-    ? `Median ${money(median, "USD")} ${rows[0].basis_label} · spread ${cat.spread_multiple}× from cheapest to dearest · ${rows.length} SKUs shown.`
-    : `${rows.length} SKUs across all categories — pick a single category for a like-for-like ladder.`) + exclNote;
+  const parts = [];
+  if (asis) {
+    parts.push(`${rows.length} SKUs at their real pack size.`);
+    if (mixedHome) parts.push("Figures are in each brand's home currency; bar length uses USD, because different currencies cannot share one axis.");
+    if (curKey === "aed") parts.push("AED figures are the FX-parity expectation unless an observed price has been recorded.");
+  } else if (cat && median) {
+    parts.push(`Median ${money(median, "USD")} ${rows[0].basis_label} · spread ${cat.spread_multiple}× cheapest to dearest · ${rows.length} SKUs.`);
+  } else if (cat && curKey === "aed") {
+    parts.push(`${rows.length} SKUs, rebased ${rows[0].basis_label} in AED.`);
+  } else {
+    parts.push(`${rows.length} SKUs across all categories — pick one category for a true like-for-like ladder.`);
+  }
+  if (excluded) parts.push(`${excluded} SKU${excluded === 1 ? "" : "s"} measured on a different basis excluded; the "as sold" view shows them.`);
+  $("#ladder-foot").textContent = parts.join(" ");
 }
 
 /* ---------- category spread ---------- */
@@ -177,63 +224,126 @@ function renderSpread() {
   const cats = D.categories.filter((c) => c.spread_multiple).sort((a, b) => b.spread_multiple - a.spread_multiple);
   const box = $("#spread"); box.innerHTML = "";
   const max = Math.max(...cats.map((c) => c.spread_multiple));
-  cats.forEach((c, i) => {
-    const row = el("div", "bar-row");
-    row.append(el("div", "bar-name", esc(c.label)));
-    const track = el("div", "track");
-    const fill = el("div", "fill");
-    fill.style.width = (c.spread_multiple / max * 100) + "%";
-    fill.style.background = "var(--series-1)";
-    track.append(fill); row.append(track);
-    const extreme = i === 0 || i === cats.length - 1;
-    row.append(el("div", "bar-val", extreme ? `<b>${c.spread_multiple}×</b>` : `${c.spread_multiple}×`));
+
+  cats.forEach((c) => {
+    const inCat = D.products.filter((p) => p.category === c.id && p.norm_usd != null && !p.off_basis);
+    const lo = inCat.reduce((a, b) => (a.norm_usd < b.norm_usd ? a : b));
+    const hi = inCat.reduce((a, b) => (a.norm_usd > b.norm_usd ? a : b));
+
+    const row = el("div", "spread-row");
+    const head = el("div", "spread-head");
+    head.append(el("span", "cat", esc(c.label)));
+    head.append(el("span", "chip plain", esc(c.basis_label || "")));
+    head.append(el("span", "mult", `${c.spread_multiple}×`));
+    row.append(head);
+
+    const bar = el("div", "spread-bar");
+    const inner = el("i");
+    inner.style.left = "0%";
+    inner.style.width = (c.spread_multiple / max * 100) + "%";
+    bar.append(inner);
+    row.append(bar);
+
+    const ends = el("div", "spread-ends");
+    ends.append(el("span", null, `Cheapest · ${esc(lo.brand_name)} ${esc(money(lo.norm_usd, "USD"))}`));
+    ends.append(el("span", null, `Dearest · ${esc(hi.brand_name)} ${esc(money(hi.norm_usd, "USD"))}`));
+    row.append(ends);
+
     bindTip(row, `
       <div class="t-title">${esc(c.label)}</div>
+      <div class="t-row"><span>Basis</span><b>${esc(c.basis_label || "—")}</b></div>
       <div class="t-row"><span>Cheapest</span><b>${esc(money(c.min_norm_usd, "USD"))}</b></div>
       <div class="t-row"><span>Median</span><b>${esc(money(c.median_norm_usd, "USD"))}</b></div>
       <div class="t-row"><span>Dearest</span><b>${esc(money(c.max_norm_usd, "USD"))}</b></div>
-      <div class="t-row"><span>Basis</span><b>${esc(c.basis_label || "—")}</b></div>
+      <div class="t-row"><span>Spread</span><b>${c.spread_multiple}×</b></div>
       <div class="t-row"><span>Comparable SKUs · brands</span><b>${c.comparable_count} · ${c.brand_count}</b></div>
-      ${c.off_basis_count ? `<div class="t-row"><span>Excluded (other basis)</span><b>${c.off_basis_count}</b></div>` : ""}
-    `);
+      ${c.off_basis_count ? `<div class="t-row"><span>Excluded (other basis)</span><b>${c.off_basis_count}</b></div>` : ""}`);
     box.append(row);
   });
 }
 
-/* ---------- UAE gap (diverging) ---------- */
-function renderAedGap() {
-  const rows = D.products.filter((p) => p.aed_gap_pct != null).sort((a, b) => b.aed_gap_pct - a.aed_gap_pct);
+/* ---------- UAE pricing ---------- */
+function renderAed() {
+  const gaps = D.products.filter((p) => p.aed_gap_pct != null).sort((a, b) => b.aed_gap_pct - a.aed_gap_pct);
   const box = $("#aedgap"); box.innerHTML = "";
-  if (!rows.length) {
-    box.append(el("div", "empty",
-      `No observed UAE prices recorded yet. Add a real AED shelf price to <code>px.aed</code> on any SKU and this chart fills in — that gap against parity is the most decision-useful number the dashboard produces.`));
-    return;
+  const uplift = D.fx.uae.uplift_by_tier;
+
+  $("#aed-note").innerHTML = `
+    <b>The model.</b> Expected UAE shelf price = US price × ${D.fx.rates.AED} × a tier uplift covering
+    5% VAT plus importer and distributor margin
+    (luxury +${Math.round(uplift.luxury * 100)}%, premium +${Math.round(uplift.premium * 100)}%,
+    masstige +${Math.round(uplift.masstige * 100)}%, mass +${Math.round(uplift.mass * 100)}%).<br><br>
+    <b>Why it matters.</b> Once you record a real observed AED price, the gap against this
+    expectation is the single most decision-useful number here: a large positive gap is pricing
+    power or grey-market exposure, a negative one means the brand is buying share.
+    Brands that price in AED natively are excluded — for them the comparison is circular.`;
+
+  if (gaps.length) {
+    const max = Math.max(30, ...gaps.map((r) => Math.abs(r.aed_gap_pct)));
+    const chart = el("div");
+    gaps.forEach((p) => {
+      const row = el("div", "div-row");
+      row.append(el("div", "bar-name", `<b>${esc(p.brand_name)}</b> ${esc(p.name)}`));
+      const track = el("div", "div-track");
+      track.append(el("div", "div-axis"));
+      const fill = el("div", "div-fill");
+      const w = Math.abs(p.aed_gap_pct) / max * 50;
+      if (p.aed_gap_pct >= 0) { fill.style.left = "50%"; fill.style.background = "var(--div-high)"; }
+      else { fill.style.right = "50%"; fill.style.background = "var(--div-low)"; }
+      fill.style.width = w + "%";
+      track.append(fill); row.append(track);
+      row.append(el("div", "bar-val", `<b>${p.aed_gap_pct > 0 ? "+" : ""}${p.aed_gap_pct}%</b>`));
+      bindTip(row, `
+        <div class="t-title">${esc(p.brand_name)} — ${esc(p.name)}</div>
+        <div class="t-row"><span>Observed AED</span><b>${esc(money(p.price_aed_observed, "AED"))}</b></div>
+        <div class="t-row"><span>Expected AED</span><b>${esc(money(p.price_aed_expected, "AED"))}</b></div>
+        <div class="t-row"><span>At pure FX parity</span><b>${esc(money(p.price_aed_parity, "AED"))}</b></div>`);
+      chart.append(row);
+    });
+    box.append(el("h3", null, "Observed vs expected"), chart);
   }
-  const max = Math.max(30, ...rows.map((r) => Math.abs(r.aed_gap_pct)));
-  rows.forEach((p) => {
-    const row = el("div", "div-row");
-    row.append(el("div", "bar-name", `<b>${esc(p.brand_name)}</b> ${esc(p.name)}`));
-    const track = el("div", "div-track");
-    track.append(el("div", "div-axis"));
-    const fill = el("div", "div-fill");
-    const w = Math.abs(p.aed_gap_pct) / max * 50;
-    if (p.aed_gap_pct >= 0) { fill.style.left = "50%"; fill.style.borderRadius = "0 4px 4px 0"; fill.style.background = "var(--div-high)"; }
-    else { fill.style.right = "50%"; fill.style.borderRadius = "4px 0 0 4px"; fill.style.background = "var(--div-low)"; }
-    fill.style.width = w + "%";
+
+  // Verification queue — the hero SKUs to price-check, expectation pre-computed.
+  const queue = D.products
+    .filter((p) => p.hero && !p.aed_native && p.price_aed_expected != null && p.price_aed_observed == null)
+    .filter(matches)
+    .sort((a, b) => b.price_aed_expected - a.price_aed_expected);
+
+  box.append(el("h3", null, gaps.length ? "Verification queue" : "Expected shelf price — verification queue"));
+  if (!queue.length) { box.append(el("div", "empty", "No hero SKUs left to verify in this filter.")); return; }
+
+  box.append(el("p", "note",
+    `No observed UAE prices are recorded for these yet, so the figures below are the model's
+     expectation, not a shelf fact. Check one on Ounass, Sephora ME or Bloomingdale's Dubai,
+     put the real number in <code>px.aed</code> and set <code>conf: "ver"</code> — the gap chart
+     above turns on as soon as you do. ${queue.length} hero SKUs outstanding.`));
+
+  const max = Math.max(...queue.map((p) => p.price_aed_expected));
+  const chart = el("div", "bars");
+  queue.slice(0, 24).forEach((p, i) => {
+    const row = el("div", "bar-row");
+    row.append(el("div", "bar-name", `<b>${esc(p.brand_name)}</b> ${esc(p.name)} <span class="sz">· ${esc(sizeLabel(p))}</span>`));
+    const track = el("div", "track");
+    const fill = el("div", "fill");
+    fill.style.width = (p.price_aed_expected / max * 100) + "%";
+    fill.style.background = `var(${TIER_VAR[p.brand_tier]})`;
     track.append(fill); row.append(track);
-    row.append(el("div", "bar-val", `<b>${p.aed_gap_pct > 0 ? "+" : ""}${p.aed_gap_pct}%</b>`));
+    const extreme = i === 0 || i === Math.min(queue.length, 24) - 1;
+    const lbl = money(p.price_aed_expected, "AED");
+    row.append(el("div", "bar-val", extreme ? `<b>${esc(lbl)}</b>` : esc(lbl)));
     bindTip(row, `
       <div class="t-title">${esc(p.brand_name)} — ${esc(p.name)}</div>
-      <div class="t-row"><span>Observed AED</span><b>${esc(money(p.price_aed_observed, "AED"))}</b></div>
-      <div class="t-row"><span>Expected AED</span><b>${esc(money(p.price_aed_expected, "AED"))}</b></div>
-      <div class="t-row"><span>At pure FX parity</span><b>${esc(money(p.price_aed_parity, "AED"))}</b></div>
-    `);
-    box.append(row);
+      <div class="t-row"><span>US price</span><b>${esc(money(p.price_usd, "USD"))}</b></div>
+      <div class="t-row"><span>At FX parity</span><b>${esc(money(p.price_aed_parity, "AED"))}</b></div>
+      <div class="t-row"><span>+ ${p.aed_uplift_pct}% ${TIER_LABEL[p.brand_tier].toLowerCase()} uplift</span><b>${esc(money(p.price_aed_expected, "AED"))}</b></div>
+      <div class="t-row"><span>Observed</span><b>not yet recorded</b></div>`);
+    chart.append(row);
   });
-  box.append(el("p", "median-caption", `Expectation = US price × ${D.fx.rates.AED} × tier uplift. ${rows.length} of ${D.stats.skus} SKUs have an observed UAE price.`));
+  box.append(chart);
+  if (queue.length > 24) box.append(el("p", "chart-foot", `Showing the 24 highest-value of ${queue.length} outstanding hero SKUs.`));
 }
 
-/* ---------- range coverage matrix ---------- */
+/* ---------- range coverage ---------- */
 function renderMatrix() {
   const cats = D.categories;
   const counts = {};
@@ -246,12 +356,11 @@ function renderMatrix() {
     .sort((a, b) => Object.keys(counts[b.id]).length - Object.keys(counts[a.id]).length || a.name.localeCompare(b.name));
 
   const t = el("table", "matrix");
-  const thead = el("thead");
   const hr = el("tr");
   hr.append(el("th", "brand", ""));
   cats.forEach((c) => hr.append(el("th", "rot", esc(c.label))));
   hr.append(el("th", "", "Cats"));
-  thead.append(hr); t.append(thead);
+  const thead = el("thead"); thead.append(hr); t.append(thead);
 
   const tb = el("tbody");
   rows.forEach((b) => {
@@ -264,7 +373,7 @@ function renderMatrix() {
       bindTip(td, `<div class="t-title">${esc(b.name)}</div><div class="t-row"><span>${esc(c.label)}</span><b>${n} SKU${n === 1 ? "" : "s"}</b></div>`);
       tr.append(td);
     });
-    tr.append(el("td", "", `<span style="color:var(--text-secondary);font-variant-numeric:tabular-nums">${Object.keys(counts[b.id]).length}</span>`));
+    tr.append(el("td", "", `<span style="color:var(--ink-2);font-variant-numeric:tabular-nums">${Object.keys(counts[b.id]).length}</span>`));
     tb.append(tr);
   });
   t.append(tb);
@@ -272,26 +381,26 @@ function renderMatrix() {
   box.append(rows.length ? t : el("div", "empty", "Nothing matches these filters."));
 }
 
-/* ---------- SKU table (the table-view twin) ---------- */
+/* ---------- SKU table ---------- */
 function renderSkuTable() {
   const rows = filtered().sort((a, b) => (b.norm_usd ?? 0) - (a.norm_usd ?? 0));
   const t = $("#sku-table");
   t.innerHTML = `<thead><tr>
     <th>Brand</th><th>Product</th><th>Category</th><th>Size</th>
     <th class="num">Home</th><th class="num">USD</th><th class="num">AED</th>
-    <th class="num">Norm. USD</th><th class="num">Index</th><th>Confidence</th></tr></thead>`;
+    <th class="num">Like for like</th><th class="num">Index</th><th>Confidence</th></tr></thead>`;
   const tb = el("tbody");
   rows.forEach((p) => {
     const tr = el("tr");
     tr.innerHTML = `
       <td>${esc(p.brand_name)}</td>
-      <td>${esc(p.name)}</td>
+      <td>${esc(p.name)}${p.off_basis ? '<div class="sub">other basis — excluded from the ladder</div>' : ""}</td>
       <td>${esc(p.category_label)}</td>
-      <td class="num">${p.size}${p.unit === "unit" ? "" : " " + esc(p.unit)}</td>
+      <td class="num">${esc(sizeLabel(p))}</td>
       <td class="num">${esc(money(p.price_home, p.home_currency))}</td>
       <td class="num">${esc(money(p.price_usd, "USD"))}</td>
-      <td class="num">${esc(money(p.price_aed_observed ?? p.price_aed_expected, "AED"))}${p.price_aed_observed == null ? ' <span style="color:var(--text-muted)">exp</span>' : ""}</td>
-      <td class="num">${esc(money(p.norm_usd, "USD"))}</td>
+      <td class="num">${esc(money(p.price_aed_observed ?? p.price_aed_expected, "AED"))}${p.price_aed_observed == null ? ' <span style="color:var(--ink-3)">exp</span>' : ""}</td>
+      <td class="num">${esc(money(p.norm_usd, "USD"))}<div class="sub">${esc(p.basis_label)}</div></td>
       <td class="num">${p.price_index ?? "—"}</td>
       <td><span class="chip ${p.verified ? "ver" : "est"}">${p.verified ? "verified" : "estimate"}</span></td>`;
     tb.append(tr);
@@ -299,17 +408,17 @@ function renderSkuTable() {
   t.append(tb);
 }
 
-/* ---------- signals ---------- */
+/* ---------- news ---------- */
 function newsFiltered() {
   return D.news.filter((n) => {
     if (state.tag && !(n.tags || []).includes(state.tag)) return false;
     if (state.region && n.region !== state.region) return false;
+    if (state.brand && n.brand !== state.brand) return false;
     if (state.q) {
       const hay = ((n.brand_name || "") + " " + n.title + " " + (n.source || "")).toLowerCase();
       if (!hay.includes(state.q.toLowerCase())) return false;
     }
     if (state.tier || state.role) {
-      if (!n.brand) return false;
       const b = D.brands.find((x) => x.id === n.brand);
       if (!b) return false;
       if (state.tier && b.tier !== state.tier) return false;
@@ -319,6 +428,30 @@ function newsFiltered() {
   });
 }
 
+function renderNews() {
+  const items = newsFiltered();
+  const box = $("#news-list"); box.innerHTML = "";
+  if (!items.length) {
+    box.append(el("div", "empty", "No headlines match. If it is empty everywhere, run <code>python3 scripts/collect_news.py</code> then rebuild."));
+    return;
+  }
+  items.slice(0, 250).forEach((n) => {
+    const s = el("div", "signal");
+    s.append(el("time", null, esc(n.published || "undated")));
+    const body = el("div");
+    body.append(el("div", null, `<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>`));
+    body.append(el("div", "src", `${esc(n.source || "—")}${n.brand_name ? " · " + esc(n.brand_name) : ""}${n.region === "uae" ? " · UAE/GCC" : ""}`));
+    if ((n.tags || []).length) {
+      const chips = el("div", "chips");
+      n.tags.forEach((t) => chips.append(el("span", "chip tag", esc(TAG_LABEL[t] || t))));
+      body.append(chips);
+    }
+    s.append(body); box.append(s);
+  });
+  if (items.length > 250) box.append(el("p", "chart-foot", `Showing the 250 most recent of ${items.length} matching headlines — narrow with the filters above.`));
+}
+
+/* ---------- PR & initiatives ---------- */
 function simpleBars(target, entries, unitLabel) {
   const box = $(target); box.innerHTML = "";
   if (!entries.length) {
@@ -332,7 +465,7 @@ function simpleBars(target, entries, unitLabel) {
     const track = el("div", "track");
     const fill = el("div", "fill");
     fill.style.width = (n / max * 100) + "%";
-    fill.style.background = "var(--series-1)";
+    fill.style.background = "var(--accent)";
     track.append(fill); row.append(track);
     const extreme = i === 0 || i === entries.length - 1;
     row.append(el("div", "bar-val", extreme ? `<b>${n}</b>` : String(n)));
@@ -341,8 +474,9 @@ function simpleBars(target, entries, unitLabel) {
   });
 }
 
-function renderSignals() {
+function renderPr() {
   const items = newsFiltered();
+  $("#pr-count").textContent = `${items.length} headlines`;
 
   const tagCounts = {};
   items.forEach((n) => (n.tags || []).forEach((t) => (tagCounts[t] = (tagCounts[t] || 0) + 1)));
@@ -352,42 +486,57 @@ function renderSignals() {
   items.forEach((n) => { if (n.brand_name) sov[n.brand_name] = (sov[n.brand_name] || 0) + 1; });
   simpleBars("#sovchart", Object.entries(sov).sort((a, b) => b[1] - a[1]).slice(0, 14), "headlines");
 
-  const box = $("#timeline"); box.innerHTML = "";
-  if (!items.length) {
-    box.append(el("div", "empty", "No signals match. If the list is empty everywhere, run <code>python3 scripts/collect_news.py</code> then rebuild."));
-    return;
-  }
-  items.slice(0, 200).forEach((n) => {
-    const s = el("div", "signal");
-    s.append(el("time", null, esc(n.published || "undated")));
-    const body = el("div");
-    body.append(el("div", null, `<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>`));
-    body.append(el("div", "src", `${esc(n.source || "—")}${n.brand_name ? " · " + esc(n.brand_name) : ""}${n.region === "uae" ? " · UAE/GCC" : ""}`));
-    if ((n.tags || []).length) {
-      const chips = el("div", "chips");
-      n.tags.forEach((t) => chips.append(el("span", "chip tag", esc(TAG_LABEL[t] || t))));
-      body.append(chips);
-    }
-    s.append(body); box.append(s);
+  // brand x initiative matrix
+  const grid = {};
+  items.forEach((n) => {
+    if (!n.brand) return;
+    grid[n.brand] = grid[n.brand] || {};
+    (n.tags || []).forEach((t) => (grid[n.brand][t] = (grid[n.brand][t] || 0) + 1));
   });
-  if (items.length > 200) box.append(el("p", "median-caption", `Showing the 200 most recent of ${items.length} matching signals — narrow with the filters above.`));
+  const brands = Object.keys(grid)
+    .map((id) => D.brands.find((b) => b.id === id))
+    .filter(Boolean)
+    .sort((a, b) => Object.keys(grid[b.id]).length - Object.keys(grid[a.id]).length || a.name.localeCompare(b.name));
+
+  const box = $("#pr-matrix"); box.innerHTML = "";
+  if (!brands.length) { box.append(el("div", "empty", "No tagged headlines in this filter.")); return; }
+
+  const t = el("table", "matrix");
+  const hr = el("tr");
+  hr.append(el("th", "brand", ""));
+  TAG_KEYS.forEach((k) => hr.append(el("th", "rot", esc(TAG_LABEL[k]))));
+  const thead = el("thead"); thead.append(hr); t.append(thead);
+  const tb = el("tbody");
+  brands.forEach((b) => {
+    const tr = el("tr");
+    tr.append(el("th", "brand", esc(b.name)));
+    TAG_KEYS.forEach((k) => {
+      const n = grid[b.id][k] || 0;
+      const td = el("td", n ? "on" : "");
+      if (n) td.dataset.n = n;
+      bindTip(td, `<div class="t-title">${esc(b.name)}</div><div class="t-row"><span>${esc(TAG_LABEL[k])}</span><b>${n} headline${n === 1 ? "" : "s"}</b></div>`);
+      tr.append(td);
+    });
+    tb.append(tr);
+  });
+  t.append(tb);
+  box.append(t);
 }
 
 /* ---------- radar ---------- */
 function renderRadar() {
   const box = $("#radar"); box.innerHTML = "";
-  const list = [...D.watchlist].sort((a, b) => b.momentum - a.momentum);
-  list.forEach((w) => {
+  [...D.watchlist].sort((a, b) => b.momentum - a.momentum).forEach((w) => {
     const c = el("div", "radar-card");
     c.append(el("h3", null, `${esc(w.name)} <span class="chip"><i class="dot" style="background:var(${THREAT_VAR[w.threat] || "--good"})"></i>${esc(w.threat)} threat</span>`));
     c.append(el("div", "place", `${esc(w.country)}${w.founded ? " · founded " + w.founded : ""} · ${esc((w.categories || []).join(", ").replace(/_/g, " "))}${w.needs_review ? " · needs review" : ""}`));
     const meter = el("div", "meter");
     for (let i = 1; i <= 5; i++) {
       const pip = el("i");
-      if (i <= w.momentum) pip.style.background = "var(--series-1)";
+      if (i <= w.momentum) pip.style.background = "var(--accent)";
       meter.append(pip);
     }
-    meter.append(el("span", "lbl", `momentum ${w.momentum}/5`));
+    meter.append(el("span", "lbl", `momentum ${w.momentum} of 5`));
     c.append(meter);
     c.append(el("p", null, esc(w.why)));
     if ((w.signals || []).length) {
@@ -409,22 +558,20 @@ const BRAND_COLS = [
   { k: "avg_price_index", t: "Avg index", num: true },
   { k: "news_count", t: "Signals", num: true },
 ];
-function brandRows() {
-  return D.brands
+function renderBrands() {
+  const rows = D.brands
     .filter((b) => (!state.tier || b.tier === state.tier) && (!state.role || b.role === state.role) &&
       (!state.q || (b.name + " " + b.owner + " " + b.positioning).toLowerCase().includes(state.q.toLowerCase())))
-    .map((b) => ({ ...b, uae_status: b.uae.status, categories_n: (b.categories_tracked || []).length }));
-}
-function renderBrands() {
-  const rows = brandRows().sort((a, b) => {
-    const { key, dir } = state.sort;
-    const x = a[key], y = b[key];
-    if (x == null) return 1; if (y == null) return -1;
-    return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * dir;
-  });
-  const t = $("#brand-table");
-  t.innerHTML = "";
-  const thead = el("thead"); const tr = el("tr");
+    .map((b) => ({ ...b, uae_status: b.uae.status, categories_n: (b.categories_tracked || []).length }))
+    .sort((a, b) => {
+      const { key, dir } = state.sort;
+      const x = a[key], y = b[key];
+      if (x == null) return 1; if (y == null) return -1;
+      return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * dir;
+    });
+
+  const t = $("#brand-table"); t.innerHTML = "";
+  const tr = el("tr");
   BRAND_COLS.forEach((c) => {
     const th = el("th", c.num ? "num" : "", esc(c.t) + (state.sort.key === c.k ? (state.sort.dir === 1 ? " ↑" : " ↓") : ""));
     th.onclick = () => {
@@ -433,17 +580,18 @@ function renderBrands() {
     };
     tr.append(th);
   });
-  thead.append(tr); t.append(thead);
+  const thead = el("thead"); thead.append(tr); t.append(thead);
+
   const tb = el("tbody");
   rows.forEach((b) => {
     const row = el("tr");
     row.innerHTML = `
-      <td><b>${esc(b.name)}</b>${b.needs_review ? ' <span class="chip est">review</span>' : ""}<div style="color:var(--text-muted);font-size:11.5px">${esc(b.positioning)}</div></td>
-      <td><span class="chip"><i class="swatch" style="background:var(${TIER_VAR[b.tier]})"></i>${esc(TIER_LABEL[b.tier])}</span></td>
+      <td><b>${esc(b.name)}</b>${b.needs_review ? ' <span class="chip est">review</span>' : ""}<div class="sub">${esc(b.positioning)}</div></td>
+      <td><span class="chip"><i class="swatch" style="width:12px;height:3px;background:var(${TIER_VAR[b.tier]})"></i>${esc(TIER_LABEL[b.tier])}</span></td>
       <td>${esc(b.role.replace(/_/g, " "))}</td>
       <td>${esc(b.country)}</td>
       <td>${esc(b.owner)}</td>
-      <td>${esc(b.uae.status.replace(/_/g, " "))}${(b.uae.channels || []).length ? `<div style="color:var(--text-muted);font-size:11.5px">${esc(b.uae.channels.join(", "))}</div>` : ""}</td>
+      <td>${esc(b.uae.status.replace(/_/g, " "))}${(b.uae.channels || []).length ? `<div class="sub">${esc(b.uae.channels.join(", "))}</div>` : ""}</td>
       <td class="num">${b.sku_count}</td>
       <td class="num">${b.categories_n}</td>
       <td class="num">${b.avg_price_index ?? "—"}</td>
@@ -455,8 +603,9 @@ function renderBrands() {
 
 /* ---------- wiring ---------- */
 function renderAll() {
-  if (state.tab === "pricing") { renderLadder(); renderSpread(); renderAedGap(); renderMatrix(); renderSkuTable(); }
-  if (state.tab === "signals") renderSignals();
+  if (state.tab === "pricing") { renderLadder(); renderSpread(); renderAed(); renderMatrix(); renderSkuTable(); }
+  if (state.tab === "news") renderNews();
+  if (state.tab === "pr") renderPr();
   if (state.tab === "radar") renderRadar();
   if (state.tab === "brands") renderBrands();
 }
@@ -464,35 +613,46 @@ function renderAll() {
 function setTab(tab) {
   state.tab = tab;
   document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === tab)));
-  ["pricing", "signals", "radar", "brands"].forEach((t) => $("#panel-" + t).classList.toggle("hidden", t !== tab));
-  // Currency + table view only mean something on the pricing tab.
-  $("#f-cur").parentElement.style.display = tab === "pricing" ? "" : "none";
-  $("#toggle-table").style.display = tab === "pricing" ? "" : "none";
-  // Category scopes the ladder only. The directory lists every brand; the signals
-  // feed is not category-tagged. Showing an inert control would be worse than hiding it.
-  $("#f-cat").parentElement.style.display = tab === "pricing" ? "" : "none";
+  ["pricing", "news", "pr", "radar", "brands"].forEach((t) => $("#panel-" + t).classList.toggle("hidden", t !== tab));
+  // Only show a control where it actually scopes something.
+  const pricing = tab === "pricing";
+  $("#w-cat").classList.toggle("hidden", !pricing);
+  $("#w-view").classList.toggle("hidden", !pricing);
+  $("#w-cur").classList.toggle("hidden", !pricing);
   renderAll();
 }
 
 function init() {
-  const catSel = $("#f-cat");
-  catSel.innerHTML = `<option value="">All categories</option>` +
+  let saved = "auto";
+  try { saved = localStorage.getItem("ci-theme") || "auto"; } catch (e) { /* private mode */ }
+  applyTheme(saved);
+  document.querySelectorAll("[data-theme-set]").forEach((b) =>
+    b.addEventListener("click", () => applyTheme(b.dataset.themeSet)));
+
+  $("#f-cat").innerHTML = `<option value="">All categories</option>` +
     D.categories.map((c) => `<option value="${c.id}">${esc(c.label)}</option>`).join("");
-  state.cat = D.categories.find((c) => c.id === "soap") ? "soap" : D.categories[0]?.id || "";
-  catSel.value = state.cat;
+  state.cat = D.categories.some((c) => c.id === "soap") ? "soap" : (D.categories[0]?.id || "");
+  $("#f-cat").value = state.cat;
 
   $("#f-tag").innerHTML = `<option value="">All initiative types</option>` +
-    Object.keys(TAG_LABEL).map((k) => `<option value="${k}">${esc(TAG_LABEL[k])}</option>`).join("");
+    TAG_KEYS.map((k) => `<option value="${k}">${esc(TAG_LABEL[k])}</option>`).join("");
+
+  const withNews = D.brands.filter((b) => b.news_count > 0).sort((a, b) => a.name.localeCompare(b.name));
+  $("#f-brand").innerHTML = `<option value="">All brands</option>` +
+    withNews.map((b) => `<option value="${b.id}">${esc(b.name)} (${b.news_count})</option>`).join("");
 
   const bind = (sel, key) => $(sel).addEventListener("input", (e) => { state[key] = e.target.value; renderAll(); });
-  bind("#f-cat", "cat"); bind("#f-tier", "tier"); bind("#f-role", "role");
-  bind("#f-cur", "cur"); bind("#f-q", "q"); bind("#f-tag", "tag"); bind("#f-region", "region");
-
-  $("#toggle-table").addEventListener("click", (e) => {
-    state.table = !state.table;
-    e.target.setAttribute("aria-pressed", String(state.table));
-    $("#card-table").classList.toggle("hidden", !state.table);
+  ["#f-cat:cat", "#f-tier:tier", "#f-role:role", "#f-cur:cur", "#f-q:q",
+   "#f-tag:tag", "#f-region:region", "#f-brand:brand"].forEach((pair) => {
+    const [sel, key] = pair.split(":");
+    bind(sel, key);
   });
+
+  document.querySelectorAll("[data-view]").forEach((b) => b.addEventListener("click", () => {
+    state.view = b.dataset.view;
+    document.querySelectorAll("[data-view]").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.view === state.view)));
+    renderLadder();
+  }));
 
   document.querySelectorAll("nav.tabs button").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
 
