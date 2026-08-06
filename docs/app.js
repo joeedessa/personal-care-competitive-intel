@@ -27,6 +27,11 @@ const TAG_LABEL = {
   corporate: "Corporate & M&A", awards_press: "Awards & press",
 };
 const TAG_KEYS = Object.keys(TAG_LABEL);
+const KIND_LABEL = {
+  same_tier_gap: "Same-tier gap", pack_illusion: "Pack-size illusion", geography: "Geography premium",
+  white_space: "White space", uae_gap: "UAE exposure", price_leader: "Price leadership",
+  momentum: "Coverage momentum", initiative: "Comms focus", entry_price: "Entry price",
+};
 
 const state = {
   cat: "", tier: "", role: "", cur: "usd", q: "", tag: "", region: "", brand: "",
@@ -179,8 +184,9 @@ function renderLadder() {
 
   rows.forEach((p, i) => {
     const row = el("div", "bar-row");
-    row.append(el("div", "bar-name",
-      `<b>${esc(p.brand_name)}</b> ${esc(p.name)}${asis ? ` <span class="sz">· ${esc(sizeLabel(p))}</span>` : ""}`));
+    const nameCell = el("div", "bar-name",
+      `<b class="brand-link" data-brand="${esc(p.brand)}">${esc(p.brand_name)}</b> ${esc(p.name)}${asis ? ` <span class="sz">· ${esc(sizeLabel(p))}</span>` : ""}`);
+    row.append(nameCell);
 
     const track = el("div", "track");
     if (median) {
@@ -393,15 +399,15 @@ function renderSkuTable() {
   rows.forEach((p) => {
     const tr = el("tr");
     tr.innerHTML = `
-      <td>${esc(p.brand_name)}</td>
-      <td>${esc(p.name)}${p.off_basis ? '<div class="sub">other basis — excluded from the ladder</div>' : ""}</td>
-      <td>${esc(p.category_label)}</td>
-      <td class="num">${esc(sizeLabel(p))}</td>
-      <td class="num">${esc(money(p.price_home, p.home_currency))}</td>
-      <td class="num">${esc(money(p.price_usd, "USD"))}</td>
+      <td data-l="Brand"><span class="brand-link" data-brand="${esc(p.brand)}">${esc(p.brand_name)}</span></td>
+      <td data-l="Product">${esc(p.name)}${p.off_basis ? '<div class="sub">other basis — excluded from the ladder</div>' : ""}</td>
+      <td data-l="Category">${esc(p.category_label)}</td>
+      <td class="num" data-l="Size">${esc(sizeLabel(p))}</td>
+      <td class="num" data-l="Home">${esc(money(p.price_home, p.home_currency))}</td>
+      <td class="num" data-l="USD">${esc(money(p.price_usd, "USD"))}</td>
       <td class="num">${esc(money(p.price_aed_observed ?? p.price_aed_expected, "AED"))}${p.price_aed_observed == null ? ' <span style="color:var(--ink-3)">exp</span>' : ""}</td>
       <td class="num">${esc(money(p.norm_usd, "USD"))}<div class="sub">${esc(p.basis_label)}</div></td>
-      <td class="num">${p.price_index ?? "—"}</td>
+      <td class="num" data-l="Index">${p.price_index ?? "—"}</td>
       <td><span class="chip ${p.verified ? "ver" : "est"}">${p.verified ? "verified" : "estimate"}</span></td>`;
     tb.append(tr);
   });
@@ -586,23 +592,267 @@ function renderBrands() {
   rows.forEach((b) => {
     const row = el("tr");
     row.innerHTML = `
-      <td><b>${esc(b.name)}</b>${b.needs_review ? ' <span class="chip est">review</span>' : ""}<div class="sub">${esc(b.positioning)}</div></td>
+      <td data-l="Brand"><b class="brand-link" data-brand="${esc(b.id)}">${esc(b.name)}</b>${b.needs_review ? ' <span class="chip est">review</span>' : ""}<div class="sub">${esc(b.positioning)}</div></td>
       <td><span class="chip"><i class="swatch" style="width:12px;height:3px;background:var(${TIER_VAR[b.tier]})"></i>${esc(TIER_LABEL[b.tier])}</span></td>
-      <td>${esc(b.role.replace(/_/g, " "))}</td>
-      <td>${esc(b.country)}</td>
-      <td>${esc(b.owner)}</td>
+      <td data-l="Role">${esc(b.role.replace(/_/g, " "))}</td>
+      <td data-l="Home">${esc(b.country)}</td>
+      <td data-l="Owner">${esc(b.owner)}</td>
       <td>${esc(b.uae.status.replace(/_/g, " "))}${(b.uae.channels || []).length ? `<div class="sub">${esc(b.uae.channels.join(", "))}</div>` : ""}</td>
-      <td class="num">${b.sku_count}</td>
-      <td class="num">${b.categories_n}</td>
-      <td class="num">${b.avg_price_index ?? "—"}</td>
-      <td class="num">${b.news_count}</td>`;
+      <td class="num" data-l="SKUs">${b.sku_count}</td>
+      <td class="num" data-l="Cats">${b.categories_n}</td>
+      <td class="num" data-l="Avg index">${b.avg_price_index ?? "—"}</td>
+      <td class="num" data-l="Signals">${b.news_count}</td>`;
     tb.append(row);
   });
   t.append(tb);
 }
 
+/* ===========================================================================
+   Overview — computed findings
+   =========================================================================== */
+function applyFocus(f) {
+  const focus = f.focus || {};
+  if (focus.cat != null) { state.cat = focus.cat; $("#f-cat").value = focus.cat; }
+  if (focus.tier != null) { state.tier = focus.tier; $("#f-tier").value = focus.tier; }
+  if (focus.tag != null) { state.tag = focus.tag; $("#f-tag").value = focus.tag; }
+  if (focus.brand != null) { state.brand = focus.brand; $("#f-brand").value = focus.brand; }
+  if (focus.view != null) {
+    state.view = focus.view;
+    document.querySelectorAll("[data-view]").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.view === state.view)));
+  }
+  setTab(f.tab || "pricing");
+  scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function renderOverview() {
+  const all = D.findings || [];
+  const hero = all[0];
+  const box = $("#hero-finding"); box.innerHTML = "";
+  if (hero) {
+    const h = el("div", "hero-finding");
+    h.innerHTML = `
+      <div class="kicker"><span>Headline finding</span><span style="color:var(--ink-3)">${esc(KIND_LABEL[hero.kind] || hero.kind)}</span></div>
+      <div class="metric">${esc(hero.metric)}</div>
+      <h2>${esc(hero.headline)}</h2>
+      <p>${esc(hero.detail)}</p>`;
+    box.append(h);
+  }
+
+  const grid = $("#findings"); grid.innerHTML = "";
+  all.slice(1).forEach((f) => {
+    const card = el("button", "finding");
+    card.type = "button";
+    card.innerHTML = `
+      <div class="f-top">
+        <span class="f-rank">${String(f.rank).padStart(2, "0")}</span>
+        <span class="f-rank">${esc(KIND_LABEL[f.kind] || f.kind)}</span>
+        <span class="f-metric">${esc(f.metric)}</span>
+      </div>
+      <p class="f-head">${esc(f.headline)}</p>
+      <p class="f-detail">${esc(f.detail)}</p>
+      <span class="f-cta">See the evidence →</span>`;
+    card.addEventListener("click", () => applyFocus(f));
+    grid.append(card);
+  });
+  if (!all.length) grid.append(el("div", "empty", "No findings — the analysis layer needs priced SKUs. Run <code>python3 scripts/build.py</code>."));
+}
+
+/* ===========================================================================
+   Positioning map
+   =========================================================================== */
+function renderMap() {
+  const rows = (D.positioning || []).filter((r) =>
+    (!state.tier || r.tier === state.tier) &&
+    (!state.role || r.role === state.role) &&
+    (!state.q || r.name.toLowerCase().includes(state.q.toLowerCase())));
+  $("#map-count").textContent = `${rows.length} brands`;
+
+  const box = $("#map"); box.innerHTML = "";
+  if (!rows.length) { box.append(el("div", "empty", "Nothing matches these filters.")); return; }
+
+  const W = 980, H = 560, M = { t: 26, r: 30, b: 62, l: 70 };
+  const maxB = Math.max(...rows.map((r) => r.breadth), 4);
+  const maxI = Math.max(...rows.map((r) => r.index));
+  const maxSk = Math.max(...rows.map((r) => r.skus));
+  // Index is heavily right-skewed (La Mer at 464 vs most brands near 100), so the
+  // vertical scale is sqrt — it keeps the crowded middle readable without a log's
+  // false precision at the bottom.
+  const x = (b) => M.l + (b - 1) / Math.max(1, maxB - 1) * (W - M.l - M.r);
+  const y = (i) => H - M.b - (Math.sqrt(i) / Math.sqrt(maxI)) * (H - M.t - M.b);
+  const r = (s) => 5 + Math.sqrt(s / maxSk) * 12;
+
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Brand positioning: range breadth against average price index");
+  const add = (tag, attrs, cls) => {
+    const n = document.createElementNS(ns, tag);
+    Object.entries(attrs).forEach(([k, v]) => n.setAttribute(k, v));
+    if (cls) n.setAttribute("class", cls);
+    svg.append(n);
+    return n;
+  };
+
+  // gridlines + ticks
+  [100, 150, 200, 300, 450].filter((v) => v <= maxI * 1.05).forEach((v) => {
+    add("line", { x1: M.l, x2: W - M.r, y1: y(v), y2: y(v) }, v === 100 ? "map-median" : "map-grid-line");
+    const t = add("text", { x: M.l - 12, y: y(v) + 4, "text-anchor": "end" }, "map-tick");
+    t.textContent = v === 100 ? "100 median" : v;
+  });
+  for (let b = 1; b <= maxB; b++) {
+    const t = add("text", { x: x(b), y: H - M.b + 22, "text-anchor": "middle" }, "map-tick");
+    t.textContent = b;
+  }
+  add("line", { x1: M.l, x2: W - M.r, y1: H - M.b, y2: H - M.b }, "map-axis-line");
+  add("line", { x1: M.l, x2: M.l, y1: M.t, y2: H - M.b }, "map-axis-line");
+
+  let lab = add("text", { x: (M.l + W - M.r) / 2, y: H - 14, "text-anchor": "middle" }, "map-axis-label");
+  lab.textContent = "Categories sold into  →";
+  lab = add("text", { x: 18, y: (M.t + H - M.b) / 2, "text-anchor": "middle",
+                      transform: `rotate(-90 18 ${(M.t + H - M.b) / 2})` }, "map-axis-label");
+  lab.textContent = "Price index  →";
+
+  const q1 = add("text", { x: W - M.r - 6, y: M.t + 12, "text-anchor": "end" }, "map-quad");
+  q1.textContent = "Full-range, premium-priced";
+  const q2 = add("text", { x: M.l + 6, y: H - M.b - 8 }, "map-quad");
+  q2.textContent = "Single-category, value-priced";
+
+  // draw large dots first so small ones stay clickable on top
+  [...rows].sort((a, b) => b.skus - a.skus).forEach((d) => {
+    const dot = add("circle", { cx: x(d.breadth), cy: y(d.index), r: r(d.skus),
+      fill: `var(${TIER_VAR[d.tier]})`, "fill-opacity": .82 }, "map-dot");
+    dot.style.cursor = "pointer";
+    bindTip(dot, `
+      <div class="t-title">${esc(d.name)}</div>
+      <div class="t-row"><span>Price index</span><b>${d.index}</b></div>
+      <div class="t-row"><span>Categories</span><b>${d.breadth}</b></div>
+      <div class="t-row"><span>SKUs tracked</span><b>${d.skus}</b></div>
+      <div class="t-row"><span>UAE</span><b>${esc(d.uae.replace(/_/g, " "))}</b></div>
+      <div class="t-row"><span>Signals</span><b>${d.news}</b></div>`);
+    dot.addEventListener("click", () => openBrand(d.id));
+  });
+
+  // label only the brands worth naming — the outliers and the broad players
+  const notable = [...rows].sort((a, b) =>
+    (b.breadth * 30 + b.index) - (a.breadth * 30 + a.index)).slice(0, 12);
+  notable.forEach((d) => {
+    const t = add("text", { x: x(d.breadth) + r(d.skus) + 6, y: y(d.index) + 4 }, "map-label");
+    t.textContent = d.name.length > 22 ? d.name.slice(0, 21) + "…" : d.name;
+  });
+
+  box.append(svg);
+}
+
+/* ===========================================================================
+   Brand profile drawer
+   =========================================================================== */
+let lastFocused = null;
+
+function openBrand(id) {
+  const b = D.brands.find((x) => x.id === id);
+  if (!b) return;
+  lastFocused = document.activeElement;
+  const own = D.products.filter((p) => p.brand === id);
+  const news = D.news.filter((n) => n.brand === id);
+  const pos = (D.positioning || []).find((p) => p.id === id);
+
+  $("#drawer-eyebrow").textContent =
+    `${TIER_LABEL[b.tier]} · ${b.role.replace(/_/g, " ")} · ${b.country}`;
+  $("#drawer-title").textContent = b.name;
+
+  const body = $("#drawer-body");
+  body.innerHTML = "";
+
+  const s1 = el("section");
+  s1.innerHTML = `
+    <div class="stat-row">
+      <div><div class="v">${pos ? pos.index : "—"}</div><div class="k">Price index</div></div>
+      <div><div class="v">${own.length}</div><div class="k">SKUs</div></div>
+      <div><div class="v">${new Set(own.map((p) => p.category)).size}</div><div class="k">Categories</div></div>
+      <div><div class="v">${news.length}</div><div class="k">Signals</div></div>
+    </div>
+    <p style="color:var(--ink-2);font-size:13.5px;line-height:1.65;margin:16px 0 0">${esc(b.positioning)}</p>`;
+  body.append(s1);
+
+  const s2 = el("section");
+  s2.append(el("h3", null, "Identity"));
+  s2.insertAdjacentHTML("beforeend", `
+    <dl class="kv">
+      <dt>Owner</dt><dd>${esc(b.owner)}</dd>
+      <dt>Founded</dt><dd>${b.founded || "—"}</dd>
+      <dt>Home market</dt><dd>${esc(b.country)} · prices in ${esc(b.currency)}</dd>
+      <dt>UAE</dt><dd>${esc(b.uae.status.replace(/_/g, " "))}${(b.uae.channels || []).length ? "<br><span style='color:var(--ink-3)'>" + esc(b.uae.channels.join(", ")) + "</span>" : ""}</dd>
+      <dt>Sells</dt><dd>${esc((b.categories || []).join(", ").replace(/_/g, " "))}</dd>
+      ${b.site ? `<dt>Site</dt><dd><a href="${esc(b.site)}" target="_blank" rel="noopener" style="color:var(--accent)">${esc(b.site.replace(/^https?:\/\//, ""))}</a></dd>` : ""}
+      ${b.needs_review ? `<dt>Caveat</dt><dd style="color:var(--ink-3)">Metadata seeded from model knowledge — confirm before citing.</dd>` : ""}
+    </dl>`);
+  body.append(s2);
+
+  if (own.length) {
+    const byCat = {};
+    own.forEach((p) => { (byCat[p.category_label] = byCat[p.category_label] || []).push(p); });
+    const s3 = el("section");
+    s3.append(el("h3", null, `Range & pricing — ${own.length} SKUs`));
+    Object.entries(byCat).forEach(([label, items]) => {
+      s3.append(el("div", null, `<div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:16px 0 4px">${esc(label)}</div>`));
+      items.sort((a, b2) => (b2.norm_usd ?? 0) - (a.norm_usd ?? 0)).forEach((p) => {
+        const line = el("div", "sku-line");
+        line.innerHTML = `
+          <span class="nm">${esc(p.name)}</span>
+          <span class="sz">${esc(sizeLabel(p))}</span>
+          <span class="px">${esc(money(p.price_usd, "USD"))}</span>
+          <span class="ix">${p.price_index != null ? p.price_index : "—"}</span>`;
+        bindTip(line, productTip(p));
+        s3.append(line);
+      });
+    });
+    s3.insertAdjacentHTML("beforeend",
+      `<p style="font-size:11.5px;color:var(--ink-3);margin-top:14px">Right-hand figure is the price index against that category's median (100 = median).</p>`);
+    body.append(s3);
+  }
+
+  if (news.length) {
+    const s4 = el("section");
+    s4.append(el("h3", null, `Recent coverage — ${news.length}`));
+    news.slice(0, 10).forEach((n) => {
+      const line = el("div", "sku-line");
+      line.innerHTML = `<span class="nm"><a href="${esc(n.url)}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none">${esc(n.title)}</a></span><span class="sz">${esc(n.published || "")}</span>`;
+      s4.append(line);
+    });
+    if (news.length > 10) {
+      const more = el("button", "f-cta");
+      more.type = "button";
+      more.style.cssText = "background:none;border:0;padding:12px 0 0;cursor:pointer;font:inherit;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)";
+      more.textContent = `All ${news.length} headlines →`;
+      more.addEventListener("click", () => {
+        closeDrawer();
+        state.brand = id; $("#f-brand").value = id;
+        setTab("news"); scrollTo({ top: 0, behavior: "smooth" });
+      });
+      s4.append(more);
+    }
+    body.append(s4);
+  }
+
+  $("#drawer").classList.add("open");
+  $("#scrim").classList.add("open");
+  document.body.style.overflow = "hidden";
+  $("#drawer").focus();
+}
+
+function closeDrawer() {
+  $("#drawer").classList.remove("open");
+  $("#scrim").classList.remove("open");
+  document.body.style.overflow = "";
+  hideTip();
+  if (lastFocused && lastFocused.focus) lastFocused.focus();
+}
+
 /* ---------- wiring ---------- */
 function renderAll() {
+  if (state.tab === "overview") renderOverview();
+  if (state.tab === "map") renderMap();
   if (state.tab === "pricing") { renderLadder(); renderSpread(); renderAed(); renderMatrix(); renderSkuTable(); }
   if (state.tab === "news") renderNews();
   if (state.tab === "pr") renderPr();
@@ -610,16 +860,31 @@ function renderAll() {
   if (state.tab === "brands") renderBrands();
 }
 
+function updateFilterSummary() {
+  const cat = D.categories.find((c) => c.id === state.cat);
+  const bits = [];
+  if (state.tab === "pricing" && cat) bits.push(cat.label);
+  if (state.tier) bits.push(TIER_LABEL[state.tier]);
+  if (state.role) bits.push(state.role.replace(/_/g, " "));
+  if (state.q) bits.push(`"${state.q}"`);
+  const s = $("#filter-summary");
+  if (s) s.textContent = bits.length ? bits.join(" · ") : "All";
+}
+
 function setTab(tab) {
   state.tab = tab;
   document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === tab)));
-  ["pricing", "news", "pr", "radar", "brands"].forEach((t) => $("#panel-" + t).classList.toggle("hidden", t !== tab));
+  ["overview", "map", "pricing", "news", "pr", "radar", "brands"].forEach((t) =>
+    $("#panel-" + t).classList.toggle("hidden", t !== tab));
   // Only show a control where it actually scopes something.
   const pricing = tab === "pricing";
   $("#w-cat").classList.toggle("hidden", !pricing);
   $("#w-view").classList.toggle("hidden", !pricing);
   $("#w-cur").classList.toggle("hidden", !pricing);
+  $("#filters").classList.toggle("hidden", tab === "overview");
+  $("#filter-toggle").classList.toggle("hidden", tab === "overview");
   renderAll();
+  updateFilterSummary();
 }
 
 function init() {
@@ -641,7 +906,7 @@ function init() {
   $("#f-brand").innerHTML = `<option value="">All brands</option>` +
     withNews.map((b) => `<option value="${b.id}">${esc(b.name)} (${b.news_count})</option>`).join("");
 
-  const bind = (sel, key) => $(sel).addEventListener("input", (e) => { state[key] = e.target.value; renderAll(); });
+  const bind = (sel, key) => $(sel).addEventListener("input", (e) => { state[key] = e.target.value; renderAll(); updateFilterSummary(); });
   ["#f-cat:cat", "#f-tier:tier", "#f-role:role", "#f-cur:cur", "#f-q:q",
    "#f-tag:tag", "#f-region:region", "#f-brand:brand"].forEach((pair) => {
     const [sel, key] = pair.split(":");
@@ -656,8 +921,24 @@ function init() {
 
   document.querySelectorAll("nav.tabs button").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
 
+  // Brand names are clickable wherever they appear.
+  document.addEventListener("click", (e) => {
+    const t = e.target.closest("[data-brand]");
+    if (t) { e.preventDefault(); openBrand(t.dataset.brand); }
+  });
+  $("#drawer-close").addEventListener("click", closeDrawer);
+  $("#scrim").addEventListener("click", closeDrawer);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && $("#drawer").classList.contains("open")) closeDrawer();
+  });
+
+  $("#filter-toggle").addEventListener("click", () => {
+    const open = $("#filters").classList.toggle("open");
+    $("#filter-toggle").setAttribute("aria-expanded", String(open));
+  });
+
   renderHeader();
-  setTab("pricing");
+  setTab("overview");
 }
 
 init();

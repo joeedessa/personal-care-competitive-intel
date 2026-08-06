@@ -34,12 +34,18 @@
   <section class="tiles" id="tiles"></section>
 
   <nav class="tabs" role="tablist">
-    <button role="tab" data-tab="pricing" aria-selected="true">Price &amp; range</button>
+    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button role="tab" data-tab="pricing" aria-selected="false">Price &amp; range</button>
+    <button role="tab" data-tab="map" aria-selected="false">Positioning</button>
     <button role="tab" data-tab="news" aria-selected="false">News</button>
     <button role="tab" data-tab="pr" aria-selected="false">PR &amp; initiatives</button>
     <button role="tab" data-tab="radar" aria-selected="false">Emerging radar</button>
     <button role="tab" data-tab="brands" aria-selected="false">Brand directory</button>
   </nav>
+
+  <button class="filter-toggle" id="filter-toggle" aria-expanded="false" aria-controls="filters">
+    <span>Filters</span><span id="filter-summary"></span>
+  </button>
 
   <div class="filters" id="filters">
     <div id="w-cat"><label for="f-cat">Category</label><select id="f-cat"></select></div>
@@ -71,8 +77,41 @@
     <div class="grow"><label for="f-q">Search</label><input id="f-q" type="search" placeholder="Brand, product or owner…"></div>
   </div>
 
+  <!-- ============ OVERVIEW ============ -->
+  <section id="panel-overview">
+    <div id="hero-finding"></div>
+    <div class="card">
+      <header><h2>What the data says</h2></header>
+      <p class="note">Every claim below is computed from the tracked set, not written by hand — they change when the prices and the news do. Ranked by how loud the finding is. Click any one to land on the evidence.</p>
+      <div class="findings-grid" id="findings"></div>
+    </div>
+  </section>
+
+  <!-- ============ POSITIONING ============ -->
+  <section id="panel-map" class="hidden">
+    <div class="card">
+      <header><h2>The competitive map</h2><div class="spacer"></div><span class="chip plain" id="map-count"></span></header>
+      <p class="note">
+        <b>Across:</b> how many of the ten tracked categories a brand sells into — its range breadth.
+        <b>Up:</b> its average price index, where 100 is the median of every category it competes in.
+        <b>Dot size:</b> how many SKUs are tracked. Click any brand to open its profile.<br><br>
+        The top-right is where the full-range luxury houses sit. The bottom-left is where a
+        single-category specialist lives — which is where almost every brand starts, and where
+        the emerging set on the radar tab is clustered right now.
+      </p>
+      <div class="legend">
+        <span><i class="swatch" style="background:var(--tier-luxury)"></i> Luxury</span>
+        <span><i class="swatch" style="background:var(--tier-premium)"></i> Premium</span>
+        <span><i class="swatch" style="background:var(--tier-masstige)"></i> Masstige</span>
+        <span><i class="swatch" style="background:var(--tier-mass)"></i> Mass (benchmark)</span>
+      </div>
+      <div class="map-wrap" id="map"></div>
+      <p class="chart-foot">Brands with no priced SKUs are absent. The full numbers are in the brand directory, which is this chart's table view.</p>
+    </div>
+  </section>
+
   <!-- ============ PRICE & RANGE ============ -->
-  <section id="panel-pricing">
+  <section id="panel-pricing" class="hidden">
     <div class="card">
       <header>
         <h2 id="ladder-title">Price ladder</h2>
@@ -198,6 +237,15 @@
 </div>
 
 <div id="tip" role="tooltip"></div>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1">
+  <div class="drawer-head">
+    <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
+    <div class="eyebrow" id="drawer-eyebrow"></div>
+    <h2 id="drawer-title"></h2>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
 <script src="data.js"></script>
 <script src="app.js"></script>
 </body>

@@ -22,8 +22,12 @@ from __future__ import annotations
 
 import json
 import statistics
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from analysis import build_findings, build_positioning  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -213,8 +217,18 @@ def main() -> int:
         for t in n.get("tags", []):
             tag_counts[t] = tag_counts.get(t, 0) + 1
 
+    tag_labels = {
+        "sustainability": "Sustainability & refill", "retail_expansion": "Retail expansion",
+        "product_launch": "Product launch", "collaboration": "Collaboration",
+        "campaign_pr": "Campaign & PR", "corporate": "Corporate & M&A", "awards_press": "Awards & press",
+    }
+    findings = build_findings(products, brand_rows, categories, news, tag_labels)
+    positioning = build_positioning(products, brand_rows)
+
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "findings": findings,
+        "positioning": positioning,
         "fx": {"rates": rates, **fx_meta, "uae": strip_comments(uae_cfg)},
         "brands": brand_rows,
         "categories": sorted(categories, key=lambda c: c["label"]),
