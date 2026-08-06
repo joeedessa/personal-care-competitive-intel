@@ -570,3 +570,47 @@ footer.foot p { max-width: 86ch; }
   .hidden { display: block !important; }
   .card { break-inside: avoid; box-shadow: none; }
 }
+
+/* ===========================================================================
+   Head to head
+   =========================================================================== */
+.btn-ghost {
+  background: none; border: 1px solid var(--rule-strong); color: var(--ink-3);
+  font: inherit; font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+  padding: 7px 13px; cursor: pointer; min-height: 34px;
+}
+.btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
+
+.cmp-pickers { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
+.cmp-pickers select {
+  font: inherit; font-size: 13px; padding: 9px 2px; min-width: 200px;
+  border: 0; border-bottom: 1px solid var(--rule-strong); background: transparent; color: var(--ink);
+}
+.cmp-pickers select:focus { outline: 0; border-bottom-color: var(--accent); }
+
+.cmp-head { display: grid; gap: 20px; margin-bottom: 34px; }
+.cmp-card { border-top: 2px solid var(--accent); padding-top: 16px; }
+.cmp-card h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; margin: 0 0 4px; text-transform: none; letter-spacing: 0; color: var(--ink); border: 0; padding: 0; }
+.cmp-card .meta { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+.cmp-card .figs { display: flex; gap: 22px; flex-wrap: wrap; }
+.cmp-card .figs div { min-width: 62px; }
+.cmp-card .figs .v { font-family: var(--serif); font-size: 26px; line-height: 1.05; }
+.cmp-card .figs .k { font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-top: 3px; }
+
+.clash { border-top: 1px solid var(--rule); padding: 18px 0; }
+.clash-cat { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 12px; }
+.clash-row { display: grid; gap: 10px; align-items: center; margin-bottom: 9px; }
+.clash-name { font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.clash-bar { height: 9px; background: var(--accent); min-width: 2px; }
+.clash-val { font-size: 13px; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.clash-verdict { font-size: 12.5px; color: var(--ink-2); margin-top: 10px; line-height: 1.6; }
+.clash-verdict b { color: var(--ink); }
+.only-in { font-size: 12.5px; color: var(--ink-2); line-height: 1.7; }
+.only-in b { color: var(--ink); }
+
+@media (max-width: 760px) {
+  .cmp-pickers { flex-direction: column; gap: 16px; }
+  .cmp-pickers select { width: 100%; min-height: 42px; font-size: 16px; }
+  .cmp-head { grid-template-columns: 1fr !important; gap: 24px; }
+  .cmp-card h3 { font-size: 20px; }
+}

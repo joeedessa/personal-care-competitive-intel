@@ -35,7 +35,8 @@ const KIND_LABEL = {
 
 const state = {
   cat: "", tier: "", role: "", cur: "usd", q: "", tag: "", region: "", brand: "",
-  view: "norm", tab: "pricing", sort: { key: "sku_count", dir: -1 },
+  view: "norm", tab: "overview", cmp: [null, null, null],
+  sort: { key: "sku_count", dir: -1 },
 };
 
 /* ---------- theme ---------- */
@@ -835,6 +836,23 @@ function openBrand(id) {
     body.append(s4);
   }
 
+  const act = el("section");
+  act.style.marginTop = "8px";
+  const cmpBtn = el("button", "btn-ghost");
+  cmpBtn.type = "button";
+  cmpBtn.textContent = "Compare this brand →";
+  cmpBtn.addEventListener("click", () => {
+    if (!state.cmp.includes(id)) {
+      const slot = state.cmp.findIndex((x) => !x);
+      state.cmp[slot === -1 ? 1 : slot] = id;
+    }
+    closeDrawer();
+    setTab("compare");
+    scrollTo({ top: 0, behavior: "smooth" });
+  });
+  act.append(cmpBtn);
+  body.append(act);
+
   $("#drawer").classList.add("open");
   $("#scrim").classList.add("open");
   document.body.style.overflow = "hidden";
@@ -849,10 +867,162 @@ function closeDrawer() {
   if (lastFocused && lastFocused.focus) lastFocused.focus();
 }
 
+/* ===========================================================================
+   Head to head
+   =========================================================================== */
+function renderCompare() {
+  const picks = $("#cmp-pickers");
+  const options = [...D.brands].filter((b) => b.sku_count > 0).sort((a, b) => a.name.localeCompare(b.name));
+  picks.innerHTML = "";
+  for (let i = 0; i < 3; i++) {
+    const sel = el("select");
+    sel.setAttribute("aria-label", `Brand ${i + 1}`);
+    sel.innerHTML = `<option value="">${i < 2 ? "Choose a brand…" : "Add a third (optional)…"}</option>` +
+      options.map((b) => `<option value="${b.id}"${state.cmp[i] === b.id ? " selected" : ""}>${esc(b.name)}</option>`).join("");
+    sel.addEventListener("change", (e) => {
+      state.cmp[i] = e.target.value || null;
+      syncUrl(); renderCompare();
+    });
+    picks.append(sel);
+  }
+
+  const chosen = state.cmp.filter(Boolean).map((id) => D.brands.find((b) => b.id === id)).filter(Boolean);
+  const out = $("#cmp-out"); out.innerHTML = "";
+  if (chosen.length < 2) {
+    out.append(el("div", "empty", "Choose at least two brands. <b>Aesop vs Grown Alchemist</b> and <b>Diptyque vs Trudon</b> are the two sharpest fights in this dataset."));
+    return;
+  }
+
+  const cols = chosen.length;
+  const head = el("div", "cmp-head");
+  head.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+  chosen.forEach((b) => {
+    const pos = (D.positioning || []).find((p) => p.id === b.id);
+    const c = el("div", "cmp-card");
+    c.innerHTML = `
+      <h3 class="brand-link" data-brand="${esc(b.id)}">${esc(b.name)}</h3>
+      <div class="meta">${TIER_LABEL[b.tier]} · ${esc(b.country)} · ${esc(b.owner)}</div>
+      <div class="figs">
+        <div><div class="v">${pos ? pos.index : "—"}</div><div class="k">Index</div></div>
+        <div><div class="v">${b.sku_count}</div><div class="k">SKUs</div></div>
+        <div><div class="v">${(b.categories_tracked || []).length}</div><div class="k">Cats</div></div>
+        <div><div class="v">${b.news_count}</div><div class="k">Signals</div></div>
+      </div>`;
+    head.append(c);
+  });
+  out.append(head);
+
+  // Where they actually clash: categories more than one of them competes in.
+  const catsOf = (b) => new Set(D.products.filter((p) => p.brand === b.id && !p.off_basis).map((p) => p.category));
+  const sets = chosen.map(catsOf);
+  const shared = D.categories.filter((c) => sets.filter((s) => s.has(c.id)).length >= 2);
+
+  if (shared.length) {
+    const sec = el("div");
+    sec.append(el("h3", null, `Where they compete — ${shared.length} categories`));
+    shared.forEach((cat) => {
+      // cheapest SKU per brand: compares each on its best foot forward
+      const entries = chosen.map((b) => {
+        const own = D.products.filter((p) => p.brand === b.id && p.category === cat.id && p.norm_usd && !p.off_basis);
+        if (!own.length) return null;
+        const best = own.reduce((a, x) => (x.norm_usd < a.norm_usd ? x : a));
+        return { brand: b, p: best };
+      }).filter(Boolean);
+      if (entries.length < 2) return;
+
+      const block = el("div", "clash");
+      block.append(el("div", "clash-cat", `${esc(cat.label)} · ${esc(cat.basis_label)}`));
+      const max = Math.max(...entries.map((e) => e.p.norm_usd));
+      entries.sort((a, b) => b.p.norm_usd - a.p.norm_usd).forEach((e) => {
+        const row = el("div", "clash-row");
+        row.style.gridTemplateColumns = "minmax(96px,168px) 1fr auto";
+        row.append(el("div", "clash-name", esc(e.brand.name)));
+        const track = el("div");
+        const bar = el("div", "clash-bar");
+        bar.style.width = (e.p.norm_usd / max * 100) + "%";
+        bar.style.background = `var(${TIER_VAR[e.brand.tier]})`;
+        track.append(bar);
+        row.append(track);
+        row.append(el("div", "clash-val", `${money(e.p.norm_usd, "USD")}`));
+        bindTip(row, productTip(e.p));
+        block.append(row);
+      });
+
+      const hi = entries[0], lo = entries[entries.length - 1];
+      const mult = hi.p.norm_usd / lo.p.norm_usd;
+      block.append(el("div", "clash-verdict",
+        `<b>${esc(hi.brand.name)}</b> is <b>${mult.toFixed(1)}×</b> ${esc(lo.brand.name)} here — ` +
+        `${esc(hi.p.name)} at ${esc(sizeLabel(hi.p))} against ${esc(lo.p.name)} at ${esc(sizeLabel(lo.p))}.`));
+      sec.append(block);
+    });
+    out.append(sec);
+  }
+
+  // Range each one is missing relative to the others.
+  const gaps = el("div");
+  gaps.style.marginTop = "34px";
+  gaps.append(el("h3", null, "Range one has and the other does not"));
+  let any = false;
+  chosen.forEach((b, i) => {
+    const mine = sets[i];
+    const others = sets.filter((_, j) => j !== i).reduce((acc, s) => { s.forEach((v) => acc.add(v)); return acc; }, new Set());
+    const only = D.categories.filter((c) => mine.has(c.id) && !others.has(c.id));
+    const missing = D.categories.filter((c) => !mine.has(c.id) && others.has(c.id));
+    if (!only.length && !missing.length) return;
+    any = true;
+    const p = el("p", "only-in");
+    const clauses = [];
+    if (only.length) clauses.push(`competes alone in ${only.map((c) => esc(c.label.toLowerCase())).join(", ")}`);
+    if (missing.length) clauses.push(`is absent from ${missing.map((c) => esc(c.label.toLowerCase())).join(", ")}, where the other${chosen.length > 2 ? "s do" : " does"}`);
+    p.innerHTML = `<b>${esc(b.name)}</b> ${clauses.join("; and ")}.`;
+    gaps.append(p);
+  });
+  if (!any) gaps.append(el("p", "only-in", "These brands cover exactly the same categories — the fight is entirely on price and story."));
+  out.append(gaps);
+}
+
+/* ===========================================================================
+   URL state — every view is shareable
+   =========================================================================== */
+const URL_KEYS = ["tab", "cat", "tier", "role", "cur", "q", "tag", "region", "brand", "view"];
+let urlLock = false;
+
+function syncUrl() {
+  if (urlLock) return;
+  const p = new URLSearchParams();
+  URL_KEYS.forEach((k) => { if (state[k]) p.set(k, state[k]); });
+  const cmp = state.cmp.filter(Boolean);
+  if (cmp.length) p.set("cmp", cmp.join(","));
+  const q = p.toString();
+  history.replaceState(null, "", q ? "#" + q : location.pathname);
+}
+
+function readUrl() {
+  const raw = location.hash.replace(/^#/, "");
+  if (!raw) return false;
+  const p = new URLSearchParams(raw);
+  URL_KEYS.forEach((k) => { if (p.has(k)) state[k] = p.get(k); });
+  if (p.has("cmp")) {
+    const ids = p.get("cmp").split(",").filter(Boolean);
+    state.cmp = [ids[0] || null, ids[1] || null, ids[2] || null];
+  }
+  return true;
+}
+
+function reflectStateToControls() {
+  const setv = (sel, v) => { const n = $(sel); if (n) n.value = v || ""; };
+  setv("#f-cat", state.cat); setv("#f-tier", state.tier); setv("#f-role", state.role);
+  setv("#f-cur", state.cur); setv("#f-q", state.q); setv("#f-tag", state.tag);
+  setv("#f-region", state.region); setv("#f-brand", state.brand);
+  document.querySelectorAll("[data-view]").forEach((x) =>
+    x.setAttribute("aria-pressed", String(x.dataset.view === state.view)));
+}
+
 /* ---------- wiring ---------- */
 function renderAll() {
   if (state.tab === "overview") renderOverview();
   if (state.tab === "map") renderMap();
+  if (state.tab === "compare") renderCompare();
   if (state.tab === "pricing") { renderLadder(); renderSpread(); renderAed(); renderMatrix(); renderSkuTable(); }
   if (state.tab === "news") renderNews();
   if (state.tab === "pr") renderPr();
@@ -874,17 +1044,19 @@ function updateFilterSummary() {
 function setTab(tab) {
   state.tab = tab;
   document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === tab)));
-  ["overview", "map", "pricing", "news", "pr", "radar", "brands"].forEach((t) =>
+  ["overview", "map", "compare", "pricing", "news", "pr", "radar", "brands"].forEach((t) =>
     $("#panel-" + t).classList.toggle("hidden", t !== tab));
   // Only show a control where it actually scopes something.
   const pricing = tab === "pricing";
   $("#w-cat").classList.toggle("hidden", !pricing);
   $("#w-view").classList.toggle("hidden", !pricing);
   $("#w-cur").classList.toggle("hidden", !pricing);
-  $("#filters").classList.toggle("hidden", tab === "overview");
-  $("#filter-toggle").classList.toggle("hidden", tab === "overview");
+  const noFilters = tab === "overview" || tab === "compare";
+  $("#filters").classList.toggle("hidden", noFilters);
+  $("#filter-toggle").classList.toggle("hidden", noFilters);
   renderAll();
   updateFilterSummary();
+  syncUrl();
 }
 
 function init() {
@@ -896,8 +1068,7 @@ function init() {
 
   $("#f-cat").innerHTML = `<option value="">All categories</option>` +
     D.categories.map((c) => `<option value="${c.id}">${esc(c.label)}</option>`).join("");
-  state.cat = D.categories.some((c) => c.id === "soap") ? "soap" : (D.categories[0]?.id || "");
-  $("#f-cat").value = state.cat;
+
 
   $("#f-tag").innerHTML = `<option value="">All initiative types</option>` +
     TAG_KEYS.map((k) => `<option value="${k}">${esc(TAG_LABEL[k])}</option>`).join("");
@@ -906,7 +1077,7 @@ function init() {
   $("#f-brand").innerHTML = `<option value="">All brands</option>` +
     withNews.map((b) => `<option value="${b.id}">${esc(b.name)} (${b.news_count})</option>`).join("");
 
-  const bind = (sel, key) => $(sel).addEventListener("input", (e) => { state[key] = e.target.value; renderAll(); updateFilterSummary(); });
+  const bind = (sel, key) => $(sel).addEventListener("input", (e) => { state[key] = e.target.value; renderAll(); updateFilterSummary(); syncUrl(); });
   ["#f-cat:cat", "#f-tier:tier", "#f-role:role", "#f-cur:cur", "#f-q:q",
    "#f-tag:tag", "#f-region:region", "#f-brand:brand"].forEach((pair) => {
     const [sel, key] = pair.split(":");
@@ -916,7 +1087,7 @@ function init() {
   document.querySelectorAll("[data-view]").forEach((b) => b.addEventListener("click", () => {
     state.view = b.dataset.view;
     document.querySelectorAll("[data-view]").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.view === state.view)));
-    renderLadder();
+    renderLadder(); syncUrl();
   }));
 
   document.querySelectorAll("nav.tabs button").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
@@ -937,8 +1108,23 @@ function init() {
     $("#filter-toggle").setAttribute("aria-expanded", String(open));
   });
 
+  $("#cmp-clear").addEventListener("click", () => {
+    state.cmp = [null, null, null];
+    syncUrl(); renderCompare();
+  });
+
+  const fromUrl = readUrl();
+  if (!fromUrl || !state.cat) state.cat = state.cat || (D.categories.some((c) => c.id === "soap") ? "soap" : (D.categories[0]?.id || ""));
+  reflectStateToControls();
+
+  addEventListener("hashchange", () => {
+    urlLock = true;
+    readUrl(); reflectStateToControls(); setTab(state.tab || "overview");
+    urlLock = false;
+  });
+
   renderHeader();
-  setTab("overview");
+  setTab(state.tab || "overview");
 }
 
 init();

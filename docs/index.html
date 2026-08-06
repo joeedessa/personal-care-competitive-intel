@@ -37,6 +37,7 @@
     <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
     <button role="tab" data-tab="pricing" aria-selected="false">Price &amp; range</button>
     <button role="tab" data-tab="map" aria-selected="false">Positioning</button>
+    <button role="tab" data-tab="compare" aria-selected="false">Head to head</button>
     <button role="tab" data-tab="news" aria-selected="false">News</button>
     <button role="tab" data-tab="pr" aria-selected="false">PR &amp; initiatives</button>
     <button role="tab" data-tab="radar" aria-selected="false">Emerging radar</button>
@@ -107,6 +108,16 @@
       </div>
       <div class="map-wrap" id="map"></div>
       <p class="chart-foot">Brands with no priced SKUs are absent. The full numbers are in the brand directory, which is this chart's table view.</p>
+    </div>
+  </section>
+
+  <!-- ============ HEAD TO HEAD ============ -->
+  <section id="panel-compare" class="hidden">
+    <div class="card">
+      <header><h2>Head to head</h2><div class="spacer"></div><button class="btn-ghost" id="cmp-clear">Clear</button></header>
+      <p class="note">Pick two or three brands. Where they both compete, you get the price gap on a like-for-like basis; where only one does, you get the range each is missing. Add a brand from the picker, or from any brand profile.</p>
+      <div class="cmp-pickers" id="cmp-pickers"></div>
+      <div id="cmp-out"></div>
     </div>
   </section>
 
