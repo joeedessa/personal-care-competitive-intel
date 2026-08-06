@@ -434,10 +434,10 @@ function renderSkuTable() {
       <td class="num" data-l="Size">${esc(sizeLabel(p))}</td>
       <td class="num" data-l="Home">${esc(money(p.price_home, p.home_currency))}</td>
       <td class="num" data-l="USD">${esc(money(p.price_usd, "USD"))}</td>
-      <td class="num">${esc(money(p.price_aed_observed ?? p.price_aed_expected, "AED"))}${p.price_aed_observed == null ? ' <span style="color:var(--ink-3)">exp</span>' : ""}</td>
-      <td class="num">${esc(money(p.norm_usd, "USD"))}<div class="sub">${esc(p.basis_label)}</div></td>
+      <td class="num" data-l="AED">${esc(money(p.price_aed_observed ?? p.price_aed_expected, "AED"))}${p.price_aed_observed == null ? ' <span style="color:var(--ink-3)">exp</span>' : ""}</td>
+      <td class="num" data-l="Like for like">${esc(money(p.norm_usd, "USD"))}<div class="sub">${esc(p.basis_label)}</div></td>
       <td class="num" data-l="Index">${p.price_index ?? "—"}</td>
-      <td><span class="chip ${p.verified ? "ver" : "est"}">${p.verified ? "verified" : "estimate"}</span></td>`;
+      <td data-l="Confidence"><span class="chip ${p.verified ? "ver" : "est"}">${p.verified ? "verified" : "estimate"}</span></td>`;
     tb.append(tr);
   });
   t.append(tb);
@@ -709,7 +709,8 @@ function renderTone() {
           stack.append(seg);
         });
       track.append(stack); row.append(track);
-      row.append(el("div", "bar-val", `${t.score > 0 ? "+" : ""}${t.score}`));
+      row.append(el("div", "bar-val",
+        `<b>${t.score > 0 ? "+" : ""}${t.score}</b> <span style="color:var(--ink-3);font-size:11px">${t.positive}/${t.neutral}/${t.negative}</span>`));
       bindTip(row, `
         <div class="t-title">${esc(t.name)} — press tone</div>
         <div class="t-row"><span>Positive</span><b>${t.positive}</b></div>
@@ -730,7 +731,12 @@ function renderTone() {
 /* ---------- radar ---------- */
 function renderRadar() {
   const box = $("#radar"); box.innerHTML = "";
-  [...D.watchlist].sort((a, b) => b.momentum - a.momentum).forEach((w) => {
+  const list = [...D.watchlist]
+    .filter((w) => !state.q ||
+      (w.name + " " + (w.why || "") + " " + (w.categories || []).join(" ")).toLowerCase().includes(state.q.toLowerCase()))
+    .sort((a, b) => b.momentum - a.momentum);
+  if (!list.length) { box.append(el("div", "empty", "Nothing on the radar matches that search.")); return; }
+  list.forEach((w) => {
     const c = el("div", "radar-card");
     c.append(el("h3", null, `${esc(w.name)} <span class="chip"><i class="dot" style="background:var(${THREAT_VAR[w.threat] || "--good"})"></i>${esc(w.threat)} threat</span>`));
     c.append(el("div", "place", `${esc(w.country)}${w.founded ? " · founded " + w.founded : ""} · ${esc((w.categories || []).join(", ").replace(/_/g, " "))}${w.needs_review ? " · needs review" : ""}`));
@@ -1132,7 +1138,10 @@ function renderCompare() {
     const sel = el("select");
     sel.setAttribute("aria-label", `Brand ${i + 1}`);
     sel.innerHTML = `<option value="">${i < 2 ? "Choose a brand…" : "Add a third (optional)…"}</option>` +
-      options.map((b) => `<option value="${b.id}"${state.cmp[i] === b.id ? " selected" : ""}>${esc(b.name)}</option>`).join("");
+      options.map((b) => {
+        const taken = state.cmp.includes(b.id) && state.cmp[i] !== b.id;
+        return `<option value="${b.id}"${state.cmp[i] === b.id ? " selected" : ""}${taken ? " disabled" : ""}>${esc(b.name)}</option>`;
+      }).join("");
     sel.addEventListener("change", (e) => {
       state.cmp[i] = e.target.value || null;
       syncUrl(); renderCompare();
@@ -1140,7 +1149,7 @@ function renderCompare() {
     picks.append(sel);
   }
 
-  const chosen = state.cmp.filter(Boolean).map((id) => D.brands.find((b) => b.id === id)).filter(Boolean);
+  const chosen = [...new Set(state.cmp.filter(Boolean))].map((id) => D.brands.find((b) => b.id === id)).filter(Boolean);
   const out = $("#cmp-out"); out.innerHTML = "";
   if (chosen.length < 2) {
     out.append(el("div", "empty", "Choose at least two brands. <b>Aesop vs Grown Alchemist</b> and <b>Diptyque vs Trudon</b> are the two sharpest fights in this dataset."));
@@ -1179,7 +1188,9 @@ function renderCompare() {
       const entries = chosen.map((b) => {
         const own = D.products.filter((p) => p.brand === b.id && p.category === cat.id && p.norm_usd && !p.off_basis);
         if (!own.length) return null;
-        const best = own.reduce((a, x) => (x.norm_usd < a.norm_usd ? x : a));
+        // Hero SKU if flagged, else cheapest — a bulk refill must not stand in
+        // for the product the brand actually leads with.
+        const best = [...own].sort((a, x) => (x.hero ? 1 : 0) - (a.hero ? 1 : 0) || a.norm_usd - x.norm_usd)[0];
         return { brand: b, p: best };
       }).filter(Boolean);
       if (entries.length < 2) return;
@@ -1321,6 +1332,11 @@ function setTab(tab) {
   const noFilters = tab === "overview" || tab === "compare";
   $("#filters").classList.toggle("hidden", noFilters);
   $("#filter-toggle").classList.toggle("hidden", noFilters);
+  // Tier and role describe the tracked set; the watchlist has neither. Showing
+  // controls that silently do nothing erodes trust in the ones that work.
+  const hasTierRole = tab !== "radar";
+  $("#f-tier").parentElement.style.display = hasTierRole ? "" : "none";
+  $("#f-role").parentElement.style.display = hasTierRole ? "" : "none";
   renderAll();
   updateFilterSummary();
   syncUrl();

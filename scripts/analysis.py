@@ -80,11 +80,13 @@ def same_tier_undercuts(products, categories):
             groups[(p["category"], p["brand_tier"])].append(p)
 
     for (cat_id, tier), items in groups.items():
-        # one SKU per brand — the cheapest, so we compare best-foot-forward
+        # One SKU per brand: the HERO if one is flagged, else the cheapest.
+        # Cheapest-only was the wrong rule - it picked Shoyeido's 450-stick bulk
+        # refill over its hero line and produced a claim that was the exact
+        # inverse of the hero-to-hero comparison a buyer would actually make.
         by_brand = {}
-        for p in items:
-            if p["brand"] not in by_brand or p["norm_usd"] < by_brand[p["brand"]]["norm_usd"]:
-                by_brand[p["brand"]] = p
+        for p in sorted(items, key=lambda x: (not x.get("hero"), x["norm_usd"])):
+            by_brand.setdefault(p["brand"], p)
         if len(by_brand) < MIN_TIER_PEERS:
             continue
         ranked = sorted(by_brand.values(), key=lambda p: p["norm_usd"])

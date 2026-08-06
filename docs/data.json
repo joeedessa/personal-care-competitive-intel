@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T06:17:52+00:00",
+  "generated_at": "2026-08-06T14:07:02+00:00",
   "findings": [
     {
       "kind": "same_tier_gap",
@@ -36,23 +36,6 @@
       "rank": 2
     },
     {
-      "kind": "same_tier_gap",
-      "headline": "Astier de Villatte charges 7.4× Shoyeido for the same luxury claim in incense",
-      "detail": "Astier de Villatte Incense Sticks (Grand Chalet / Delhi / Tokyo) is $0.52 per stick; Shoyeido Daily Incense (bulk) is $0.07. Same tier, same category — the difference is brand equity, not positioning.",
-      "metric": "7.4×",
-      "magnitude": 74.57142857142857,
-      "refs": [
-        "astier-de-villatte-incense-125",
-        "shoyeido-daily-incense-450"
-      ],
-      "tab": "pricing",
-      "focus": {
-        "cat": "incense",
-        "tier": "luxury"
-      },
-      "rank": 3
-    },
-    {
       "kind": "white_space",
       "headline": "Only 6 premium brands compete in hair accessories — against 31 in body lotion & body care",
       "detail": "Hair Accessories is the least crowded category tracked. Thin competition can mean an opening or a category that does not support a premium — check the spread before reading it as opportunity.",
@@ -63,7 +46,7 @@
       "focus": {
         "cat": "hair_accessories"
       },
-      "rank": 4
+      "rank": 3
     },
     {
       "kind": "uae_gap",
@@ -83,7 +66,7 @@
       ],
       "tab": "brands",
       "focus": {},
-      "rank": 5
+      "rank": 4
     },
     {
       "kind": "same_tier_gap",
@@ -98,6 +81,23 @@
       "tab": "pricing",
       "focus": {
         "cat": "body_lotion",
+        "tier": "luxury"
+      },
+      "rank": 5
+    },
+    {
+      "kind": "same_tier_gap",
+      "headline": "Sisley Paris (Hair Rituel) charges 6.2× Aesop for the same luxury claim in conditioner",
+      "detail": "Sisley Paris (Hair Rituel) Hair Rituel Restructuring Conditioner is $48 per 100ml; Aesop Classic Conditioner is $7.80. Same tier, same category — the difference is brand equity, not positioning.",
+      "metric": "6.2×",
+      "magnitude": 71.38461538461539,
+      "refs": [
+        "sisley-hair-rituel-conditioner-200",
+        "aesop-classic-conditioner-500"
+      ],
+      "tab": "pricing",
+      "focus": {
+        "cat": "conditioner",
         "tier": "luxury"
       },
       "rank": 6
@@ -1211,9 +1211,9 @@
       "basis": "newly_covered"
     },
     {
-      "id": "dr-bronners",
-      "name": "Dr. Bronner's",
-      "tier": "masstige",
+      "id": "montroi",
+      "name": "MONTROI",
+      "tier": "luxury",
       "recent": 3,
       "prior": 0,
       "delta": 3,
@@ -1223,9 +1223,9 @@
       "basis": "newly_covered"
     },
     {
-      "id": "montroi",
-      "name": "MONTROI",
-      "tier": "luxury",
+      "id": "dr-bronners",
+      "name": "Dr. Bronner's",
+      "tier": "masstige",
       "recent": 3,
       "prior": 0,
       "delta": 3,
@@ -1271,18 +1271,6 @@
       "basis": "gaining_share"
     },
     {
-      "id": "ds-durga",
-      "name": "D.S. & DURGA",
-      "tier": "luxury",
-      "recent": 6,
-      "prior": 1,
-      "delta": 5,
-      "share_recent": 2.3,
-      "share_prior": 0.9,
-      "ratio": 2.05,
-      "basis": "newly_covered"
-    },
-    {
       "id": "ouai",
       "name": "OUAI",
       "tier": "premium",
@@ -1295,8 +1283,20 @@
       "basis": "newly_covered"
     },
     {
-      "id": "oribe",
-      "name": "Oribe",
+      "id": "ds-durga",
+      "name": "D.S. & DURGA",
+      "tier": "luxury",
+      "recent": 6,
+      "prior": 1,
+      "delta": 5,
+      "share_recent": 2.3,
+      "share_prior": 0.9,
+      "ratio": 2.05,
+      "basis": "newly_covered"
+    },
+    {
+      "id": "byredo",
+      "name": "Byredo",
       "tier": "luxury",
       "recent": 9,
       "prior": 2,
@@ -1307,8 +1307,8 @@
       "basis": "gaining_share"
     },
     {
-      "id": "byredo",
-      "name": "Byredo",
+      "id": "oribe",
+      "name": "Oribe",
       "tier": "luxury",
       "recent": 9,
       "prior": 2,
@@ -1367,9 +1367,9 @@
       "basis": "newly_covered"
     },
     {
-      "id": "flamingo-estate",
-      "name": "Flamingo Estate",
-      "tier": "luxury",
+      "id": "bioderma",
+      "name": "Bioderma",
+      "tier": "masstige",
       "recent": 3,
       "prior": 1,
       "delta": 2,
@@ -1379,9 +1379,9 @@
       "basis": "newly_covered"
     },
     {
-      "id": "bioderma",
-      "name": "Bioderma",
-      "tier": "masstige",
+      "id": "flamingo-estate",
+      "name": "Flamingo Estate",
+      "tier": "luxury",
       "recent": 3,
       "prior": 1,
       "delta": 2,
@@ -1511,6 +1511,18 @@
       "basis": "gaining_share"
     },
     {
+      "id": "loccitane",
+      "name": "L'Occitane en Provence",
+      "tier": "premium",
+      "recent": 4,
+      "prior": 3,
+      "delta": 1,
+      "share_recent": 1.5,
+      "share_prior": 2.8,
+      "ratio": 0.6,
+      "basis": "gaining_share"
+    },
+    {
       "id": "acqua-di-parma",
       "name": "Acqua di Parma",
       "tier": "luxury",
@@ -1526,18 +1538,6 @@
       "id": "tom-ford-beauty",
       "name": "TOM FORD BEAUTY",
       "tier": "luxury",
-      "recent": 4,
-      "prior": 3,
-      "delta": 1,
-      "share_recent": 1.5,
-      "share_prior": 2.8,
-      "ratio": 0.6,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "loccitane",
-      "name": "L'Occitane en Provence",
-      "tier": "premium",
       "recent": 4,
       "prior": 3,
       "delta": 1,
