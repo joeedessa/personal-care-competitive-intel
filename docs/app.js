@@ -94,10 +94,18 @@ function showTip(e, html) {
   tip.style.left = Math.max(8, x) + "px"; tip.style.top = Math.max(8, y) + "px";
 }
 const hideTip = () => { tip.style.opacity = "0"; };
-function bindTip(node, html) {
+/* Tooltips enhance; they never gate a value.
+   `focusable` is opt-in and reserved for marks whose information is carried ONLY
+   by colour or position — matrix cells, map dots. Bar rows already print their
+   number as a direct label, so making 250 of them tab stops would add a vast
+   keyboard trap and no information. Those stay mouse-only, with the table view
+   as the keyboard/screen-reader path. */
+function bindTip(node, html, focusable) {
   node.addEventListener("mousemove", (e) => showTip(e, html));
   node.addEventListener("mouseleave", hideTip);
+  if (!focusable) return;
   node.tabIndex = 0;
+  node.setAttribute("aria-label", html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim());
   node.addEventListener("focus", () => {
     const b = node.getBoundingClientRect();
     showTip({ clientX: b.left + 24, clientY: b.top + b.height }, html);
@@ -397,7 +405,7 @@ function renderMatrix() {
       const n = counts[b.id][c.id] || 0;
       const td = el("td", n ? "on" : "");
       if (n) td.dataset.n = n;
-      bindTip(td, `<div class="t-title">${esc(b.name)}</div><div class="t-row"><span>${esc(c.label)}</span><b>${n} SKU${n === 1 ? "" : "s"}</b></div>`);
+      bindTip(td, `<div class="t-title">${esc(b.name)}</div><div class="t-row"><span>${esc(c.label)}</span><b>${n} SKU${n === 1 ? "" : "s"}</b></div>`, true);
       tr.append(td);
     });
     tr.append(el("td", "", `<span style="color:var(--ink-2);font-variant-numeric:tabular-nums">${Object.keys(counts[b.id]).length}</span>`));
@@ -420,7 +428,7 @@ function renderSkuTable() {
   rows.forEach((p) => {
     const tr = el("tr");
     tr.innerHTML = `
-      <td data-l="Brand"><span class="brand-link" data-brand="${esc(p.brand)}">${esc(p.brand_name)}</span></td>
+      <td data-l="Brand">${esc(p.brand_name)}</td>
       <td data-l="Product">${esc(p.name)}${p.off_basis ? '<div class="sub">other basis — excluded from the ladder</div>' : ""}</td>
       <td data-l="Category">${esc(p.category_label)}</td>
       <td class="num" data-l="Size">${esc(sizeLabel(p))}</td>
@@ -552,7 +560,7 @@ function renderPr() {
       const n = grid[b.id][k] || 0;
       const td = el("td", n ? "on" : "");
       if (n) td.dataset.n = n;
-      bindTip(td, `<div class="t-title">${esc(b.name)}</div><div class="t-row"><span>${esc(TAG_LABEL[k])}</span><b>${n} headline${n === 1 ? "" : "s"}</b></div>`);
+      bindTip(td, `<div class="t-title">${esc(b.name)}</div><div class="t-row"><span>${esc(TAG_LABEL[k])}</span><b>${n} headline${n === 1 ? "" : "s"}</b></div>`, true);
       tr.append(td);
     });
     tb.append(tr);
@@ -856,7 +864,9 @@ function renderMap() {
       <div class="t-row"><span>Categories</span><b>${d.breadth}</b></div>
       <div class="t-row"><span>SKUs tracked</span><b>${d.skus}</b></div>
       <div class="t-row"><span>UAE</span><b>${esc(d.uae.replace(/_/g, " "))}</b></div>
-      <div class="t-row"><span>Signals</span><b>${d.news}</b></div>`);
+      <div class="t-row"><span>Signals</span><b>${d.news}</b></div>`, true);
+    dot.setAttribute("role", "button");
+    dot.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openBrand(d.id); } });
     dot.addEventListener("click", () => openBrand(d.id));
   });
 
@@ -1166,6 +1176,14 @@ function reflectStateToControls() {
 }
 
 /* ---------- wiring ---------- */
+function upgradeBrandLinks() {
+  document.querySelectorAll("[data-brand]:not([role])").forEach((n) => {
+    n.setAttribute("role", "button");
+    n.tabIndex = 0;
+    n.setAttribute("aria-label", `Open ${n.textContent.trim()} profile`);
+  });
+}
+
 function renderAll() {
   if (state.tab === "overview") renderOverview();
   if (state.tab === "map") renderMap();
@@ -1175,6 +1193,7 @@ function renderAll() {
   if (state.tab === "pr") { renderPr(); renderWeekly(); renderMomentum(); }
   if (state.tab === "radar") renderRadar();
   if (state.tab === "brands") renderBrands();
+  upgradeBrandLinks();
 }
 
 function updateFilterSummary() {
@@ -1190,7 +1209,11 @@ function updateFilterSummary() {
 
 function setTab(tab) {
   state.tab = tab;
-  document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === tab)));
+  document.querySelectorAll("nav.tabs button").forEach((b) => {
+    const on = b.dataset.tab === tab;
+    b.setAttribute("aria-selected", String(on));
+    b.tabIndex = on ? 0 : -1;   // roving tabindex: one stop for the whole tablist
+  });
   ["overview", "map", "compare", "pricing", "news", "pr", "radar", "brands"].forEach((t) =>
     $("#panel-" + t).classList.toggle("hidden", t !== tab));
   // Only show a control where it actually scopes something.
@@ -1224,7 +1247,14 @@ function init() {
   $("#f-brand").innerHTML = `<option value="">All brands</option>` +
     withNews.map((b) => `<option value="${b.id}">${esc(b.name)} (${b.news_count})</option>`).join("");
 
-  const bind = (sel, key) => $(sel).addEventListener("input", (e) => { state[key] = e.target.value; renderAll(); updateFilterSummary(); syncUrl(); });
+  let searchTimer = null;
+  const bind = (sel, key) => $(sel).addEventListener("input", (e) => {
+    state[key] = e.target.value;
+    const go = () => { renderAll(); updateFilterSummary(); syncUrl(); };
+    // Re-rendering 250 SKUs on every keystroke is wasted work; everything else
+    // is a discrete choice and should feel instant.
+    if (key === "q") { clearTimeout(searchTimer); searchTimer = setTimeout(go, 160); } else go();
+  });
   ["#f-cat:cat", "#f-tier:tier", "#f-role:role", "#f-cur:cur", "#f-q:q",
    "#f-tag:tag", "#f-region:region", "#f-brand:brand"].forEach((pair) => {
     const [sel, key] = pair.split(":");
@@ -1237,17 +1267,55 @@ function init() {
     renderLadder(); syncUrl();
   }));
 
-  document.querySelectorAll("nav.tabs button").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
+  const tabBtns = [...document.querySelectorAll("nav.tabs button")];
+  tabBtns.forEach((b, i) => {
+    b.addEventListener("click", () => setTab(b.dataset.tab));
+    b.addEventListener("keydown", (e) => {
+      const map = { ArrowRight: 1, ArrowLeft: -1, Home: -Infinity, End: Infinity };
+      if (!(e.key in map)) return;
+      e.preventDefault();
+      const d = map[e.key];
+      const next = d === -Infinity ? 0 : d === Infinity ? tabBtns.length - 1
+        : (i + d + tabBtns.length) % tabBtns.length;
+      tabBtns[next].focus();
+      setTab(tabBtns[next].dataset.tab);
+    });
+  });
 
-  // Brand names are clickable wherever they appear.
+  // Brand names are clickable wherever they appear — and operable by keyboard,
+  // which means they must actually be controls, not just styled text.
   document.addEventListener("click", (e) => {
     const t = e.target.closest("[data-brand]");
     if (t) { e.preventDefault(); openBrand(t.dataset.brand); }
   });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const t = e.target.closest && e.target.closest("[data-brand]");
+    if (t) { e.preventDefault(); openBrand(t.dataset.brand); }
+  });
+
   $("#drawer-close").addEventListener("click", closeDrawer);
   $("#scrim").addEventListener("click", closeDrawer);
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && $("#drawer").classList.contains("open")) closeDrawer();
+    const drawer = $("#drawer");
+    if (!drawer.classList.contains("open")) {
+      // "/" focuses search from anywhere, unless already typing
+      if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
+        e.preventDefault();
+        $("#filters").classList.add("open");
+        $("#f-q").focus();
+      }
+      return;
+    }
+    if (e.key === "Escape") { closeDrawer(); return; }
+    if (e.key !== "Tab") return;
+    // A modal must not leak focus to the page behind it.
+    const f = [...drawer.querySelectorAll('a[href], button, input, select, [tabindex]:not([tabindex="-1"])')]
+      .filter((n) => n.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
 
   $("#filter-toggle").addEventListener("click", () => {

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 
   <header class="top">
@@ -32,9 +33,10 @@
     </div>
   </header>
 
-  <section class="tiles" id="tiles"></section>
+  <section class="tiles" id="tiles" aria-label="Headline figures"></section>
+  <main id="main" tabindex="-1">
 
-  <nav class="tabs" role="tablist">
+  <nav class="tabs" role="tablist" aria-label="Dashboard sections">
     <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
     <button role="tab" data-tab="pricing" aria-selected="false">Price &amp; range</button>
     <button role="tab" data-tab="map" aria-selected="false">Positioning</button>
@@ -264,6 +266,8 @@
       <div class="table-scroll"><table class="data" id="brand-table"></table></div>
     </div>
   </section>
+
+  </main>
 
   <footer class="foot">
     <p><b>Data confidence.</b> Prices marked <i>est</i> are seeded estimates for structure and shape — close enough to reason about a price ladder, and wrong enough that you must not quote them. Verify against the brand's own storefront, set <code>conf</code> to <code>"ver"</code> and record the <code>src</code> URL. News is collected automatically; product and pricing data is curated by hand, on purpose.</p>
