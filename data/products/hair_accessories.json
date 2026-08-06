@@ -1,0 +1,14 @@
+{
+  "category": "hair_accessories",
+  "label": "Hair Accessories",
+  "products": [
+    { "id": "alexandre-de-paris-vendome-clip", "brand": "alexandre-de-paris", "name": "Vendôme Hair Clip (medium)", "subtype": "clip", "size": 1, "unit": "unit", "hero": true, "px": { "home": 130, "usd": 155, "aed": null }, "conf": "est", "src": null, "notes": "Couture, hand-made in France. The ceiling of the accessory ladder and the closest structural analogue to La Bonne Brosse's positioning." },
+    { "id": "alexandre-de-paris-barrette", "brand": "alexandre-de-paris", "name": "Barrette (small)", "subtype": "clip", "size": 1, "unit": "unit", "hero": false, "px": { "home": 85, "usd": 100, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "emi-jay-big-effing-clip", "brand": "emi-jay", "name": "Big Effing Clip", "subtype": "claw_clip", "size": 1, "unit": "unit", "hero": true, "px": { "home": 28, "usd": 28, "aed": null }, "conf": "est", "src": null, "notes": "Drop mechanics + colourway scarcity. The volume story in premium accessories right now." },
+    { "id": "emi-jay-bow-scrunchie", "brand": "emi-jay", "name": "Silk Scrunchie Set", "subtype": "scrunchie", "size": 3, "unit": "pack", "hero": false, "px": { "home": 32, "usd": 32, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "machete-claw-clip", "brand": "machete", "name": "Large Claw Clip", "subtype": "claw_clip", "size": 1, "unit": "unit", "hero": true, "px": { "home": 32, "usd": 32, "aed": null }, "conf": "est", "src": null, "notes": "Italian cellulose acetate; sustainability framing on material." },
+    { "id": "chunks-claw-clip", "brand": "chunks", "name": "Marbled Claw Clip", "subtype": "claw_clip", "size": 1, "unit": "unit", "hero": true, "px": { "home": 26, "usd": 26, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "crown-affair-silk-scrunchie", "brand": "crown-affair", "name": "The Scrunchie (silk)", "subtype": "scrunchie", "size": 1, "unit": "unit", "hero": false, "px": { "home": 28, "usd": 28, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "byredo-hair-perfume-75", "brand": "byredo", "name": "Hair Perfume", "subtype": "hair_fragrance", "size": 75, "unit": "ml", "hero": false, "px": { "home": 75, "usd": 85, "aed": null }, "conf": "est", "src": null, "notes": "Adjacent format — fragrance houses entering hair via mist rather than tools." }
+  ]
+}

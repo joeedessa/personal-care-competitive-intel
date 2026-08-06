@@ -1,0 +1,19 @@
+{
+  "category": "conditioner",
+  "label": "Conditioner",
+  "products": [
+    { "id": "oribe-gold-lust-conditioner-200", "brand": "oribe", "name": "Gold Lust Repair & Restore Conditioner", "subtype": "conditioner", "size": 200, "unit": "ml", "hero": true, "px": { "home": 58, "usd": 58, "aed": null }, "conf": "est", "src": null, "notes": "Conditioner priced above shampoo at a smaller fill — a common prestige-haircare move worth flagging." },
+    { "id": "virtue-recovery-conditioner-240", "brand": "virtue", "name": "Recovery Conditioner", "subtype": "conditioner", "size": 240, "unit": "ml", "hero": true, "px": { "home": 46, "usd": 46, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "aesop-classic-conditioner-500", "brand": "aesop", "name": "Classic Conditioner", "subtype": "conditioner", "size": 500, "unit": "ml", "hero": true, "px": { "home": 55, "usd": 39, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "le-labo-conditioner-hinoki-237", "brand": "le-labo", "name": "Hinoki Conditioner", "subtype": "conditioner", "size": 237, "unit": "ml", "hero": true, "px": { "home": 44, "usd": 44, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "sisley-hair-rituel-conditioner-200", "brand": "sisley", "name": "Hair Rituel Restructuring Conditioner", "subtype": "conditioner", "size": 200, "unit": "ml", "hero": true, "px": { "home": 82, "usd": 96, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "rahua-classic-conditioner-275", "brand": "rahua", "name": "Classic Conditioner", "subtype": "conditioner", "size": 275, "unit": "ml", "hero": false, "px": { "home": 42, "usd": 42, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "ouai-fine-hair-conditioner-300", "brand": "ouai", "name": "Fine Hair Conditioner", "subtype": "conditioner", "size": 300, "unit": "ml", "hero": true, "px": { "home": 32, "usd": 32, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "briogeo-dont-despair-repair-conditioner-236", "brand": "briogeo", "name": "Don't Despair, Repair! Conditioner", "subtype": "conditioner", "size": 236, "unit": "ml", "hero": false, "px": { "home": 34, "usd": 34, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "aveda-nutriplenish-conditioner-200", "brand": "aveda", "name": "Nutriplenish Conditioner", "subtype": "conditioner", "size": 200, "unit": "ml", "hero": false, "px": { "home": 36, "usd": 36, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "davines-oi-conditioner-250", "brand": "davines", "name": "OI Conditioner", "subtype": "conditioner", "size": 250, "unit": "ml", "hero": false, "px": { "home": 35, "usd": 40, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "grown-alchemist-conditioner-200", "brand": "grown-alchemist", "name": "Conditioner 0.2 – Rosemary & Burdock", "subtype": "conditioner", "size": 200, "unit": "ml", "hero": false, "px": { "home": 39, "usd": 30, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "molton-brown-repairing-conditioner-300", "brand": "molton-brown", "name": "Repairing Conditioner with Fennel", "subtype": "conditioner", "size": 300, "unit": "ml", "hero": false, "px": { "home": 26, "usd": 32, "aed": null }, "conf": "est", "src": null, "notes": null },
+    { "id": "dove-daily-moisture-conditioner-400", "brand": "dove", "name": "Daily Moisture Conditioner", "subtype": "conditioner", "size": 400, "unit": "ml", "hero": true, "px": { "home": 4, "usd": 6, "aed": null }, "conf": "est", "src": null, "notes": "Mass floor." }
+  ]
+}

@@ -1,0 +1,70 @@
+name: Refresh dashboard
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # 05:00 UTC = 09:00 Gulf Standard Time
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "scripts/**"
+      - "docs/index.html"
+      - "docs/app.js"
+      - "docs/styles.css"
+      - ".github/workflows/refresh.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet requests feedparser
+
+      - name: Fetch FX rates
+        run: python scripts/fetch_fx.py
+
+      - name: Collect news & PR signals
+        # Non-fatal: a rate-limited feed must not block a rebuild.
+        run: python scripts/collect_news.py || echo "::warning::news collection finished with errors"
+
+      - name: Build dashboard payload
+        run: python scripts/build.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/generated docs/data.js docs/data.json
+          git diff --staged --quiet || git commit -m "chore: daily data refresh [skip ci]"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

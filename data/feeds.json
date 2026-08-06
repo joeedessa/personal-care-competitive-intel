@@ -1,0 +1,46 @@
+{
+  "_comment": "News/PR sources. Trade feeds are polled directly. Per-brand coverage is generated automatically from brands.json via Google News RSS — no per-brand feed maintenance needed. Add 'own' feeds when a brand actually publishes RSS (rare in luxury).",
+
+  "google_news": {
+    "enabled": true,
+    "template": "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en",
+    "regional_template": "https://news.google.com/rss/search?q={query}&hl=en-AE&gl=AE&ceid=AE:en",
+    "poll_regional_for_roles": ["core_competitor", "regional_incumbent"],
+    "query_suffix": "(beauty OR fragrance OR skincare OR launch OR campaign OR retail)",
+    "lookback_days": 90
+  },
+
+  "trade_feeds": [
+    { "id": "beauty-independent", "name": "Beauty Independent", "url": "https://www.beautyindependent.com/feed/", "focus": "indie / emerging brands, funding, retail" },
+    { "id": "cosmetics-business", "name": "Cosmetics Business", "url": "https://cosmeticsbusiness.com/rss", "focus": "UK/EU industry, NPD, market data" },
+    { "id": "premium-beauty-news", "name": "Premium Beauty News", "url": "https://www.premiumbeautynews.com/spip.php?page=backend", "focus": "packaging, luxury beauty, sustainability" },
+    { "id": "wwd-beauty", "name": "WWD Beauty", "url": "https://wwd.com/beauty-industry-news/feed/", "focus": "luxury beauty business, M&A, executive moves" },
+    { "id": "global-cosmetics-news", "name": "Global Cosmetics News", "url": "https://www.globalcosmeticsnews.com/feed/", "focus": "global brand and retail news" },
+    { "id": "esm-magazine", "name": "ESM Magazine", "url": "https://www.esmmagazine.com/feed", "focus": "European retail & FMCG, listings and distribution" }
+  ],
+
+  "trade_feeds_broken": [
+    { "id": "happi", "url": "https://www.happi.com/rss/", "status": "403 — blocks non-browser clients" },
+    { "id": "cosmeticsdesign-europe", "url": "https://www.cosmeticsdesign-europe.com/rss", "status": "410 — William Reed retired their public RSS" },
+    { "id": "personal-care-insights", "url": "https://www.personalcareinsights.com/rss", "status": "404 — no public feed found" }
+  ],
+
+  "topic_feeds": [
+    { "id": "topic-luxury-candle", "name": "Topic: luxury candles & home fragrance", "query": "\"home fragrance\" OR \"luxury candle\" market launch" },
+    { "id": "topic-gcc-beauty", "name": "Topic: GCC / UAE beauty retail", "query": "(UAE OR Dubai OR GCC) beauty retail expansion brand launch" },
+    { "id": "topic-body-skinification", "name": "Topic: body skinification", "query": "\"body care\" skinification premium growth" },
+    { "id": "topic-refill-sustainability", "name": "Topic: refill & packaging", "query": "beauty refill packaging sustainability personal care" },
+    { "id": "topic-hair-tools", "name": "Topic: premium hair tools & accessories", "query": "\"hair brush\" OR \"hair accessories\" luxury brand launch" }
+  ],
+
+  "initiative_keywords": {
+    "_comment": "Used to auto-tag headlines into initiative buckets on the Signals tab.",
+    "sustainability": ["refill", "refillable", "recycl", "carbon", "B Corp", "biodegrad", "packaging", "regenerat", "circular"],
+    "retail_expansion": ["opens", "opening", "flagship", "boutique", "store", "expands", "expansion", "enters", "launch in", "pop-up", "popup"],
+    "product_launch": ["launches", "debuts", "unveils", "introduces", "new collection", "new line", "drop"],
+    "collaboration": ["collab", "partners with", "partnership", "capsule", "limited edition", "limited-edition", "teams up", "joins forces"],
+    "campaign_pr": ["campaign", "ambassador", "face of", "appoints", "names", "film", "creative director"],
+    "corporate": ["acquire", "acquisition", "stake", "funding", "investment", "raises", "CEO", "results", "revenue", "IPO"],
+    "awards_press": ["award", "wins", "named best", "ranking"]
+  }
+}

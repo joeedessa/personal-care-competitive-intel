@@ -1,0 +1,32 @@
+{
+  "_comment": "Fallback FX table, units of currency per 1 USD. scripts/fetch_fx.py overwrites data/generated/fx_live.json daily from frankfurter.app; the builder prefers live and falls back to this. AED is pegged at 3.6725 and does not move.",
+  "base": "USD",
+  "as_of": "2026-08-06",
+  "rates": {
+    "USD": 1.0,
+    "AED": 3.6725,
+    "EUR": 0.92,
+    "GBP": 0.79,
+    "AUD": 1.52,
+    "SEK": 9.6,
+    "JPY": 152.0,
+    "KRW": 1370.0,
+    "INR": 84.0,
+    "CHF": 0.88,
+    "CAD": 1.36,
+    "ILS": 3.7,
+    "BRL": 5.4,
+    "OMR": 0.385
+  },
+  "uae_market": {
+    "_comment": "Expected AED shelf price = USD price x AED/USD x (1 + uplift). Uplift covers 5% VAT plus importer/distributor margin. Tune per tier once you verify real Ounass / Sephora ME / Bloomingdale's prices — the gap between derived and observed is the single most useful output of this dashboard.",
+    "uplift_by_tier": {
+      "luxury": 0.18,
+      "premium": 0.15,
+      "masstige": 0.10,
+      "mass": 0.05
+    },
+    "vat_rate": 0.05,
+    "note": "Boutique-operated brands (Aesop, Le Labo, Diptyque, Rituals) tend to price closer to parity. Distributor-fed brands and department-store-only brands tend to run well above it. Flag anything over +30% as a pricing-power signal or a grey-market risk."
+  }
+}
