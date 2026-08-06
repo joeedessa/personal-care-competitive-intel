@@ -157,7 +157,7 @@ function renderHeader() {
       foot: ceiling ? `${ceiling.name} vs category median` : "" },
     { label: "Widest spread", value: widest ? widest.spread_multiple + "×" : "—",
       foot: widest ? widest.label.toLowerCase() : "" },
-    { label: "Steepest same-tier gap", value: gap ? gap.metric : "—",
+    { label: "Steepest tier gap", value: gap ? gap.metric : "—",
       foot: gap ? "two brands, one claim" : "" },
     { label: "Most contested", value: crowded ? crowded.brand_count : "—",
       foot: crowded ? `brands in ${crowded.label.toLowerCase()}` : "" },

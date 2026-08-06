@@ -25,6 +25,28 @@ MIN_TIER_PEERS = 3
 MAX_SIZE_RATIO = 4      # beyond this the two packs are different product classes
 MAX_PER_KIND = 3        # keep the finding set varied rather than one idea repeated
 
+# Magnitude decides what leads the dashboard, so it encodes editorial judgement,
+# not just arithmetic. Each kind gets a BASE reflecting how actionable it is, plus
+# a bounded bonus for how extreme this particular instance is. Without the base a
+# raw index like 464 would swamp everything and a stat would lead instead of a
+# competitive fact.
+BASE = {
+    "same_tier_gap": 60,   # two brands, one claim, a real gap - the sharpest fact here
+    "pack_illusion": 57,   # same shelf price, different value - directly actionable
+    "white_space": 54,     # where nobody is competing
+    "uae_gap": 50,         # unclaimed routes to the decision market
+    "geography": 45,       # how much of a price is distribution
+    "price_leader": 42,    # the ceiling, useful but static
+    "accelerating": 40,    # who is moving
+    "entry_price": 30,     # the trial price to beat
+    "initiative": 25,      # what the category is talking about
+}
+
+
+def _mag(kind, bonus=0.0):
+    """Base priority for the finding type, plus at most 25 points of extremity."""
+    return BASE.get(kind, 20) + min(25.0, bonus)
+
 
 def _fmt_usd(v):
     return f"${v:,.2f}" if v < 10 else f"${v:,.0f}"
@@ -90,7 +112,7 @@ def same_tier_undercuts(products, categories):
                       f"{lo['brand_name']} {lo['name']} is {_fmt_usd(lo['norm_usd'])}. Same tier, same category — "
                       f"the difference is brand equity, not positioning.",
             "metric": f"{mult:.1f}×",
-            "magnitude": _damp(mult) * 1.4,
+            "magnitude": _mag("same_tier_gap", (mult - 1.6) * 2.5),
             "refs": [hi["id"], lo["id"]],
             "tab": "pricing", "focus": {"cat": cat_id, "tier": tier},
         })
@@ -138,7 +160,7 @@ def pack_size_illusion(products, categories):
                           f"{lo['size']}{lo['unit']} both sit near {_fmt_usd(hi['price_usd'])}. Pack size is doing the work "
                           f"that price appears to be doing. This is the lever to pull if you want to look competitive without discounting.",
                 "metric": f"{mult:.1f}×",
-                "magnitude": _damp(mult) * 1.25,
+                "magnitude": _mag("pack_illusion", (mult - 1.5) * 2.5),
                 "refs": [hi["id"], lo["id"]],
                 "tab": "pricing", "focus": {"cat": cat_id, "view": "asis"},
             })
@@ -162,7 +184,7 @@ def geography_premium(products):
                   f"{len(big)} tracked SKUs carry a US premium above 25% — that gap is distribution margin, not product, "
                   f"and it is the same gap you would be paying to import into the UAE.",
         "metric": f"+{top['us_vs_home_pct']:.0f}%",
-        "magnitude": top["us_vs_home_pct"] * 1.2,
+        "magnitude": _mag("geography", top["us_vs_home_pct"] / 4),
         "refs": [top["id"]],
         "tab": "pricing", "focus": {"cat": top["category"]},
     }]
@@ -190,7 +212,7 @@ def range_white_space(products, brands, categories):
         "detail": f"{tc['label']} is the least crowded category tracked. Thin competition can mean an opening or a category "
                   f"that does not support a premium — check the spread before reading it as opportunity.",
         "metric": str(per_cat[thinnest]),
-        "magnitude": (per_cat[thickest] - per_cat[thinnest]) * 4,
+        "magnitude": _mag("white_space", (per_cat[thickest] - per_cat[thinnest]) * 0.8),
         "refs": [],
         "tab": "pricing", "focus": {"cat": thinnest},
     })
@@ -212,7 +234,7 @@ def uae_exposure(brands):
         "detail": f"{names}{' and others' if len(absent) > 4 else ''} reach the Gulf through e-commerce or not at all. "
                   f"Every one of them is a shelf that is not yet taken — and a distribution conversation somebody will have first.",
         "metric": str(len(absent)),
-        "magnitude": len(absent) * 3,
+        "magnitude": _mag("uae_gap", len(absent) * 0.8),
         "refs": [b["id"] for b in absent[:8]],
         "tab": "brands", "focus": {},
     }]
@@ -233,7 +255,7 @@ def price_leadership(brands):
                   f"where 100 is the median of each category it competes in. The most restrained brand in the set is "
                   f"{low['name']} at {low['avg_price_index']}. Those two numbers bracket the practical premium ceiling.",
         "metric": str(top["avg_price_index"]),
-        "magnitude": top["avg_price_index"] / 2,
+        "magnitude": _mag("price_leader", (top["avg_price_index"] - 100) / 15),
         "refs": [top["id"], low["id"]],
         "tab": "brands", "focus": {},
     }]
@@ -264,7 +286,7 @@ def news_momentum(news, brands):
         "detail": f"{top_n} headlines against a median of {median:.0f} across the {len(counts)} brands with any coverage. "
                   f"Volume is not sentiment — but a brand this loud is either launching, being acquired, or in trouble.",
         "metric": str(top_n),
-        "magnitude": (top_n / median) * 8,
+        "magnitude": _mag("accelerating", (top_n / median) * 4),
         "refs": [top_id],
         "tab": "news", "focus": {"brand": top_id},
     }]
@@ -290,7 +312,7 @@ def initiative_concentration(news, tag_labels):
         "detail": f"{top_n} of {total} tagged headlines. The quietest front is {tag_labels.get(bottom, bottom).lower()} "
                   f"at {bottom_n} — a theme nobody has claimed is either irrelevant or unoccupied.",
         "metric": f"{top_n / total * 100:.0f}%",
-        "magnitude": (top_n / total) * 60,
+        "magnitude": _mag("initiative", (top_n / total) * 40),
         "refs": [],
         "tab": "pr", "focus": {"tag": top},
     }]
@@ -313,7 +335,7 @@ def entry_price_floor(products, categories):
                       f"That is the trial price a new entrant has to beat or justify — the number that decides whether "
                       f"someone tries you on impulse.",
             "metric": _fmt_usd(cheapest["price_usd"]),
-            "magnitude": 20,
+            "magnitude": _mag("entry_price"),
             "refs": [cheapest["id"]],
             "tab": "pricing", "focus": {"cat": c["id"], "view": "asis"},
         })
@@ -450,7 +472,7 @@ def momentum_finding(momentum):
                   f"returns denser recent coverage — raw counts would rise for everyone. "
                   f"{len(risers)} brands are gaining share on this measure. Volume is not sentiment.",
         "metric": f"{top['ratio']}×",
-        "magnitude": 42 + top["ratio"] * 4,
+        "magnitude": _mag("accelerating", top["ratio"] * 5),
         "refs": [top["id"]],
         "tab": "news", "focus": {"brand": top["id"]},
     }]

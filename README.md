@@ -11,11 +11,21 @@ request, and the recommended next additions.
 
 | Tab | Answers |
 |---|---|
+| **Overview** | The findings, computed not written. Same-tier price gaps, pack-size illusions, geography premiums, white space, UAE exposure, entry price floors — ranked, each clickable through to its evidence |
 | **Price & range** | Where every SKU sits on the ladder — in two views (below); how much premium each category tolerates; what a UAE shelf price should be and which SKUs still need verifying; which brands play in which categories |
-| **News** | Every headline collected across the brand set, newest first, filterable by brand, region and initiative type |
-| **PR & initiatives** | What brands are *doing*, auto-tagged into seven buckets; share of voice; a brand × initiative matrix showing where each brand is spending its attention |
+| **Positioning** | The competitive map: range breadth against price index, dot size by SKU count, coloured by tier. Click any brand to open its profile |
+| **Head to head** | Two or three brands side by side — the like-for-like price gap in every category they both compete in, and the range each one is missing |
+| **News** | Every headline collected, grouped by week with sticky headers, filterable by brand, region and initiative type |
+| **PR & initiatives** | What brands are *doing*, auto-tagged into seven buckets; share of voice; coverage over time; share-of-voice momentum; a brand × initiative matrix |
 | **Emerging radar** | Brands under ~5 years old that are setting price or winning doors, ranked by momentum and threat |
 | **Brand directory** | All ~85 brands with tier, owner, UAE channel presence, SKU coverage and average price index |
+
+Brand names are clickable anywhere they appear and open a **profile drawer** — identity,
+ownership, UAE channels, full range with per-category price index, and recent coverage.
+
+Every view is a URL. Tab, filters, price view and the current comparison are encoded in the
+hash, so a specific finding can be sent to someone:
+`…/#tab=compare&cmp=aesop,grown-alchemist`
 
 ### Two price views
 
@@ -92,6 +102,23 @@ lightness across the ramp, ≥8 OKLab ΔE between adjacent steps, ≥2:1 contras
 nearest the surface, ≥3:1 for every mark, ≥90° hue separation between the diverging poles, and
 WCAG contrast on all three text roles. **Run it before changing any colour** — `make check`
 does, and it exits non-zero on failure.
+
+## The analysis layer
+
+`scripts/analysis.py` turns the merged dataset into ranked findings. Nothing is hand-written —
+edit a price and the findings change. Three things are deliberate:
+
+- **Comparability guards.** A same-tier gap is only claimed between SKUs of the same format
+  within 4× on size. Without that, a 30-stick gift box "competed with" a 450-stick bulk pack
+  and produced a true number attached to a false claim.
+- **Editorial magnitude.** Ranking uses a base priority per finding type plus a bounded
+  extremity bonus, so a raw index of 464 cannot swamp the board and push a static stat above an
+  actionable competitive fact.
+- **Share-based momentum.** News search returns much denser coverage for recent weeks, so raw
+  30-day counts make everything look like it is accelerating. Momentum is each brand's *share*
+  of its period's coverage. Brands with no prior baseline are reported as "newly appearing"
+  rather than as risers, because a young archive cannot tell new activity from a previously
+  missed brand.
 
 ## Derived metrics
 

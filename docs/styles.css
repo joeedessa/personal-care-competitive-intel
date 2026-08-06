@@ -155,7 +155,8 @@ header.top { padding-bottom: 30px; border-bottom: 1px solid var(--rule); }
   border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
   margin: 0 0 40px;
 }
-.tile { padding: 26px 26px 24px; border-right: 1px solid var(--rule); }
+.tile { padding: 26px 26px 24px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; }
+.tile .value { margin-top: auto; }
 .tile:last-child { border-right: 0; }
 .tile .label { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-3); }
 .tile .value {

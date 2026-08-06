@@ -1,39 +1,76 @@
 {
-  "generated_at": "2026-08-06T05:51:40+00:00",
+  "generated_at": "2026-08-06T05:54:16+00:00",
   "findings": [
     {
-      "kind": "price_leader",
-      "headline": "La Mer prices at 464% of the category median across every category it plays in",
-      "detail": "Across 3 tracked SKUs, La Mer averages an index of 464 where 100 is the median of each category it competes in. The most restrained brand in the set is Nippon Kodo at 24. Those two numbers bracket the practical premium ceiling.",
-      "metric": "464",
-      "magnitude": 232.0,
+      "kind": "same_tier_gap",
+      "headline": "SENSAI (Kanebo) charges 10.2× Aesop for the same luxury claim in lip balm & lip care",
+      "detail": "SENSAI (Kanebo) Total Lip Treatment is $2,143 per 100g; Aesop Protective Lip Balm SPF30 is $211. Same tier, same category — the difference is brand equity, not positioning.",
+      "metric": "10.2×",
+      "magnitude": 81.3761072426697,
       "refs": [
-        "la-mer",
-        "nippon-kodo"
+        "sensai-lip-treatment",
+        "aesop-lip-balm-protective-9"
       ],
-      "tab": "brands",
-      "focus": {},
+      "tab": "pricing",
+      "focus": {
+        "cat": "lip_balm",
+        "tier": "luxury"
+      },
       "rank": 1
+    },
+    {
+      "kind": "pack_illusion",
+      "headline": "Byredo and Molton Brown cost the same on shelf — Byredo is 10.9× the price by volume",
+      "detail": "Byredo Blanche Hand Cream at 30ml and Molton Brown Orange & Bergamot Hand Lotion at 300ml both sit near $38. Pack size is doing the work that price appears to be doing. This is the lever to pull if you want to look competitive without discounting.",
+      "metric": "10.9×",
+      "magnitude": 80.38581833761782,
+      "refs": [
+        "byredo-hand-cream-blanche-30",
+        "molton-brown-hand-lotion-300"
+      ],
+      "tab": "pricing",
+      "focus": {
+        "cat": "hand_cream",
+        "view": "asis"
+      },
+      "rank": 2
+    },
+    {
+      "kind": "same_tier_gap",
+      "headline": "Astier de Villatte charges 7.4× Shoyeido for the same luxury claim in incense",
+      "detail": "Astier de Villatte Incense Sticks (Grand Chalet / Delhi / Tokyo) is $0.52 per stick; Shoyeido Daily Incense (bulk) is $0.07. Same tier, same category — the difference is brand equity, not positioning.",
+      "metric": "7.4×",
+      "magnitude": 74.57142857142857,
+      "refs": [
+        "astier-de-villatte-incense-125",
+        "shoyeido-daily-incense-450"
+      ],
+      "tab": "pricing",
+      "focus": {
+        "cat": "incense",
+        "tier": "luxury"
+      },
+      "rank": 3
     },
     {
       "kind": "white_space",
       "headline": "Only 6 premium brands compete in hair accessories — against 31 in body lotion & body care",
       "detail": "Hair Accessories is the least crowded category tracked. Thin competition can mean an opening or a category that does not support a premium — check the spread before reading it as opportunity.",
       "metric": "6",
-      "magnitude": 100,
+      "magnitude": 74.0,
       "refs": [],
       "tab": "pricing",
       "focus": {
         "cat": "hair_accessories"
       },
-      "rank": 2
+      "rank": 4
     },
     {
       "kind": "uae_gap",
       "headline": "27 premium brands still have no proper UAE route to market",
       "detail": "Tangent GC, Officine Universelle Buly 1803, Astier de Villatte, MONTROI and others reach the Gulf through e-commerce or not at all. Every one of them is a shelf that is not yet taken — and a distribution conversation somebody will have first.",
       "metric": "27",
-      "magnitude": 81,
+      "magnitude": 71.6,
       "refs": [
         "tangent-gc",
         "buly-1803",
@@ -46,80 +83,14 @@
       ],
       "tab": "brands",
       "focus": {},
-      "rank": 3
-    },
-    {
-      "kind": "geography",
-      "headline": "Shoyeido costs 58% more in the US than at home",
-      "detail": "Horin Series Incense is $22 in the US against 2,200 JPY at home. 9 tracked SKUs carry a US premium above 25% — that gap is distribution margin, not product, and it is the same gap you would be paying to import into the UAE.",
-      "metric": "+58%",
-      "magnitude": 69.12,
-      "refs": [
-        "shoyeido-horin-incense-20"
-      ],
-      "tab": "pricing",
-      "focus": {
-        "cat": "incense"
-      },
-      "rank": 4
-    },
-    {
-      "kind": "same_tier_gap",
-      "headline": "SENSAI (Kanebo) charges 10.2× Aesop for the same luxury claim in lip balm & lip care",
-      "detail": "SENSAI (Kanebo) Total Lip Treatment is $2,143 per 100g; Aesop Protective Lip Balm SPF30 is $211. Same tier, same category — the difference is brand equity, not positioning.",
-      "metric": "10.2×",
-      "magnitude": 56.349578602688645,
-      "refs": [
-        "sensai-lip-treatment",
-        "aesop-lip-balm-protective-9"
-      ],
-      "tab": "pricing",
-      "focus": {
-        "cat": "lip_balm",
-        "tier": "luxury"
-      },
       "rank": 5
-    },
-    {
-      "kind": "pack_illusion",
-      "headline": "Byredo and Molton Brown cost the same on shelf — Byredo is 10.9× the price by volume",
-      "detail": "Byredo Blanche Hand Cream at 30ml and Molton Brown Orange & Bergamot Hand Lotion at 300ml both sit near $38. Pack size is doing the work that price appears to be doing. This is the lever to pull if you want to look competitive without discounting.",
-      "metric": "10.9×",
-      "magnitude": 51.73950364238969,
-      "refs": [
-        "byredo-hand-cream-blanche-30",
-        "molton-brown-hand-lotion-300"
-      ],
-      "tab": "pricing",
-      "focus": {
-        "cat": "hand_cream",
-        "view": "asis"
-      },
-      "rank": 6
-    },
-    {
-      "kind": "same_tier_gap",
-      "headline": "Astier de Villatte charges 7.4× Shoyeido for the same luxury claim in incense",
-      "detail": "Astier de Villatte Incense Sticks (Grand Chalet / Delhi / Tokyo) is $0.52 per stick; Shoyeido Daily Incense (bulk) is $0.07. Same tier, same category — the difference is brand equity, not positioning.",
-      "metric": "7.4×",
-      "magnitude": 49.49647869859769,
-      "refs": [
-        "astier-de-villatte-incense-125",
-        "shoyeido-daily-incense-450"
-      ],
-      "tab": "pricing",
-      "focus": {
-        "cat": "incense",
-        "tier": "luxury"
-      },
-      "rank": 7
     },
     {
       "kind": "same_tier_gap",
       "headline": "La Mer charges 6.2× NONFICTION for the same luxury claim in body lotion & body care",
       "detail": "La Mer The Body Crème is $95 per 100ml; NONFICTION Body Lotion – Gentle Night is $15. Same tier, same category — the difference is brand equity, not positioning.",
       "metric": "6.2×",
-      "magnitude": 45.91569946195945,
+      "magnitude": 71.4924983692107,
       "refs": [
         "la-mer-body-creme-300",
         "nonfiction-body-lotion-300"
@@ -129,14 +100,28 @@
         "cat": "body_lotion",
         "tier": "luxury"
       },
-      "rank": 8
+      "rank": 6
+    },
+    {
+      "kind": "price_leader",
+      "headline": "La Mer prices at 464% of the category median across every category it plays in",
+      "detail": "Across 3 tracked SKUs, La Mer averages an index of 464 where 100 is the median of each category it competes in. The most restrained brand in the set is Nippon Kodo at 24. Those two numbers bracket the practical premium ceiling.",
+      "metric": "464",
+      "magnitude": 66.26666666666667,
+      "refs": [
+        "la-mer",
+        "nippon-kodo"
+      ],
+      "tab": "brands",
+      "focus": {},
+      "rank": 7
     },
     {
       "kind": "pack_illusion",
       "headline": "Diptyque and Astier de Villatte cost the same on shelf — Diptyque is 4.5× the price by volume",
       "detail": "Diptyque Scented Incense (Baies / Figuier) at 30sticks and Astier de Villatte Incense Sticks (Grand Chalet / Delhi / Tokyo) at 125sticks both sit near $70. Pack size is doing the work that price appears to be doing. This is the lever to pull if you want to look competitive without discounting.",
       "metric": "4.5×",
-      "magnitude": 35.82102468391328,
+      "magnitude": 64.45192307692308,
       "refs": [
         "diptyque-incense-sticks-3x",
         "astier-de-villatte-incense-125"
@@ -146,14 +131,14 @@
         "cat": "incense",
         "view": "asis"
       },
-      "rank": 9
+      "rank": 8
     },
     {
       "kind": "pack_illusion",
       "headline": "Diptyque and Boy Smells cost the same on shelf — Diptyque is 3.3× the price by volume",
       "detail": "Diptyque Baies Scented Candle (mini) at 70g and Boy Smells Kush Scented Candle at 240g both sit near $40. Pack size is doing the work that price appears to be doing. This is the lever to pull if you want to look competitive without discounting.",
       "metric": "3.3×",
-      "magnitude": 31.312989433595384,
+      "magnitude": 61.41285714285714,
       "refs": [
         "diptyque-baies-candle-70",
         "boy-smells-candle-240"
@@ -163,6 +148,21 @@
         "cat": "candles",
         "view": "asis"
       },
+      "rank": 9
+    },
+    {
+      "kind": "geography",
+      "headline": "Shoyeido costs 58% more in the US than at home",
+      "detail": "Horin Series Incense is $22 in the US against 2,200 JPY at home. 9 tracked SKUs carry a US premium above 25% — that gap is distribution margin, not product, and it is the same gap you would be paying to import into the UAE.",
+      "metric": "+58%",
+      "magnitude": 59.4,
+      "refs": [
+        "shoyeido-horin-incense-20"
+      ],
+      "tab": "pricing",
+      "focus": {
+        "cat": "incense"
+      },
       "rank": 10
     },
     {
@@ -170,7 +170,7 @@
       "headline": "Bath & Body Works is generating 3.0× the median brand's coverage",
       "detail": "15 headlines against a median of 5 across the 64 brands with any coverage. Volume is not sentiment — but a brand this loud is either launching, being acquired, or in trouble.",
       "metric": "15",
-      "magnitude": 24.0,
+      "magnitude": 52.0,
       "refs": [
         "bath-body-works"
       ],
@@ -181,11 +181,24 @@
       "rank": 11
     },
     {
+      "kind": "initiative",
+      "headline": "Retail expansion accounts for 28% of everything the category is talking about",
+      "detail": "55 of 195 tagged headlines. The quietest front is awards & press at 1 — a theme nobody has claimed is either irrelevant or unoccupied.",
+      "metric": "28%",
+      "magnitude": 36.282051282051285,
+      "refs": [],
+      "tab": "pr",
+      "focus": {
+        "tag": "retail_expansion"
+      },
+      "rank": 12
+    },
+    {
       "kind": "entry_price",
       "headline": "The cheapest way into premium body lotion & body care is $28",
       "detail": "Nécessaire The Body Lotion – Fragrance Free at 237ml. That is the trial price a new entrant has to beat or justify — the number that decides whether someone tries you on impulse.",
       "metric": "$28",
-      "magnitude": 20,
+      "magnitude": 30.0,
       "refs": [
         "necessaire-body-lotion-fragrance-free-237"
       ],
@@ -194,14 +207,14 @@
         "cat": "body_lotion",
         "view": "asis"
       },
-      "rank": 12
+      "rank": 13
     },
     {
       "kind": "entry_price",
       "headline": "The cheapest way into premium candles & home fragrance is $40",
       "detail": "Diptyque Baies Scented Candle (mini) at 70g. That is the trial price a new entrant has to beat or justify — the number that decides whether someone tries you on impulse.",
       "metric": "$40",
-      "magnitude": 20,
+      "magnitude": 30.0,
       "refs": [
         "diptyque-baies-candle-70"
       ],
@@ -210,14 +223,14 @@
         "cat": "candles",
         "view": "asis"
       },
-      "rank": 13
+      "rank": 14
     },
     {
       "kind": "entry_price",
       "headline": "The cheapest way into premium conditioner is $26",
       "detail": "Malin+Goetz Cilantro Hair Conditioner at 236ml. That is the trial price a new entrant has to beat or justify — the number that decides whether someone tries you on impulse.",
       "metric": "$26",
-      "magnitude": 20,
+      "magnitude": 30.0,
       "refs": [
         "malin-goetz-cilantro-conditioner-236"
       ],
@@ -225,19 +238,6 @@
       "focus": {
         "cat": "conditioner",
         "view": "asis"
-      },
-      "rank": 14
-    },
-    {
-      "kind": "initiative",
-      "headline": "Retail expansion accounts for 28% of everything the category is talking about",
-      "detail": "55 of 195 tagged headlines. The quietest front is awards & press at 1 — a theme nobody has claimed is either irrelevant or unoccupied.",
-      "metric": "28%",
-      "magnitude": 16.923076923076923,
-      "refs": [],
-      "tab": "pr",
-      "focus": {
-        "tag": "retail_expansion"
       },
       "rank": 15
     }
@@ -1256,18 +1256,6 @@
       "basis": "newly_covered"
     },
     {
-      "id": "oribe",
-      "name": "Oribe",
-      "tier": "luxury",
-      "recent": 7,
-      "prior": 1,
-      "delta": 6,
-      "share_recent": 3.4,
-      "share_prior": 1.2,
-      "ratio": 2.34,
-      "basis": "newly_covered"
-    },
-    {
       "id": "byredo",
       "name": "Byredo",
       "tier": "luxury",
@@ -1280,9 +1268,21 @@
       "basis": "newly_covered"
     },
     {
-      "id": "ds-durga",
-      "name": "D.S. & DURGA",
+      "id": "oribe",
+      "name": "Oribe",
       "tier": "luxury",
+      "recent": 7,
+      "prior": 1,
+      "delta": 6,
+      "share_recent": 3.4,
+      "share_prior": 1.2,
+      "ratio": 2.34,
+      "basis": "newly_covered"
+    },
+    {
+      "id": "ouai",
+      "name": "OUAI",
+      "tier": "premium",
       "recent": 6,
       "prior": 1,
       "delta": 5,
@@ -1292,9 +1292,9 @@
       "basis": "newly_covered"
     },
     {
-      "id": "ouai",
-      "name": "OUAI",
-      "tier": "premium",
+      "id": "ds-durga",
+      "name": "D.S. & DURGA",
+      "tier": "luxury",
       "recent": 6,
       "prior": 1,
       "delta": 5,
@@ -1340,18 +1340,6 @@
       "basis": "gaining_share"
     },
     {
-      "id": "machete",
-      "name": "Machete",
-      "tier": "premium",
-      "recent": 3,
-      "prior": 1,
-      "delta": 2,
-      "share_recent": 1.4,
-      "share_prior": 1.2,
-      "ratio": 1.17,
-      "basis": "newly_covered"
-    },
-    {
       "id": "dove",
       "name": "Dove",
       "tier": "mass",
@@ -1376,6 +1364,18 @@
       "basis": "newly_covered"
     },
     {
+      "id": "machete",
+      "name": "Machete",
+      "tier": "premium",
+      "recent": 3,
+      "prior": 1,
+      "delta": 2,
+      "share_recent": 1.4,
+      "share_prior": 1.2,
+      "ratio": 1.17,
+      "basis": "newly_covered"
+    },
+    {
       "id": "summer-fridays",
       "name": "Summer Fridays",
       "tier": "premium",
@@ -1386,6 +1386,18 @@
       "share_prior": 3.5,
       "ratio": 0.97,
       "basis": "gaining_share"
+    },
+    {
+      "id": "briogeo",
+      "name": "Briogeo",
+      "tier": "premium",
+      "recent": 2,
+      "prior": 1,
+      "delta": 1,
+      "share_recent": 1.0,
+      "share_prior": 1.2,
+      "ratio": 0.88,
+      "basis": "newly_covered"
     },
     {
       "id": "nest-new-york",
@@ -1403,18 +1415,6 @@
       "id": "bioderma",
       "name": "Bioderma",
       "tier": "masstige",
-      "recent": 2,
-      "prior": 1,
-      "delta": 1,
-      "share_recent": 1.0,
-      "share_prior": 1.2,
-      "ratio": 0.88,
-      "basis": "newly_covered"
-    },
-    {
-      "id": "briogeo",
-      "name": "Briogeo",
-      "tier": "premium",
       "recent": 2,
       "prior": 1,
       "delta": 1,
@@ -1532,8 +1532,8 @@
       "basis": "gaining_share"
     },
     {
-      "id": "diptyque",
-      "name": "Diptyque",
+      "id": "bamford",
+      "name": "Bamford",
       "tier": "luxury",
       "recent": 1,
       "prior": 2,
@@ -1544,8 +1544,8 @@
       "basis": "gaining_share"
     },
     {
-      "id": "bamford",
-      "name": "Bamford",
+      "id": "diptyque",
+      "name": "Diptyque",
       "tier": "luxury",
       "recent": 1,
       "prior": 2,
