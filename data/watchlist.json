@@ -1,22 +1,328 @@
 {
   "_comment": "Emerging / scaling brands. momentum 1-5 (5 = scaling hardest right now). threat = how directly it competes with a premium soap/scent/body proposition. Update signals as you find them; the news collector will also surface mentions automatically.",
   "watchlist": [
-    { "id": "flamingo-estate", "name": "Flamingo Estate", "country": "US", "founded": 2020, "categories": ["soap","candles","body_lotion"], "momentum": 5, "threat": "high", "why": "Took luxury soap/candle pricing in under five years on pure narrative — agricultural provenance, produce-to-product. Wholesale into premium grocery and design retail, not beauty.", "signals": ["Diptyque-parity candle pricing","Heavy editorial/celebrity organic coverage","Collab-led product drops"], "watch": "Whether it holds price as distribution widens." },
-    { "id": "tamburins", "name": "TAMBURINS", "country": "KR", "founded": 2017, "categories": ["hand_cream","body_lotion","perfume"], "momentum": 5, "threat": "high", "why": "Gentle Monster's retail-theatre playbook applied to hand cream. Sculptural packaging turned a commodity format into a collectible.", "signals": ["Flagship stores as art installations","Perfume line extension","Expansion beyond Korea/China"], "watch": "Western wholesale entry — would land directly on Byredo/Diptyque hand cream." },
-    { "id": "nonfiction", "name": "NONFICTION", "country": "KR", "founded": 2019, "categories": ["hand_cream","soap","body_lotion","perfume"], "momentum": 4, "threat": "high", "why": "Seoul minimal-luxury positioning hand cream as fragrance layering. Scaling into EU/US concept and department stores.", "signals": ["International wholesale expansion","Strong hotel/amenity interest"], "watch": "Which EU doors it wins — same buyers as Aesop and Le Labo." },
-    { "id": "necessaire", "name": "Nécessaire", "country": "US", "founded": 2018, "categories": ["body_lotion","soap","shampoo"], "momentum": 4, "threat": "high", "why": "Defined body-skinification. Ingredient-percentage marketing at roughly half the luxury body price undercuts the fragrance-led premium.", "signals": ["Sephora expansion","Category extension into hair and deodorant"], "watch": "Whether skinification claims keep beating scent equity with under-35s." },
-    { "id": "cyklar", "name": "Cyklar", "country": "US", "founded": null, "categories": ["body_lotion","soap"], "momentum": 3, "threat": "medium", "why": "Named by BoF among indie brands to watch in 2026 in body care.", "signals": ["BoF 2026 brands-to-watch listing"], "watch": "Retail wins and funding — verify details before quoting.", "needs_review": true },
-    { "id": "hanni", "name": "Hanni", "country": "US", "founded": 2021, "categories": ["body_lotion","soap","shaving"], "momentum": 4, "threat": "medium", "why": "Took investment from L'Oréal's venture arm — a strategic signal that big beauty sees premium body care as the growth pocket.", "signals": ["L'Oréal BOLD investment","Eco-conscious vegan positioning"], "watch": "Whether L'Oréal scales it against Nécessaire.", "needs_review": true },
-    { "id": "xinu", "name": "Xinu", "country": "MX", "founded": 2014, "categories": ["perfume","home_fragrance"], "momentum": 3, "threat": "medium", "why": "Latin American niche perfumery gaining international editorial traction; strong object/packaging design.", "signals": ["BoF 2026 brands-to-watch listing"], "watch": "Home and body line extension.", "needs_review": true },
-    { "id": "fugazzi", "name": "Fugazzi", "country": "NL", "founded": 2021, "categories": ["perfume"], "momentum": 3, "threat": "low", "why": "Fast-rising niche fragrance house with a distinctive counter-culture voice.", "signals": ["BoF 2026 brands-to-watch listing"], "watch": "Whether it extends into candles/body.", "needs_review": true },
-    { "id": "vyrao", "name": "Vyrao", "country": "GB", "founded": 2021, "categories": ["perfume","home_fragrance"], "momentum": 3, "threat": "medium", "why": "Energy/wellness framing of fragrance; strong UK department-store traction.", "signals": ["Selfridges/Liberty presence"], "watch": "Home fragrance extension.", "needs_review": true },
-    { "id": "ffern", "name": "Ffern", "country": "GB", "founded": 2018, "categories": ["perfume"], "momentum": 4, "threat": "medium", "why": "Ledger/waitlist model — seasonal batches, no retail, no discounting. The most interesting scarcity mechanic in scent right now.", "signals": ["Sold-out seasonal ledgers","Organic-certified sourcing"], "watch": "Model is highly transferable to candles and soap — worth studying regardless of category.", "needs_review": true },
-    { "id": "haeckels", "name": "Haeckels", "country": "GB", "founded": 2012, "categories": ["soap","body_lotion","candles"], "momentum": 3, "threat": "medium", "why": "Radical-transparency and regenerative-packaging comms; B-Corp. Sets the bar for credible sustainability claims.", "signals": ["Mycelium packaging","Local-foraging provenance"], "watch": "The claims playbook to benchmark yours against." },
-    { "id": "corpus", "name": "Corpus Naturals", "country": "US", "founded": 2016, "categories": ["body_lotion","deodorant","soap"], "momentum": 3, "threat": "medium", "why": "Design-forward natural body care with strong concept-store distribution — same doors as Tangent GC.", "signals": ["Concept-store expansion"], "watch": "Whether it broadens beyond deodorant." },
-    { "id": "sangre-de-fruta", "name": "Sangre de Fruta", "country": "CA", "founded": 2016, "categories": ["soap","body_lotion","perfume"], "momentum": 3, "threat": "medium", "why": "Botanical luxury with a distinctive romantic visual language; strong in independent luxury retail.", "signals": ["Independent luxury retail expansion"], "watch": null, "needs_review": true },
-    { "id": "binu-binu", "name": "Binu Binu", "country": "CA", "founded": 2015, "categories": ["soap"], "momentum": 2, "threat": "medium", "why": "Korean bathhouse-inspired artisan soap. Small but a reference point for narrative-led bar soap.", "signals": ["Design-retail distribution"], "watch": null, "needs_review": true },
-    { "id": "moehr", "name": "Moëhr", "country": "FR", "founded": null, "categories": ["perfume"], "momentum": 3, "threat": "low", "why": "Gourmand-led niche perfumery riding the haute-cuisine scent trend.", "signals": ["2026 emerging-brand coverage"], "watch": null, "needs_review": true },
-    { "id": "keap", "name": "Keap Candles", "country": "US", "founded": 2016, "categories": ["candles"], "momentum": 2, "threat": "medium", "why": "Coconut-wax DTC candle with a clean-burn/transparency angle at half the luxury price.", "signals": ["Subscription model"], "watch": null, "needs_review": true },
-    { "id": "maison-balzac", "name": "Maison Balzac", "country": "AU", "founded": 2012, "categories": ["candles","home_fragrance"], "momentum": 3, "threat": "medium", "why": "Glassware-first house where the vessel is the product. Strong design-retail and gifting position.", "signals": ["International design-retail expansion"], "watch": "Vessel-as-object is the same lever Astier and L'OBJET pull.", "needs_review": true }
+    {
+      "id": "flamingo-estate",
+      "name": "Flamingo Estate",
+      "country": "US",
+      "founded": 2020,
+      "categories": [
+        "soap",
+        "candles",
+        "body_lotion"
+      ],
+      "momentum": 5,
+      "threat": "high",
+      "why": "Took luxury soap/candle pricing in under five years on pure narrative — agricultural provenance, produce-to-product. Wholesale into premium grocery and design retail, not beauty.",
+      "signals": [
+        "Diptyque-parity candle pricing",
+        "Heavy editorial/celebrity organic coverage",
+        "Collab-led product drops"
+      ],
+      "watch": "Whether it holds price as distribution widens."
+    },
+    {
+      "id": "tamburins",
+      "name": "TAMBURINS",
+      "country": "KR",
+      "founded": 2017,
+      "categories": [
+        "hand_cream",
+        "body_lotion",
+        "perfume"
+      ],
+      "momentum": 5,
+      "threat": "high",
+      "why": "Gentle Monster's retail-theatre playbook applied to hand cream. Sculptural packaging turned a commodity format into a collectible.",
+      "signals": [
+        "Flagship stores as art installations",
+        "Perfume line extension",
+        "Expansion beyond Korea/China"
+      ],
+      "watch": "Western wholesale entry — would land directly on Byredo/Diptyque hand cream."
+    },
+    {
+      "id": "nonfiction",
+      "name": "NONFICTION",
+      "country": "KR",
+      "founded": 2019,
+      "categories": [
+        "hand_cream",
+        "soap",
+        "body_lotion",
+        "perfume"
+      ],
+      "momentum": 4,
+      "threat": "high",
+      "why": "Seoul minimal-luxury positioning hand cream as fragrance layering. Scaling into EU/US concept and department stores.",
+      "signals": [
+        "International wholesale expansion",
+        "Strong hotel/amenity interest"
+      ],
+      "watch": "Which EU doors it wins — same buyers as Aesop and Le Labo."
+    },
+    {
+      "id": "necessaire",
+      "name": "Nécessaire",
+      "country": "US",
+      "founded": 2018,
+      "categories": [
+        "body_lotion",
+        "soap",
+        "shampoo"
+      ],
+      "momentum": 4,
+      "threat": "high",
+      "why": "Defined body-skinification. Ingredient-percentage marketing at roughly half the luxury body price undercuts the fragrance-led premium.",
+      "signals": [
+        "Sephora expansion",
+        "Category extension into hair and deodorant"
+      ],
+      "watch": "Whether skinification claims keep beating scent equity with under-35s."
+    },
+    {
+      "id": "cyklar",
+      "name": "Cyklar",
+      "country": "US",
+      "founded": null,
+      "categories": [
+        "body_lotion",
+        "soap"
+      ],
+      "momentum": 3,
+      "threat": "medium",
+      "why": "Named by BoF among indie brands to watch in 2026 in body care.",
+      "signals": [
+        "BoF 2026 brands-to-watch listing"
+      ],
+      "watch": "Retail wins and funding — verify details before quoting.",
+      "needs_review": true,
+      "news_query": "\"Cyklar\" (body OR beauty OR skincare)"
+    },
+    {
+      "id": "hanni",
+      "name": "Hanni",
+      "country": "US",
+      "founded": 2021,
+      "categories": [
+        "body_lotion",
+        "soap",
+        "shaving"
+      ],
+      "momentum": 4,
+      "threat": "medium",
+      "why": "Took investment from L'Oréal's venture arm — a strategic signal that big beauty sees premium body care as the growth pocket.",
+      "signals": [
+        "L'Oréal BOLD investment",
+        "Eco-conscious vegan positioning"
+      ],
+      "watch": "Whether L'Oréal scales it against Nécessaire.",
+      "needs_review": true,
+      "news_query": "\"Hanni\" (body care OR shave OR beauty OR skincare)"
+    },
+    {
+      "id": "xinu",
+      "name": "Xinu",
+      "country": "MX",
+      "founded": 2014,
+      "categories": [
+        "perfume",
+        "home_fragrance"
+      ],
+      "momentum": 3,
+      "threat": "medium",
+      "why": "Latin American niche perfumery gaining international editorial traction; strong object/packaging design.",
+      "signals": [
+        "BoF 2026 brands-to-watch listing"
+      ],
+      "watch": "Home and body line extension.",
+      "needs_review": true,
+      "news_query": "\"Xinu\" (fragrance OR perfume)"
+    },
+    {
+      "id": "fugazzi",
+      "name": "Fugazzi",
+      "country": "NL",
+      "founded": 2021,
+      "categories": [
+        "perfume"
+      ],
+      "momentum": 3,
+      "threat": "low",
+      "why": "Fast-rising niche fragrance house with a distinctive counter-culture voice.",
+      "signals": [
+        "BoF 2026 brands-to-watch listing"
+      ],
+      "watch": "Whether it extends into candles/body.",
+      "needs_review": true,
+      "news_query": "\"Fugazzi\" (fragrance OR perfume)"
+    },
+    {
+      "id": "vyrao",
+      "name": "Vyrao",
+      "country": "GB",
+      "founded": 2021,
+      "categories": [
+        "perfume",
+        "home_fragrance"
+      ],
+      "momentum": 3,
+      "threat": "medium",
+      "why": "Energy/wellness framing of fragrance; strong UK department-store traction.",
+      "signals": [
+        "Selfridges/Liberty presence"
+      ],
+      "watch": "Home fragrance extension.",
+      "needs_review": true,
+      "news_query": "\"Vyrao\" (fragrance OR perfume OR beauty)"
+    },
+    {
+      "id": "ffern",
+      "name": "Ffern",
+      "country": "GB",
+      "founded": 2018,
+      "categories": [
+        "perfume"
+      ],
+      "momentum": 4,
+      "threat": "medium",
+      "why": "Ledger/waitlist model — seasonal batches, no retail, no discounting. The most interesting scarcity mechanic in scent right now.",
+      "signals": [
+        "Sold-out seasonal ledgers",
+        "Organic-certified sourcing"
+      ],
+      "watch": "Model is highly transferable to candles and soap — worth studying regardless of category.",
+      "needs_review": true,
+      "news_query": "\"Ffern\" (fragrance OR perfume)"
+    },
+    {
+      "id": "haeckels",
+      "name": "Haeckels",
+      "country": "GB",
+      "founded": 2012,
+      "categories": [
+        "soap",
+        "body_lotion",
+        "candles"
+      ],
+      "momentum": 3,
+      "threat": "medium",
+      "why": "Radical-transparency and regenerative-packaging comms; B-Corp. Sets the bar for credible sustainability claims.",
+      "signals": [
+        "Mycelium packaging",
+        "Local-foraging provenance"
+      ],
+      "watch": "The claims playbook to benchmark yours against."
+    },
+    {
+      "id": "corpus",
+      "name": "Corpus Naturals",
+      "country": "US",
+      "founded": 2016,
+      "categories": [
+        "body_lotion",
+        "deodorant",
+        "soap"
+      ],
+      "momentum": 3,
+      "threat": "medium",
+      "why": "Design-forward natural body care with strong concept-store distribution — same doors as Tangent GC.",
+      "signals": [
+        "Concept-store expansion"
+      ],
+      "watch": "Whether it broadens beyond deodorant."
+    },
+    {
+      "id": "sangre-de-fruta",
+      "name": "Sangre de Fruta",
+      "country": "CA",
+      "founded": 2016,
+      "categories": [
+        "soap",
+        "body_lotion",
+        "perfume"
+      ],
+      "momentum": 3,
+      "threat": "medium",
+      "why": "Botanical luxury with a distinctive romantic visual language; strong in independent luxury retail.",
+      "signals": [
+        "Independent luxury retail expansion"
+      ],
+      "watch": null,
+      "needs_review": true,
+      "news_query": "\"Sangre de Fruta\""
+    },
+    {
+      "id": "binu-binu",
+      "name": "Binu Binu",
+      "country": "CA",
+      "founded": 2015,
+      "categories": [
+        "soap"
+      ],
+      "momentum": 2,
+      "threat": "medium",
+      "why": "Korean bathhouse-inspired artisan soap. Small but a reference point for narrative-led bar soap.",
+      "signals": [
+        "Design-retail distribution"
+      ],
+      "watch": null,
+      "needs_review": true,
+      "news_query": "\"Binu Binu\""
+    },
+    {
+      "id": "moehr",
+      "name": "Moëhr",
+      "country": "FR",
+      "founded": null,
+      "categories": [
+        "perfume"
+      ],
+      "momentum": 3,
+      "threat": "low",
+      "why": "Gourmand-led niche perfumery riding the haute-cuisine scent trend.",
+      "signals": [
+        "2026 emerging-brand coverage"
+      ],
+      "watch": null,
+      "needs_review": true,
+      "news_query": "\"Moehr\" OR \"Moëhr\" perfume"
+    },
+    {
+      "id": "keap",
+      "name": "Keap Candles",
+      "country": "US",
+      "founded": 2016,
+      "categories": [
+        "candles"
+      ],
+      "momentum": 2,
+      "threat": "medium",
+      "why": "Coconut-wax DTC candle with a clean-burn/transparency angle at half the luxury price.",
+      "signals": [
+        "Subscription model"
+      ],
+      "watch": null,
+      "needs_review": true,
+      "news_query": "\"Keap\" (candle OR candles)"
+    },
+    {
+      "id": "maison-balzac",
+      "name": "Maison Balzac",
+      "country": "AU",
+      "founded": 2012,
+      "categories": [
+        "candles",
+        "home_fragrance"
+      ],
+      "momentum": 3,
+      "threat": "medium",
+      "why": "Glassware-first house where the vessel is the product. Strong design-retail and gifting position.",
+      "signals": [
+        "International design-retail expansion"
+      ],
+      "watch": "Vessel-as-object is the same lever Astier and L'OBJET pull.",
+      "needs_review": true
+    }
   ]
 }

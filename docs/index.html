@@ -74,6 +74,11 @@
       <option value="masstige">Masstige</option>
       <option value="mass">Mass (benchmark)</option>
     </select></div>
+    <div><label for="f-own">Ownership</label><select id="f-own">
+      <option value="">All ownership</option>
+      <option value="independent">Independent &amp; founder-led</option>
+      <option value="corporate">Group-owned</option>
+    </select></div>
     <div><label for="f-role">Role</label><select id="f-role">
       <option value="">All roles</option>
       <option value="core_competitor">Core competitor</option>
@@ -280,6 +285,18 @@
         <span style="color:var(--ink-3)">Threat = how directly it competes with a premium soap / scent / body proposition</span>
       </div>
       <div class="radar-grid" id="radar"></div>
+    </div>
+
+    <div class="card">
+      <header><h2>What the challengers are doing</h2><div class="spacer"></div><span class="chip plain" id="challenger-count"></span></header>
+      <p class="note">
+        The comms feed restricted to <b>independent and founder-led brands</b> — no Estée Lauder,
+        L'Oréal, LVMH or Puig houses — so the moves of the emerging set aren't drowned out by
+        corporate volume. Campaigns, collaborations, activations, retail wins and launches, most
+        recent first, grouped by brand. The same ownership cut is available everywhere else via
+        the <b>Ownership</b> filter.
+      </p>
+      <div id="challenger-feed"></div>
     </div>
   </section>
 

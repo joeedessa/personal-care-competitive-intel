@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T05:50:37+00:00",
+  "generated_at": "2026-08-08T13:07:35+00:00",
   "findings": [
     {
       "kind": "same_tier_gap",
@@ -152,10 +152,10 @@
     },
     {
       "kind": "accelerating",
-      "headline": "LANEIGE has taken 4.01× more share of category coverage in the last 30 days",
-      "detail": "6.2% of all headlines in the last 30 days, against 1.3% in the 30 before (21 vs 2 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 8 brands are gaining share on this measure. Volume is not sentiment.",
-      "metric": "4.01×",
-      "magnitude": 60.05,
+      "headline": "LANEIGE has taken 4.25× more share of category coverage in the last 30 days",
+      "detail": "6.2% of all headlines in the last 30 days, against 1.2% in the 30 before (22 vs 2 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 8 brands are gaining share on this measure. Volume is not sentiment.",
+      "metric": "4.25×",
+      "magnitude": 61.25,
       "refs": [
         "laneige"
       ],
@@ -182,10 +182,10 @@
     },
     {
       "kind": "momentum",
-      "headline": "NIVEA is generating 3.7× the median brand's coverage",
-      "detail": "26 headlines against a median of 7 across the 69 brands with any coverage. Volume is not sentiment — but a brand this loud is either launching, being acquired, or in trouble.",
-      "metric": "26",
-      "magnitude": 54.85714285714286,
+      "headline": "NIVEA is generating 4.2× the median brand's coverage",
+      "detail": "27 headlines against a median of 6 across the 76 brands with any coverage. Volume is not sentiment — but a brand this loud is either launching, being acquired, or in trouble.",
+      "metric": "27",
+      "magnitude": 56.61538461538461,
       "refs": [
         "nivea"
       ],
@@ -197,10 +197,10 @@
     },
     {
       "kind": "initiative",
-      "headline": "Retail expansion accounts for 32% of everything the category is talking about",
-      "detail": "96 of 297 tagged headlines. The quietest front is awards & press at 2 — a theme nobody has claimed is either irrelevant or unoccupied.",
-      "metric": "32%",
-      "magnitude": 37.92929292929293,
+      "headline": "Retail expansion accounts for 29% of everything the category is talking about",
+      "detail": "92 of 317 tagged headlines. The quietest front is awards & press at 2 — a theme nobody has claimed is either irrelevant or unoccupied.",
+      "metric": "29%",
+      "magnitude": 36.60883280757098,
       "refs": [],
       "tab": "pr",
       "focus": {
@@ -267,7 +267,9 @@
       "index": 203,
       "skus": 12,
       "uae": "boutique",
-      "news": 11
+      "news": 12,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "le-labo",
@@ -278,7 +280,9 @@
       "index": 142,
       "skus": 7,
       "uae": "boutique",
-      "news": 21
+      "news": 22,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "byredo",
@@ -289,7 +293,9 @@
       "index": 238,
       "skus": 7,
       "uae": "boutique",
-      "news": 14
+      "news": 14,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "aesop",
@@ -300,7 +306,9 @@
       "index": 93,
       "skus": 11,
       "uae": "boutique",
-      "news": 21
+      "news": 21,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "tangent-gc",
@@ -311,7 +319,9 @@
       "index": 83,
       "skus": 3,
       "uae": "ecom_only",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "loccitane",
@@ -322,7 +332,9 @@
       "index": 82,
       "skus": 7,
       "uae": "boutique",
-      "news": 9
+      "news": 10,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "grown-alchemist",
@@ -333,7 +345,9 @@
       "index": 86,
       "skus": 4,
       "uae": "retail",
-      "news": 11
+      "news": 11,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "rituals",
@@ -344,7 +358,9 @@
       "index": 57,
       "skus": 6,
       "uae": "boutique",
-      "news": 13
+      "news": 13,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "method",
@@ -355,7 +371,9 @@
       "index": 12,
       "skus": 1,
       "uae": "retail",
-      "news": 2
+      "news": 2,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "molton-brown",
@@ -366,7 +384,9 @@
       "index": 74,
       "skus": 7,
       "uae": "retail",
-      "news": 7
+      "news": 7,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "jo-malone",
@@ -377,7 +397,9 @@
       "index": 159,
       "skus": 5,
       "uae": "boutique",
-      "news": 24
+      "news": 25,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "acqua-di-parma",
@@ -388,7 +410,9 @@
       "index": 162,
       "skus": 4,
       "uae": "boutique",
-      "news": 14
+      "news": 14,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "malin-goetz",
@@ -399,7 +423,9 @@
       "index": 86,
       "skus": 7,
       "uae": "retail",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "buly-1803",
@@ -410,7 +436,9 @@
       "index": 152,
       "skus": 4,
       "uae": "unknown",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "santa-maria-novella",
@@ -421,7 +449,9 @@
       "index": 171,
       "skus": 6,
       "uae": "retail",
-      "news": 8
+      "news": 8,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "trudon",
@@ -432,7 +462,9 @@
       "index": 122,
       "skus": 2,
       "uae": "retail",
-      "news": 3
+      "news": 3,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "astier-de-villatte",
@@ -443,7 +475,9 @@
       "index": 115,
       "skus": 4,
       "uae": "unknown",
-      "news": 2
+      "news": 2,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "lobjet",
@@ -454,7 +488,9 @@
       "index": 166,
       "skus": 3,
       "uae": "retail",
-      "news": 3
+      "news": 3,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "montroi",
@@ -465,7 +501,9 @@
       "index": 264,
       "skus": 3,
       "uae": "unknown",
-      "news": 7
+      "news": 7,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "nippon-kodo",
@@ -476,7 +514,9 @@
       "index": 24,
       "skus": 3,
       "uae": "ecom_only",
-      "news": 1
+      "news": 1,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "shoyeido",
@@ -487,7 +527,9 @@
       "index": 267,
       "skus": 3,
       "uae": "ecom_only",
-      "news": 2
+      "news": 2,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "hem",
@@ -498,7 +540,9 @@
       "index": 19,
       "skus": 1,
       "uae": "retail",
-      "news": 1
+      "news": 1,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "yankee-candle",
@@ -509,7 +553,9 @@
       "index": 14,
       "skus": 1,
       "uae": "retail",
-      "news": 1
+      "news": 1,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "bath-body-works",
@@ -520,7 +566,9 @@
       "index": 25,
       "skus": 3,
       "uae": "boutique",
-      "news": 25
+      "news": 26,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "zara-home",
@@ -531,7 +579,9 @@
       "index": 26,
       "skus": 1,
       "uae": "boutique",
-      "news": 4
+      "news": 4,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "loewe-home-scents",
@@ -542,7 +592,9 @@
       "index": 160,
       "skus": 2,
       "uae": "retail",
-      "news": 2
+      "news": 2,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "nest-new-york",
@@ -553,7 +605,9 @@
       "index": 59,
       "skus": 1,
       "uae": "unknown",
-      "news": 10
+      "news": 10,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "ds-durga",
@@ -564,7 +618,9 @@
       "index": 90,
       "skus": 1,
       "uae": "ecom_only",
-      "news": 11
+      "news": 11,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "boy-smells",
@@ -575,7 +631,9 @@
       "index": 46,
       "skus": 1,
       "uae": "ecom_only",
-      "news": 5
+      "news": 5,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "otherland",
@@ -586,7 +644,9 @@
       "index": 49,
       "skus": 1,
       "uae": "none",
-      "news": 1
+      "news": 1,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "flamingo-estate",
@@ -597,7 +657,9 @@
       "index": 108,
       "skus": 4,
       "uae": "ecom_only",
-      "news": 7
+      "news": 7,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "compagnie-de-provence",
@@ -608,7 +670,9 @@
       "index": 48,
       "skus": 3,
       "uae": "retail",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "fer-a-cheval",
@@ -619,7 +683,9 @@
       "index": 30,
       "skus": 1,
       "uae": "ecom_only",
-      "news": 3
+      "news": 3,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "claus-porto",
@@ -630,7 +696,9 @@
       "index": 104,
       "skus": 4,
       "uae": "retail",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "dr-bronners",
@@ -641,7 +709,9 @@
       "index": 25,
       "skus": 1,
       "uae": "retail",
-      "news": 7
+      "news": 7,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "sabon",
@@ -652,7 +722,9 @@
       "index": 89,
       "skus": 4,
       "uae": "retail",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "sisley",
@@ -663,7 +735,9 @@
       "index": 363,
       "skus": 3,
       "uae": "retail",
-      "news": 1
+      "news": 1,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "oribe",
@@ -674,7 +748,9 @@
       "index": 165,
       "skus": 3,
       "uae": "retail",
-      "news": 21
+      "news": 22,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "virtue",
@@ -685,7 +761,9 @@
       "index": 132,
       "skus": 2,
       "uae": "ecom_only",
-      "news": 3
+      "news": 3,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "rahua",
@@ -696,7 +774,9 @@
       "index": 112,
       "skus": 3,
       "uae": "ecom_only",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "ouai",
@@ -707,7 +787,9 @@
       "index": 87,
       "skus": 4,
       "uae": "retail",
-      "news": 14
+      "news": 14,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "briogeo",
@@ -718,7 +800,9 @@
       "index": 98,
       "skus": 2,
       "uae": "retail",
-      "news": 4
+      "news": 4,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "aveda",
@@ -729,7 +813,9 @@
       "index": 76,
       "skus": 4,
       "uae": "retail",
-      "news": 14
+      "news": 15,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "davines",
@@ -740,7 +826,9 @@
       "index": 104,
       "skus": 2,
       "uae": "retail",
-      "news": 10
+      "news": 10,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "christophe-robin",
@@ -751,7 +839,9 @@
       "index": 176,
       "skus": 2,
       "uae": "retail",
-      "news": 2
+      "news": 2,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "sachajuan",
@@ -762,7 +852,9 @@
       "index": 86,
       "skus": 2,
       "uae": "ecom_only",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "act-acre",
@@ -773,7 +865,9 @@
       "index": 112,
       "skus": 1,
       "uae": "ecom_only",
-      "news": 1
+      "news": 1,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "k18",
@@ -784,7 +878,9 @@
       "index": 118,
       "skus": 1,
       "uae": "retail",
-      "news": 23
+      "news": 23,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "gisou",
@@ -795,7 +891,9 @@
       "index": 150,
       "skus": 3,
       "uae": "retail",
-      "news": 5
+      "news": 5,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "crown-affair",
@@ -806,7 +904,9 @@
       "index": 62,
       "skus": 3,
       "uae": "ecom_only",
-      "news": 13
+      "news": 13,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "la-bonne-brosse",
@@ -817,7 +917,9 @@
       "index": 113,
       "skus": 5,
       "uae": "retail",
-      "news": 9
+      "news": 10,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "mason-pearson",
@@ -828,7 +930,9 @@
       "index": 164,
       "skus": 4,
       "uae": "retail",
-      "news": 2
+      "news": 3,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "acca-kappa",
@@ -839,7 +943,9 @@
       "index": 67,
       "skus": 7,
       "uae": "retail",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "kent-brushes",
@@ -850,7 +956,9 @@
       "index": 71,
       "skus": 2,
       "uae": "ecom_only",
-      "news": 2
+      "news": 2,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "tangle-teezer",
@@ -861,7 +969,9 @@
       "index": 10,
       "skus": 1,
       "uae": "retail",
-      "news": 3
+      "news": 3,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "emi-jay",
@@ -872,7 +982,9 @@
       "index": 93,
       "skus": 2,
       "uae": "ecom_only",
-      "news": 4
+      "news": 4,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "machete",
@@ -883,7 +995,9 @@
       "index": 107,
       "skus": 1,
       "uae": "ecom_only",
-      "news": 6
+      "news": 6,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "alexandre-de-paris",
@@ -894,7 +1008,9 @@
       "index": 425,
       "skus": 2,
       "uae": "retail",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "chunks",
@@ -905,7 +1021,9 @@
       "index": 87,
       "skus": 1,
       "uae": "none",
-      "news": 5
+      "news": 5,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "sensai",
@@ -916,7 +1034,9 @@
       "index": 788,
       "skus": 2,
       "uae": "retail",
-      "news": 2
+      "news": 2,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "la-mer",
@@ -927,7 +1047,9 @@
       "index": 464,
       "skus": 3,
       "uae": "retail",
-      "news": 18
+      "news": 18,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "tom-ford-beauty",
@@ -938,7 +1060,9 @@
       "index": 416,
       "skus": 3,
       "uae": "retail",
-      "news": 9
+      "news": 10,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "summer-fridays",
@@ -949,7 +1073,9 @@
       "index": 98,
       "skus": 2,
       "uae": "retail",
-      "news": 23
+      "news": 24,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "kiehls",
@@ -960,7 +1086,9 @@
       "index": 76,
       "skus": 4,
       "uae": "boutique",
-      "news": 16
+      "news": 16,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "nuxe",
@@ -971,7 +1099,9 @@
       "index": 88,
       "skus": 4,
       "uae": "retail",
-      "news": 1
+      "news": 1,
+      "ownership": "independent",
+      "challenger": false
     },
     {
       "id": "bioderma",
@@ -982,7 +1112,9 @@
       "index": 42,
       "skus": 1,
       "uae": "retail",
-      "news": 5
+      "news": 5,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "la-roche-posay",
@@ -993,7 +1125,9 @@
       "index": 61,
       "skus": 1,
       "uae": "retail",
-      "news": 18
+      "news": 18,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "neutrogena",
@@ -1004,7 +1138,9 @@
       "index": 19,
       "skus": 1,
       "uae": "retail",
-      "news": 22
+      "news": 22,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "nivea",
@@ -1015,7 +1151,9 @@
       "index": 10,
       "skus": 1,
       "uae": "retail",
-      "news": 26
+      "news": 27,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "dove",
@@ -1026,7 +1164,9 @@
       "index": 13,
       "skus": 4,
       "uae": "retail",
-      "news": 16
+      "news": 16,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "the-body-shop",
@@ -1037,7 +1177,9 @@
       "index": 63,
       "skus": 1,
       "uae": "retail",
-      "news": 9
+      "news": 9,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "haeckels",
@@ -1048,7 +1190,9 @@
       "index": 104,
       "skus": 3,
       "uae": "ecom_only",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "susanne-kaufmann",
@@ -1059,7 +1203,9 @@
       "index": 171,
       "skus": 2,
       "uae": "retail",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "bamford",
@@ -1070,7 +1216,9 @@
       "index": 106,
       "skus": 3,
       "uae": "retail",
-      "news": 7
+      "news": 7,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "necessaire",
@@ -1081,7 +1229,9 @@
       "index": 81,
       "skus": 4,
       "uae": "retail",
-      "news": 8
+      "news": 8,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "corpus",
@@ -1092,7 +1242,9 @@
       "index": 90,
       "skus": 2,
       "uae": "ecom_only",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "tamburins",
@@ -1103,7 +1255,9 @@
       "index": 172,
       "skus": 2,
       "uae": "unknown",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "nonfiction",
@@ -1114,7 +1268,9 @@
       "index": 113,
       "skus": 3,
       "uae": "unknown",
-      "news": 6
+      "news": 6,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "amouage",
@@ -1125,7 +1281,9 @@
       "index": 148,
       "skus": 2,
       "uae": "boutique",
-      "news": 14
+      "news": 14,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "maison-balzac",
@@ -1136,7 +1294,9 @@
       "index": 58,
       "skus": 1,
       "uae": "ecom_only",
-      "news": 3
+      "news": 4,
+      "ownership": "independent",
+      "challenger": true
     },
     {
       "id": "laneige",
@@ -1147,7 +1307,9 @@
       "index": 75,
       "skus": 1,
       "uae": "retail",
-      "news": 24
+      "news": 25,
+      "ownership": "corporate",
+      "challenger": false
     },
     {
       "id": "the-camel-soap-factory",
@@ -1158,7 +1320,9 @@
       "index": 109,
       "skus": 1,
       "uae": "boutique",
-      "news": 0
+      "news": 0,
+      "ownership": "independent",
+      "challenger": false
     }
   ],
   "momentum": [
@@ -1169,7 +1333,7 @@
       "recent": 23,
       "prior": 0,
       "delta": 23,
-      "share_recent": 6.7,
+      "share_recent": 6.4,
       "share_prior": 0.0,
       "ratio": 24.0,
       "basis": "newly_covered"
@@ -1181,34 +1345,22 @@
       "recent": 14,
       "prior": 1,
       "delta": 13,
-      "share_recent": 4.1,
-      "share_prior": 0.7,
-      "ratio": 4.62,
+      "share_recent": 3.9,
+      "share_prior": 0.6,
+      "ratio": 4.68,
       "basis": "newly_covered"
     },
     {
       "id": "laneige",
       "name": "LANEIGE",
       "tier": "masstige",
-      "recent": 21,
+      "recent": 22,
       "prior": 2,
-      "delta": 19,
+      "delta": 20,
       "share_recent": 6.2,
-      "share_prior": 1.3,
-      "ratio": 4.01,
+      "share_prior": 1.2,
+      "ratio": 4.25,
       "basis": "gaining_share"
-    },
-    {
-      "id": "nonfiction",
-      "name": "NONFICTION",
-      "tier": "luxury",
-      "recent": 3,
-      "prior": 0,
-      "delta": 3,
-      "share_recent": 0.9,
-      "share_prior": 0.0,
-      "ratio": 4.0,
-      "basis": "newly_covered"
     },
     {
       "id": "molton-brown",
@@ -1217,7 +1369,7 @@
       "recent": 3,
       "prior": 0,
       "delta": 3,
-      "share_recent": 0.9,
+      "share_recent": 0.8,
       "share_prior": 0.0,
       "ratio": 4.0,
       "basis": "newly_covered"
@@ -1229,22 +1381,34 @@
       "recent": 3,
       "prior": 0,
       "delta": 3,
-      "share_recent": 0.9,
+      "share_recent": 0.8,
       "share_prior": 0.0,
       "ratio": 4.0,
       "basis": "newly_covered"
     },
     {
-      "id": "jo-malone",
-      "name": "Jo Malone London",
+      "id": "maison-balzac",
+      "name": "Maison Balzac",
+      "tier": "premium",
+      "recent": 3,
+      "prior": 0,
+      "delta": 3,
+      "share_recent": 0.8,
+      "share_prior": 0.0,
+      "ratio": 4.0,
+      "basis": "newly_covered"
+    },
+    {
+      "id": "nonfiction",
+      "name": "NONFICTION",
       "tier": "luxury",
-      "recent": 18,
-      "prior": 2,
-      "delta": 16,
-      "share_recent": 5.3,
-      "share_prior": 1.3,
-      "ratio": 3.46,
-      "basis": "gaining_share"
+      "recent": 3,
+      "prior": 0,
+      "delta": 3,
+      "share_recent": 0.8,
+      "share_prior": 0.0,
+      "ratio": 4.0,
+      "basis": "newly_covered"
     },
     {
       "id": "ouai",
@@ -1253,9 +1417,9 @@
       "recent": 8,
       "prior": 1,
       "delta": 7,
-      "share_recent": 2.3,
-      "share_prior": 0.7,
-      "ratio": 2.77,
+      "share_recent": 2.2,
+      "share_prior": 0.6,
+      "ratio": 2.81,
       "basis": "newly_covered"
     },
     {
@@ -1265,33 +1429,45 @@
       "recent": 14,
       "prior": 2,
       "delta": 12,
-      "share_recent": 4.1,
-      "share_prior": 1.3,
-      "ratio": 2.73,
+      "share_recent": 3.9,
+      "share_prior": 1.2,
+      "ratio": 2.77,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "jo-malone",
+      "name": "Jo Malone London",
+      "tier": "luxury",
+      "recent": 18,
+      "prior": 3,
+      "delta": 15,
+      "share_recent": 5.0,
+      "share_prior": 1.9,
+      "ratio": 2.5,
       "basis": "gaining_share"
     },
     {
       "id": "nivea",
       "name": "NIVEA",
       "tier": "mass",
-      "recent": 22,
+      "recent": 23,
       "prior": 4,
-      "delta": 18,
-      "share_recent": 6.5,
-      "share_prior": 2.6,
-      "ratio": 2.31,
+      "delta": 19,
+      "share_recent": 6.4,
+      "share_prior": 2.5,
+      "ratio": 2.45,
       "basis": "gaining_share"
     },
     {
       "id": "le-labo",
       "name": "Le Labo",
       "tier": "luxury",
-      "recent": 16,
+      "recent": 17,
       "prior": 3,
-      "delta": 13,
-      "share_recent": 4.7,
-      "share_prior": 2.0,
-      "ratio": 2.2,
+      "delta": 14,
+      "share_recent": 4.8,
+      "share_prior": 1.9,
+      "ratio": 2.36,
       "basis": "gaining_share"
     },
     {
@@ -1301,9 +1477,9 @@
       "recent": 10,
       "prior": 2,
       "delta": 8,
-      "share_recent": 2.9,
-      "share_prior": 1.3,
-      "ratio": 2.0,
+      "share_recent": 2.8,
+      "share_prior": 1.2,
+      "ratio": 2.03,
       "basis": "gaining_share"
     },
     {
@@ -1313,9 +1489,9 @@
       "recent": 9,
       "prior": 2,
       "delta": 7,
-      "share_recent": 2.6,
-      "share_prior": 1.3,
-      "ratio": 1.82,
+      "share_recent": 2.5,
+      "share_prior": 1.2,
+      "ratio": 1.85,
       "basis": "gaining_share"
     },
     {
@@ -1325,9 +1501,9 @@
       "recent": 17,
       "prior": 4,
       "delta": 13,
-      "share_recent": 5.0,
-      "share_prior": 2.6,
-      "ratio": 1.8,
+      "share_recent": 4.8,
+      "share_prior": 2.5,
+      "ratio": 1.83,
       "basis": "gaining_share"
     },
     {
@@ -1337,9 +1513,21 @@
       "recent": 6,
       "prior": 2,
       "delta": 4,
-      "share_recent": 1.8,
-      "share_prior": 1.3,
-      "ratio": 1.28,
+      "share_recent": 1.7,
+      "share_prior": 1.2,
+      "ratio": 1.29,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "la-bonne-brosse",
+      "name": "La Bonne Brosse",
+      "tier": "luxury",
+      "recent": 6,
+      "prior": 2,
+      "delta": 4,
+      "share_recent": 1.7,
+      "share_prior": 1.2,
+      "ratio": 1.29,
       "basis": "gaining_share"
     },
     {
@@ -1349,9 +1537,9 @@
       "recent": 3,
       "prior": 1,
       "delta": 2,
-      "share_recent": 0.9,
-      "share_prior": 0.7,
-      "ratio": 1.23,
+      "share_recent": 0.8,
+      "share_prior": 0.6,
+      "ratio": 1.25,
       "basis": "newly_covered"
     },
     {
@@ -1361,9 +1549,9 @@
       "recent": 5,
       "prior": 2,
       "delta": 3,
-      "share_recent": 1.5,
-      "share_prior": 1.3,
-      "ratio": 1.09,
+      "share_recent": 1.4,
+      "share_prior": 1.2,
+      "ratio": 1.11,
       "basis": "gaining_share"
     },
     {
@@ -1373,21 +1561,9 @@
       "recent": 5,
       "prior": 2,
       "delta": 3,
-      "share_recent": 1.5,
-      "share_prior": 1.3,
-      "ratio": 1.09,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "la-bonne-brosse",
-      "name": "La Bonne Brosse",
-      "tier": "luxury",
-      "recent": 5,
-      "prior": 2,
-      "delta": 3,
-      "share_recent": 1.5,
-      "share_prior": 1.3,
-      "ratio": 1.09,
+      "share_recent": 1.4,
+      "share_prior": 1.2,
+      "ratio": 1.11,
       "basis": "gaining_share"
     },
     {
@@ -1397,9 +1573,9 @@
       "recent": 7,
       "prior": 3,
       "delta": 4,
-      "share_recent": 2.1,
-      "share_prior": 2.0,
-      "ratio": 1.03,
+      "share_recent": 2.0,
+      "share_prior": 1.9,
+      "ratio": 1.05,
       "basis": "gaining_share"
     },
     {
@@ -1410,8 +1586,8 @@
       "prior": 1,
       "delta": 1,
       "share_recent": 0.6,
-      "share_prior": 0.7,
-      "ratio": 0.92,
+      "share_prior": 0.6,
+      "ratio": 0.94,
       "basis": "newly_covered"
     },
     {
@@ -1422,8 +1598,8 @@
       "prior": 1,
       "delta": 1,
       "share_recent": 0.6,
-      "share_prior": 0.7,
-      "ratio": 0.92,
+      "share_prior": 0.6,
+      "ratio": 0.94,
       "basis": "newly_covered"
     },
     {
@@ -1434,8 +1610,8 @@
       "prior": 1,
       "delta": 1,
       "share_recent": 0.6,
-      "share_prior": 0.7,
-      "ratio": 0.92,
+      "share_prior": 0.6,
+      "ratio": 0.94,
       "basis": "newly_covered"
     },
     {
@@ -1445,9 +1621,9 @@
       "recent": 6,
       "prior": 3,
       "delta": 3,
-      "share_recent": 1.8,
-      "share_prior": 2.0,
-      "ratio": 0.91,
+      "share_recent": 1.7,
+      "share_prior": 1.9,
+      "ratio": 0.92,
       "basis": "gaining_share"
     },
     {
@@ -1457,33 +1633,21 @@
       "recent": 4,
       "prior": 2,
       "delta": 2,
-      "share_recent": 1.2,
-      "share_prior": 1.3,
-      "ratio": 0.91,
+      "share_recent": 1.1,
+      "share_prior": 1.2,
+      "ratio": 0.92,
       "basis": "gaining_share"
     },
     {
       "id": "summer-fridays",
       "name": "Summer Fridays",
       "tier": "premium",
-      "recent": 11,
+      "recent": 12,
       "prior": 6,
-      "delta": 5,
-      "share_recent": 3.2,
-      "share_prior": 3.9,
-      "ratio": 0.83,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "bath-body-works",
-      "name": "Bath & Body Works",
-      "tier": "mass",
-      "recent": 16,
-      "prior": 9,
-      "delta": 7,
-      "share_recent": 4.7,
-      "share_prior": 5.9,
-      "ratio": 0.8,
+      "delta": 6,
+      "share_recent": 3.4,
+      "share_prior": 3.7,
+      "ratio": 0.91,
       "basis": "gaining_share"
     },
     {
@@ -1493,9 +1657,21 @@
       "recent": 5,
       "prior": 3,
       "delta": 2,
-      "share_recent": 1.5,
-      "share_prior": 2.0,
-      "ratio": 0.78,
+      "share_recent": 1.4,
+      "share_prior": 1.9,
+      "ratio": 0.79,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "bath-body-works",
+      "name": "Bath & Body Works",
+      "tier": "mass",
+      "recent": 16,
+      "prior": 10,
+      "delta": 6,
+      "share_recent": 4.5,
+      "share_prior": 6.2,
+      "ratio": 0.74,
       "basis": "gaining_share"
     },
     {
@@ -1505,9 +1681,9 @@
       "recent": 3,
       "prior": 2,
       "delta": 1,
-      "share_recent": 0.9,
-      "share_prior": 1.3,
-      "ratio": 0.73,
+      "share_recent": 0.8,
+      "share_prior": 1.2,
+      "ratio": 0.74,
       "basis": "gaining_share"
     },
     {
@@ -1517,9 +1693,21 @@
       "recent": 3,
       "prior": 2,
       "delta": 1,
-      "share_recent": 0.9,
-      "share_prior": 1.3,
-      "ratio": 0.73,
+      "share_recent": 0.8,
+      "share_prior": 1.2,
+      "ratio": 0.74,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "tom-ford-beauty",
+      "name": "TOM FORD BEAUTY",
+      "tier": "luxury",
+      "recent": 6,
+      "prior": 4,
+      "delta": 2,
+      "share_recent": 1.7,
+      "share_prior": 2.5,
+      "ratio": 0.71,
       "basis": "gaining_share"
     },
     {
@@ -1529,9 +1717,21 @@
       "recent": 9,
       "prior": 6,
       "delta": 3,
-      "share_recent": 2.6,
-      "share_prior": 3.9,
-      "ratio": 0.69,
+      "share_recent": 2.5,
+      "share_prior": 3.7,
+      "ratio": 0.7,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "aveda",
+      "name": "Aveda",
+      "tier": "premium",
+      "recent": 9,
+      "prior": 6,
+      "delta": 3,
+      "share_recent": 2.5,
+      "share_prior": 3.7,
+      "ratio": 0.7,
       "basis": "gaining_share"
     },
     {
@@ -1539,59 +1739,11 @@
       "name": "Oribe",
       "tier": "luxury",
       "recent": 10,
-      "prior": 7,
-      "delta": 3,
-      "share_recent": 2.9,
-      "share_prior": 4.6,
-      "ratio": 0.66,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "loccitane",
-      "name": "L'Occitane en Provence",
-      "tier": "premium",
-      "recent": 4,
-      "prior": 3,
-      "delta": 1,
-      "share_recent": 1.2,
-      "share_prior": 2.0,
-      "ratio": 0.65,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "aveda",
-      "name": "Aveda",
-      "tier": "premium",
-      "recent": 8,
-      "prior": 6,
+      "prior": 8,
       "delta": 2,
-      "share_recent": 2.3,
-      "share_prior": 3.9,
-      "ratio": 0.62,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "tom-ford-beauty",
-      "name": "TOM FORD BEAUTY",
-      "tier": "luxury",
-      "recent": 5,
-      "prior": 4,
-      "delta": 1,
-      "share_recent": 1.5,
-      "share_prior": 2.6,
-      "ratio": 0.6,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "gisou",
-      "name": "Gisou",
-      "tier": "premium",
-      "recent": 2,
-      "prior": 2,
-      "delta": 0,
-      "share_recent": 0.6,
-      "share_prior": 1.3,
-      "ratio": 0.55,
+      "share_recent": 2.8,
+      "share_prior": 4.9,
+      "ratio": 0.59,
       "basis": "gaining_share"
     },
     {
@@ -1602,8 +1754,32 @@
       "prior": 2,
       "delta": 0,
       "share_recent": 0.6,
-      "share_prior": 1.3,
+      "share_prior": 1.2,
       "ratio": 0.55,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "gisou",
+      "name": "Gisou",
+      "tier": "premium",
+      "recent": 2,
+      "prior": 2,
+      "delta": 0,
+      "share_recent": 0.6,
+      "share_prior": 1.2,
+      "ratio": 0.55,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "loccitane",
+      "name": "L'Occitane en Provence",
+      "tier": "premium",
+      "recent": 4,
+      "prior": 4,
+      "delta": 0,
+      "share_recent": 1.1,
+      "share_prior": 2.5,
+      "ratio": 0.51,
       "basis": "gaining_share"
     },
     {
@@ -1614,8 +1790,20 @@
       "prior": 3,
       "delta": -1,
       "share_recent": 0.6,
-      "share_prior": 2.0,
+      "share_prior": 1.9,
       "ratio": 0.39,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "mason-pearson",
+      "name": "Mason Pearson",
+      "tier": "luxury",
+      "recent": 1,
+      "prior": 2,
+      "delta": -1,
+      "share_recent": 0.3,
+      "share_prior": 1.2,
+      "ratio": 0.37,
       "basis": "gaining_share"
     },
     {
@@ -1625,8 +1813,8 @@
       "recent": 4,
       "prior": 6,
       "delta": -2,
-      "share_recent": 1.2,
-      "share_prior": 3.9,
+      "share_recent": 1.1,
+      "share_prior": 3.7,
       "ratio": 0.35,
       "basis": "gaining_share"
     },
@@ -1637,8 +1825,8 @@
       "recent": 6,
       "prior": 14,
       "delta": -8,
-      "share_recent": 1.8,
-      "share_prior": 9.2,
+      "share_recent": 1.7,
+      "share_prior": 8.6,
       "ratio": 0.22,
       "basis": "gaining_share"
     },
@@ -1650,7 +1838,7 @@
       "prior": 4,
       "delta": -3,
       "share_recent": 0.3,
-      "share_prior": 2.6,
+      "share_prior": 2.5,
       "ratio": 0.2,
       "basis": "gaining_share"
     },
@@ -1662,19 +1850,7 @@
       "prior": 10,
       "delta": -8,
       "share_recent": 0.6,
-      "share_prior": 6.6,
-      "ratio": 0.13,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "tangle-teezer",
-      "name": "Tangle Teezer",
-      "tier": "mass",
-      "recent": 0,
-      "prior": 3,
-      "delta": -3,
-      "share_recent": 0.0,
-      "share_prior": 2.0,
+      "share_prior": 6.2,
       "ratio": 0.13,
       "basis": "gaining_share"
     },
@@ -1686,7 +1862,19 @@
       "prior": 3,
       "delta": -3,
       "share_recent": 0.0,
-      "share_prior": 2.0,
+      "share_prior": 1.9,
+      "ratio": 0.13,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "tangle-teezer",
+      "name": "Tangle Teezer",
+      "tier": "mass",
+      "recent": 0,
+      "prior": 3,
+      "delta": -3,
+      "share_recent": 0.0,
+      "share_prior": 1.9,
       "ratio": 0.13,
       "basis": "gaining_share"
     }
@@ -1698,11 +1886,11 @@
     },
     {
       "week": "2026-W20",
-      "count": 43
+      "count": 46
     },
     {
       "week": "2026-W21",
-      "count": 31
+      "count": 36
     },
     {
       "week": "2026-W22",
@@ -1710,43 +1898,43 @@
     },
     {
       "week": "2026-W23",
-      "count": 24
+      "count": 26
     },
     {
       "week": "2026-W24",
-      "count": 31
+      "count": 33
     },
     {
       "week": "2026-W25",
-      "count": 38
+      "count": 40
     },
     {
       "week": "2026-W26",
-      "count": 51
+      "count": 53
     },
     {
       "week": "2026-W27",
-      "count": 28
+      "count": 32
     },
     {
       "week": "2026-W28",
-      "count": 31
+      "count": 33
     },
     {
       "week": "2026-W29",
-      "count": 59
+      "count": 61
     },
     {
       "week": "2026-W30",
-      "count": 74
+      "count": 79
     },
     {
       "week": "2026-W31",
-      "count": 103
+      "count": 105
     },
     {
       "week": "2026-W32",
-      "count": 180
+      "count": 198
     }
   ],
   "tone": [
@@ -1773,11 +1961,11 @@
     {
       "id": "summer-fridays",
       "name": "Summer Fridays",
-      "total": 23,
+      "total": 24,
       "positive": 11,
-      "neutral": 12,
+      "neutral": 13,
       "negative": 0,
-      "score": 48,
+      "score": 46,
       "reliable": true
     },
     {
@@ -1851,8 +2039,8 @@
       "reliable": false
     },
     {
-      "id": "maison-balzac",
-      "name": "Maison Balzac",
+      "id": "mason-pearson",
+      "name": "Mason Pearson",
       "total": 3,
       "positive": 1,
       "neutral": 2,
@@ -1881,13 +2069,13 @@
       "reliable": true
     },
     {
-      "id": "le-labo",
-      "name": "Le Labo",
-      "total": 21,
-      "positive": 6,
-      "neutral": 15,
+      "id": "la-bonne-brosse",
+      "name": "La Bonne Brosse",
+      "total": 10,
+      "positive": 3,
+      "neutral": 7,
       "negative": 0,
-      "score": 29,
+      "score": 30,
       "reliable": true
     },
     {
@@ -1913,11 +2101,21 @@
     {
       "id": "bath-body-works",
       "name": "Bath & Body Works",
-      "total": 25,
+      "total": 26,
       "positive": 8,
-      "neutral": 16,
+      "neutral": 17,
       "negative": 1,
-      "score": 28,
+      "score": 27,
+      "reliable": true
+    },
+    {
+      "id": "le-labo",
+      "name": "Le Labo",
+      "total": 22,
+      "positive": 6,
+      "neutral": 16,
+      "negative": 0,
+      "score": 27,
       "reliable": true
     },
     {
@@ -1931,6 +2129,16 @@
       "reliable": true
     },
     {
+      "id": "maison-balzac",
+      "name": "Maison Balzac",
+      "total": 4,
+      "positive": 1,
+      "neutral": 3,
+      "negative": 0,
+      "score": 25,
+      "reliable": false
+    },
+    {
       "id": "briogeo",
       "name": "Briogeo",
       "total": 4,
@@ -1939,6 +2147,16 @@
       "negative": 0,
       "score": 25,
       "reliable": false
+    },
+    {
+      "id": "nivea",
+      "name": "NIVEA",
+      "total": 27,
+      "positive": 6,
+      "neutral": 21,
+      "negative": 0,
+      "score": 22,
+      "reliable": true
     },
     {
       "id": "la-mer",
@@ -1961,36 +2179,6 @@
       "reliable": true
     },
     {
-      "id": "loccitane",
-      "name": "L'Occitane en Provence",
-      "total": 9,
-      "positive": 2,
-      "neutral": 7,
-      "negative": 0,
-      "score": 22,
-      "reliable": true
-    },
-    {
-      "id": "la-bonne-brosse",
-      "name": "La Bonne Brosse",
-      "total": 9,
-      "positive": 2,
-      "neutral": 7,
-      "negative": 0,
-      "score": 22,
-      "reliable": true
-    },
-    {
-      "id": "jo-malone",
-      "name": "Jo Malone London",
-      "total": 24,
-      "positive": 5,
-      "neutral": 19,
-      "negative": 0,
-      "score": 21,
-      "reliable": true
-    },
-    {
       "id": "acqua-di-parma",
       "name": "Acqua di Parma",
       "total": 14,
@@ -2001,8 +2189,28 @@
       "reliable": true
     },
     {
+      "id": "jo-malone",
+      "name": "Jo Malone London",
+      "total": 25,
+      "positive": 5,
+      "neutral": 20,
+      "negative": 0,
+      "score": 20,
+      "reliable": true
+    },
+    {
       "id": "davines",
       "name": "Davines",
+      "total": 10,
+      "positive": 2,
+      "neutral": 8,
+      "negative": 0,
+      "score": 20,
+      "reliable": true
+    },
+    {
+      "id": "loccitane",
+      "name": "L'Occitane en Provence",
       "total": 10,
       "positive": 2,
       "neutral": 8,
@@ -2031,16 +2239,6 @@
       "reliable": false
     },
     {
-      "id": "nivea",
-      "name": "NIVEA",
-      "total": 26,
-      "positive": 5,
-      "neutral": 21,
-      "negative": 0,
-      "score": 19,
-      "reliable": true
-    },
-    {
       "id": "aesop",
       "name": "Aesop",
       "total": 21,
@@ -2063,11 +2261,11 @@
     {
       "id": "laneige",
       "name": "LANEIGE",
-      "total": 24,
+      "total": 25,
       "positive": 6,
-      "neutral": 16,
+      "neutral": 17,
       "negative": 2,
-      "score": 17,
+      "score": 16,
       "reliable": true
     },
     {
@@ -2086,16 +2284,6 @@
       "total": 22,
       "positive": 3,
       "neutral": 19,
-      "negative": 0,
-      "score": 14,
-      "reliable": true
-    },
-    {
-      "id": "aveda",
-      "name": "Aveda",
-      "total": 14,
-      "positive": 2,
-      "neutral": 12,
       "negative": 0,
       "score": 14,
       "reliable": true
@@ -2121,13 +2309,23 @@
       "reliable": true
     },
     {
+      "id": "aveda",
+      "name": "Aveda",
+      "total": 15,
+      "positive": 2,
+      "neutral": 13,
+      "negative": 0,
+      "score": 13,
+      "reliable": true
+    },
+    {
       "id": "tom-ford-beauty",
       "name": "TOM FORD BEAUTY",
-      "total": 9,
+      "total": 10,
       "positive": 1,
-      "neutral": 8,
+      "neutral": 9,
       "negative": 0,
-      "score": 11,
+      "score": 10,
       "reliable": true
     },
     {
@@ -2163,9 +2361,9 @@
     {
       "id": "diptyque",
       "name": "Diptyque",
-      "total": 11,
+      "total": 12,
       "positive": 0,
-      "neutral": 11,
+      "neutral": 12,
       "negative": 0,
       "score": 0,
       "reliable": true
@@ -2263,11 +2461,11 @@
     {
       "id": "oribe",
       "name": "Oribe",
-      "total": 21,
+      "total": 22,
       "positive": 4,
       "neutral": 9,
-      "negative": 8,
-      "score": -19,
+      "negative": 9,
+      "score": -23,
       "reliable": true
     }
   ],
@@ -2335,6 +2533,8 @@
       "press": "https://www.diptyqueparis.com/en_eu/c/press.html",
       "instagram": "diptyque",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 12,
       "categories_tracked": [
         "body_lotion",
@@ -2346,7 +2546,7 @@
       ],
       "median_norm_usd": 40.52,
       "avg_price_index": 203,
-      "news_count": 11,
+      "news_count": 12,
       "latest_news": {
         "title": "I’m in a Perfume Rut, so I Asked an Expert What Summer Is Going to Smell Like—Her Answers Surprised Me - instyle.com",
         "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE80bFBocUxyY3BpbDRuTzRmcjdWejhrR3VMeUljeFVUWjNRQzRWR0N2UHNXRnBTLTRDdXBieHJmelRfVU9OVzZqZTlOc1ZZYll1Tmo4bU5JMTZmc3VtSHhjU1BBSlNudW1GQmtQdEpaUkZxaE80bTkzR2V3?oc=5",
@@ -2392,6 +2592,8 @@
       "press": null,
       "instagram": "lelabofragrances",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 7,
       "categories_tracked": [
         "body_lotion",
@@ -2403,7 +2605,7 @@
       ],
       "median_norm_usd": 18.99,
       "avg_price_index": 142,
-      "news_count": 21,
+      "news_count": 22,
       "latest_news": {
         "title": "SHIU 25: Le Labo’s ode to Beijing’s quiet soul - macau daily times 澳門每日時報",
         "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQeFo1WTNZUEhaRnVSUEloWXEtcG9vYXB3TWFpRnI4cHphQnRkOEhsQmd1bzR0dzNISFlRYUxzOE1hNjVCWTMzX1NDRkZuX3dLaUV5YjM0em0zWDBld29PZGo1SHV4aXFmd3U2a2Y4WTVGXzNjWG1za2ZaX1NydUphRGZ2YW9nQQ?oc=5",
@@ -2450,6 +2652,8 @@
       "press": null,
       "instagram": "byredo",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 7,
       "categories_tracked": [
         "body_lotion",
@@ -2510,6 +2714,8 @@
       "instagram": "aesopskincare",
       "needs_review": false,
       "news_query": "\"Aesop\" (skincare OR beauty OR store OR L'Oreal)",
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 11,
       "categories_tracked": [
         "body_lotion",
@@ -2563,6 +2769,8 @@
       "press": null,
       "instagram": "tangentgc",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 3,
       "categories_tracked": [
         "hand_cream",
@@ -2605,6 +2813,8 @@
       "press": "https://group.loccitane.com/press",
       "instagram": "loccitane",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 7,
       "categories_tracked": [
         "body_lotion",
@@ -2615,7 +2825,7 @@
       ],
       "median_norm_usd": 24.0,
       "avg_price_index": 82,
-      "news_count": 9,
+      "news_count": 10,
       "latest_news": {
         "title": "“We Want to Give New Momentum to Provence”: After L’Occitane, Olivier Baussan’s New Ventures - Le Figaro",
         "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQWm52N1A4ek1fdWZnQjJ6YmNOdFhLZGs5VkV4TjVFOWZHSTZlUFM5MU15LVFFaE5TbkN2a01ndl9vbE94U2dETnRvVm00SmozX25VY1hKWUtyZlNmUmtBNFo0WE9PSTBXUGhnVURJQXFIOVM4TklWTWljUUowTk1qUWNlZFJ5elNuODVQWUtTVDUzeUVpV0tsRlhyeXY2b2YyVjc0RzJBTVB2QVQwQzVaOXNzNFJ3Vm5xMHhwd0QyeTJQXzdZSDdlazJhUlQ4Zw?oc=5",
@@ -2658,6 +2868,8 @@
       "press": null,
       "instagram": "grownalchemist",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "body_lotion",
@@ -2714,6 +2926,8 @@
       "instagram": "ritualscosmetics",
       "needs_review": false,
       "news_query": "\"Rituals Cosmetics\"",
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 6,
       "categories_tracked": [
         "body_lotion",
@@ -2765,6 +2979,8 @@
       "instagram": "methodhome",
       "needs_review": false,
       "news_query": "\"Method\" (hand soap OR home care OR \"SC Johnson\")",
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "soap"
@@ -2817,6 +3033,8 @@
       "press": null,
       "instagram": "moltonbrown",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 7,
       "categories_tracked": [
         "body_lotion",
@@ -2873,6 +3091,8 @@
       "press": null,
       "instagram": "jomalonelondon",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 5,
       "categories_tracked": [
         "body_lotion",
@@ -2882,7 +3102,7 @@
       ],
       "median_norm_usd": 40.0,
       "avg_price_index": 159,
-      "news_count": 24,
+      "news_count": 25,
       "latest_news": {
         "title": "Jo Malone adds Sea Salt & Bergamot, to its collection of salty fragrances - Premium Beauty News",
         "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbUNDVDNxa3FBSmU0bWMtSkZzaFhYMUY0eHkwTDRSVVBVTHpMQVk2WlBTdklpc21RYmtULUFlR3BCVGphd3pIUTRJTGpud3QzUV9Nc1kyVFNUTEtnaWdBZnp0V1lGS1VzeVpwOWRhTmExQlk2QVlyUWhEcUpQS0VSbA?oc=5",
@@ -2927,6 +3147,8 @@
       "press": null,
       "instagram": "acquadiparma",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "body_lotion",
@@ -2981,6 +3203,8 @@
       "press": null,
       "instagram": "malinandgoetz",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 7,
       "categories_tracked": [
         "body_lotion",
@@ -3021,6 +3245,8 @@
       "press": null,
       "instagram": "buly1803",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "hair_tools",
@@ -3061,6 +3287,8 @@
       "press": null,
       "instagram": "smnovella",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 6,
       "categories_tracked": [
         "body_lotion",
@@ -3114,6 +3342,8 @@
       "instagram": "trudon",
       "needs_review": true,
       "news_query": "\"Trudon\" (candle OR Cire Trudon)",
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "candles"
@@ -3158,6 +3388,8 @@
       "press": null,
       "instagram": "astierdevillatte",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "candles",
@@ -3209,6 +3441,8 @@
       "instagram": "lobjet",
       "needs_review": false,
       "news_query": "\"L'Objet\" (design OR home OR candle OR fragrance)",
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 3,
       "categories_tracked": [
         "candles",
@@ -3254,6 +3488,8 @@
       "press": null,
       "instagram": "montroi",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 3,
       "categories_tracked": [
         "candles",
@@ -3301,6 +3537,8 @@
       "press": null,
       "instagram": "nipponkodo_official",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 3,
       "categories_tracked": [
         "incense"
@@ -3346,6 +3584,8 @@
       "press": null,
       "instagram": "shoyeido_official",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 3,
       "categories_tracked": [
         "incense"
@@ -3393,6 +3633,8 @@
       "instagram": null,
       "needs_review": true,
       "news_query": "\"HEM\" (incense OR agarbatti)",
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "incense"
@@ -3440,6 +3682,8 @@
       "press": null,
       "instagram": "yankeecandle",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "candles"
@@ -3488,6 +3732,8 @@
       "press": null,
       "instagram": "bathandbodyworks",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 3,
       "categories_tracked": [
         "candles",
@@ -3496,7 +3742,7 @@
       ],
       "median_norm_usd": 6.57,
       "avg_price_index": 25,
-      "news_count": 25,
+      "news_count": 26,
       "latest_news": {
         "title": "Bath & Body Works Brought Back Its Fan-Favorite Football Season Products & They're on Sale for as Low as $2 - Yahoo",
         "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNY3hZM29sNWo3MFdkaTJqQ1MtN01jOGEzOHN5LWliM0xxczhCLXdjQjdmSjBaVG02aHhBcFpfcEhJU1E2U1N2ZjBkSG9IOGp3dXRfS25jNV9KeFdoTlF1ZkNZLUYzdVRYNVJvVFltOG9vaEE2N2d5ejlWbWpFY0VFRzl2Ym5sZGpBZ29pRzhtQ1dMcHBZaGxoT19JbGk?oc=5",
@@ -3537,6 +3783,8 @@
       "press": null,
       "instagram": "zarahome",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "candles"
@@ -3584,6 +3832,8 @@
       "press": null,
       "instagram": "loewe",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "candles",
@@ -3632,6 +3882,8 @@
       "press": null,
       "instagram": "nestnewyork",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 1,
       "categories_tracked": [
         "candles"
@@ -3677,6 +3929,8 @@
       "press": null,
       "instagram": "dsanddurga",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 1,
       "categories_tracked": [
         "candles"
@@ -3722,6 +3976,8 @@
       "press": null,
       "instagram": "boysmells",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 1,
       "categories_tracked": [
         "candles"
@@ -3766,6 +4022,8 @@
       "instagram": "otherland",
       "needs_review": false,
       "news_query": "\"Otherland\" (candle OR home fragrance)",
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 1,
       "categories_tracked": [
         "candles"
@@ -3815,6 +4073,8 @@
       "press": null,
       "instagram": "flamingoestate",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 4,
       "categories_tracked": [
         "body_lotion",
@@ -3866,6 +4126,8 @@
       "press": null,
       "instagram": "compagniedeprovence",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 3,
       "categories_tracked": [
         "body_lotion",
@@ -3898,6 +4160,8 @@
       "press": null,
       "instagram": "mariusfabre_savon",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 0,
       "categories_tracked": [],
       "median_norm_usd": null,
@@ -3940,6 +4204,8 @@
       "press": null,
       "instagram": "savonferacheval",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "soap"
@@ -3990,6 +4256,8 @@
       "press": null,
       "instagram": "clausporto",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "body_lotion",
@@ -4026,6 +4294,8 @@
       "press": null,
       "instagram": "nestidante",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 0,
       "categories_tracked": [],
       "median_norm_usd": null,
@@ -4060,6 +4330,8 @@
       "press": "https://www.drbronner.com/pages/press",
       "instagram": "drbronner",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "soap"
@@ -4109,6 +4381,8 @@
       "instagram": "sabon",
       "needs_review": true,
       "news_query": "\"Sabon\" (beauty OR body OR skincare)",
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "body_lotion",
@@ -4149,6 +4423,8 @@
       "press": null,
       "instagram": "sisleyparisofficial",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 3,
       "categories_tracked": [
         "body_lotion",
@@ -4199,6 +4475,8 @@
       "press": null,
       "instagram": "oribe",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 3,
       "categories_tracked": [
         "conditioner",
@@ -4206,7 +4484,7 @@
       ],
       "median_norm_usd": 21.6,
       "avg_price_index": 165,
-      "news_count": 21,
+      "news_count": 22,
       "latest_news": {
         "title": "ORIBE CAMPAIGN - Dazed",
         "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9HcjF2SGQ1aWpBVXdQclplb1N3SzhKNlBCaFVfUDJmcHJ1aURtWUxodVpqUTlJcUVVTE1oWE9nOFFNQkVfMDRhMzRpc285MjRSTXRxOXl5cmVzbDhOMUZLX2gzajNEYmozclhhNjQ1SUtKQlQ5?oc=5",
@@ -4247,6 +4525,8 @@
       "instagram": "virtuelabs",
       "needs_review": true,
       "news_query": "\"Virtue Labs\" OR \"VIRTUE haircare\"",
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 2,
       "categories_tracked": [
         "conditioner",
@@ -4294,6 +4574,8 @@
       "press": null,
       "instagram": "rahua",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 3,
       "categories_tracked": [
         "body_lotion",
@@ -4333,6 +4615,8 @@
       "press": null,
       "instagram": "theouai",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 4,
       "categories_tracked": [
         "body_lotion",
@@ -4384,6 +4668,8 @@
       "press": null,
       "instagram": "briogeo",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "conditioner",
@@ -4434,6 +4720,8 @@
       "press": null,
       "instagram": "aveda",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "conditioner",
@@ -4443,7 +4731,7 @@
       ],
       "median_norm_usd": 23.0,
       "avg_price_index": 76,
-      "news_count": 14,
+      "news_count": 15,
       "latest_news": {
         "title": "Editors' Picks: New launches from Tatti Lashes, Prequel, Aveda and more... - TheIndustry.beauty",
         "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMXh2MWt6bGhUaXhPRHlqSTByRzlpR2llSUF3Q2lFSXdPd2dwTWR6OGNYUUdzM2RjZ2FkN0tDbU8tdGNXOEVPODh3UWNiQjkyUmJyQWprQzMxa3JRTFhnd0NPbEFsVHpnMTExZVRVNWFCd2NvbW5tMUhhMmRnYzg1Zk5yT1dKVW1STU03RTg1MGxyaFRsTVlMb1V5dw?oc=5",
@@ -4486,6 +4774,8 @@
       "press": null,
       "instagram": "davines",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "conditioner",
@@ -4536,6 +4826,8 @@
       "press": null,
       "instagram": "christophe_robin",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "conditioner",
@@ -4581,6 +4873,8 @@
       "press": null,
       "instagram": "sachajuan",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "conditioner",
@@ -4615,6 +4909,8 @@
       "instagram": "actandacre",
       "needs_review": false,
       "news_query": "\"Act+Acre\" OR \"Act and Acre\"",
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 1,
       "categories_tracked": [
         "shampoo"
@@ -4663,6 +4959,8 @@
       "instagram": "k18hair",
       "needs_review": false,
       "news_query": "\"K18\" (hair OR haircare)",
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 1,
       "categories_tracked": [
         "shampoo"
@@ -4711,6 +5009,8 @@
       "press": null,
       "instagram": "gisou",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 3,
       "categories_tracked": [
         "conditioner",
@@ -4760,6 +5060,8 @@
       "press": null,
       "instagram": "crownaffair",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 3,
       "categories_tracked": [
         "hair_accessories",
@@ -4808,27 +5110,27 @@
       "press": null,
       "instagram": "labonnebrosse",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 5,
       "categories_tracked": [
         "hair_tools"
       ],
       "median_norm_usd": 190,
       "avg_price_index": 113,
-      "news_count": 9,
+      "news_count": 10,
       "latest_news": {
-        "title": "The new beauty launches to see you through the rest of the summer - wallpaper.com",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1fRVdvNVZnQ0I1Qk96V2JNM19hTzBQUzNNVGtKLVMzc0FfZzdIVTVtTTNkdm84WmxyOEFRT0hzZUlVUUQ3QndZTllkUVl3cjk4UXRIbVVwQTdDWF83RUVBVVctZzBUQjFaSVNESkFNZ2JBQmp3dzZHYlozay1iZw?oc=5",
-        "published": "2026-07-26",
+        "title": "We Found the Best Boar Bristle Brushes to Help Your Hair Grow - ELLE",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBsZjFGdG91aURiTGVuY0Ytb1p0YTA3NzRKdUwtZ09QcWthVl82QUdGZlR6VFdyYmhjZDU4cmUzRndTMXd2NjNJTU93bFBSLUJOUGhYOU9Iek91MTktRWdfRUlpV3Ewdmc5N2xvZGlxVjNVUEtmWlE?oc=5",
+        "published": "2026-08-05",
         "brand": "la-bonne-brosse",
-        "source": "wallpaper.com",
+        "source": "ELLE",
         "region": "global",
         "scope": "brand",
-        "summary": "The new beauty launches to see you through the rest of the summer &nbsp;&nbsp; wallpaper.com",
-        "tags": [
-          "product_launch"
-        ],
+        "summary": "We Found the Best Boar Bristle Brushes to Help Your Hair Grow &nbsp;&nbsp; ELLE",
+        "tags": [],
         "brand_name": "La Bonne Brosse",
-        "tone": "neutral"
+        "tone": "positive"
       }
     },
     {
@@ -4855,25 +5157,27 @@
       "press": null,
       "instagram": "masonpearsonbrushes",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "hair_tools"
       ],
       "median_norm_usd": 257.5,
       "avg_price_index": 164,
-      "news_count": 2,
+      "news_count": 3,
       "latest_news": {
-        "title": "Woman buys $8 hairbrush from T.J. Maxx. Then she compares it to a $120 brush from Costco: ‘I hate it’ - The Mary Sue",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBiSk12Zm9JaTlpY2dsaHRhVGxxZHdDZUhpaXpvVzczekpWX0NvcEU3dldrSU9lWWt1eHEzZGU3STh1VURiUDAxc3ZwNDRMOWY0eWFCNGs2Mmw3eGxuWEJ5QVhkZ3o?oc=5",
-        "published": "2026-06-13",
+        "title": "We Found the Best Boar Bristle Brushes to Help Your Hair Grow - ELLE",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBsZjFGdG91aURiTGVuY0Ytb1p0YTA3NzRKdUwtZ09QcWthVl82QUdGZlR6VFdyYmhjZDU4cmUzRndTMXd2NjNJTU93bFBSLUJOUGhYOU9Iek91MTktRWdfRUlpV3Ewdmc5N2xvZGlxVjNVUEtmWlE?oc=5",
+        "published": "2026-08-05",
         "brand": "mason-pearson",
-        "source": "The Mary Sue",
+        "source": "ELLE",
         "region": "global",
         "scope": "brand",
-        "summary": "Woman buys $8 hairbrush from T.J. Maxx. Then she compares it to a $120 brush from Costco: ‘I hate it’ &nbsp;&nbsp; The Mary Sue",
+        "summary": "We Found the Best Boar Bristle Brushes to Help Your Hair Grow &nbsp;&nbsp; ELLE",
         "tags": [],
         "brand_name": "Mason Pearson",
-        "tone": "neutral"
+        "tone": "positive"
       }
     },
     {
@@ -4906,6 +5210,8 @@
       "press": null,
       "instagram": "accakappa1869",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 7,
       "categories_tracked": [
         "conditioner",
@@ -4940,6 +5246,8 @@
       "press": null,
       "instagram": "kentbrushes",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "hair_tools"
@@ -4986,6 +5294,8 @@
       "press": null,
       "instagram": "tangleteezer",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "hair_tools"
@@ -5030,6 +5340,8 @@
       "press": null,
       "instagram": "emi_jay",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 2,
       "categories_tracked": [
         "hair_accessories"
@@ -5073,6 +5385,8 @@
       "instagram": "machete",
       "needs_review": false,
       "news_query": "\"Machete\" (hair claw OR hair clip OR hair accessories)",
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 1,
       "categories_tracked": [
         "hair_accessories"
@@ -5118,6 +5432,8 @@
       "press": null,
       "instagram": "alexandredeparis_officiel",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "hair_accessories"
@@ -5149,6 +5465,8 @@
       "instagram": "chunks",
       "needs_review": false,
       "news_query": "\"Chunks\" (hair claw OR hair clip OR hair accessories)",
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 1,
       "categories_tracked": [
         "hair_accessories"
@@ -5196,6 +5514,8 @@
       "press": null,
       "instagram": "sensai_cosmetics",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "body_lotion",
@@ -5247,6 +5567,8 @@
       "press": null,
       "instagram": "lamer",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 3,
       "categories_tracked": [
         "body_lotion",
@@ -5298,6 +5620,8 @@
       "press": null,
       "instagram": "tomfordbeauty",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 3,
       "categories_tracked": [
         "body_lotion",
@@ -5306,7 +5630,7 @@
       ],
       "median_norm_usd": 65.33,
       "avg_price_index": 416,
-      "news_count": 9,
+      "news_count": 10,
       "latest_news": {
         "title": "Buckhead Village adds three boutiques, including two Georgia debuts - The Business Journals",
         "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZ2tPaWl1VWxDQXF0MDZtTWFYbmFpU1U0Wnhfb1lLWnJqMk1oZ3BsNjNMWEVWWU1qSkhKaWlWTG1Yb2dMQ0VOZWc4dVkxZDN2em9IcFo0d2xQclg5QzJrOHJxamRCUTVoVUhvbE05anN3b1drWURVcVQ1MmctQ0lRVG9TYVZpd3FzNkF3RXhlQ2Q1eWVXaHN4TENmVVM?oc=5",
@@ -5349,6 +5673,8 @@
       "press": null,
       "instagram": "summerfridays",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 2,
       "categories_tracked": [
         "body_lotion",
@@ -5356,7 +5682,7 @@
       ],
       "median_norm_usd": 89.04,
       "avg_price_index": 98,
-      "news_count": 23,
+      "news_count": 24,
       "latest_news": {
         "title": "Summer Fridays Just Dropped an Under-$40 Body Care Collection - marieclaire.com",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43WGx5dTFKaWZzVF8xUEJhVThQN0h4M0NhbnJFYjRYWDduVjRTcDQ4ZUdJT3pJOGRaTEprdk1tRHNCWGFoRERVandaTWxjS2dzeFRyUWN4NEtrLVVhQXBwUTNkZGI5bWNlbEY3c1ZiUGZmbF9lVkpQUE5ZSEVuZDg?oc=5",
@@ -5403,6 +5729,8 @@
       "press": null,
       "instagram": "kiehls",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "body_lotion",
@@ -5457,6 +5785,8 @@
       "press": null,
       "instagram": "nuxe",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "hand_cream",
@@ -5508,6 +5838,8 @@
       "press": null,
       "instagram": "bioderma",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "lip_balm"
@@ -5557,6 +5889,8 @@
       "press": null,
       "instagram": "larocheposay",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "hand_cream"
@@ -5606,6 +5940,8 @@
       "press": null,
       "instagram": "neutrogena",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "hand_cream"
@@ -5655,27 +5991,27 @@
       "press": null,
       "instagram": "nivea",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "body_lotion"
       ],
       "median_norm_usd": 2.0,
       "avg_price_index": 10,
-      "news_count": 26,
+      "news_count": 27,
       "latest_news": {
-        "title": "Nivea blue cream launches its €17.99 anti-ageing moisturiser targeting 4 facial zones - parisselectbook.com",
-        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRWRwRFVsekhBTExYS1FEaUVMcHYySV9oLVZ3M0pyQnBMeW5RalA3b3lyOF95bWJvTGpMS3Bka1JzV01QcGkyZ0tMOXkxN0JOU2tWa0tmQTlqOWhpV2VHb3J1VUYyNDU1ZFBuN2wzcmdudm8tVzJaRWl6UmtzWFhFX3NQY0R6NDJZbTdLMGJETTdjeWloTXlrWk5WTXJpRnJ1d25QZWloQVVTUVc4bWFmQXB0LXhLNkZpczNNWndlR2VuTlhvSk5pQmRrcGE?oc=5",
-        "published": "2026-08-07",
+        "title": "Nivea dethrones its iconic blue tin with this €17.99 anti-ageing day cream - Paris Select Book",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOSm1WN1VIbXdZMVVxcnR1TzlnZXhPN3Jod1RYbDU5NWpIdU02UXN1QlVvdmNMOXFNRmVQeW5KRVJwSnJyUlZWTjBZWjNORTM2LVh2SVBtTmhrei03a0hiQVBLblJZWHZMb2drcXh6Z1dDNUFNMHN2RnQtTXoxMW5JU3h2TTNpWk43V1V6X2J2VVBkT1dBdV9KOWIzblFwTmRVbHJzYmhSSEwyUUdBU05JdlRuaGNibjJUR0hDTXhn?oc=5",
+        "published": "2026-08-08",
         "brand": "nivea",
-        "source": "parisselectbook.com",
+        "source": "Paris Select Book",
         "region": "global",
         "scope": "brand",
-        "summary": "Nivea blue cream launches its €17.99 anti-ageing moisturiser targeting 4 facial zones &nbsp;&nbsp; parisselectbook.com",
-        "tags": [
-          "product_launch"
-        ],
+        "summary": "Nivea dethrones its iconic blue tin with this €17.99 anti-ageing day cream &nbsp;&nbsp; Paris Select Book",
+        "tags": [],
         "brand_name": "NIVEA",
-        "tone": "neutral"
+        "tone": "positive"
       }
     },
     {
@@ -5707,6 +6043,8 @@
       "instagram": "dove",
       "needs_review": false,
       "news_query": "\"Dove\" (Unilever OR \"beauty bar\" OR body wash OR skincare)",
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 4,
       "categories_tracked": [
         "body_lotion",
@@ -5759,6 +6097,8 @@
       "press": null,
       "instagram": "thebodyshop",
       "needs_review": true,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "body_lotion"
@@ -5805,6 +6145,8 @@
       "press": null,
       "instagram": "haeckels",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 3,
       "categories_tracked": [
         "body_lotion",
@@ -5844,6 +6186,8 @@
       "press": null,
       "instagram": "susannekaufmann_",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 2,
       "categories_tracked": [
         "body_lotion",
@@ -5883,6 +6227,8 @@
       "instagram": "bamford",
       "needs_review": false,
       "news_query": "\"Bamford\" (beauty OR wellness OR Daylesford OR skincare)",
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 3,
       "categories_tracked": [
         "body_lotion",
@@ -5934,6 +6280,8 @@
       "press": null,
       "instagram": "necessaire",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 4,
       "categories_tracked": [
         "body_lotion",
@@ -5982,6 +6330,8 @@
       "instagram": "corpusnaturals",
       "needs_review": false,
       "news_query": "\"Corpus Naturals\"",
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 2,
       "categories_tracked": [
         "body_lotion",
@@ -6016,6 +6366,8 @@
       "press": null,
       "instagram": "tamburins_official",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 2,
       "categories_tracked": [
         "body_lotion",
@@ -6051,6 +6403,8 @@
       "press": null,
       "instagram": "nonfiction_beauty",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 3,
       "categories_tracked": [
         "body_lotion",
@@ -6104,6 +6458,8 @@
       "press": null,
       "instagram": "amouage",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 2,
       "categories_tracked": [
         "candles",
@@ -6152,6 +6508,8 @@
       "press": null,
       "instagram": "ajmalperfumes",
       "needs_review": false,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "incense"
@@ -6195,22 +6553,24 @@
       "press": null,
       "instagram": "maisonbalzac",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": true,
       "sku_count": 1,
       "categories_tracked": [
         "candles"
       ],
       "median_norm_usd": 22.0,
       "avg_price_index": 58,
-      "news_count": 3,
+      "news_count": 4,
       "latest_news": {
-        "title": "Beauty Storage Ideas: Styling a Luxe Product Cupboard - beauticate.com",
-        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSkhUUDdhWWVvU3VXVEFMNTVhd1VEUGhuU2xPQVRqcUo1MEEzckhWajRCakdsN3hQdWJDTENwOWJwMjl2RWNXLUI5d05GY2d6ajR0UEZ5RUwwY2VMYkVkMS02TjFsY2p0OEoxZ1JMZ1BvZndLV0NOd3UxODNyV01NajdybDNsR3pX?oc=5",
-        "published": "2026-08-02",
+        "title": "Home Decorating Trends 2024: Create Your Chic Sanctuary - Beauticate",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUU94VHFJal9WMXJCcjNxLUV3bWNSbXY5cTBkV292b1ViNzBwdEdoYXFwaXVDMWRPeHpySFJCa3dNNno1WHd5TUR5dkdFb25MaWw1dkIxYldBUkNCdlB0S0N5SGN2N3REVTYxSkF1MFRoTXNuUjZ4dUFISHg0aTBTM2JBOE54c2NRVkRicnlhQjVwZi1RenBuZ2pXMWpIYXc4d2c?oc=5",
+        "published": "2026-08-08",
         "brand": "maison-balzac",
-        "source": "beauticate.com",
+        "source": "Beauticate",
         "region": "global",
         "scope": "brand",
-        "summary": "Beauty Storage Ideas: Styling a Luxe Product Cupboard &nbsp;&nbsp; beauticate.com",
+        "summary": "Home Decorating Trends 2024: Create Your Chic Sanctuary &nbsp;&nbsp; Beauticate",
         "tags": [],
         "brand_name": "Maison Balzac",
         "tone": "neutral"
@@ -6243,13 +6603,15 @@
       "press": null,
       "instagram": "laneige_kr",
       "needs_review": false,
+      "ownership": "corporate",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "lip_balm"
       ],
       "median_norm_usd": 120.0,
       "avg_price_index": 75,
-      "news_count": 24,
+      "news_count": 25,
       "latest_news": {
         "title": "Skin-Caring Water Bottles - Trend Hunter",
         "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9yNFZxY0RhM09xYTlBU3BaNVN5THlQSjhnLTJjYXhsVXppQ3hhRTM0NC1zeWJ3c21ud3U2MHVvTFpuTnVyMVE5RlRISlFhOU55WU5hdm5fWUhJdnBTMHh6bG9lUzFoQmFha0FabNIBbEFVX3lxTE9yNFZxY0RhM09xYTlBU3BaNVN5THlQSjhnLTJjYXhsVXppQ3hhRTM0NC1zeWJ3c21ud3U2MHVvTFpuTnVyMVE5RlRISlFhOU55WU5hdm5fWUhJdnBTMHh6bG9lUzFoQmFha0FabA?oc=5",
@@ -6291,6 +6653,8 @@
       "press": null,
       "instagram": "thecamelsoapfactory",
       "needs_review": true,
+      "ownership": "independent",
+      "challenger": false,
       "sku_count": 1,
       "categories_tracked": [
         "soap"
@@ -6462,6 +6826,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 60,
       "price_home_usd": 69.21,
@@ -6499,6 +6864,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 60,
       "price_home_usd": 69.21,
@@ -6536,6 +6902,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 68,
       "price_home_usd": 68.0,
@@ -6573,6 +6940,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Puig",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 60,
       "price_home_usd": 69.21,
@@ -6610,6 +6978,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 55,
       "price_home_usd": 38.72,
@@ -6647,6 +7016,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Occitane Group",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 55,
       "price_home_usd": 38.72,
@@ -6684,6 +7054,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "L'Occitane Group (Reinold Geiger)",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 42,
       "price_home_usd": 48.45,
@@ -6721,6 +7092,7 @@
       "brand_role": "core_competitor",
       "brand_country": "NL",
       "brand_owner": "Independent (Raymond Cloosterman)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 22,
       "price_home_usd": 25.38,
@@ -6758,6 +7130,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 28,
       "price_home_usd": 28.0,
@@ -6795,6 +7168,7 @@
       "brand_role": "benchmark",
       "brand_country": "GB",
       "brand_owner": "Auréa Group",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 20,
       "price_home_usd": 26.9,
@@ -6832,6 +7206,7 @@
       "brand_role": "benchmark",
       "brand_country": "DE",
       "brand_owner": "Beiersdorf",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 6,
       "price_home_usd": 6.92,
@@ -6869,6 +7244,7 @@
       "brand_role": "benchmark",
       "brand_country": "GB",
       "brand_owner": "Unilever",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 6.5,
       "price_home_usd": 8.74,
@@ -6906,6 +7282,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 48,
       "price_home_usd": 48.0,
@@ -6943,6 +7320,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent (d'Ornano family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 175,
       "price_home_usd": 201.86,
@@ -6980,6 +7358,7 @@
       "brand_role": "adjacent",
       "brand_country": "AT",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 65,
       "price_home_usd": 74.98,
@@ -7017,6 +7396,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent (Richard Christiansen)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 45,
       "price_home_usd": 45.0,
@@ -7054,6 +7434,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 52,
       "price_home_usd": 69.94,
@@ -7091,6 +7472,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "LVMH",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 55,
       "price_home_usd": 63.44,
@@ -7128,6 +7510,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (Manzanita Capital)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 42,
       "price_home_usd": 42.0,
@@ -7165,6 +7548,7 @@
       "brand_role": "core_competitor",
       "brand_country": "PT",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 34,
       "price_home_usd": 39.22,
@@ -7202,6 +7586,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 98,
       "price_home_usd": 98.0,
@@ -7239,6 +7624,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -7276,6 +7662,7 @@
       "brand_role": "core_competitor",
       "brand_country": "JP",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "JPY",
       "price_home": 12000,
       "price_home_usd": 75.79,
@@ -7313,6 +7700,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 285,
       "price_home_usd": 285.0,
@@ -7350,6 +7738,7 @@
       "brand_role": "core_competitor",
       "brand_country": "KR",
       "brand_owner": "IICOMBINED (Gentle Monster group)",
+      "brand_ownership": "independent",
       "home_currency": "KRW",
       "price_home": 52000,
       "price_home_usd": 36.72,
@@ -7387,6 +7776,7 @@
       "brand_role": "core_competitor",
       "brand_country": "KR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "KRW",
       "price_home": 55000,
       "price_home_usd": 38.84,
@@ -7424,6 +7814,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (post-Amyris)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 40,
       "price_home_usd": 40.0,
@@ -7461,6 +7852,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 34,
       "price_home_usd": 45.73,
@@ -7498,6 +7890,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 24,
       "price_home_usd": 27.68,
@@ -7535,6 +7928,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IL",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -7572,6 +7966,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Italmobiliare",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 62,
       "price_home_usd": 71.52,
@@ -7609,6 +8004,7 @@
       "brand_role": "adjacent",
       "brand_country": "GB",
       "brand_owner": "Independent (Carole Bamford)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 42,
       "price_home_usd": 56.49,
@@ -7646,6 +8042,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 34,
       "price_home_usd": 34.0,
@@ -7683,6 +8080,7 @@
       "brand_role": "adjacent",
       "brand_country": "GB",
       "brand_owner": "Independent (B-Corp)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 32,
       "price_home_usd": 43.04,
@@ -7720,6 +8118,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -7757,6 +8156,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 68,
       "price_home_usd": 78.44,
@@ -7794,6 +8194,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 105,
       "price_home_usd": 121.12,
@@ -7831,6 +8232,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 32,
       "price_home_usd": 36.91,
@@ -7868,6 +8270,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Puig",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 85,
       "price_home_usd": 98.05,
@@ -7905,6 +8308,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 90,
       "price_home_usd": 90.0,
@@ -7942,6 +8346,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 165,
       "price_home_usd": 116.16,
@@ -7979,6 +8384,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 58,
       "price_home_usd": 78.01,
@@ -8016,6 +8422,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "LVMH",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 75,
       "price_home_usd": 86.51,
@@ -8053,6 +8460,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 110,
       "price_home_usd": 126.88,
@@ -8090,6 +8498,7 @@
       "brand_role": "core_competitor",
       "brand_country": "ES",
       "brand_owner": "LVMH",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 85,
       "price_home_usd": 98.05,
@@ -8127,6 +8536,7 @@
       "brand_role": "benchmark",
       "brand_country": "ES",
       "brand_owner": "Inditex",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 16,
       "price_home_usd": 18.46,
@@ -8164,6 +8574,7 @@
       "brand_role": "benchmark",
       "brand_country": "US",
       "brand_owner": "Newell Brands",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -8201,6 +8612,7 @@
       "brand_role": "benchmark",
       "brand_country": "US",
       "brand_owner": "Bath & Body Works, Inc. (NYSE: BBWI)",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 27,
       "price_home_usd": 27.0,
@@ -8238,6 +8650,7 @@
       "brand_role": "core_competitor",
       "brand_country": "NL",
       "brand_owner": "Independent (Raymond Cloosterman)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 29.5,
       "price_home_usd": 34.03,
@@ -8275,6 +8688,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent (Richard Christiansen)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 78,
       "price_home_usd": 78.0,
@@ -8312,6 +8726,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent / PE (Kering Beauté-adjacent investors)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 42,
       "price_home_usd": 42.0,
@@ -8349,6 +8764,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 68,
       "price_home_usd": 68.0,
@@ -8386,6 +8802,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 42,
       "price_home_usd": 42.0,
@@ -8423,6 +8840,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 52,
       "price_home_usd": 52.0,
@@ -8461,6 +8879,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 125,
       "price_home_usd": 144.19,
@@ -8498,6 +8917,7 @@
       "brand_role": "regional_incumbent",
       "brand_country": "OM",
       "brand_owner": "SABCO Group / Omani royal patronage",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 110,
       "price_home_usd": 110.0,
@@ -8535,6 +8955,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (Manzanita Capital)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 60,
       "price_home_usd": 60.0,
@@ -8572,6 +8993,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Italmobiliare",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 88,
       "price_home_usd": 101.51,
@@ -8609,6 +9031,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 78,
       "price_home_usd": 89.97,
@@ -8646,6 +9069,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 120,
       "price_home_usd": 138.42,
@@ -8683,6 +9107,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent (Elad Yifrach)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 165,
       "price_home_usd": 165.0,
@@ -8720,6 +9145,7 @@
       "brand_role": "core_competitor",
       "brand_country": "PT",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 62,
       "price_home_usd": 71.52,
@@ -8757,6 +9183,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 98,
       "price_home_usd": 98.0,
@@ -8794,6 +9221,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 45,
       "price_home_usd": 60.52,
@@ -8832,6 +9260,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 95,
       "price_home_usd": 109.58,
@@ -8869,6 +9298,7 @@
       "brand_role": "adjacent",
       "brand_country": "GB",
       "brand_owner": "Independent (Carole Bamford)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 48,
       "price_home_usd": 64.56,
@@ -8906,6 +9336,7 @@
       "brand_role": "adjacent",
       "brand_country": "GB",
       "brand_owner": "Independent (B-Corp)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 42,
       "price_home_usd": 56.49,
@@ -8943,6 +9374,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "Independent (Elise Pioch)",
+      "brand_ownership": "independent",
       "home_currency": "AUD",
       "price_home": 65,
       "price_home_usd": 45.76,
@@ -8980,6 +9412,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 220,
       "price_home_usd": 295.89,
@@ -9017,6 +9450,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 58,
       "price_home_usd": 58.0,
@@ -9054,6 +9488,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 46,
       "price_home_usd": 46.0,
@@ -9091,6 +9526,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 55,
       "price_home_usd": 38.72,
@@ -9128,6 +9564,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 44,
       "price_home_usd": 44.0,
@@ -9165,6 +9602,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent (d'Ornano family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 82,
       "price_home_usd": 94.59,
@@ -9202,6 +9640,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 42,
       "price_home_usd": 42.0,
@@ -9239,6 +9678,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (post-Amyris)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -9276,6 +9716,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Wella Company",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 34,
       "price_home_usd": 34.0,
@@ -9313,6 +9754,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 36,
       "price_home_usd": 36.0,
@@ -9350,6 +9792,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Independent (Bollati family, B-Corp)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 35,
       "price_home_usd": 40.37,
@@ -9387,6 +9830,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Occitane Group",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 39,
       "price_home_usd": 27.46,
@@ -9424,6 +9868,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 26,
       "price_home_usd": 34.97,
@@ -9461,6 +9906,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (Manzanita Capital)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 26,
       "price_home_usd": 26.0,
@@ -9498,6 +9944,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Puig",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 62,
       "price_home_usd": 71.52,
@@ -9535,6 +9982,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 28,
       "price_home_usd": 28.0,
@@ -9572,6 +10020,7 @@
       "brand_role": "adjacent",
       "brand_country": "SE",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "SEK",
       "price_home": 290,
       "price_home_usd": 30.56,
@@ -9609,6 +10058,7 @@
       "brand_role": "adjacent",
       "brand_country": "NL",
       "brand_owner": "Independent (Negin Mirsalehi)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 34,
       "price_home_usd": 39.22,
@@ -9646,6 +10096,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Independent (Krull family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 22,
       "price_home_usd": 25.38,
@@ -9683,6 +10134,7 @@
       "brand_role": "benchmark",
       "brand_country": "GB",
       "brand_owner": "Unilever",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 4,
       "price_home_usd": 5.38,
@@ -9720,6 +10172,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 130,
       "price_home_usd": 149.95,
@@ -9757,6 +10210,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 85,
       "price_home_usd": 98.05,
@@ -9794,6 +10248,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 28,
       "price_home_usd": 28.0,
@@ -9831,6 +10286,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -9868,6 +10324,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -9905,6 +10362,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 26,
       "price_home_usd": 26.0,
@@ -9942,6 +10400,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 28,
       "price_home_usd": 28.0,
@@ -9979,6 +10438,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Puig",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 75,
       "price_home_usd": 86.51,
@@ -10016,6 +10476,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 165,
       "price_home_usd": 190.33,
@@ -10053,6 +10514,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 140,
       "price_home_usd": 161.49,
@@ -10090,6 +10552,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 190,
       "price_home_usd": 219.16,
@@ -10127,6 +10590,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 95,
       "price_home_usd": 109.58,
@@ -10164,6 +10628,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Independent (family)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 210,
       "price_home_usd": 282.44,
@@ -10201,6 +10666,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Independent (family)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 185,
       "price_home_usd": 248.82,
@@ -10238,6 +10704,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Independent (family)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 150,
       "price_home_usd": 201.74,
@@ -10275,6 +10742,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Independent (Krull family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 75,
       "price_home_usd": 86.51,
@@ -10312,6 +10780,7 @@
       "brand_role": "adjacent",
       "brand_country": "GB",
       "brand_owner": "Independent (Cosby family)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 120,
       "price_home_usd": 161.39,
@@ -10349,6 +10818,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 48,
       "price_home_usd": 48.0,
@@ -10386,6 +10856,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 98,
       "price_home_usd": 98.0,
@@ -10423,6 +10894,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "PE / founder-led",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 130,
       "price_home_usd": 149.95,
@@ -10460,6 +10932,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 30,
       "price_home_usd": 30.0,
@@ -10497,6 +10970,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Independent (Krull family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 32,
       "price_home_usd": 36.91,
@@ -10534,6 +11008,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Independent (family)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 240,
       "price_home_usd": 322.79,
@@ -10571,6 +11046,7 @@
       "brand_role": "adjacent",
       "brand_country": "GB",
       "brand_owner": "Independent (Cosby family)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 55,
       "price_home_usd": 73.97,
@@ -10608,6 +11084,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 175,
       "price_home_usd": 201.86,
@@ -10645,6 +11122,7 @@
       "brand_role": "benchmark",
       "brand_country": "GB",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 12,
       "price_home_usd": 16.14,
@@ -10682,6 +11160,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "L'Occitane Group (Reinold Geiger)",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 34,
       "price_home_usd": 39.22,
@@ -10719,6 +11198,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "L'Occitane Group (Reinold Geiger)",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 11,
       "price_home_usd": 12.69,
@@ -10756,6 +11236,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 45,
       "price_home_usd": 31.68,
@@ -10793,6 +11274,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 45,
       "price_home_usd": 31.68,
@@ -10830,6 +11312,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 45,
       "price_home_usd": 45.0,
@@ -10867,6 +11350,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Puig",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 33,
       "price_home_usd": 38.07,
@@ -10904,6 +11388,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 38,
       "price_home_usd": 43.83,
@@ -10941,6 +11426,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 38,
       "price_home_usd": 43.83,
@@ -10978,6 +11464,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Occitane Group",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 39,
       "price_home_usd": 27.46,
@@ -11015,6 +11502,7 @@
       "brand_role": "core_competitor",
       "brand_country": "NL",
       "brand_owner": "Independent (Raymond Cloosterman)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 12.5,
       "price_home_usd": 14.42,
@@ -11052,6 +11540,7 @@
       "brand_role": "core_competitor",
       "brand_country": "KR",
       "brand_owner": "IICOMBINED (Gentle Monster group)",
+      "brand_ownership": "independent",
       "home_currency": "KRW",
       "price_home": 38000,
       "price_home_usd": 26.84,
@@ -11089,6 +11578,7 @@
       "brand_role": "core_competitor",
       "brand_country": "KR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "KRW",
       "price_home": 38000,
       "price_home_usd": 26.84,
@@ -11126,6 +11616,7 @@
       "brand_role": "benchmark",
       "brand_country": "FR",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 9,
       "price_home_usd": 10.38,
@@ -11163,6 +11654,7 @@
       "brand_role": "benchmark",
       "brand_country": "US",
       "brand_owner": "Kenvue",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 6,
       "price_home_usd": 6.0,
@@ -11200,6 +11692,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent (Aliza Jabès)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 12,
       "price_home_usd": 13.84,
@@ -11237,6 +11730,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 24,
       "price_home_usd": 24.0,
@@ -11274,6 +11768,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (Manzanita Capital)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 22,
       "price_home_usd": 22.0,
@@ -11311,6 +11806,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "PE / founder-led",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 45,
       "price_home_usd": 51.91,
@@ -11348,6 +11844,7 @@
       "brand_role": "benchmark",
       "brand_country": "US",
       "brand_owner": "Bath & Body Works, Inc. (NYSE: BBWI)",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 8,
       "price_home_usd": 8.0,
@@ -11385,6 +11882,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 36,
       "price_home_usd": 48.42,
@@ -11422,6 +11920,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "LVMH",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 42,
       "price_home_usd": 48.45,
@@ -11459,6 +11958,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Italmobiliare",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 44,
       "price_home_usd": 50.75,
@@ -11496,6 +11996,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 16,
       "price_home_usd": 18.46,
@@ -11533,6 +12034,7 @@
       "brand_role": "core_competitor",
       "brand_country": "PT",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 22,
       "price_home_usd": 25.38,
@@ -11570,6 +12072,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 130,
       "price_home_usd": 130.0,
@@ -11607,6 +12110,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IL",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 24,
       "price_home_usd": 24.0,
@@ -11644,6 +12148,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "SEK",
       "price_home": 260,
       "price_home_usd": 27.4,
@@ -11681,6 +12186,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 28,
       "price_home_usd": 37.66,
@@ -11718,6 +12224,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Independent (Krull family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 18,
       "price_home_usd": 20.76,
@@ -11755,6 +12262,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Italmobiliare",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 22,
       "price_home_usd": 25.38,
@@ -11792,6 +12300,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent (Richard Christiansen)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 38,
       "price_home_usd": 38.0,
@@ -11829,6 +12338,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent (Aliza Jabès)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 16,
       "price_home_usd": 18.46,
@@ -11866,6 +12376,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (post-Amyris)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 22,
       "price_home_usd": 22.0,
@@ -11903,6 +12414,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 35,
       "price_home_usd": 35.0,
@@ -11940,6 +12452,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 55,
       "price_home_usd": 63.44,
@@ -11977,6 +12490,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 95,
       "price_home_usd": 109.58,
@@ -12014,6 +12528,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 48,
       "price_home_usd": 55.37,
@@ -12051,6 +12566,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent (Elad Yifrach)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 65,
       "price_home_usd": 65.0,
@@ -12088,6 +12604,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent (Elad Yifrach)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 165,
       "price_home_usd": 165.0,
@@ -12125,6 +12642,7 @@
       "brand_role": "core_competitor",
       "brand_country": "JP",
       "brand_owner": "Independent (Hata family)",
+      "brand_ownership": "independent",
       "home_currency": "JPY",
       "price_home": 2200,
       "price_home_usd": 13.89,
@@ -12162,6 +12680,7 @@
       "brand_role": "core_competitor",
       "brand_country": "JP",
       "brand_owner": "Independent (Hata family)",
+      "brand_ownership": "independent",
       "home_currency": "JPY",
       "price_home": 3000,
       "price_home_usd": 18.95,
@@ -12199,6 +12718,7 @@
       "brand_role": "core_competitor",
       "brand_country": "JP",
       "brand_owner": "Independent (JP)",
+      "brand_ownership": "independent",
       "home_currency": "JPY",
       "price_home": 3200,
       "price_home_usd": 20.21,
@@ -12236,6 +12756,7 @@
       "brand_role": "core_competitor",
       "brand_country": "JP",
       "brand_owner": "Independent (JP)",
+      "brand_ownership": "independent",
       "home_currency": "JPY",
       "price_home": 2000,
       "price_home_usd": 12.63,
@@ -12273,6 +12794,7 @@
       "brand_role": "benchmark",
       "brand_country": "IN",
       "brand_owner": "Hem Corporation",
+      "brand_ownership": "independent",
       "home_currency": "INR",
       "price_home": 40,
       "price_home_usd": 0.42,
@@ -12310,6 +12832,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 60,
       "price_home_usd": 69.21,
@@ -12347,6 +12870,7 @@
       "brand_role": "regional_incumbent",
       "brand_country": "AE",
       "brand_owner": "Ajmal Group (family)",
+      "brand_ownership": "independent",
       "home_currency": "AED",
       "price_home": 120,
       "price_home_usd": 32.68,
@@ -12384,6 +12908,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Italmobiliare",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 58,
       "price_home_usd": 66.9,
@@ -12421,6 +12946,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "PE / founder-led",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 180,
       "price_home_usd": 207.63,
@@ -12458,6 +12984,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 78,
       "price_home_usd": 89.97,
@@ -12495,6 +13022,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 55,
       "price_home_usd": 63.44,
@@ -12532,6 +13060,7 @@
       "brand_role": "core_competitor",
       "brand_country": "JP",
       "brand_owner": "Independent (JP)",
+      "brand_ownership": "independent",
       "home_currency": "JPY",
       "price_home": 600,
       "price_home_usd": 3.79,
@@ -12569,6 +13098,7 @@
       "brand_role": "core_competitor",
       "brand_country": "JP",
       "brand_owner": "Independent (Hata family)",
+      "brand_ownership": "independent",
       "home_currency": "JPY",
       "price_home": 9000,
       "price_home_usd": 56.84,
@@ -12606,6 +13136,7 @@
       "brand_role": "regional_incumbent",
       "brand_country": "OM",
       "brand_owner": "SABCO Group / Omani royal patronage",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 90,
       "price_home_usd": 90.0,
@@ -12643,6 +13174,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 85,
       "price_home_usd": 85.0,
@@ -12680,6 +13212,7 @@
       "brand_role": "core_competitor",
       "brand_country": "JP",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "JPY",
       "price_home": 9900,
       "price_home_usd": 62.52,
@@ -12717,6 +13250,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Puig",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 38,
       "price_home_usd": 43.83,
@@ -12754,6 +13288,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 62,
       "price_home_usd": 62.0,
@@ -12791,6 +13326,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 32,
       "price_home_usd": 36.91,
@@ -12828,6 +13364,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 27,
       "price_home_usd": 19.01,
@@ -12865,6 +13402,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 24,
       "price_home_usd": 24.0,
@@ -12902,6 +13440,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 15,
       "price_home_usd": 15.0,
@@ -12939,6 +13478,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent (Aliza Jabès)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 12,
       "price_home_usd": 13.84,
@@ -12976,6 +13516,7 @@
       "brand_role": "benchmark",
       "brand_country": "FR",
       "brand_owner": "NAOS",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 7,
       "price_home_usd": 8.07,
@@ -13013,6 +13554,7 @@
       "brand_role": "adjacent",
       "brand_country": "NL",
       "brand_owner": "Independent (Negin Mirsalehi)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 28,
       "price_home_usd": 32.3,
@@ -13050,6 +13592,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (Manzanita Capital)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 16,
       "price_home_usd": 16.0,
@@ -13087,6 +13630,7 @@
       "brand_role": "core_competitor",
       "brand_country": "NL",
       "brand_owner": "Independent (Raymond Cloosterman)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 9.5,
       "price_home_usd": 10.96,
@@ -13124,6 +13668,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "L'Occitane Group (Reinold Geiger)",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 12,
       "price_home_usd": 13.84,
@@ -13161,6 +13706,7 @@
       "brand_role": "benchmark",
       "brand_country": "KR",
       "brand_owner": "AMOREPACIFIC",
+      "brand_ownership": "corporate",
       "home_currency": "KRW",
       "price_home": 22000,
       "price_home_usd": 15.54,
@@ -13198,6 +13744,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent (d'Ornano family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 78,
       "price_home_usd": 89.97,
@@ -13235,6 +13782,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 54,
       "price_home_usd": 54.0,
@@ -13272,6 +13820,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 49,
       "price_home_usd": 49.0,
@@ -13309,6 +13858,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 44,
       "price_home_usd": 44.0,
@@ -13346,6 +13896,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 55,
       "price_home_usd": 38.72,
@@ -13383,6 +13934,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 33,
       "price_home_usd": 23.23,
@@ -13420,6 +13972,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 42,
       "price_home_usd": 42.0,
@@ -13457,6 +14010,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 38,
       "price_home_usd": 38.0,
@@ -13494,6 +14048,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (post-Amyris)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -13531,6 +14086,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Wella Company",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -13568,6 +14124,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 34,
       "price_home_usd": 34.0,
@@ -13605,6 +14162,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Independent (Bollati family, B-Corp)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 33,
       "price_home_usd": 38.07,
@@ -13642,6 +14200,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "L'Occitane Group (Reinold Geiger)",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 23,
       "price_home_usd": 26.53,
@@ -13679,6 +14238,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 24,
       "price_home_usd": 32.28,
@@ -13716,6 +14276,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Puig",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 45,
       "price_home_usd": 51.91,
@@ -13753,6 +14314,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 36,
       "price_home_usd": 36.0,
@@ -13790,6 +14352,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 40,
       "price_home_usd": 40.0,
@@ -13827,6 +14390,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (Manzanita Capital)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 24,
       "price_home_usd": 24.0,
@@ -13864,6 +14428,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 28,
       "price_home_usd": 28.0,
@@ -13901,6 +14466,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Independent (Krull family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 20,
       "price_home_usd": 23.07,
@@ -13938,6 +14504,7 @@
       "brand_role": "adjacent",
       "brand_country": "NL",
       "brand_owner": "Independent (Negin Mirsalehi)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 32,
       "price_home_usd": 36.91,
@@ -13975,6 +14542,7 @@
       "brand_role": "adjacent",
       "brand_country": "SE",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "SEK",
       "price_home": 270,
       "price_home_usd": 28.45,
@@ -14012,6 +14580,7 @@
       "brand_role": "benchmark",
       "brand_country": "GB",
       "brand_owner": "Unilever",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 4,
       "price_home_usd": 5.38,
@@ -14049,6 +14618,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 68,
       "price_home_usd": 47.87,
@@ -14086,6 +14656,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 108,
       "price_home_usd": 76.03,
@@ -14123,6 +14694,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 63,
       "price_home_usd": 44.35,
@@ -14160,6 +14732,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 39,
       "price_home_usd": 44.99,
@@ -14197,6 +14770,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Manzanita Capital",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 25,
       "price_home_usd": 28.84,
@@ -14234,6 +14808,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 45,
       "price_home_usd": 45.0,
@@ -14271,6 +14846,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 30,
       "price_home_usd": 30.0,
@@ -14308,6 +14884,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Puig",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 58,
       "price_home_usd": 66.9,
@@ -14345,6 +14922,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Puig",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 32,
       "price_home_usd": 36.91,
@@ -14382,6 +14960,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "L'Occitane Group (Reinold Geiger)",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 7.5,
       "price_home_usd": 8.65,
@@ -14419,6 +14998,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "L'Occitane Group (Reinold Geiger)",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 22,
       "price_home_usd": 25.38,
@@ -14456,6 +15036,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "SEK",
       "price_home": 120,
       "price_home_usd": 12.65,
@@ -14493,6 +15074,7 @@
       "brand_role": "core_competitor",
       "brand_country": "SE",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "SEK",
       "price_home": 245,
       "price_home_usd": 25.82,
@@ -14530,6 +15112,7 @@
       "brand_role": "core_competitor",
       "brand_country": "AU",
       "brand_owner": "L'Occitane Group",
+      "brand_ownership": "corporate",
       "home_currency": "AUD",
       "price_home": 49,
       "price_home_usd": 34.5,
@@ -14567,6 +15150,7 @@
       "brand_role": "core_competitor",
       "brand_country": "NL",
       "brand_owner": "Independent (Raymond Cloosterman)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 12.5,
       "price_home_usd": 14.42,
@@ -14604,6 +15188,7 @@
       "brand_role": "benchmark",
       "brand_country": "US",
       "brand_owner": "SC Johnson",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 4.5,
       "price_home_usd": 4.5,
@@ -14641,6 +15226,7 @@
       "brand_role": "benchmark",
       "brand_country": "GB",
       "brand_owner": "Unilever",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 1.5,
       "price_home_usd": 2.02,
@@ -14678,6 +15264,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Italmobiliare",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 22,
       "price_home_usd": 25.38,
@@ -14715,6 +15302,7 @@
       "brand_role": "core_competitor",
       "brand_country": "PT",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 18,
       "price_home_usd": 20.76,
@@ -14752,6 +15340,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 19,
       "price_home_usd": 21.92,
@@ -14789,6 +15378,7 @@
       "brand_role": "adjacent",
       "brand_country": "FR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 7,
       "price_home_usd": 8.07,
@@ -14826,6 +15416,7 @@
       "brand_role": "benchmark",
       "brand_country": "US",
       "brand_owner": "Independent (Bronner family, B-Corp)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 13,
       "price_home_usd": 13.0,
@@ -14863,6 +15454,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent (Richard Christiansen)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 22,
       "price_home_usd": 22.0,
@@ -14900,6 +15492,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "L'Oréal Groupe",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 20,
       "price_home_usd": 20.0,
@@ -14937,6 +15530,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 24,
       "price_home_usd": 32.28,
@@ -14974,6 +15568,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Independent (Krull family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 12,
       "price_home_usd": 13.84,
@@ -15011,6 +15606,7 @@
       "brand_role": "regional_incumbent",
       "brand_country": "AE",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "AED",
       "price_home": 45,
       "price_home_usd": 12.25,
@@ -15048,6 +15644,7 @@
       "brand_role": "benchmark",
       "brand_country": "US",
       "brand_owner": "Bath & Body Works, Inc. (NYSE: BBWI)",
+      "brand_ownership": "corporate",
       "home_currency": "USD",
       "price_home": 7.5,
       "price_home_usd": 7.5,
@@ -15085,6 +15682,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IL",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 32,
       "price_home_usd": 32.0,
@@ -15122,6 +15720,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IL",
       "brand_owner": "Independent / PE",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 40,
       "price_home_usd": 40.0,
@@ -15159,6 +15758,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "The Estée Lauder Companies",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 32,
       "price_home_usd": 43.04,
@@ -15196,6 +15796,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "LVMH",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 18,
       "price_home_usd": 20.76,
@@ -15233,6 +15834,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "PE-backed (Manzanita Capital)",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 26,
       "price_home_usd": 26.0,
@@ -15270,6 +15872,7 @@
       "brand_role": "core_competitor",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 25,
       "price_home_usd": 25.0,
@@ -15307,6 +15910,7 @@
       "brand_role": "core_competitor",
       "brand_country": "KR",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "KRW",
       "price_home": 42000,
       "price_home_usd": 29.66,
@@ -15344,6 +15948,7 @@
       "brand_role": "core_competitor",
       "brand_country": "ES",
       "brand_owner": "LVMH",
+      "brand_ownership": "corporate",
       "home_currency": "EUR",
       "price_home": 48,
       "price_home_usd": 55.37,
@@ -15381,6 +15986,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "PE / founder-led",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 24,
       "price_home_usd": 27.68,
@@ -15418,6 +16024,7 @@
       "brand_role": "core_competitor",
       "brand_country": "FR",
       "brand_owner": "Independent (Aliza Jabès)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 18,
       "price_home_usd": 20.76,
@@ -15455,6 +16062,7 @@
       "brand_role": "core_competitor",
       "brand_country": "GB",
       "brand_owner": "Kao Corporation",
+      "brand_ownership": "corporate",
       "home_currency": "GBP",
       "price_home": 28,
       "price_home_usd": 37.66,
@@ -15492,6 +16100,7 @@
       "brand_role": "core_competitor",
       "brand_country": "NL",
       "brand_owner": "Independent (Raymond Cloosterman)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 10.5,
       "price_home_usd": 12.11,
@@ -15529,6 +16138,7 @@
       "brand_role": "core_competitor",
       "brand_country": "IT",
       "brand_owner": "Independent (Krull family)",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 30,
       "price_home_usd": 34.6,
@@ -15566,6 +16176,7 @@
       "brand_role": "adjacent",
       "brand_country": "GB",
       "brand_owner": "Independent (B-Corp)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 14,
       "price_home_usd": 18.83,
@@ -15603,6 +16214,7 @@
       "brand_role": "adjacent",
       "brand_country": "AT",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "EUR",
       "price_home": 34,
       "price_home_usd": 39.22,
@@ -15640,6 +16252,7 @@
       "brand_role": "adjacent",
       "brand_country": "US",
       "brand_owner": "Independent",
+      "brand_ownership": "independent",
       "home_currency": "USD",
       "price_home": 28,
       "price_home_usd": 28.0,
@@ -15677,6 +16290,7 @@
       "brand_role": "adjacent",
       "brand_country": "GB",
       "brand_owner": "Independent (Carole Bamford)",
+      "brand_ownership": "independent",
       "home_currency": "GBP",
       "price_home": 26,
       "price_home_usd": 34.97,
@@ -15793,7 +16407,8 @@
         "BoF 2026 brands-to-watch listing"
       ],
       "watch": "Retail wins and funding — verify details before quoting.",
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Cyklar\" (body OR beauty OR skincare)"
     },
     {
       "id": "hanni",
@@ -15813,7 +16428,8 @@
         "Eco-conscious vegan positioning"
       ],
       "watch": "Whether L'Oréal scales it against Nécessaire.",
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Hanni\" (body care OR shave OR beauty OR skincare)"
     },
     {
       "id": "xinu",
@@ -15831,7 +16447,8 @@
         "BoF 2026 brands-to-watch listing"
       ],
       "watch": "Home and body line extension.",
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Xinu\" (fragrance OR perfume)"
     },
     {
       "id": "fugazzi",
@@ -15848,7 +16465,8 @@
         "BoF 2026 brands-to-watch listing"
       ],
       "watch": "Whether it extends into candles/body.",
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Fugazzi\" (fragrance OR perfume)"
     },
     {
       "id": "vyrao",
@@ -15866,7 +16484,8 @@
         "Selfridges/Liberty presence"
       ],
       "watch": "Home fragrance extension.",
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Vyrao\" (fragrance OR perfume OR beauty)"
     },
     {
       "id": "ffern",
@@ -15884,7 +16503,8 @@
         "Organic-certified sourcing"
       ],
       "watch": "Model is highly transferable to candles and soap — worth studying regardless of category.",
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Ffern\" (fragrance OR perfume)"
     },
     {
       "id": "haeckels",
@@ -15940,7 +16560,8 @@
         "Independent luxury retail expansion"
       ],
       "watch": null,
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Sangre de Fruta\""
     },
     {
       "id": "binu-binu",
@@ -15957,7 +16578,8 @@
         "Design-retail distribution"
       ],
       "watch": null,
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Binu Binu\""
     },
     {
       "id": "moehr",
@@ -15974,7 +16596,8 @@
         "2026 emerging-brand coverage"
       ],
       "watch": null,
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Moehr\" OR \"Moëhr\" perfume"
     },
     {
       "id": "keap",
@@ -15991,7 +16614,8 @@
         "Subscription model"
       ],
       "watch": null,
-      "needs_review": true
+      "needs_review": true,
+      "news_query": "\"Keap\" (candle OR candles)"
     },
     {
       "id": "maison-balzac",
@@ -16028,6 +16652,32 @@
       ],
       "brand_name": null,
       "tone": "positive"
+    },
+    {
+      "title": "Nivea dethrones its iconic blue tin with this €17.99 anti-ageing day cream - Paris Select Book",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOSm1WN1VIbXdZMVVxcnR1TzlnZXhPN3Jod1RYbDU5NWpIdU02UXN1QlVvdmNMOXFNRmVQeW5KRVJwSnJyUlZWTjBZWjNORTM2LVh2SVBtTmhrei03a0hiQVBLblJZWHZMb2drcXh6Z1dDNUFNMHN2RnQtTXoxMW5JU3h2TTNpWk43V1V6X2J2VVBkT1dBdV9KOWIzblFwTmRVbHJzYmhSSEwyUUdBU05JdlRuaGNibjJUR0hDTXhn?oc=5",
+      "published": "2026-08-08",
+      "brand": "nivea",
+      "source": "Paris Select Book",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Nivea dethrones its iconic blue tin with this €17.99 anti-ageing day cream &nbsp;&nbsp; Paris Select Book",
+      "tags": [],
+      "brand_name": "NIVEA",
+      "tone": "positive"
+    },
+    {
+      "title": "Home Decorating Trends 2024: Create Your Chic Sanctuary - Beauticate",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUU94VHFJal9WMXJCcjNxLUV3bWNSbXY5cTBkV292b1ViNzBwdEdoYXFwaXVDMWRPeHpySFJCa3dNNno1WHd5TUR5dkdFb25MaWw1dkIxYldBUkNCdlB0S0N5SGN2N3REVTYxSkF1MFRoTXNuUjZ4dUFISHg0aTBTM2JBOE54c2NRVkRicnlhQjVwZi1RenBuZ2pXMWpIYXc4d2c?oc=5",
+      "published": "2026-08-08",
+      "brand": "maison-balzac",
+      "source": "Beauticate",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Home Decorating Trends 2024: Create Your Chic Sanctuary &nbsp;&nbsp; Beauticate",
+      "tags": [],
+      "brand_name": "Maison Balzac",
+      "tone": "neutral"
     },
     {
       "title": "SHIU 25: Le Labo’s ode to Beijing’s quiet soul - macau daily times 澳門每日時報",
@@ -16441,6 +17091,49 @@
       "tone": "neutral"
     },
     {
+      "title": "Believe it: Le Labo is on sale at Nordstrom for nearly $60 off - pagesix.com",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSUszQmZHNmtYX0pKbVl4UXJRUllwYjVJUVRyTDVOLVJJNUZoMERINmR0ZzNqSnpORE5NcjNpR013dC1FRWtvbng0VWtmYktFVzJzZ05XV29qSlRORjFWa3BlSXpSWWM3MWVEZU8wYXktU2lQbFNQWkNUNU1fcGZiTzBnRGFON1Q4T0pPRFp4emc1YklQVXRHR09xMjlNTmk5N3dPQWVWSQ?oc=5",
+      "published": "2026-08-07",
+      "brand": "le-labo",
+      "source": "pagesix.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Believe it: Le Labo is on sale at Nordstrom for nearly $60 off &nbsp;&nbsp; pagesix.com",
+      "tags": [],
+      "brand_name": "Le Labo",
+      "tone": "neutral"
+    },
+    {
+      "title": "Summer Fridays Just Dropped an Under-$40 Body Care Collection - Marie Claire",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43WGx5dTFKaWZzVF8xUEJhVThQN0h4M0NhbnJFYjRYWDduVjRTcDQ4ZUdJT3pJOGRaTEprdk1tRHNCWGFoRERVandaTWxjS2dzeFRyUWN4NEtrLVVhQXBwUTNkZGI5bWNlbEY3c1ZiUGZmbF9lVkpQUE5ZSEVuZDg?oc=5",
+      "published": "2026-08-07",
+      "brand": "summer-fridays",
+      "source": "Marie Claire",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Summer Fridays Just Dropped an Under-$40 Body Care Collection &nbsp;&nbsp; Marie Claire",
+      "tags": [
+        "product_launch"
+      ],
+      "brand_name": "Summer Fridays",
+      "tone": "neutral"
+    },
+    {
+      "title": "CHANEL Turns its Mykonos Boutique into a Refined Expression of Cycladic Architecture",
+      "url": "https://retailboss.co/chanel-turns-its-mykonos-boutique-into-a-refined-expression-of-cycladic-architecture/",
+      "published": "2026-08-07",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Experience a refined shopping destination that showcases CHANEL's commitment to sophistication and tradition.",
+      "tags": [
+        "retail_expansion"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
       "title": "EXCLUSIVE: Giorgio Armani Signs Jonathan Bailey for I Will Scent",
       "url": "https://wwd.com/beauty-industry-news/fragrance/giorgio-armani-signs-jonathan-bailey-i-will-scent-1239095370/",
       "published": "2026-08-06",
@@ -16513,16 +17206,17 @@
       "tone": "positive"
     },
     {
-      "title": "L’Oréal Appoints Rahquel Purcell as North America DE&I Chief",
-      "url": "https://www.globalcosmeticsnews.com/loreal-appoints-rahquel-purcell-as-north-america-dei-chief/",
+      "title": "L'Oréal appoints Rahquel Purcell as North America DE&I chief",
+      "url": "https://www.premiumbeautynews.com/en/l-oreal-appoints-rahquel-purcell,28007",
       "published": "2026-08-06",
       "brand": null,
-      "source": "Global Cosmetics News",
+      "source": "Premium Beauty News",
       "region": "global",
       "scope": "trade",
-      "summary": "L'Oréal, Rahquel Purcell, DE&#038;I, diversity equity and inclusion, L'Oréal USA, executive appointment, North America, beauty leadership, Alexis Perakis-Valat \n The post  L&#8217;Oréal Appoints Rahquel Purcell as North America DE&amp;I Chief  appeared first on  Global Cosmetics News .",
+      "summary": "L'Oréal has announced the appointment of Rahquel Purcell as its next Chief Diversity, Equity & Inclusion (DE&amp;I) Officer, North America, effective immediately.  \nIn this role, Purcell will report to Alexis Perakis-Valat, CEO, L'Oréal USA and President, North America. She will continue to sit on the management committee of L'Oréal USA as well as the global leadership team of Margaret Johnston-C",
       "tags": [
-        "campaign_pr"
+        "campaign_pr",
+        "corporate"
       ],
       "brand_name": null,
       "tone": "neutral"
@@ -16578,7 +17272,7 @@
       "scope": "brand",
       "summary": "K18 hair longevity-focused pop-up to ‘inform and empower’ people on scalp health &nbsp;&nbsp; Cosmetics Business",
       "tags": [
-        "retail_expansion"
+        "experiential"
       ],
       "brand_name": "K18",
       "tone": "neutral"
@@ -16689,7 +17383,7 @@
       "scope": "trade",
       "summary": "Taking place at London, UK, shopping destination Battersea Power Station with retailer Space NK, the immersive experience is tied to the launch of K18’s first longevity serum, FutureIQ",
       "tags": [
-        "retail_expansion"
+        "experiential"
       ],
       "brand_name": null,
       "tone": "neutral"
@@ -16801,7 +17495,7 @@
       "scope": "brand",
       "summary": "K18 hair longevity-focused pop-up to ‘inform and empower’ people on scalp health &nbsp;&nbsp; cosmeticsbusiness.com",
       "tags": [
-        "retail_expansion"
+        "experiential"
       ],
       "brand_name": "K18",
       "tone": "neutral"
@@ -16958,6 +17652,49 @@
       "region": "global",
       "scope": "trade",
       "summary": "A legal dispute has emerged following the February sale of the  HoliFrog  skincare brand. On May 13, former owner Seemark Brands and its principals, HoliFrog co-founders Emily Parr and Majeed Hemmat, filed a complaint after the buyer alleged they provided inaccurate information during the sale process and demanded $750,000 in damages. \n According to \n  ... \n The post  Oliveda&#8217;s Nasdaq Plans",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "How Beauty Brands Turned Music Festivals Into Experiential Marketing Powerhouses - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPS0dIZ1BGbkVmNzQ1YXl4bUlfZHhLSHRJS3RwdVg0aTh3UXpGenRhekoxSWR1dVBIRGRnemNnWkxxXzVvdm9LRndQVGJjZGNTTVVUX21DOEp1WjVtSjd2T25nYjVpRmJPbXFPNm44TmNrUUNOYkxXUERTa0FlMHZoTFJJTFFsY1FvZFE?oc=5",
+      "published": "2026-08-06",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "How Beauty Brands Turned Music Festivals Into Experiential Marketing Powerhouses &nbsp;&nbsp; BeautyMatter",
+      "tags": [
+        "experiential"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "e.l.f. Beauty Credits rhode Acquisition for Strong Q1 FY2027 Growth - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSjRqajhuTlU5d3NaMURZTjdMbFZrclVGT2oxZm9IVmdJS1VXdEVpU28wUzVBWVVrclktX28tSk84WkdNTU9XRGtwVGZmLXkycUhiR1hGSDczMzR0VzFSeU4wTjZkbUY1ZzdhbXhPa1F4YVQ4Tnhlc1BnT0dPMFRkMmR0ak8tV1FV?oc=5",
+      "published": "2026-08-06",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "e.l.f. Beauty Credits rhode Acquisition for Strong Q1 FY2027 Growth &nbsp;&nbsp; BeautyMatter",
+      "tags": [
+        "corporate"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "How Grande Cosmetics Created Sephora's Lash Serum Category - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNdVNKcXBiSVY1a3oycHBoNkpMMmdYUDJXNzcxZDdQYjd3TVVibUI0RWVKZ1hoa0dFVDNLUWE4LWxFZ1BiU1RfOTNwY2k0bS1vdkNpRmRnMHpvbE5wUzk2VEg1bXh0YWlHX0k2anNPODM1ckdfS2NMenVaUzZzY2dpRDZBaFJjc2RPOXFzWHB3aUw4Skowakw1Mm5B?oc=5",
+      "published": "2026-08-06",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "How Grande Cosmetics Created Sephora's Lash Serum Category &nbsp;&nbsp; BeautyMatter",
       "tags": [],
       "brand_name": null,
       "tone": "neutral"
@@ -17141,7 +17878,9 @@
       "region": "global",
       "scope": "trade",
       "summary": "Ulta Beauty-owned retailer Space NK has been named as the experiential partner for the 2026 return of shopping destination Covent Garden’s annual beauty festival",
-      "tags": [],
+      "tags": [
+        "experiential"
+      ],
       "brand_name": null,
       "tone": "neutral"
     },
@@ -17367,7 +18106,8 @@
       "scope": "trade",
       "summary": "Takeover negotiations for Boots have stalled after the Weston family reduced its offer for the UK health and beauty retailer, casting doubt over a proposed £7 billion acquisition. \n The post  Boots Sale Talks Stall as £7 Billion Takeover Faces Uncertainty  appeared first on  Global Cosmetics News .",
       "tags": [
-        "corporate"
+        "corporate",
+        "experiential"
       ],
       "brand_name": null,
       "tone": "neutral"
@@ -17528,6 +18268,58 @@
         "retail_expansion"
       ],
       "brand_name": "Neutrogena",
+      "tone": "neutral"
+    },
+    {
+      "title": "We Found the Best Boar Bristle Brushes to Help Your Hair Grow - ELLE",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBsZjFGdG91aURiTGVuY0Ytb1p0YTA3NzRKdUwtZ09QcWthVl82QUdGZlR6VFdyYmhjZDU4cmUzRndTMXd2NjNJTU93bFBSLUJOUGhYOU9Iek91MTktRWdfRUlpV3Ewdmc5N2xvZGlxVjNVUEtmWlE?oc=5",
+      "published": "2026-08-05",
+      "brand": "la-bonne-brosse",
+      "source": "ELLE",
+      "region": "global",
+      "scope": "brand",
+      "summary": "We Found the Best Boar Bristle Brushes to Help Your Hair Grow &nbsp;&nbsp; ELLE",
+      "tags": [],
+      "brand_name": "La Bonne Brosse",
+      "tone": "positive"
+    },
+    {
+      "title": "We Found the Best Boar Bristle Brushes to Help Your Hair Grow - ELLE",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBsZjFGdG91aURiTGVuY0Ytb1p0YTA3NzRKdUwtZ09QcWthVl82QUdGZlR6VFdyYmhjZDU4cmUzRndTMXd2NjNJTU93bFBSLUJOUGhYOU9Iek91MTktRWdfRUlpV3Ewdmc5N2xvZGlxVjNVUEtmWlE?oc=5",
+      "published": "2026-08-05",
+      "brand": "mason-pearson",
+      "source": "ELLE",
+      "region": "global",
+      "scope": "brand",
+      "summary": "We Found the Best Boar Bristle Brushes to Help Your Hair Grow &nbsp;&nbsp; ELLE",
+      "tags": [],
+      "brand_name": "Mason Pearson",
+      "tone": "positive"
+    },
+    {
+      "title": "The Best Cyklar Bodycare Products: Reviewed by an Editor - Who What Wear",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE93WnpTc2N2YldEQ21fX3BUMmdMQmtsR2hBYVphczZTQVVvZlJjbGl4NmxSWXVNTkZEX2FRRWRTcTRyXzlhN3A2TVp3SzFBbjQ1aWx0aWg5V21TZlBTNWZaN2ctVFRpMlZiY2dndEZNYw?oc=5",
+      "published": "2026-08-05",
+      "brand": "cyklar",
+      "source": "Who What Wear",
+      "region": "global",
+      "scope": "brand",
+      "summary": "The Best Cyklar Bodycare Products: Reviewed by an Editor &nbsp;&nbsp; Who What Wear",
+      "tags": [],
+      "brand_name": "Cyklar",
+      "tone": "positive"
+    },
+    {
+      "title": "POV Beauty Makes Its Retail Debut at Sephora - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMGEyZ1dQSWhNM3FyZW9ScVEwaXl1UVY5cy1GaVBuZXRCNEtPS1dLOGtIRnpUQjVTeVp0X2JpZjJibU82bnpuSTdRZDFUNGdWNDhzYV9qMmQ3VTFWVnR4dFJ0YzJKaGhyVXRyMEhIbkFnNkkyQXM0OGNTOFBnV2JHT1BTMnAxa0t5R1ljcg?oc=5",
+      "published": "2026-08-05",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "POV Beauty Makes Its Retail Debut at Sephora &nbsp;&nbsp; BeautyMatter",
+      "tags": [],
+      "brand_name": null,
       "tone": "neutral"
     },
     {
@@ -17715,7 +18507,7 @@
     },
     {
       "title": "Beiersdorf cuts profit forecast and speeds up Nivea turnaround - Premium Beauty News",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5jWjRadnpHZzRERmlIMlVtc0ZlOExHN0JWYnk5RHJkNE9aYkJaOXlZVjNEZ2VrNWpYWW5OWDNOZ0dKeXRJN1BtdlJLSWFOcGpyUTIxZldtTE1LMkdsYWtINnEtaFB0YkdUbnJuRFR4RnRiRHZkNXFnd1IyaGtka3M?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9QcUdsaHdwbFJYNEQxS19yb09RWC1nYmFra2pBVklFYXNHVkRDeV9Cdm9CZTBJWWZuajl6aU9wM3VmTWlRbm1vZ3V5eHV4NlpOMG1qNlo0am05cFd6andUTzlwMGJUcTY3MGREOVhzcTJiZzN6dHlaWUhQLW5ONWM?oc=5",
       "published": "2026-08-04",
       "brand": "nivea",
       "source": "Premium Beauty News",
@@ -18149,9 +18941,65 @@
       "scope": "brand",
       "summary": "The Most Unforgettable Beauty Pop-Ups of All Time &nbsp;&nbsp; Hypebae",
       "tags": [
-        "retail_expansion"
+        "experiential"
       ],
       "brand_name": "Summer Fridays",
+      "tone": "neutral"
+    },
+    {
+      "title": "Don't forget these Sephora promo codes to get freebies with your order - businessinsider.com",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQM09XOHllbHByMVFVSEpyUHppRTRvUlZyS05FbGdaSWN0Z0w3Um5nMVEwOHdxM1JSZ29Rc3JtV29vY3JET2l3cVV4NmpvNzB4Z1duWG15V1hXZWh4WGtLX18waGpLM0UzNnp3MC1NVzlTNnlaX0pBVmtQTVJoN2ZRU3MwcGtKUW1xX1FIczBNZ1lCWmk2by1xUnB2Q0Q?oc=5",
+      "published": "2026-08-04",
+      "brand": "laneige",
+      "source": "businessinsider.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Don't forget these Sephora promo codes to get freebies with your order &nbsp;&nbsp; businessinsider.com",
+      "tags": [],
+      "brand_name": "LANEIGE",
+      "tone": "neutral"
+    },
+    {
+      "title": "Why Luxury Barbershops Are Becoming Beauty's Next Investment Opportunity - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcHNxMlNOWTN0ZVFKVGh4TGxJWDRkMF95YXRzOWJncV92ckVlOU1LRktEMlh1bjZSTGVIWmc0aVJyTTR3NHhldDFoVDdjY2doTmNURGVIV19MN21lX0tCVHVfZGRldVkyal9ZTFdTRlFWcHVpTVlIOV9WeXFoWWZaMjdOUXluMnZG?oc=5",
+      "published": "2026-08-04",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Why Luxury Barbershops Are Becoming Beauty's Next Investment Opportunity &nbsp;&nbsp; BeautyMatter",
+      "tags": [
+        "corporate"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "How Beauty Pop-Ups Became Summer's Most Powerful Marketing Tool - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTTVfY1VqdDd2NENwRGNzcjBMR2ZYMU96ZlV5TWFETWlfWGRWVlJPRDBGalVQZ1FJT3ptUFBHalNzcHl6Sk5yaGhfZVJpTzNXUXhzTW9HNFJ3cTZjZTVtdTVmeVdYUjJMN18waGFoMU80YjBfR3N3U3VsaG9QUXRLZjBRRlVBQQ?oc=5",
+      "published": "2026-08-04",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "How Beauty Pop-Ups Became Summer's Most Powerful Marketing Tool &nbsp;&nbsp; BeautyMatter",
+      "tags": [
+        "experiential"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "How Partner Season II Is Redefining the Global Future of C-Beauty - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOOXVIbGVwQmN4UGcwbVRRcU16NkdneUwxQkNObFEyUXc4b1Y1djdqRDBZcVhsbm5zZkFFQ1dtWm9LMWVMekJ2ekgtVFBZMkRJTE5QUjgtVXpaTEl3Rks4YzVFWnp3VzdSa0FDWFF1dmo3RGxCVVJ4X1B3cHY2OC1HT3EzSllQUTNS?oc=5",
+      "published": "2026-08-04",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "How Partner Season II Is Redefining the Global Future of C-Beauty &nbsp;&nbsp; BeautyMatter",
+      "tags": [],
+      "brand_name": null,
       "tone": "neutral"
     },
     {
@@ -18546,6 +19394,34 @@
       "tone": "neutral"
     },
     {
+      "title": "Beauty Sweep: 5 beauty drops worth your attention (and money) - Lifestyle Asia Hong Kong",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSjhFaTkzTVVpTGdXNnktemxYbGVhSjFhZHEtU3JwM1JrWkpKZ3JmS1VyS3Fxc3NyS0VYWGlOWG9sY1FLMUozNld5eGRheEFDSENtcG4tSllQNEMxVjQ4QXdtWmhTZjQzOW5yYVJDa0NjWTJ1NGNDRDZxTGUzUWxOekVKRWVCZ2lTSkxERm10cG5CQUVlNzhHbEN0OS1xbnUxUjdMRGlSWGQzczhqbi03YTNKVlhDUdIBuwFBVV95cUxOLTlpTE9oNjFXdWdrblRNUDVseVFaVWtHbE5Qd25oVlBWaVZKQXhTZ19FU3hBVHFzemJEQ0pUc1owcGFDb3hoakhPaUFQTF91cEVmZEp3UlZyb0hpTFI3ZE4yeE9WSzZMM1RhdnRKU2t2SFdoQ0xYSWt6MWVITWVneVVyUUFzbmMxR2lMakhmTG5aUFJRYklpeTN3RlZXbGloRkV4UVJ3U0duRlZyQVpjV3BjODMwMkxPWFR3?oc=5",
+      "published": "2026-08-03",
+      "brand": "tom-ford-beauty",
+      "source": "Lifestyle Asia Hong Kong",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Beauty Sweep: 5 beauty drops worth your attention (and money) &nbsp;&nbsp; Lifestyle Asia Hong Kong",
+      "tags": [
+        "product_launch"
+      ],
+      "brand_name": "TOM FORD BEAUTY",
+      "tone": "neutral"
+    },
+    {
+      "title": "I tried the $24 perfume Jennifer Lawrence carries with her always — and it’s not what I thought - Page Six",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQ0dpNkJtMWtFdVVjWlZxZDlFYkdVeHpmV3VHV0d0dWZxN3AybUg2enBrMUY5WFZKdzZ5a3pqOFc3YjhaUzRudHU0TjluaVpwMC15anZ3bDJ1bFZta2JBSnlMQWRWVnVSb2daSllWbTZlWE5EX2xGWGlBd1VHT0I0R3NRLVgwSWoyaGtFYmpjQU4tNlhNdUNVTXNfNlE4d0pGWURveFRvMTRaelZmTUV1Z0lR?oc=5",
+      "published": "2026-08-03",
+      "brand": "cyklar",
+      "source": "Page Six",
+      "region": "global",
+      "scope": "brand",
+      "summary": "I tried the $24 perfume Jennifer Lawrence carries with her always — and it’s not what I thought &nbsp;&nbsp; Page Six",
+      "tags": [],
+      "brand_name": "Cyklar",
+      "tone": "neutral"
+    },
+    {
       "title": "A 70-Year-Old Said Their “Sagging Skin Is Pretty Much Gone” Thanks to This $10 Firming Retinol Body Lotion - instyle.com",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNeHd3cy0yNkMtakUzMXhnbHZtR1pJODREMGNIbF9rN0hpZWRPRmE3V0xhVy1wWkQ3dWY4Z0lOVHVOYXJ3MXlZb1BtOTh4S3diTWVfaU5oQzZzeGdKMkM0WUJaRjJRU3lYWXZ0bTNCcHE2NmJ6aVQ0RENycENtSjVNOA?oc=5",
       "published": "2026-08-02",
@@ -18660,7 +19536,9 @@
       "region": "global",
       "scope": "trade",
       "summary": "Le pétrochimiste britannique Ineos prévoit de démarrer au second semestre 2027 l'important site de production d'éthylène, en construction à Anvers en Belgique, après qu'une des parties de l'installation a été bloquée plusieurs mois par la guerre au Moyen-Orient. La finalisation de l'ensemble du site \"est prévue pour l'été prochain\", explique l'entreprise, dans un communiqué mardi 28 juillet. \"Not",
-      "tags": [],
+      "tags": [
+        "experiential"
+      ],
       "brand_name": null,
       "tone": "neutral"
     },
@@ -19191,7 +20069,8 @@
       "summary": "Kiehl’s rolls out permanent AI-driven smart mirror installations as 'new face of in-store engagement' &nbsp;&nbsp; FashionNetwork USA",
       "tags": [
         "retail_expansion",
-        "campaign_pr"
+        "campaign_pr",
+        "experiential"
       ],
       "brand_name": "Kiehl's",
       "tone": "neutral"
@@ -19205,7 +20084,9 @@
       "region": "uae",
       "scope": "brand",
       "summary": "LOOOK.AI and Kiehl’s launch smart mirror installations across the UK, UAE, Singapore and Malaysia &nbsp;&nbsp; Retail Technology Innovation Hub",
-      "tags": [],
+      "tags": [
+        "experiential"
+      ],
       "brand_name": "Kiehl's",
       "tone": "neutral"
     },
@@ -19391,6 +20272,19 @@
       ],
       "brand_name": "Gisou",
       "tone": "neutral"
+    },
+    {
+      "title": "Epicutis Closes $25 Million Series C - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBxMDl2WHZudkdNYk0yckhRd2lWZzlHUW1DWlhjWk5NR05vbGRuN2RiRmdlaW04bmpzYldGa3h3YTMxNEZERWNIYnNVb05jQWluNXN2aEVVa3NPNHVhcl9TcFpFaldJRGRPMmlHNGRnOE5nVHFLQkNnNw?oc=5",
+      "published": "2026-07-30",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Epicutis Closes $25 Million Series C &nbsp;&nbsp; BeautyMatter",
+      "tags": [],
+      "brand_name": null,
+      "tone": "negative"
     },
     {
       "title": "Santa Maria Novella Opens New Fragrance Store at JR Nagoya Takashimaya on August 1 - haveagood-holiday.com",
@@ -19693,14 +20587,14 @@
       "tone": "positive"
     },
     {
-      "title": "Unilever Sales Jump on Emerging-Market Demand for Dove Soap - bloomberg.com",
+      "title": "Unilever Sales Jump on Emerging-Market Demand for Dove Soap - Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdG5RUU9kT0pCLWZDam9MT1RKbWFGaXFlVDRCYXRDNzVBSXBidjBKRDNSS2p4SWh2eGZ0d3dlQUFvVXhqU19nLW1ZVHpkbDVsYk5lZlN4eUdOZjNYLXFqU0FkeDlLSnFsTDZHSnM1cWo2dGtza2hJSEt1MGNnRmRCckFqSEhkenRXSnRJLWRSR3c4dElqWUdaWmNhWldYLWRhSHZEZlU4TjZTYmhqalNV?oc=5",
       "published": "2026-07-28",
       "brand": "dove",
-      "source": "bloomberg.com",
+      "source": "Bloomberg.com",
       "region": "global",
       "scope": "brand",
-      "summary": "Unilever Sales Jump on Emerging-Market Demand for Dove Soap &nbsp;&nbsp; bloomberg.com",
+      "summary": "Unilever Sales Jump on Emerging-Market Demand for Dove Soap &nbsp;&nbsp; Bloomberg.com",
       "tags": [],
       "brand_name": "Dove",
       "tone": "neutral"
@@ -19949,6 +20843,19 @@
       "tone": "negative"
     },
     {
+      "title": "5 Japan-Exclusive Perfumes To Upgrade Your Fragrance Collection - Tokyo Weekender",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1BUy1MMGJJeGpwdVM2Qm1mLXhISmdKT1ZGMF9PUExKOFlqeEFRVGdxc3pReWRxaGV0QTA4LS1wS3VKYUo2SlhQbGI1ZXIwQnY5ZTdNMEttZ0k1UzhwUEVGWS1uQ3VzR215cE1UZGZ0NTk2U3FObk8td2RxUGpRbVk?oc=5",
+      "published": "2026-07-27",
+      "brand": "fugazzi",
+      "source": "Tokyo Weekender",
+      "region": "global",
+      "scope": "brand",
+      "summary": "5 Japan-Exclusive Perfumes To Upgrade Your Fragrance Collection &nbsp;&nbsp; Tokyo Weekender",
+      "tags": [],
+      "brand_name": "Fugazzi",
+      "tone": "neutral"
+    },
+    {
       "title": "This Week in Retail: Saks Fifth Avenue Stages Odyssey Windows, Louis Vuitton Opens Miami Boutique, Jacquemus Maps Mediterranean Trail, lululemon Debuts Global Concept,Aesop Turns Stores Into Libraries - RETAILBOSS | Substack",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9yNjFTNWJ2bFd3NlJDakx3VnliaHRqWm0tbnRGaWJQWEpLaHNvSDA5cUNTYUpVQTluaWNDS1BTX0o3Z3Y4NW1kTG81Q1hzTHU0ZlQ4UkNQeGpaVlh2cHZPdGl6NUJHdGpsYi1JVnE4akJpR1FYY2hrbTFYVQ?oc=5",
       "published": "2026-07-26",
@@ -20082,6 +20989,19 @@
       "tags": [],
       "brand_name": "LANEIGE",
       "tone": "positive"
+    },
+    {
+      "title": "When perfume becomes a cocktail: Introducing the Fugazzi Pomegranoudh - Prestige Online - Singapore",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOGdETll4bnNpV0twYlRtaHJuM0laMWI5UVpHRUVqZU5IOU1NbG14SzZBRFNuakd4djdYcjZlSl9qMVEybE5leE1kN1RGWEtLSExvcWpMQUtkZnNaeXZCLWVvTk05SW1fOENZVV9nMkVYdFBkQXFUdmZDNjl1REl6OU1TRWt1WlhxdlpKdXpR0gGTAUFVX3lxTE53Ml9KdmVvS0VOcHZVU0FhR0psRHFOdzNoWGZ3Um9lSGE2eWdUcFpDWVVOWXM5ZzlJeGpJRnNLVkFFbUhGbFVVcUVNWFN1UnlIZ1lHYzBoZEtsanZoY3cxZnFsa1JUUUZuV2xrRUk2eVNTajNrR1RSTGpGQTdzR1MwZG5hTnZvYTA1aXhvY1djYkNlTQ?oc=5",
+      "published": "2026-07-25",
+      "brand": "fugazzi",
+      "source": "Prestige Online - Singapore",
+      "region": "global",
+      "scope": "brand",
+      "summary": "When perfume becomes a cocktail: Introducing the Fugazzi Pomegranoudh &nbsp;&nbsp; Prestige Online - Singapore",
+      "tags": [],
+      "brand_name": "Fugazzi",
+      "tone": "neutral"
     },
     {
       "title": "These Zara perfume dupes make me smell expensive on a budget – and they are perfect for summer - Grazia Daily UK",
@@ -20255,6 +21175,19 @@
       "tags": [],
       "brand_name": "Summer Fridays",
       "tone": "positive"
+    },
+    {
+      "title": "Introducing Aveda’s new 25-in-1 hair elixir - Dazed",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOUm5CXzY2SzJ0cXFtS2NKNTc4QmRraFRnb0VQTVpqbmJ3dUp0TDR3UEg2VDFpek9KTFpZWjk2SXp6b2J0RUlWOWpRX095Um04cXJ3WHl0V005OVdlVGRWbVFxTVc5ZVZOclhmQ2pMeENlVmp3SFlscS1RSF9MOTNFcDY4czZ2LVAwckhTZTRUQ1ZLNEFZTFFxU2JaVQ?oc=5",
+      "published": "2026-07-24",
+      "brand": "aveda",
+      "source": "Dazed",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Introducing Aveda’s new 25-in-1 hair elixir &nbsp;&nbsp; Dazed",
+      "tags": [],
+      "brand_name": "Aveda",
+      "tone": "neutral"
     },
     {
       "title": "Byredo Is Secretly on Sale at Nordstrom (Even Mojave Ghost) - E! News",
@@ -20845,6 +21778,32 @@
       "tone": "positive"
     },
     {
+      "title": "If I Had to Start My Cyklar Collection Over, I’d Buy These First - ELLE",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRW1fZnJ2WkdnQmw1NGtCRDBWRkhyaDRoem55SmI1RG9sQUdjY0VTUUpwSVhWUzhWYmZhOXAwMHFXZHByTUltZ185NTBHTVVaVEg1NnR2cHJsd28zbnl4aWVZckJRT1BYb2hyOGJBTmtBdHNrTThtRlNpRUZPT3ZGcklDSVo3WklD?oc=5",
+      "published": "2026-07-21",
+      "brand": "cyklar",
+      "source": "ELLE",
+      "region": "global",
+      "scope": "brand",
+      "summary": "If I Had to Start My Cyklar Collection Over, I’d Buy These First &nbsp;&nbsp; ELLE",
+      "tags": [],
+      "brand_name": "Cyklar",
+      "tone": "neutral"
+    },
+    {
+      "title": "I Can’t Stop Buying Stuff From Cyklar - theSkimm",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE01WFVNRno5R1pHbWVfbEhIbjRQWkpfZ0FRbnJpZFEyS2wzOHlvVkx3NGhBM185bnJROENSaXRkOXZGUjlMc0dJT1d5SEZKc0ZwN1k1SHpuUG9WdHNubWpRYkE4WDRYQQ?oc=5",
+      "published": "2026-07-21",
+      "brand": "cyklar",
+      "source": "theSkimm",
+      "region": "global",
+      "scope": "brand",
+      "summary": "I Can’t Stop Buying Stuff From Cyklar &nbsp;&nbsp; theSkimm",
+      "tags": [],
+      "brand_name": "Cyklar",
+      "tone": "neutral"
+    },
+    {
       "title": "Watermelon Perfume Is Having a Moment—And NEST Just Made It Grown-Up - Popdust",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1HNTJqVHR6NGdnNGZpdTJ6bE5janRzRV9UbzQ5UWVpdURNWExhRWI2d3dIbm9TdVVtNG5ycXVxZzZJNEthd3RHZDA4Sk4tX0pGU2VEUExVX2t3cjJ2VXFzTlIyeE9fQmk3V1RSMQ?oc=5",
       "published": "2026-07-20",
@@ -20951,6 +21910,19 @@
       "summary": "Skip Luxury Collagen Creams—a Dermatologist Recommends This $14 Neutrogena Vitamin C Serum Instead &nbsp;&nbsp; realsimple.com",
       "tags": [],
       "brand_name": "Neutrogena",
+      "tone": "neutral"
+    },
+    {
+      "title": "Dehydrated skin? This Cyklar Body Oil gives ‘radiance and plumpness’ - New York Post",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNYmRUWF9keHVTMjUxemRXZWFhbUtJVVdOcC0xWUlYc1dsdDZqTkE3OWJIb254VEtmQVBpd0hzeHpDZzhYal81UlFzMnUtYjRMUk5PekhsdGZDT0d6cWF1UFNFNktvRktnTEJrTHdUVkNzQS1fT0pRaTJTbVBBWnc2MzAyN2JhOTNON3QyWE94ekE1cnpMdkVJVk9saVBxOHM0bUNv?oc=5",
+      "published": "2026-07-20",
+      "brand": "cyklar",
+      "source": "New York Post",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Dehydrated skin? This Cyklar Body Oil gives ‘radiance and plumpness’ &nbsp;&nbsp; New York Post",
+      "tags": [],
+      "brand_name": "Cyklar",
       "tone": "neutral"
     },
     {
@@ -21459,6 +22431,19 @@
       "tone": "positive"
     },
     {
+      "title": "Irina Barbalova: State of Play 2026 Recording Session - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOcnVhOXhHR1RPV1RLcXIxRnJUXzhZYmQ0WFRuV0RZOTZ3cHgtYVRCLUltUDdIcUxmdTJqRzJzWm9PZWd4anZmYUsybDVTR0dUQmxkc2VZM052andIVVdOWTJUXzFkVXhwZGp2N0U1bVNqbU4wbWFSUWpjUWJ6OFJLZTRqVjRoYkhnN3ZoWHBlWQ?oc=5",
+      "published": "2026-07-16",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Irina Barbalova: State of Play 2026 Recording Session &nbsp;&nbsp; BeautyMatter",
+      "tags": [],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
       "title": "Bath & Body Works launches in Brazil - Retail Dive",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTE1Falp6bFluUVFVMVZrSVZuM19YU055TjNsRmtQZktaNXRyZGxRa1R2VkZPRUYtVjdLbVNOTFEyX0h0TmhuaGVxWU5yUTVnaUhfbjJsMlBJRElLZzQ2cmZvREpNUXNsUWNiT0Y5RFdTQkJJWllmTi1yR1FMLWNscHR1TXNTbVBDZ19TakR2MDh4a04weDBIRVJmVQ?oc=5",
       "published": "2026-07-15",
@@ -21625,6 +22610,19 @@
       "tags": [],
       "brand_name": "K18",
       "tone": "positive"
+    },
+    {
+      "title": "How Vaginal Microbiome Testing Is Reshaping Women’s Health, Longevity, and Beauty - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPUGVRTWR2d1JuSTNmaFItaWFoZjFzVDFWZ0lCM3BfVHR5dEY1TnNIbnJySjd5eWF0eFhqTTkweVRpREdSbU9JU0o1NzJDQTltNlVrbmdJN091WktkSy1Ta3N6UTF4NjNmY0otRGpUUV9pMXFQTzI0YV83QURGN2FyX3VkMjVCV2RULWc?oc=5",
+      "published": "2026-07-14",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "How Vaginal Microbiome Testing Is Reshaping Women’s Health, Longevity, and Beauty &nbsp;&nbsp; BeautyMatter",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
     },
     {
       "title": "L’OCCITANE Malaysia’s 7th Race for Vision Draws 3,000 Participants, Donates RM50,000 to Support Children’s Eye Health in Kelantan - Zawya",
@@ -21929,6 +22927,34 @@
       "tone": "neutral"
     },
     {
+      "title": "Bogart Group Shareholder Acquires German Beauty Retailer Stadtparfümerie Pieper - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOR1JqWXA0R08zYWQ1Q2NjbkRWUHRaSVRiQU5OTWtFYzg5VENONnJMMnZnNldFMkp3WHZfV0VhaE9KNTA2dDRpcGc5SmFwYnZ6NE1Ld0xERlQxMUlVSGlLcEoxY2libmNuR0NrX1A4X3drU29JeWVQNmxyLWFMSkQwQlpHc3BkWHZpQ25rR1RjTEtIdE5xSHp2Vko3MTdtMzM4anQzU0lPX1RKRExBOVdBQ0JQVQ?oc=5",
+      "published": "2026-07-10",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Bogart Group Shareholder Acquires German Beauty Retailer Stadtparfümerie Pieper &nbsp;&nbsp; BeautyMatter",
+      "tags": [
+        "corporate"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "CK Hutchison Explores Sale of Marionnaud to Beauty Investor David Konckier - BeautyMatter",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPU1JRem1yTnRuRVlDUE9aTlFIb1JwdWlBdW5henJGWHBKdXNDV1NFWkhsTElTa0FCdzNaRmUzSTV3dmx1M0ZOY3hqX0c3cGQ0QUFuSUY4a0JoczQ5VHhZM1pCX0Zid19NdU9IU1ZSdnotY1ZPVFBGTFU5RHpzR1dWdzkzVWpVa2pXVEZyYXNfeW1ta0wyd3VR?oc=5",
+      "published": "2026-07-10",
+      "brand": null,
+      "source": "BeautyMatter",
+      "region": "global",
+      "scope": "trade",
+      "summary": "CK Hutchison Explores Sale of Marionnaud to Beauty Investor David Konckier &nbsp;&nbsp; BeautyMatter",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
       "title": "Hammerson signs Ireland’s first standalone Zara Home at Dundrum Town - Estates Gazette",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPWDNSdVNUaXlhVURiTTF3S0xuNjVkQWlZUlVxcnpZOW05d1JIU0FKOFdFckp2cW9hWTNMbDVGRTNxTHB5VmNrUzZQR19XVnc4N1daX1JvTGs1SkFrZmwtOTZtZllvZ0tmd04wOWRUWnd1N0VoSGhjR2o1ZXZNcklMa0pxQi1kZmttRC1IanpteV9sYTFNQmIxa0oxelR5ODhsMDlTSk1DNW5xZw?oc=5",
       "published": "2026-07-09",
@@ -22185,6 +23211,19 @@
       "tone": "negative"
     },
     {
+      "title": "Sephora Advent Calendar 2026 - Mamabella",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1sOUs0bFJyRkowTHI0WjFBV1g1Z2cxOFZDWjFjVkJmTUxUc3B2am1fQ3FzNmJLTk9ERk5UaTF6WHNMRGdvNFJpYlNvMm1lRk9CcDhNOW1vUzBqb3lyMHViSUJlNjV0NmY3ZXROYw?oc=5",
+      "published": "2026-07-05",
+      "brand": "fugazzi",
+      "source": "Mamabella",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Sephora Advent Calendar 2026 &nbsp;&nbsp; Mamabella",
+      "tags": [],
+      "brand_name": "Fugazzi",
+      "tone": "neutral"
+    },
+    {
       "title": "The TikTok-Viral Skin-Tightening Nécessaire Body Retinol Is 25% Off - E! News",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaXpVY1d0dzRqOVYtZ0V5a2I5M1JNMWZGWGI4SFRkUHdxZk40LXR3ZS1tYTNHMms3MGZoWVI3NEE4WWpDWF9oRXY2am1PUTI1TndMUktwX0pyTHZWV2VYVnpwUExGckhBdWVrbmhncnVUZmVwUS1QZTVvZUdRUUZwdGp1QVJPNmhIQ2xQaXRTWnJKZnItN0ZFbTYyQkM3dEFhbjllVGhn?oc=5",
       "published": "2026-07-04",
@@ -22421,6 +23460,34 @@
       "tone": "positive"
     },
     {
+      "title": "The Cascades Neopolis Partners with Spa L’Occitane en Provence to Bring a Provençal Vision of Better-Being to Residential Living in Hyderabad - Telugu Times",
+      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxNZ083eURDR3hKb3Fnd3luOGZIaFVZYUhFOUhVTlkyU2hLUG1wWllGQUdKY2J4SmxpdHRpWUxRbU80R3ZIV0tVZzdpVXIyMTR1eWdhVFAzU21qN0RBSE5rdll3aERTbU5CUDVqNTdISlFxZEFoWl9qVGFJVDdXY0xTNU5xZ0FKZ2NGMXF2UklQYXE0UUhWaGhVZF9xTHkxa2w0ekllekFFaHZwOC1nMkVjMlJxc2dXdmliVDNUTGZEa0x0QVA0RE9uTFZCRlRWdHZtVWs5ajZ6a3hTaWZQbzhJcHBtbDNseVhTcUxjMlY3WXY3UmxQVl9HbE9sd3JGazVDd1Q0aldqeEN4MzFVWWJ3WWpkSTk1V21E?oc=5",
+      "published": "2026-07-01",
+      "brand": "loccitane",
+      "source": "Telugu Times",
+      "region": "global",
+      "scope": "brand",
+      "summary": "The Cascades Neopolis Partners with Spa L’Occitane en Provence to Bring a Provençal Vision of Better-Being to Residential Living in Hyderabad &nbsp;&nbsp; Telugu Times",
+      "tags": [
+        "collaboration"
+      ],
+      "brand_name": "L'Occitane en Provence",
+      "tone": "neutral"
+    },
+    {
+      "title": "Ffern gets poetic for perfume - Creative Moment",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5zNzNPX0tad1k3VWpucWVIWm5pdU1HZlh2UldJYUpJblQ4TEN6aU9jM0xodXh1S2xEUEl1REFCY2k0TnIxYmdwWXNOY3JVUjBCX2wzQlNNRUljNzZPbEYwS3J2MVFvMFM2UC1n?oc=5",
+      "published": "2026-07-01",
+      "brand": "ffern",
+      "source": "Creative Moment",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Ffern gets poetic for perfume &nbsp;&nbsp; Creative Moment",
+      "tags": [],
+      "brand_name": "Ffern",
+      "tone": "neutral"
+    },
+    {
       "title": "Cult Japanese Skincare Brand SHIMBI METHOD Is Finally In Singapore And It’s Already Getting Rave Reviews - GirlStyle 女生日常",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRjU3VE1jektJcnl6MUdZdXBoVlAtakRkYmVKSi1XSmR4ZHA3UkE5WVUwYUFGRVNTWXVEa1NUdTlhbmhMaGJRLWk0VmJUcElIWHByMjY3dFU4UmpudURhdjlTalV2RDFUVDZTUkdJRFJsQUlIX2xsZkRJdVV3ei1DQWtUZ0FFdw?oc=5",
       "published": "2026-06-30",
@@ -22514,6 +23581,21 @@
       "tags": [],
       "brand_name": null,
       "tone": "neutral"
+    },
+    {
+      "title": "Kao USA Voluntarily Recalls Oribe Serene Scalp Densifying Shampoo - Beauty Packaging",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQ3FncUZlU0ZLTXZFRzFTYzNJdENPODZLQmdlUkliRkVjWHRZOVpxQzdBMEtjeHY2cGItNWt6eHlMdTJXYXJNR3AydXFISndBWFJkNUhTRXpmUFY0eFVxTFNnYzBRcUV6Wjg0NG5HU3NITThJSXRDTEE3SkJRSnp6S01LT21NR1NJR0N2c3VjcDJDVWRDdGdMYTJYYi1vd21DelZzUUk4eF9sUmd3ZkJoYjJn?oc=5",
+      "published": "2026-06-30",
+      "brand": "oribe",
+      "source": "Beauty Packaging",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Kao USA Voluntarily Recalls Oribe Serene Scalp Densifying Shampoo &nbsp;&nbsp; Beauty Packaging",
+      "tags": [
+        "sustainability"
+      ],
+      "brand_name": "Oribe",
+      "tone": "negative"
     },
     {
       "title": "I Ditched Dated Floral Fragrances for These Intoxicating Cool-Girl Scents—Shop Under-the-Radar Perfumes From $20 - instyle.com",
@@ -22826,6 +23908,19 @@
       "summary": "The adorable Aesop Queer Library is back for Pride! &nbsp;&nbsp; timeout.com",
       "tags": [],
       "brand_name": "Aesop",
+      "tone": "neutral"
+    },
+    {
+      "title": "Cyklar's Amazon Prime Sale Is So Good, I'm Buying Vanilla Verve in Bulk - Marie Claire",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbXNSR0sydW82UjFiWEVnTHB3aThZSGI1TDFRR3RsblZTQ0ZjY3ZjUFNDV0FXTnlpcnVNSVFDTGozNFBsLWxEQjRNSGVpTnB0TWlCelp0VnhLX3ZUY05WZFRRY2hGaXpnbnI0MmtXRlZGcjdVLXZaOWtFSVV5ekFBQk9xNW5TdHBLZ1RFSXlEWE9telpX?oc=5",
+      "published": "2026-06-25",
+      "brand": "cyklar",
+      "source": "Marie Claire",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Cyklar's Amazon Prime Sale Is So Good, I'm Buying Vanilla Verve in Bulk &nbsp;&nbsp; Marie Claire",
+      "tags": [],
+      "brand_name": "Cyklar",
       "tone": "neutral"
     },
     {
@@ -23201,6 +24296,21 @@
         "sustainability"
       ],
       "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Bath & Body Works partners with Ulta Beauty as it looks to boost sales - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNRG5GSG5jLVFzWTBBbnZiOUtGYmtRMEt3bEVkTkU0Tzd0OEQ5d0dRRkk3NkZzUHFKWDAyU0EyMmdTTE5MbVFqQTVFOU9mdmpHZWZSaWZ3eEYtVmxJaEhvak1QMW1RWUVfNXktaE52U2ZkcEVtdmJnbEp6U0VJbm5fV25sREtYa2xQNzE1Zzc3bEozaTFpMXMzX2g5dTRpQzh5eEwtcEFRRzBSU2kyRmxha0lScEthSm9sZVp0azRrNjNZcUNK?oc=5",
+      "published": "2026-06-23",
+      "brand": "bath-body-works",
+      "source": "Reuters",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Bath & Body Works partners with Ulta Beauty as it looks to boost sales &nbsp;&nbsp; Reuters",
+      "tags": [
+        "collaboration"
+      ],
+      "brand_name": "Bath & Body Works",
       "tone": "neutral"
     },
     {
@@ -23602,6 +24712,32 @@
       "tags": [],
       "brand_name": null,
       "tone": "neutral"
+    },
+    {
+      "title": "The Estée Lauder Companies and Jo Malone London Launch Experience That Turns Visual Taste into a Personalized Fragrance Wardrobe, exclusively on Pinterest - Business Wire",
+      "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxQN1d0VlczQ0xuY3ZKVWhoZ19NbjE2TlNhS0ZBX3FxOWNZTXdHVUdNYU1lNmNCNHk5M0pKODFTaW5JVHJFNmJfR1FOSHR4SndpcDhRMTF6RExjcy1YNzlxdFRjbXdLYVZEbFJzTWliT2VPMnNhZEZXbHR6LVZlY0gyWUVXMU9rV0RTWm1LcHVjTkdod19zTmxwMW8zUkFLRERVUUxYdTNkcWVjU084UWU1aUpVNDlUZVpwSlp5TUFzLW91RkRkRHpaeHR2bldFSGJVYkpydV9LaVk3bkZrOXV2eVpMUS01NmxDMmF6MER5YzZDcjA5THc3MXhOZGdLUGZ4cEF1ZXk4Tks2S2VheU1wMWFXTVR1OFRUdmcwWGZ0SUIyUFpLem0tQW44MGkyVF8xdTI4?oc=5",
+      "published": "2026-06-17",
+      "brand": "jo-malone",
+      "source": "Business Wire",
+      "region": "global",
+      "scope": "brand",
+      "summary": "The Estée Lauder Companies and Jo Malone London Launch Experience That Turns Visual Taste into a Personalized Fragrance Wardrobe, exclusively on Pinterest &nbsp;&nbsp; Business Wire",
+      "tags": [],
+      "brand_name": "Jo Malone London",
+      "tone": "neutral"
+    },
+    {
+      "title": "Fragrance Enthusiasts Can't Stop Talking About the Cult of Ffern - InsideHook",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9PQ2FGZVNJdFpSTGhFeG92Snl3MTFzZjhGWkprUi1ISGRMS2pVSWlRRGlnLXk4MmMtVjlqTlhFZzBRbURaRXA4SUJUM0pMbXhrQ2NkMlZZYkh1UFNVcUwxanMyUmtZaTBvcDlPdtIBckFVX3lxTE1TUnE2azVnbGRXOG9Jd1F1RzNlQzh2OFBubVZ3bnQ0OEVzeEVQd0FoMzNDbTBvTURNaGJlVTBVbjg1SnZCeFB0SUNZZTFJc3k4RU43MkZTQk9PenkyWmdPTTIxd2ZKQ3NKLVJJQUFQMk1nZw?oc=5",
+      "published": "2026-06-17",
+      "brand": "ffern",
+      "source": "InsideHook",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Fragrance Enthusiasts Can't Stop Talking About the Cult of Ffern &nbsp;&nbsp; InsideHook",
+      "tags": [],
+      "brand_name": "Ffern",
+      "tone": "positive"
     },
     {
       "title": "Nivea vs La Mer Review: I Compared the $10 Cream to a $390 Moisturizer - the-independent.com",
@@ -24008,6 +25144,19 @@
       "tone": "positive"
     },
     {
+      "title": "This Tropical Perfume Gets Me More Compliments Than Any Other Fragrance I Own - cosmopolitan.com",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQa2Zhd0xudVJRNWF5aXNyR0d2ZTlobGZvejNTNnhFMkppZkd6bHdjT2VudXV1UF9hZDU1YXRkSXREeGZSU1FaOVJQNEw1MnVRMmktUE9oaDRWZ3phdU1vZDFNY2lyWkYzOXNVWTJHWTV4Zk5xQWNIcUJtWlBVRmhtWi1XLTc1VVk?oc=5",
+      "published": "2026-06-11",
+      "brand": "fugazzi",
+      "source": "cosmopolitan.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "This Tropical Perfume Gets Me More Compliments Than Any Other Fragrance I Own &nbsp;&nbsp; cosmopolitan.com",
+      "tags": [],
+      "brand_name": "Fugazzi",
+      "tone": "neutral"
+    },
+    {
       "title": "The Nivea Crème in Your Medicine Cabinet Just Turned 115—Here's Why It's Still Unbeatable - NewBeauty",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOS2VKQnNtTFRHVnhXWGRZUVdpRUU4SG5vVWxiV0xObC1wd3VyQU1ZU1VaMVkyNF9EMjAwWWRNMHJMeUltU3BXeUxjQzh0ajMyLXkxaURNaks0Q0VxdHZXY1lGd1ZnUlRpZzZsTWRaWC1zWk1oV2k2UGstbTZzRVBnSnBn?oc=5",
       "published": "2026-06-10",
@@ -24070,6 +25219,19 @@
       "summary": "The 27 Best Summer Colognes for Men, From L’Objet to Louis Vuitton &nbsp;&nbsp; Robb Report",
       "tags": [],
       "brand_name": "L'OBJET",
+      "tone": "positive"
+    },
+    {
+      "title": "10 Stunning Scents Guaranteed to Garner Compliments: The Best Fragrances of 2026 - Who What Wear",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1uTHVMcFpOZThVVTEtWTBSZjUycUdzR2s4MUNQQnFKR09UcE42OXpGWHpoVjNUeUpSRXI5UTZ4dExKVjZ1TGg5UGpWcThQUDBwVE9CWWktM3djRmI3a25UQ2MyUGNuZw?oc=5",
+      "published": "2026-06-10",
+      "brand": "fugazzi",
+      "source": "Who What Wear",
+      "region": "global",
+      "scope": "brand",
+      "summary": "10 Stunning Scents Guaranteed to Garner Compliments: The Best Fragrances of 2026 &nbsp;&nbsp; Who What Wear",
+      "tags": [],
+      "brand_name": "Fugazzi",
       "tone": "positive"
     },
     {
@@ -24222,6 +25384,19 @@
       "summary": "Acqua di Parma’s “La Caletta” Collection Evokes the Charm of Secluded Italian Summers &nbsp;&nbsp; hypebeast.com",
       "tags": [],
       "brand_name": "Acqua di Parma",
+      "tone": "neutral"
+    },
+    {
+      "title": "This IYKYK Bodycare Brand Makes Up 99% of My Routine—Here's Every Underrated In-Shower Essential - Who What Wear",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBxN1NGQW1xeWpmRHJ2eW5KZDNxWVdoaDB1RUhYS28yTFo2QXIyTXdVdnk3bGxQVFppc2lLSy1MQzBGSXR4UDU0dGFxRjZNemlEeS1KeTJkMlhWVEUzM3l4a2tfYmRuaW5pdTNQdlJR?oc=5",
+      "published": "2026-06-05",
+      "brand": "hanni",
+      "source": "Who What Wear",
+      "region": "global",
+      "scope": "brand",
+      "summary": "This IYKYK Bodycare Brand Makes Up 99% of My Routine—Here's Every Underrated In-Shower Essential &nbsp;&nbsp; Who What Wear",
+      "tags": [],
+      "brand_name": "Hanni",
       "tone": "neutral"
     },
     {
@@ -24418,6 +25593,21 @@
       "summary": "10 Tomato Candles That Make It Easy to Spark Summer Joy &nbsp;&nbsp; harpersbazaar.com",
       "tags": [],
       "brand_name": "Flamingo Estate",
+      "tone": "neutral"
+    },
+    {
+      "title": "Moëhr Honours Grand Hotel Origins in 'Carry the Heritage' Film - Little Black Book | LBBOnline",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdkpfdHNmQ3M2aGJKREFfWWkwYl9hdjRSamR1N0I0NVdmeHZaSFM1XzZpVXl1X1hwQUlORkt3cWFrV2hKNlpvdGc4U0RWNUJIeldXdlBCLTAzcmdYcXZEek9kLTVvTkVnY0JnTTFMc0ZfWk9ZMGhKWl82d0dXckRrYm1FdDUxMF9aVDRVUDB1N0o?oc=5",
+      "published": "2026-06-02",
+      "brand": "moehr",
+      "source": "Little Black Book | LBBOnline",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Moëhr Honours Grand Hotel Origins in 'Carry the Heritage' Film &nbsp;&nbsp; Little Black Book | LBBOnline",
+      "tags": [
+        "campaign_pr"
+      ],
+      "brand_name": "Moëhr",
       "tone": "neutral"
     },
     {
@@ -24921,7 +26111,9 @@
       "region": "global",
       "scope": "brand",
       "summary": "Amouage brings Love Hibiscus fragrance residency to Nobu Hotel Marbella &nbsp;&nbsp; FashionNetwork USA",
-      "tags": [],
+      "tags": [
+        "experiential"
+      ],
       "brand_name": "Amouage",
       "tone": "positive"
     },
@@ -24938,6 +26130,45 @@
         "campaign_pr"
       ],
       "brand_name": "La Roche-Posay",
+      "tone": "neutral"
+    },
+    {
+      "title": "Moëhr Revives Monte-Carlo’s Lost Perfume Legacy - Luxferity",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPLXFQUWw2cEduWkRZQnk2aWlMZ1ZpdUtCN2V2VmV1Vm5DQTBnOF9ISHRvaklwbGdGVEtkRUJMa3c3ZEoySDllNHRZUkg1aUhxVVE2ZmR1VUFVZENPYXlLOFhEaDdLREVRdGdrcGdjSUxqaDJ4VUVKWlFSX2lkVklZbWpiUTV6WEF2MFE?oc=5",
+      "published": "2026-05-22",
+      "brand": "moehr",
+      "source": "Luxferity",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Moëhr Revives Monte-Carlo’s Lost Perfume Legacy &nbsp;&nbsp; Luxferity",
+      "tags": [],
+      "brand_name": "Moëhr",
+      "tone": "neutral"
+    },
+    {
+      "title": "How two brothers are reviving a legendary perfumery from Monaco's golden age - wallpaper.com",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE40NEI2N25lbHZFd0tkR0FBUDFiTWpuMVVlMWU2aEMyN3BTRXZGdzRtckU5RG9Mc1lQX1dtMnkweGRaUl9Lck8zSVVEX3drTWlDa1UxR0w5VjBtQVVtUjFnYkJ0U2w?oc=5",
+      "published": "2026-05-22",
+      "brand": "moehr",
+      "source": "wallpaper.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "How two brothers are reviving a legendary perfumery from Monaco's golden age &nbsp;&nbsp; wallpaper.com",
+      "tags": [],
+      "brand_name": "Moëhr",
+      "tone": "neutral"
+    },
+    {
+      "title": "What’s Behind Niche Perfume’s Culinary Turn - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQUl0NXkzVzB3UFZ2UXV6bmFqazRmek55OGMwdjNkbXY5MHFjRVZ4MjBDQm9tTm4tQ1JoSnFDRkgyMXc1NVo5T2JzbFFucTZRU3VSQl9md25nVGpnNWd0OV9UbDduSlJZMkxfdmtRT1VNVmlOa0N4ZktKYTNna1FMSUU2RFJ1VXVvVzRKNDBfQ0lIaDUtX3c4?oc=5",
+      "published": "2026-05-22",
+      "brand": "moehr",
+      "source": "The Business of Fashion",
+      "region": "global",
+      "scope": "brand",
+      "summary": "What’s Behind Niche Perfume’s Culinary Turn &nbsp;&nbsp; The Business of Fashion",
+      "tags": [],
+      "brand_name": "Moëhr",
       "tone": "neutral"
     },
     {
@@ -25031,6 +26262,19 @@
       "region": "global",
       "scope": "brand",
       "summary": "Diptyque Wants to Transport You to a Water Garden This Summer &nbsp;&nbsp; Yahoo",
+      "tags": [],
+      "brand_name": "Diptyque",
+      "tone": "neutral"
+    },
+    {
+      "title": "Diptyque Wants to Transport You to a Water Garden This Summer - Marie Claire",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWkdVTEx6UGlsaVNFOVpnU2lKQ1F3dFRQQmJ0V0QzakNLR3ZMZ0NCUENtSXh4dXlBSTVmczJCZkNJUDk5VG5LZ0U0aklNeGo2WW1hS2c0LW53YjdSU2xXVGpHQ1pOeG50X1Y2Ukg5NlVkWGtkcjR1NGZSMDNrUmxYWmhwQQ?oc=5",
+      "published": "2026-05-21",
+      "brand": "diptyque",
+      "source": "Marie Claire",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Diptyque Wants to Transport You to a Water Garden This Summer &nbsp;&nbsp; Marie Claire",
       "tags": [],
       "brand_name": "Diptyque",
       "tone": "neutral"
@@ -25207,7 +26451,8 @@
       "scope": "brand",
       "summary": "Molton Brown expands Hong Kong Presence with exclusive pop-up at Elements &nbsp;&nbsp; Global Travel Retail Magazine",
       "tags": [
-        "retail_expansion"
+        "retail_expansion",
+        "experiential"
       ],
       "brand_name": "Molton Brown",
       "tone": "positive"
@@ -25300,7 +26545,7 @@
       "scope": "brand",
       "summary": "Molton Brown brings Tea Ceremony collection to Hong Kong via Kowloon MTR Station Elements pop-up &nbsp;&nbsp; Moodie Davitt Report",
       "tags": [
-        "retail_expansion"
+        "experiential"
       ],
       "brand_name": "Molton Brown",
       "tone": "neutral"
@@ -25317,6 +26562,19 @@
       "tags": [],
       "brand_name": "Trudon (Cire Trudon)",
       "tone": "neutral"
+    },
+    {
+      "title": "Sephora Strategies: With its launch at Sephora US, Fugazzi wants to bring luxury fragrance to the masses - glossy.co",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNUnFjeVdjeWkwOVFnaTVzcEI4Y2V6YnhPcUV0b3E5XzE4UzdVYXJnX1BUSHVkNVBhWjhsT0NSSXdhRlJpZXE1LTBGUUVSNTJHNVZ2ZlMtS1FWc2M3OHZaSEpTRDV0R0lMR1pUVHA2SmRWRmN4S09nUUVOMGpHTHFrXzFOczFsOUlNd3FOTnd5NktuN1hpRWI4N1RZU0k5bTNqQlRhRFB2UDZmWHo1eWw4c3lGMFJHV2FJS2VMNnpfVG9fTElwWS1MYmwyWUc?oc=5",
+      "published": "2026-05-18",
+      "brand": "fugazzi",
+      "source": "glossy.co",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Sephora Strategies: With its launch at Sephora US, Fugazzi wants to bring luxury fragrance to the masses &nbsp;&nbsp; glossy.co",
+      "tags": [],
+      "brand_name": "Fugazzi",
+      "tone": "negative"
     },
     {
       "title": "‘Success should enable reinvention’: How Oribe cornered the luxury beauty market - Monocle",
@@ -25462,6 +26720,19 @@
       "tone": "neutral"
     },
     {
+      "title": "Our Scent-by-Scent Guide to the Best Candles - domino.com",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5IaXRnV21IOEtxdzd6QnZ4dzNxUUpNOWZUVnF4cXV3T3d1STQxQ2psNm1Ec0JkMnJCNS1Iakx5WE54WVZOcXVyUHd6ZDRfeER3OU9qQk11NA?oc=5",
+      "published": "2026-05-15",
+      "brand": "keap",
+      "source": "domino.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Our Scent-by-Scent Guide to the Best Candles &nbsp;&nbsp; domino.com",
+      "tags": [],
+      "brand_name": "Keap Candles",
+      "tone": "positive"
+    },
+    {
       "title": "Waldorf Astoria Doha Lusail unveils 'Serenity Pool' | Gulf Times - Gulf Times",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRW1VeVh4MU1WdW4tdGZfNEgwdEdqcVFTd1BkZTB0X0lkcXpOOXBPZTdfQ01HTllVempjOEZVMjF1YmdxUE11cWlsaG5jVUMtd295QXpIaHZoWERqQTBJMmxOQWh3R1E5MjdheWpUNlRvSVN3T2wwaERNTGFSUmRRVm1ucWY5Rl9IN0JpS1Q4bENLajlOZEc1bTJJWnBoQdIBowFBVV95cUxPczQwblVzRjQ2c3A3b1FxNE5MWVBnSHJTYkFNcHFjdG0yQWw1Z1lUSkl6TmNQVjlFMHRoX2hvRkU4eWtaRDhUMmdYalNqSlpuSnFKWlpRSEpYWm95RVVqVUJOdlhyR1NXQlN2SlpCUDdsenNDeUhjdnlYclBOUGkxV2pVVV9GSEJ4MC1jbjRvanFId09yNTEtOVZ0ZDlMUm5mT1lB?oc=5",
       "published": "2026-05-14",
@@ -25517,6 +26788,32 @@
       "tags": [],
       "brand_name": "NONFICTION",
       "tone": "negative"
+    },
+    {
+      "title": "Cyklar Founder Claudia Sulewski Wants You to Get Dirty - Interview Magazine",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNaTRrQ19KdXI2ejNLbnBVeVNiMk00ZXlPMnkxUHNyVEhIMzFHdENtMmcyR1lIaVUyRjdWOGluMlc4ZTJrYjdGNzF1Q3VrRmdPeDNvYzMzcXU2X2RZcTMyR0psREdxWHhNSHBEdTM5WnNOM1VNT0wwNVFxVzZncUlkTWZlZ1Jhc2JjTURuOXdsMHlSUQ?oc=5",
+      "published": "2026-05-14",
+      "brand": "cyklar",
+      "source": "Interview Magazine",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Cyklar Founder Claudia Sulewski Wants You to Get Dirty &nbsp;&nbsp; Interview Magazine",
+      "tags": [],
+      "brand_name": "Cyklar",
+      "tone": "neutral"
+    },
+    {
+      "title": "Seasonal scents capture essence of sunny days - Boston Herald",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQenhZZVFmM1l1R1dTblMyQTdNUmRtcmZwS2xMSkRjQ21nUjdMd01lb01CMFY2Rk9uYXRmLXNrMjdqREpLZnRmeDRDX2JFMzVnZDF2M2pYM3c0R1k1ZERnajZUYndFa0Fjby1ORk5NaElKSlNXZnh5Q1EyRnB1Mzktelg3enJtWWk4Z18wTk9NUQ?oc=5",
+      "published": "2026-05-14",
+      "brand": "vyrao",
+      "source": "Boston Herald",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Seasonal scents capture essence of sunny days &nbsp;&nbsp; Boston Herald",
+      "tags": [],
+      "brand_name": "Vyrao",
+      "tone": "neutral"
     },
     {
       "title": "20 Years After Santal 33, Does Le Labo Still Smell Like Cool? - Highsnobiety",
@@ -26078,15 +27375,16 @@
       "tone": "neutral"
     }
   ],
-  "news_generated_at": "2026-08-08T05:50:37+00:00",
+  "news_generated_at": "2026-08-08T13:04:40+00:00",
   "tag_counts": {
-    "retail_expansion": 96,
-    "corporate": 47,
-    "product_launch": 71,
-    "sustainability": 22,
+    "retail_expansion": 92,
+    "corporate": 51,
+    "product_launch": 73,
+    "sustainability": 23,
     "awards_press": 2,
-    "collaboration": 26,
-    "campaign_pr": 33
+    "collaboration": 28,
+    "campaign_pr": 34,
+    "experiential": 14
   },
   "stats": {
     "brands": 85,
@@ -26095,7 +27393,7 @@
     "verified_prices": 0,
     "verified_pct": 0,
     "aed_observed": 2,
-    "news_items": 732,
+    "news_items": 781,
     "watchlist": 17
   }
 }

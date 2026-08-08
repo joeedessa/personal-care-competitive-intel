@@ -73,6 +73,21 @@ def normalise(price, size, unit):
     return round(price, 2)
 
 
+# Strategic corporate owners. Everything else - founder, family, PE fund - counts
+# as independent for the challenger lens: the question the lens answers is "who
+# moves without a group board?", and a PE-backed founder brand still does.
+CORPORATE_MARKERS = [
+    "L'Oréal", "L'Occitane Group", "Estée Lauder", "LVMH", "Puig", "Kao",
+    "Unilever", "SC Johnson", "Beiersdorf", "Kenvue", "Newell", "Inditex",
+    "Wella", "NAOS", "AMOREPACIFIC", "Bath & Body Works, Inc", "Auréa",
+    "Italmobiliare", "SABCO",
+]
+
+
+def ownership_of(owner: str) -> str:
+    return "corporate" if any(m in (owner or "") for m in CORPORATE_MARKERS) else "independent"
+
+
 def main() -> int:
     brands_raw = load(DATA / "brands.json")["brands"]
     brands = {b["id"]: b for b in brands_raw}
@@ -135,6 +150,7 @@ def main() -> int:
                 "brand_role": brand["role"],
                 "brand_country": brand["country"],
                 "brand_owner": brand["owner"],
+                "brand_ownership": ownership_of(brand["owner"]),
                 "home_currency": home_cur,
                 "price_home": home,
                 "price_home_usd": home_usd,
@@ -190,21 +206,35 @@ def main() -> int:
 
     news_blob = load(GEN / "news.json", {"items": [], "generated_at": None})
     news = news_blob.get("items", [])
+    watch_names = {w["id"]: w["name"] for w in load(DATA / "watchlist.json", {"watchlist": []})["watchlist"]}
     for item in news:
         bid = item.get("brand")
-        item["brand_name"] = brands[bid]["name"] if bid in brands else None
+        item["brand_name"] = brands[bid]["name"] if bid in brands else watch_names.get(bid)
         item["tone"] = tone_of(f"{item.get('title', '')} {item.get('summary', '')}")
 
     # Brand rollup
+    watchlist_blob = load(DATA / "watchlist.json", {"watchlist": []})["watchlist"]
+    watch_ids = {w["id"] for w in watchlist_blob}
     brand_rows = []
     for b in brands_raw:
         own = [p for p in products if p["brand"] == b["id"]]
         norms = [p["norm_usd"] for p in own if p["norm_usd"]]
         idxs = [p["price_index"] for p in own if p.get("price_index")]
         b_news = [n for n in news if n.get("brand") == b["id"]]
+        ownership = ownership_of(b["owner"])
+        # The challenger lens: independent, premium-or-luxury, actually competing,
+        # and either founded this century or explicitly on the watchlist.
+        challenger = (
+            ownership == "independent"
+            and b["tier"] in ("luxury", "premium")
+            and b["role"] in ("core_competitor", "adjacent")
+            and ((b.get("founded") or 0) >= 2000 or b["id"] in watch_ids)
+        )
         brand_rows.append(
             {
                 **b,
+                "ownership": ownership,
+                "challenger": challenger,
                 "sku_count": len(own),
                 "categories_tracked": sorted({p["category"] for p in own}),
                 "median_norm_usd": round(statistics.median(norms), 2) if norms else None,
@@ -223,6 +253,7 @@ def main() -> int:
         "sustainability": "Sustainability & refill", "retail_expansion": "Retail expansion",
         "product_launch": "Product launch", "collaboration": "Collaboration",
         "campaign_pr": "Campaign & PR", "corporate": "Corporate & M&A", "awards_press": "Awards & press",
+        "experiential": "Experiential & activations",
     }
     momentum = brand_momentum(news, brand_rows, datetime.now(timezone.utc).date())
     findings = build_findings(products, brand_rows, categories, news, tag_labels)

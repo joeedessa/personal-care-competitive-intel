@@ -17,7 +17,7 @@ request, and the recommended next additions.
 | **Head to head** | Two or three brands side by side — the like-for-like price gap in every category they both compete in, and the range each one is missing |
 | **News** | Every headline collected, grouped by week with sticky headers, filterable by brand, region and initiative type |
 | **PR & initiatives** | What brands are *doing*, auto-tagged into seven buckets; share of voice; coverage over time; share-of-voice momentum; a brand × initiative matrix |
-| **Emerging radar** | Brands under ~5 years old that are setting price or winning doors, ranked by momentum and threat |
+| **Emerging radar** | Brands under ~5 years old that are setting price or winning doors, ranked by momentum and threat — plus **What the challengers are doing**: the comms feed restricted to independent and founder-led brands, grouped by brand |
 | **Brand directory** | All ~85 brands with tier, owner, UAE channel presence, SKU coverage and average price index |
 
 Brand names are clickable anywhere they appear and open a **profile drawer** — identity,
@@ -146,6 +146,26 @@ Every headline links out. Three routes into the evidence:
   brand-and-initiative combination.
 - **Brand profile** — open any brand name; the drawer lists its PR moments grouped by initiative
   with links, its press tone, and its full coverage.
+
+## The challenger lens
+
+Every brand is classified `independent` or `corporate` (derived in `build.py` from the owner
+against a list of strategic groups — PE-backed founder brands count as independent, because the
+question the lens answers is *who moves without a group board*). An **Ownership** filter in the
+filter row applies the cut everywhere: news, PR charts, initiative matrix, tone, pricing,
+positioning and the directory. A `challenger` flag (independent + premium/luxury + competing +
+founded ≥ 2000 or on the watchlist) drives the radar tab's comms feed.
+
+Watchlist-only brands (Cyklar, Ffern, Vyrao, Hanni, Xinu, Fugazzi and others) are now harvested
+by the news collector via per-entry `news_query` overrides in `watchlist.json` — previously only
+brands with priced SKUs got coverage, which meant the emerging set was invisible in comms.
+
+An `experiential` initiative bucket (pop-ups, activations, installations, residencies,
+takeovers) separates activation activity from plain retail expansion.
+
+Sources include **BeautyMatter** (no RSS of its own — harvested via a Google News `site:` query)
+and **RetailBoss** (native RSS; covers all retail, so it is screened with the allowlist to keep
+sneaker drops out).
 
 ## Keeping the feed clean
 

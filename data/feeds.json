@@ -41,6 +41,14 @@
       "name": "Global Cosmetics News",
       "url": "https://www.globalcosmeticsnews.com/feed/",
       "focus": "global brand and retail news"
+    },
+    {
+      "id": "retailboss",
+      "name": "RetailBoss",
+      "url": "https://retailboss.co/feed/",
+      "focus": "retail activations, store concepts, experiential",
+      "screen": true,
+      "_comment": "Covers all retail, not just beauty - screened with the allowlist so sneaker drops stay out."
     }
   ],
   "trade_feeds_broken": [
@@ -114,9 +122,7 @@
       "expands",
       "expansion",
       "enters",
-      "launch in",
-      "pop-up",
-      "popup"
+      "launch in"
     ],
     "product_launch": [
       "launches",
@@ -163,6 +169,23 @@
       "wins",
       "named best",
       "ranking"
+    ],
+    "experiential": [
+      "pop-up",
+      "popup",
+      "pop up",
+      "activation",
+      "installation",
+      "immersive",
+      "experiential",
+      "takeover",
+      "residency",
+      "flagship experience",
+      "café",
+      "cafe opening",
+      "supper club",
+      "scent bar",
+      "masterclass"
     ]
   },
   "relevance": {
@@ -341,5 +364,13 @@
       "protein powder",
       "vitamin gummies"
     ]
-  }
+  },
+  "site_queries": [
+    {
+      "id": "beautymatter",
+      "name": "BeautyMatter",
+      "query": "site:beautymatter.com",
+      "_comment": "BeautyMatter publishes no RSS; harvested via Google News site: query. Edited beauty publication, so scope=trade (unscreened)."
+    }
+  ]
 }

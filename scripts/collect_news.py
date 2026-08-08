@@ -32,6 +32,13 @@ OUT = GEN / "news.json"
 BRANDS = json.loads((ROOT / "data" / "brands.json").read_text())["brands"]
 FEEDS = json.loads((ROOT / "data" / "feeds.json").read_text())
 
+# Watchlist entries that are not tracked brands still deserve coverage - they
+# are precisely the emerging set. Only those with an explicit news_query are
+# harvested (their names are too small or ambiguous to search bare).
+_brand_ids = {b["id"] for b in BRANDS}
+WATCH_EXTRA = [w for w in json.loads((ROOT / "data" / "watchlist.json").read_text())["watchlist"]
+               if w["id"] not in _brand_ids and w.get("news_query")]
+
 UA = {"User-Agent": "personal-care-competitive-intel/1.0 (+https://github.com/joeedessa)"}
 MAX_PER_SOURCE = 12
 REQUEST_PAUSE = 0.7  # be polite to Google News
@@ -67,20 +74,25 @@ def _fold(t: str) -> str:
 
 
 RELEVANCE = [_fold(k) for k in FEEDS.get("relevance", {}).get("keywords", [])]
-BRAND_NAMES = [(b["id"], _fold(b["name"])) for b in BRANDS]
+BRAND_NAMES = [(b["id"], _fold(b["name"])) for b in BRANDS] + \
+              [(w["id"], _fold(w["name"])) for w in WATCH_EXTRA]
 
 BLOCKLIST = [_fold(k) for k in FEEDS.get("relevance", {}).get("blocklist", [])]
 
 # A brand carrying a news_query override is, by definition, one whose name is an
 # ordinary word. The blocklist cannot protect those - "MISTI launches campaign"
 # contains nothing to block - so they get the positive allowlist instead.
-AMBIGUOUS = {b["id"] for b in BRANDS if b.get("news_query")}
+AMBIGUOUS = {b["id"] for b in BRANDS if b.get("news_query")} | {w["id"] for w in WATCH_EXTRA}
 
 # Sources belonging to feeds we have retired. Their items linger in history, and
 # trade scope is otherwise unscreened, so they are named explicitly.
 RETIRED_SOURCES = {_fold(t.get("id", "")).replace("-", " ")
                    for t in FEEDS.get("trade_feeds_broken", [])}
 ACTIVE_TRADE = {_fold(t["name"]) for t in FEEDS.get("trade_feeds", [])}
+
+# Trade feeds that cover a wider domain than beauty (e.g. all-retail) opt into
+# the allowlist with "screen": true, so their off-domain items stay out.
+SCREENED_TRADE = {_fold(t["name"]) for t in FEEDS.get("trade_feeds", []) if t.get("screen")}
 
 
 def find_brand(text: str) -> str | None:
@@ -108,6 +120,8 @@ def is_relevant(text: str, scope: str, brand_id: str | None = None,
 
     if scope == "trade":
         src = _fold(source or "")
+        if src in SCREENED_TRADE:
+            return allow or find_brand(text) is not None
         if src and src not in ACTIVE_TRADE and any(r and r in src for r in RETIRED_SOURCES):
             return allow
         return True
@@ -199,9 +213,21 @@ def collect() -> list[dict]:
                 )
                 time.sleep(REQUEST_PAUSE)
 
+        for wx in WATCH_EXTRA:
+            print(f"[news] watchlist: {wx['name']}")
+            harvest(gn["template"].format(query=quote_plus(wx["news_query"])), wx["id"], "Google News", "global", "brand")
+            time.sleep(REQUEST_PAUSE)
+
     for f in FEEDS["trade_feeds"]:
         print(f"[news] trade: {f['name']}")
         harvest(f["url"], None, f["name"], "global", "trade")
+
+    # Publications with no RSS of their own, harvested via a Google News site:
+    # query. Edited beauty press, so they carry trade scope (unscreened).
+    for sq in FEEDS.get("site_queries", []):
+        print(f"[news] site: {sq['name']}")
+        harvest(gn["template"].format(query=quote_plus(sq["query"])), None, sq["name"], "global", "trade")
+        time.sleep(REQUEST_PAUSE)
 
     for t in FEEDS["topic_feeds"]:
         print(f"[news] topic: {t['name']}")

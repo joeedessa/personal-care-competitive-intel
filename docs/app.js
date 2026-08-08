@@ -25,6 +25,7 @@ const TAG_LABEL = {
   sustainability: "Sustainability & refill", retail_expansion: "Retail expansion",
   product_launch: "Product launch", collaboration: "Collaboration", campaign_pr: "Campaign & PR",
   corporate: "Corporate & M&A", awards_press: "Awards & press",
+  experiential: "Experiential & activations",
 };
 const TAG_KEYS = Object.keys(TAG_LABEL);
 const KIND_LABEL = {
@@ -32,9 +33,10 @@ const KIND_LABEL = {
   white_space: "White space", uae_gap: "UAE exposure", price_leader: "Price leadership",
   momentum: "Coverage momentum", initiative: "Comms focus", entry_price: "Entry price",
 };
+const OWN_LABEL = { independent: "Independent", corporate: "Group-owned" };
 
 const state = {
-  cat: "", tier: "", role: "", cur: "usd", q: "", tag: "", region: "", brand: "",
+  cat: "", tier: "", role: "", own: "", cur: "usd", q: "", tag: "", region: "", brand: "",
   view: "norm", tab: "overview", cmp: [null, null, null],
   sort: { key: "sku_count", dir: -1 },
 };
@@ -74,6 +76,7 @@ function matches(p) {
   if (state.cat && p.category !== state.cat) return false;
   if (state.tier && p.brand_tier !== state.tier) return false;
   if (state.role && p.brand_role !== state.role) return false;
+  if (state.own && p.brand_ownership !== state.own) return false;
   if (state.q) {
     const hay = (p.brand_name + " " + p.name + " " + (p.notes || "")).toLowerCase();
     if (!hay.includes(state.q.toLowerCase())) return false;
@@ -453,11 +456,14 @@ function newsFiltered() {
       const hay = ((n.brand_name || "") + " " + n.title + " " + (n.source || "")).toLowerCase();
       if (!hay.includes(state.q.toLowerCase())) return false;
     }
-    if (state.tier || state.role) {
+    if (state.tier || state.role || state.own) {
       const b = D.brands.find((x) => x.id === n.brand);
-      if (!b) return false;
+      // Watchlist-only brands are independents by definition; they survive the
+      // independent cut and fail the corporate one.
+      if (!b) return state.own !== "corporate" && !state.tier && !state.role && !!n.brand;
       if (state.tier && b.tier !== state.tier) return false;
       if (state.role && b.role !== state.role) return false;
+      if (state.own && b.ownership !== state.own) return false;
     }
     return true;
   });
@@ -680,10 +686,13 @@ function renderMomentum() {
 
 /* ---------- press tone (NOT consumer sentiment — see the card copy) ---------- */
 function renderTone() {
-  const rows = (D.tone || []).filter((t) =>
-    (!state.q || t.name.toLowerCase().includes(state.q.toLowerCase())) &&
-    (!state.tier || (D.brands.find((b) => b.id === t.id) || {}).tier === state.tier) &&
-    (!state.role || (D.brands.find((b) => b.id === t.id) || {}).role === state.role));
+  const rows = (D.tone || []).filter((t) => {
+    const b = D.brands.find((x) => x.id === t.id) || {};
+    return (!state.q || t.name.toLowerCase().includes(state.q.toLowerCase())) &&
+      (!state.tier || b.tier === state.tier) &&
+      (!state.role || b.role === state.role) &&
+      (!state.own || b.ownership === state.own);
+  });
   const box = $("#tone"); box.innerHTML = "";
   if (!rows.length) { box.append(el("div", "empty", "No brand has enough headlines to read a tone yet.")); return; }
 
@@ -759,6 +768,53 @@ function renderRadar() {
   });
 }
 
+
+/* ---------- challenger comms — the emerging set's PR/campaign/activation feed ---------- */
+function renderChallengerFeed() {
+  const box = $("#challenger-feed"); box.innerHTML = "";
+  const challengerIds = new Set(D.brands.filter((b) => b.challenger).map((b) => b.id));
+  D.watchlist.forEach((w) => challengerIds.add(w.id));
+  const nameOf = (id) =>
+    (D.brands.find((b) => b.id === id) || D.watchlist.find((w) => w.id === id) || {}).name || id;
+
+  const items = D.news.filter((n) => n.brand && challengerIds.has(n.brand) &&
+    (!state.q || (n.title + " " + (n.brand_name || "")).toLowerCase().includes(state.q.toLowerCase())));
+  $("#challenger-count").textContent = `${items.length} headlines`;
+  if (!items.length) {
+    box.append(el("div", "empty", "No challenger coverage collected yet — it accrues as the daily collector runs."));
+    return;
+  }
+
+  // Group by brand, order groups by their freshest headline.
+  const byBrand = {};
+  items.forEach((n) => (byBrand[n.brand] = byBrand[n.brand] || []).push(n));
+  const groups = Object.entries(byBrand)
+    .sort((a, b) => (b[1][0].published || "").localeCompare(a[1][0].published || ""));
+
+  groups.forEach(([bid, list]) => {
+    const isTracked = D.brands.some((b) => b.id === bid);
+    const head = el("div", "week-head");
+    head.innerHTML = `<span>${isTracked
+        ? `<span class="brand-link" data-brand="${esc(bid)}" style="letter-spacing:inherit">${esc(nameOf(bid))}</span>`
+        : esc(nameOf(bid)) + ' <span style="color:var(--ink-3);letter-spacing:.08em">· watchlist</span>'}</span>
+      <span class="wk-n">${list.length} headline${list.length === 1 ? "" : "s"}</span>`;
+    box.append(head);
+    list.slice(0, 5).forEach((n) => {
+      const sg = el("div", "signal");
+      sg.append(el("time", null, esc(n.published || "undated")));
+      const body = el("div");
+      body.append(el("div", null, `<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>`));
+      body.append(el("div", "src", `${esc(n.source || "—")}${n.region === "uae" ? " · UAE/GCC" : ""}`));
+      if ((n.tags || []).length) {
+        const chips = el("div", "chips");
+        n.tags.forEach((t) => chips.append(el("span", "chip tag", esc(TAG_LABEL[t] || t))));
+        body.append(chips);
+      }
+      sg.append(body); box.append(sg);
+    });
+  });
+}
+
 /* ---------- brand directory ---------- */
 const BRAND_COLS = [
   { k: "name", t: "Brand" }, { k: "tier", t: "Tier" }, { k: "role", t: "Role" },
@@ -771,6 +827,7 @@ const BRAND_COLS = [
 function renderBrands() {
   const rows = D.brands
     .filter((b) => (!state.tier || b.tier === state.tier) && (!state.role || b.role === state.role) &&
+      (!state.own || b.ownership === state.own) &&
       (!state.q || (b.name + " " + b.owner + " " + b.positioning).toLowerCase().includes(state.q.toLowerCase())))
     .map((b) => ({ ...b, uae_status: b.uae.status, categories_n: (b.categories_tracked || []).length }))
     .sort((a, b) => {
@@ -868,6 +925,7 @@ function renderMap() {
   const rows = (D.positioning || []).filter((r) =>
     (!state.tier || r.tier === state.tier) &&
     (!state.role || r.role === state.role) &&
+    (!state.own || r.ownership === state.own) &&
     (!state.q || r.name.toLowerCase().includes(state.q.toLowerCase())));
   $("#map-count").textContent = `${rows.length} brands`;
 
@@ -985,7 +1043,7 @@ function openBrand(id) {
   const pos = (D.positioning || []).find((p) => p.id === id);
 
   $("#drawer-eyebrow").textContent =
-    `${TIER_LABEL[b.tier]} · ${b.role.replace(/_/g, " ")} · ${b.country}`;
+    `${TIER_LABEL[b.tier]} · ${b.role.replace(/_/g, " ")} · ${OWN_LABEL[b.ownership] || b.ownership} · ${b.country}`;
   $("#drawer-title").textContent = b.name;
 
   const body = $("#drawer-body");
@@ -1249,7 +1307,7 @@ function renderCompare() {
 /* ===========================================================================
    URL state — every view is shareable
    =========================================================================== */
-const URL_KEYS = ["tab", "cat", "tier", "role", "cur", "q", "tag", "region", "brand", "view"];
+const URL_KEYS = ["tab", "cat", "tier", "role", "own", "cur", "q", "tag", "region", "brand", "view"];
 let urlLock = false;
 
 function syncUrl() {
@@ -1276,7 +1334,7 @@ function readUrl() {
 
 function reflectStateToControls() {
   const setv = (sel, v) => { const n = $(sel); if (n) n.value = v || ""; };
-  setv("#f-cat", state.cat); setv("#f-tier", state.tier); setv("#f-role", state.role);
+  setv("#f-cat", state.cat); setv("#f-tier", state.tier); setv("#f-role", state.role); setv("#f-own", state.own);
   setv("#f-cur", state.cur); setv("#f-q", state.q); setv("#f-tag", state.tag);
   setv("#f-region", state.region); setv("#f-brand", state.brand);
   document.querySelectorAll("[data-view]").forEach((x) =>
@@ -1299,7 +1357,7 @@ function renderAll() {
   if (state.tab === "pricing") { renderLadder(); renderSpread(); renderAed(); renderMatrix(); renderSkuTable(); }
   if (state.tab === "news") renderNews();
   if (state.tab === "pr") { renderPr(); renderWeekly(); renderMomentum(); renderTone(); }
-  if (state.tab === "radar") renderRadar();
+  if (state.tab === "radar") { renderRadar(); renderChallengerFeed(); }
   if (state.tab === "brands") renderBrands();
   upgradeBrandLinks();
 }
@@ -1310,6 +1368,7 @@ function updateFilterSummary() {
   if (state.tab === "pricing" && cat) bits.push(cat.label);
   if (state.tier) bits.push(TIER_LABEL[state.tier]);
   if (state.role) bits.push(state.role.replace(/_/g, " "));
+  if (state.own) bits.push(OWN_LABEL[state.own] || state.own);
   if (state.q) bits.push(`"${state.q}"`);
   const s = $("#filter-summary");
   if (s) s.textContent = bits.length ? bits.join(" · ") : "All";
@@ -1337,6 +1396,7 @@ function setTab(tab) {
   const hasTierRole = tab !== "radar";
   $("#f-tier").parentElement.style.display = hasTierRole ? "" : "none";
   $("#f-role").parentElement.style.display = hasTierRole ? "" : "none";
+  $("#f-own").parentElement.style.display = hasTierRole ? "" : "none";
   renderAll();
   updateFilterSummary();
   syncUrl();
@@ -1368,7 +1428,7 @@ function init() {
     // is a discrete choice and should feel instant.
     if (key === "q") { clearTimeout(searchTimer); searchTimer = setTimeout(go, 160); } else go();
   });
-  ["#f-cat:cat", "#f-tier:tier", "#f-role:role", "#f-cur:cur", "#f-q:q",
+  ["#f-cat:cat", "#f-tier:tier", "#f-role:role", "#f-own:own", "#f-cur:cur", "#f-q:q",
    "#f-tag:tag", "#f-region:region", "#f-brand:brand"].forEach((pair) => {
     const [sel, key] = pair.split(":");
     bind(sel, key);

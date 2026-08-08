@@ -382,6 +382,8 @@ def build_positioning(products, brands):
             "skus": len(own),
             "uae": b["uae"]["status"],
             "news": b.get("news_count", 0),
+            "ownership": b.get("ownership", "independent"),
+            "challenger": b.get("challenger", False),
         })
     return [r for r in rows if r["index"] is not None]
 
