@@ -1,7 +1,7 @@
 {
   "base": "USD",
   "as_of": "2026-08-07",
-  "fetched_at": "2026-08-08T13:07:48+00:00",
+  "fetched_at": "2026-08-09T05:51:40+00:00",
   "source": "frankfurter.app (ECB)",
   "rates": {
     "USD": 1.0,
