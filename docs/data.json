@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T05:38:24+00:00",
+  "generated_at": "2026-08-24T05:46:51+00:00",
   "findings": [
     {
       "kind": "same_tier_gap",
@@ -182,25 +182,25 @@
     },
     {
       "kind": "accelerating",
-      "headline": "Le Labo has taken 3.34× more share of category coverage in the last 30 days",
-      "detail": "5.0% of all headlines in the last 30 days, against 1.4% in the 30 before (33 vs 4 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 5 brands are gaining share on this measure. Volume is not sentiment.",
-      "metric": "3.34×",
-      "magnitude": 56.7,
+      "headline": "Bath & Body Works has taken 3.67× more share of category coverage in the last 30 days",
+      "detail": "9.1% of all headlines in the last 30 days, against 2.4% in the 30 before (59 vs 7 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 5 brands are gaining share on this measure. Volume is not sentiment.",
+      "metric": "3.67×",
+      "magnitude": 58.35,
       "refs": [
-        "le-labo"
+        "bath-body-works"
       ],
       "tab": "news",
       "focus": {
-        "brand": "le-labo"
+        "brand": "bath-body-works"
       },
       "rank": 12
     },
     {
       "kind": "initiative",
       "headline": "Retail expansion accounts for 28% of everything the category is talking about",
-      "detail": "206 of 725 tagged headlines. The quietest front is awards & press at 14 — a theme nobody has claimed is either irrelevant or unoccupied.",
+      "detail": "208 of 734 tagged headlines. The quietest front is awards & press at 14 — a theme nobody has claimed is either irrelevant or unoccupied.",
       "metric": "28%",
-      "magnitude": 36.36551724137931,
+      "magnitude": 36.33514986376022,
       "refs": [],
       "tab": "pr",
       "focus": {
@@ -267,7 +267,7 @@
       "index": 203,
       "skus": 12,
       "uae": "boutique",
-      "news": 23,
+      "news": 24,
       "ownership": "independent",
       "challenger": false
     },
@@ -345,7 +345,7 @@
       "index": 86,
       "skus": 4,
       "uae": "retail",
-      "news": 13,
+      "news": 14,
       "ownership": "corporate",
       "challenger": false
     },
@@ -397,7 +397,7 @@
       "index": 159,
       "skus": 5,
       "uae": "boutique",
-      "news": 64,
+      "news": 65,
       "ownership": "corporate",
       "challenger": false
     },
@@ -605,7 +605,7 @@
       "index": 59,
       "skus": 1,
       "uae": "unknown",
-      "news": 15,
+      "news": 16,
       "ownership": "independent",
       "challenger": true
     },
@@ -735,7 +735,7 @@
       "index": 363,
       "skus": 3,
       "uae": "retail",
-      "news": 1,
+      "news": 2,
       "ownership": "independent",
       "challenger": false
     },
@@ -969,7 +969,7 @@
       "index": 10,
       "skus": 1,
       "uae": "retail",
-      "news": 10,
+      "news": 12,
       "ownership": "independent",
       "challenger": false
     },
@@ -1060,7 +1060,7 @@
       "index": 416,
       "skus": 3,
       "uae": "retail",
-      "news": 21,
+      "news": 22,
       "ownership": "corporate",
       "challenger": false
     },
@@ -1073,7 +1073,7 @@
       "index": 98,
       "skus": 2,
       "uae": "retail",
-      "news": 38,
+      "news": 39,
       "ownership": "independent",
       "challenger": true
     },
@@ -1151,7 +1151,7 @@
       "index": 10,
       "skus": 1,
       "uae": "retail",
-      "news": 47,
+      "news": 49,
       "ownership": "corporate",
       "challenger": false
     },
@@ -1268,7 +1268,7 @@
       "index": 113,
       "skus": 3,
       "uae": "unknown",
-      "news": 49,
+      "news": 50,
       "ownership": "independent",
       "challenger": true
     },
@@ -1281,7 +1281,7 @@
       "index": 148,
       "skus": 2,
       "uae": "boutique",
-      "news": 26,
+      "news": 27,
       "ownership": "corporate",
       "challenger": false
     },
@@ -1320,7 +1320,7 @@
       "index": 109,
       "skus": 1,
       "uae": "boutique",
-      "news": 7,
+      "news": 8,
       "ownership": "independent",
       "challenger": false
     }
@@ -1330,12 +1330,12 @@
       "id": "jo-malone",
       "name": "Jo Malone London",
       "tier": "luxury",
-      "recent": 57,
+      "recent": 58,
       "prior": 0,
-      "delta": 57,
-      "share_recent": 8.6,
+      "delta": 58,
+      "share_recent": 8.9,
       "share_prior": 0.0,
-      "ratio": 58.0,
+      "ratio": 59.0,
       "basis": "newly_covered"
     },
     {
@@ -1351,6 +1351,18 @@
       "basis": "newly_covered"
     },
     {
+      "id": "the-camel-soap-factory",
+      "name": "The Camel Soap Factory",
+      "tier": "premium",
+      "recent": 7,
+      "prior": 0,
+      "delta": 7,
+      "share_recent": 1.1,
+      "share_prior": 0.0,
+      "ratio": 8.0,
+      "basis": "newly_covered"
+    },
+    {
       "id": "yankee-candle",
       "name": "Yankee Candle",
       "tier": "mass",
@@ -1360,30 +1372,6 @@
       "share_recent": 0.9,
       "share_prior": 0.0,
       "ratio": 7.0,
-      "basis": "newly_covered"
-    },
-    {
-      "id": "the-camel-soap-factory",
-      "name": "The Camel Soap Factory",
-      "tier": "premium",
-      "recent": 6,
-      "prior": 0,
-      "delta": 6,
-      "share_recent": 0.9,
-      "share_prior": 0.0,
-      "ratio": 7.0,
-      "basis": "newly_covered"
-    },
-    {
-      "id": "maison-balzac",
-      "name": "Maison Balzac",
-      "tier": "premium",
-      "recent": 4,
-      "prior": 0,
-      "delta": 4,
-      "share_recent": 0.6,
-      "share_prior": 0.0,
-      "ratio": 5.0,
       "basis": "newly_covered"
     },
     {
@@ -1402,6 +1390,18 @@
       "id": "virtue",
       "name": "VIRTUE Labs",
       "tier": "luxury",
+      "recent": 4,
+      "prior": 0,
+      "delta": 4,
+      "share_recent": 0.6,
+      "share_prior": 0.0,
+      "ratio": 5.0,
+      "basis": "newly_covered"
+    },
+    {
+      "id": "maison-balzac",
+      "name": "Maison Balzac",
+      "tier": "premium",
       "recent": 4,
       "prior": 0,
       "delta": 4,
@@ -1435,16 +1435,28 @@
       "basis": "newly_covered"
     },
     {
-      "id": "le-labo",
-      "name": "Le Labo",
-      "tier": "luxury",
-      "recent": 33,
-      "prior": 4,
-      "delta": 29,
-      "share_recent": 5.0,
-      "share_prior": 1.4,
-      "ratio": 3.34,
+      "id": "bath-body-works",
+      "name": "Bath & Body Works",
+      "tier": "mass",
+      "recent": 59,
+      "prior": 7,
+      "delta": 52,
+      "share_recent": 9.1,
+      "share_prior": 2.4,
+      "ratio": 3.67,
       "basis": "gaining_share"
+    },
+    {
+      "id": "crown-affair",
+      "name": "Crown Affair",
+      "tier": "premium",
+      "recent": 9,
+      "prior": 1,
+      "delta": 8,
+      "share_recent": 1.4,
+      "share_prior": 0.3,
+      "ratio": 3.13,
+      "basis": "newly_covered"
     },
     {
       "id": "bamford",
@@ -1455,67 +1467,91 @@
       "delta": 7,
       "share_recent": 1.2,
       "share_prior": 0.3,
-      "ratio": 2.73,
+      "ratio": 2.82,
       "basis": "newly_covered"
-    },
-    {
-      "id": "la-roche-posay",
-      "name": "La Roche-Posay",
-      "tier": "masstige",
-      "recent": 25,
-      "prior": 4,
-      "delta": 21,
-      "share_recent": 3.8,
-      "share_prior": 1.4,
-      "ratio": 2.56,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "bath-body-works",
-      "name": "Bath & Body Works",
-      "tier": "mass",
-      "recent": 59,
-      "prior": 10,
-      "delta": 49,
-      "share_recent": 8.9,
-      "share_prior": 3.5,
-      "ratio": 2.51,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "nivea",
-      "name": "NIVEA",
-      "tier": "mass",
-      "recent": 36,
-      "prior": 6,
-      "delta": 30,
-      "share_recent": 5.5,
-      "share_prior": 2.1,
-      "ratio": 2.51,
-      "basis": "gaining_share"
     },
     {
       "id": "tangle-teezer",
       "name": "Tangle Teezer",
       "tier": "mass",
-      "recent": 6,
+      "recent": 8,
       "prior": 1,
-      "delta": 5,
-      "share_recent": 0.9,
+      "delta": 7,
+      "share_recent": 1.2,
       "share_prior": 0.3,
-      "ratio": 2.13,
+      "ratio": 2.82,
       "basis": "newly_covered"
+    },
+    {
+      "id": "nivea",
+      "name": "NIVEA",
+      "tier": "mass",
+      "recent": 37,
+      "prior": 6,
+      "delta": 31,
+      "share_recent": 5.7,
+      "share_prior": 2.0,
+      "ratio": 2.69,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "le-labo",
+      "name": "Le Labo",
+      "tier": "luxury",
+      "recent": 31,
+      "prior": 6,
+      "delta": 25,
+      "share_recent": 4.8,
+      "share_prior": 2.0,
+      "ratio": 2.26,
+      "basis": "gaining_share"
     },
     {
       "id": "nonfiction",
       "name": "NONFICTION",
       "tier": "luxury",
-      "recent": 34,
+      "recent": 35,
       "prior": 7,
-      "delta": 27,
-      "share_recent": 5.2,
+      "delta": 28,
+      "share_recent": 5.4,
       "share_prior": 2.4,
-      "ratio": 2.05,
+      "ratio": 2.2,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "la-roche-posay",
+      "name": "La Roche-Posay",
+      "tier": "masstige",
+      "recent": 24,
+      "prior": 5,
+      "delta": 19,
+      "share_recent": 3.7,
+      "share_prior": 1.7,
+      "ratio": 2.09,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "byredo",
+      "name": "Byredo",
+      "tier": "luxury",
+      "recent": 16,
+      "prior": 4,
+      "delta": 12,
+      "share_recent": 2.5,
+      "share_prior": 1.3,
+      "ratio": 1.74,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "neutrogena",
+      "name": "Neutrogena",
+      "tier": "mass",
+      "recent": 53,
+      "prior": 14,
+      "delta": 39,
+      "share_recent": 8.1,
+      "share_prior": 4.7,
+      "ratio": 1.7,
       "basis": "gaining_share"
     },
     {
@@ -1527,43 +1563,19 @@
       "delta": 14,
       "share_recent": 2.9,
       "share_prior": 1.7,
-      "ratio": 1.61,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "neutrogena",
-      "name": "Neutrogena",
-      "tier": "mass",
-      "recent": 53,
-      "prior": 15,
-      "delta": 38,
-      "share_recent": 8.0,
-      "share_prior": 5.2,
-      "ratio": 1.53,
+      "ratio": 1.67,
       "basis": "gaining_share"
     },
     {
       "id": "diptyque",
       "name": "Diptyque",
       "tier": "luxury",
-      "recent": 10,
+      "recent": 11,
       "prior": 3,
-      "delta": 7,
-      "share_recent": 1.5,
+      "delta": 8,
+      "share_recent": 1.7,
       "share_prior": 1.0,
-      "ratio": 1.4,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "byredo",
-      "name": "Byredo",
-      "tier": "luxury",
-      "recent": 16,
-      "prior": 5,
-      "delta": 11,
-      "share_recent": 2.4,
-      "share_prior": 1.7,
-      "ratio": 1.36,
+      "ratio": 1.58,
       "basis": "gaining_share"
     },
     {
@@ -1574,32 +1586,8 @@
       "prior": 13,
       "delta": 25,
       "share_recent": 5.8,
-      "share_prior": 4.5,
-      "ratio": 1.27,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "crown-affair",
-      "name": "Crown Affair",
-      "tier": "premium",
-      "recent": 9,
-      "prior": 3,
-      "delta": 6,
-      "share_recent": 1.4,
-      "share_prior": 1.0,
-      "ratio": 1.27,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "summer-fridays",
-      "name": "Summer Fridays",
-      "tier": "premium",
-      "recent": 23,
-      "prior": 8,
-      "delta": 15,
-      "share_recent": 3.5,
-      "share_prior": 2.8,
-      "ratio": 1.24,
+      "share_prior": 4.4,
+      "ratio": 1.32,
       "basis": "gaining_share"
     },
     {
@@ -1611,31 +1599,7 @@
       "delta": 5,
       "share_recent": 1.2,
       "share_prior": 1.0,
-      "ratio": 1.14,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "ouai",
-      "name": "OUAI",
-      "tier": "premium",
-      "recent": 10,
-      "prior": 4,
-      "delta": 6,
-      "share_recent": 1.5,
-      "share_prior": 1.4,
-      "ratio": 1.08,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "la-bonne-brosse",
-      "name": "La Bonne Brosse",
-      "tier": "luxury",
-      "recent": 5,
-      "prior": 2,
-      "delta": 3,
-      "share_recent": 0.8,
-      "share_prior": 0.7,
-      "ratio": 1.07,
+      "ratio": 1.19,
       "basis": "gaining_share"
     },
     {
@@ -1646,8 +1610,8 @@
       "prior": 9,
       "delta": 10,
       "share_recent": 2.9,
-      "share_prior": 3.1,
-      "ratio": 0.92,
+      "share_prior": 3.0,
+      "ratio": 0.96,
       "basis": "gaining_share"
     },
     {
@@ -1659,7 +1623,7 @@
       "delta": 1,
       "share_recent": 0.3,
       "share_prior": 0.3,
-      "ratio": 0.91,
+      "ratio": 0.94,
       "basis": "newly_covered"
     },
     {
@@ -1671,7 +1635,7 @@
       "delta": 2,
       "share_recent": 0.6,
       "share_prior": 0.7,
-      "ratio": 0.9,
+      "ratio": 0.93,
       "basis": "gaining_share"
     },
     {
@@ -1679,23 +1643,23 @@
       "name": "TOM FORD BEAUTY",
       "tier": "luxury",
       "recent": 12,
-      "prior": 7,
-      "delta": 5,
+      "prior": 6,
+      "delta": 6,
       "share_recent": 1.8,
-      "share_prior": 2.4,
-      "ratio": 0.76,
+      "share_prior": 2.0,
+      "ratio": 0.92,
       "basis": "gaining_share"
     },
     {
-      "id": "molton-brown",
-      "name": "Molton Brown",
+      "id": "summer-fridays",
+      "name": "Summer Fridays",
       "tier": "premium",
-      "recent": 3,
-      "prior": 2,
-      "delta": 1,
-      "share_recent": 0.5,
-      "share_prior": 0.7,
-      "ratio": 0.72,
+      "recent": 20,
+      "prior": 12,
+      "delta": 8,
+      "share_recent": 3.1,
+      "share_prior": 4.0,
+      "ratio": 0.77,
       "basis": "gaining_share"
     },
     {
@@ -1707,19 +1671,31 @@
       "delta": 1,
       "share_recent": 0.5,
       "share_prior": 0.7,
-      "ratio": 0.72,
+      "ratio": 0.74,
       "basis": "gaining_share"
     },
     {
-      "id": "method",
-      "name": "Method",
-      "tier": "mass",
+      "id": "molton-brown",
+      "name": "Molton Brown",
+      "tier": "premium",
       "recent": 3,
       "prior": 2,
       "delta": 1,
       "share_recent": 0.5,
       "share_prior": 0.7,
-      "ratio": 0.72,
+      "ratio": 0.74,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "ouai",
+      "name": "OUAI",
+      "tier": "premium",
+      "recent": 8,
+      "prior": 6,
+      "delta": 2,
+      "share_recent": 1.2,
+      "share_prior": 2.0,
+      "ratio": 0.64,
       "basis": "gaining_share"
     },
     {
@@ -1731,31 +1707,19 @@
       "delta": 2,
       "share_recent": 1.4,
       "share_prior": 2.4,
-      "ratio": 0.59,
+      "ratio": 0.61,
       "basis": "gaining_share"
     },
     {
-      "id": "laneige",
-      "name": "LANEIGE",
-      "tier": "masstige",
-      "recent": 15,
-      "prior": 12,
-      "delta": 3,
-      "share_recent": 2.3,
-      "share_prior": 4.2,
-      "ratio": 0.56,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "amouage",
-      "name": "Amouage",
-      "tier": "luxury",
-      "recent": 7,
-      "prior": 6,
+      "id": "grown-alchemist",
+      "name": "Grown Alchemist",
+      "tier": "premium",
+      "recent": 5,
+      "prior": 4,
       "delta": 1,
-      "share_recent": 1.1,
-      "share_prior": 2.1,
-      "ratio": 0.54,
+      "share_recent": 0.8,
+      "share_prior": 1.3,
+      "ratio": 0.61,
       "basis": "gaining_share"
     },
     {
@@ -1767,7 +1731,7 @@
       "delta": 0,
       "share_recent": 0.5,
       "share_prior": 1.0,
-      "ratio": 0.51,
+      "ratio": 0.53,
       "basis": "gaining_share"
     },
     {
@@ -1778,20 +1742,32 @@
       "prior": 4,
       "delta": 0,
       "share_recent": 0.6,
-      "share_prior": 1.4,
+      "share_prior": 1.3,
+      "ratio": 0.51,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "amouage",
+      "name": "Amouage",
+      "tier": "luxury",
+      "recent": 7,
+      "prior": 7,
+      "delta": 0,
+      "share_recent": 1.1,
+      "share_prior": 2.4,
       "ratio": 0.49,
       "basis": "gaining_share"
     },
     {
-      "id": "grown-alchemist",
-      "name": "Grown Alchemist",
-      "tier": "premium",
-      "recent": 4,
-      "prior": 4,
-      "delta": 0,
-      "share_recent": 0.6,
-      "share_prior": 1.4,
-      "ratio": 0.49,
+      "id": "laneige",
+      "name": "LANEIGE",
+      "tier": "masstige",
+      "recent": 13,
+      "prior": 14,
+      "delta": -1,
+      "share_recent": 2.0,
+      "share_prior": 4.7,
+      "ratio": 0.44,
       "basis": "gaining_share"
     },
     {
@@ -1802,8 +1778,8 @@
       "prior": 13,
       "delta": -1,
       "share_recent": 1.8,
-      "share_prior": 4.5,
-      "ratio": 0.42,
+      "share_prior": 4.4,
+      "ratio": 0.44,
       "basis": "gaining_share"
     },
     {
@@ -1814,8 +1790,8 @@
       "prior": 6,
       "delta": -1,
       "share_recent": 0.8,
-      "share_prior": 2.1,
-      "ratio": 0.41,
+      "share_prior": 2.0,
+      "ratio": 0.42,
       "basis": "gaining_share"
     },
     {
@@ -1827,7 +1803,7 @@
       "delta": -1,
       "share_recent": 0.6,
       "share_prior": 1.7,
-      "ratio": 0.4,
+      "ratio": 0.42,
       "basis": "gaining_share"
     },
     {
@@ -1838,8 +1814,32 @@
       "prior": 4,
       "delta": -1,
       "share_recent": 0.5,
-      "share_prior": 1.4,
-      "ratio": 0.39,
+      "share_prior": 1.3,
+      "ratio": 0.41,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "la-bonne-brosse",
+      "name": "La Bonne Brosse",
+      "tier": "luxury",
+      "recent": 3,
+      "prior": 4,
+      "delta": -1,
+      "share_recent": 0.5,
+      "share_prior": 1.3,
+      "ratio": 0.41,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "method",
+      "name": "Method",
+      "tier": "mass",
+      "recent": 2,
+      "prior": 3,
+      "delta": -1,
+      "share_recent": 0.3,
+      "share_prior": 1.0,
+      "ratio": 0.4,
       "basis": "gaining_share"
     },
     {
@@ -1850,20 +1850,20 @@
       "prior": 11,
       "delta": -3,
       "share_recent": 1.2,
-      "share_prior": 3.8,
-      "ratio": 0.34,
+      "share_prior": 3.7,
+      "ratio": 0.36,
       "basis": "gaining_share"
     },
     {
-      "id": "aveda",
-      "name": "Aveda",
-      "tier": "premium",
-      "recent": 6,
-      "prior": 9,
-      "delta": -3,
-      "share_recent": 0.9,
-      "share_prior": 3.1,
-      "ratio": 0.32,
+      "id": "aesop",
+      "name": "Aesop",
+      "tier": "luxury",
+      "recent": 7,
+      "prior": 12,
+      "delta": -5,
+      "share_recent": 1.1,
+      "share_prior": 4.0,
+      "ratio": 0.29,
       "basis": "gaining_share"
     },
     {
@@ -1874,8 +1874,20 @@
       "prior": 6,
       "delta": -3,
       "share_recent": 0.5,
-      "share_prior": 2.1,
-      "ratio": 0.27,
+      "share_prior": 2.0,
+      "ratio": 0.28,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "nest-new-york",
+      "name": "NEST New York",
+      "tier": "premium",
+      "recent": 3,
+      "prior": 6,
+      "delta": -3,
+      "share_recent": 0.5,
+      "share_prior": 2.0,
+      "ratio": 0.28,
       "basis": "gaining_share"
     },
     {
@@ -1887,31 +1899,7 @@
       "delta": -2,
       "share_recent": 0.2,
       "share_prior": 1.0,
-      "ratio": 0.25,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "aesop",
-      "name": "Aesop",
-      "tier": "luxury",
-      "recent": 7,
-      "prior": 14,
-      "delta": -7,
-      "share_recent": 1.1,
-      "share_prior": 4.9,
-      "ratio": 0.24,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "nest-new-york",
-      "name": "NEST New York",
-      "tier": "premium",
-      "recent": 2,
-      "prior": 6,
-      "delta": -4,
-      "share_recent": 0.3,
-      "share_prior": 2.1,
-      "ratio": 0.2,
+      "ratio": 0.26,
       "basis": "gaining_share"
     },
     {
@@ -1922,7 +1910,7 @@
       "prior": 4,
       "delta": -3,
       "share_recent": 0.2,
-      "share_prior": 1.4,
+      "share_prior": 1.3,
       "ratio": 0.2,
       "basis": "gaining_share"
     },
@@ -1946,7 +1934,7 @@
       "prior": 22,
       "delta": -18,
       "share_recent": 0.6,
-      "share_prior": 7.6,
+      "share_prior": 7.4,
       "ratio": 0.1,
       "basis": "gaining_share"
     },
@@ -1958,20 +1946,20 @@
       "prior": 4,
       "delta": -4,
       "share_recent": 0.0,
-      "share_prior": 1.4,
+      "share_prior": 1.3,
       "ratio": 0.1,
       "basis": "gaining_share"
     },
     {
-      "id": "christophe-robin",
-      "name": "Christophe Robin",
+      "id": "aveda",
+      "name": "Aveda",
       "tier": "premium",
-      "recent": 0,
-      "prior": 4,
-      "delta": -4,
-      "share_recent": 0.0,
-      "share_prior": 1.4,
-      "ratio": 0.1,
+      "recent": 1,
+      "prior": 14,
+      "delta": -13,
+      "share_recent": 0.2,
+      "share_prior": 4.7,
+      "ratio": 0.06,
       "basis": "gaining_share"
     }
   ],
@@ -1990,7 +1978,7 @@
     },
     {
       "week": "2026-W22",
-      "count": 29
+      "count": 30
     },
     {
       "week": "2026-W23",
@@ -2006,11 +1994,11 @@
     },
     {
       "week": "2026-W26",
-      "count": 70
+      "count": 71
     },
     {
       "week": "2026-W27",
-      "count": 59
+      "count": 60
     },
     {
       "week": "2026-W28",
@@ -2026,7 +2014,7 @@
     },
     {
       "week": "2026-W31",
-      "count": 140
+      "count": 141
     },
     {
       "week": "2026-W32",
@@ -2034,11 +2022,15 @@
     },
     {
       "week": "2026-W33",
-      "count": 337
+      "count": 338
     },
     {
       "week": "2026-W34",
-      "count": 290
+      "count": 300
+    },
+    {
+      "week": "2026-W35",
+      "count": 10
     }
   ],
   "tone": [
@@ -2153,16 +2145,6 @@
       "reliable": false
     },
     {
-      "id": "amouage",
-      "name": "Amouage",
-      "total": 26,
-      "positive": 10,
-      "neutral": 16,
-      "negative": 0,
-      "score": 38,
-      "reliable": true
-    },
-    {
       "id": "the-body-shop",
       "name": "The Body Shop",
       "total": 16,
@@ -2180,6 +2162,16 @@
       "neutral": 5,
       "negative": 0,
       "score": 38,
+      "reliable": true
+    },
+    {
+      "id": "amouage",
+      "name": "Amouage",
+      "total": 27,
+      "positive": 10,
+      "neutral": 17,
+      "negative": 0,
+      "score": 37,
       "reliable": true
     },
     {
@@ -2205,11 +2197,11 @@
     {
       "id": "summer-fridays",
       "name": "Summer Fridays",
-      "total": 38,
+      "total": 39,
       "positive": 14,
-      "neutral": 23,
+      "neutral": 24,
       "negative": 1,
-      "score": 34,
+      "score": 33,
       "reliable": true
     },
     {
@@ -2333,26 +2325,6 @@
       "reliable": true
     },
     {
-      "id": "grown-alchemist",
-      "name": "Grown Alchemist",
-      "total": 13,
-      "positive": 3,
-      "neutral": 10,
-      "negative": 0,
-      "score": 23,
-      "reliable": true
-    },
-    {
-      "id": "nivea",
-      "name": "NIVEA",
-      "total": 47,
-      "positive": 10,
-      "neutral": 37,
-      "negative": 0,
-      "score": 21,
-      "reliable": true
-    },
-    {
       "id": "la-mer",
       "name": "La Mer",
       "total": 34,
@@ -2363,12 +2335,22 @@
       "reliable": true
     },
     {
-      "id": "nest-new-york",
-      "name": "NEST New York",
-      "total": 15,
-      "positive": 4,
-      "neutral": 10,
-      "negative": 1,
+      "id": "grown-alchemist",
+      "name": "Grown Alchemist",
+      "total": 14,
+      "positive": 3,
+      "neutral": 11,
+      "negative": 0,
+      "score": 21,
+      "reliable": true
+    },
+    {
+      "id": "nivea",
+      "name": "NIVEA",
+      "total": 49,
+      "positive": 10,
+      "neutral": 39,
+      "negative": 0,
       "score": 20,
       "reliable": true
     },
@@ -2393,6 +2375,16 @@
       "reliable": true
     },
     {
+      "id": "nest-new-york",
+      "name": "NEST New York",
+      "total": 16,
+      "positive": 4,
+      "neutral": 11,
+      "negative": 1,
+      "score": 19,
+      "reliable": true
+    },
+    {
       "id": "bath-body-works",
       "name": "Bath & Body Works",
       "total": 75,
@@ -2403,6 +2395,16 @@
       "reliable": true
     },
     {
+      "id": "jo-malone",
+      "name": "Jo Malone London",
+      "total": 65,
+      "positive": 10,
+      "neutral": 55,
+      "negative": 0,
+      "score": 15,
+      "reliable": true
+    },
+    {
       "id": "laneige",
       "name": "LANEIGE",
       "total": 33,
@@ -2410,16 +2412,6 @@
       "neutral": 24,
       "negative": 2,
       "score": 15,
-      "reliable": true
-    },
-    {
-      "id": "jo-malone",
-      "name": "Jo Malone London",
-      "total": 64,
-      "positive": 9,
-      "neutral": 55,
-      "negative": 0,
-      "score": 14,
       "reliable": true
     },
     {
@@ -2435,9 +2427,9 @@
     {
       "id": "tom-ford-beauty",
       "name": "TOM FORD BEAUTY",
-      "total": 21,
+      "total": 22,
       "positive": 3,
-      "neutral": 18,
+      "neutral": 19,
       "negative": 0,
       "score": 14,
       "reliable": true
@@ -2455,12 +2447,12 @@
     {
       "id": "the-camel-soap-factory",
       "name": "The Camel Soap Factory",
-      "total": 7,
+      "total": 8,
       "positive": 1,
-      "neutral": 6,
+      "neutral": 7,
       "negative": 0,
-      "score": 14,
-      "reliable": false
+      "score": 12,
+      "reliable": true
     },
     {
       "id": "montroi",
@@ -2495,11 +2487,11 @@
     {
       "id": "tangle-teezer",
       "name": "Tangle Teezer",
-      "total": 10,
+      "total": 12,
       "positive": 1,
-      "neutral": 9,
+      "neutral": 11,
       "negative": 0,
-      "score": 10,
+      "score": 8,
       "reliable": true
     },
     {
@@ -2513,6 +2505,16 @@
       "reliable": true
     },
     {
+      "id": "diptyque",
+      "name": "Diptyque",
+      "total": 24,
+      "positive": 1,
+      "neutral": 23,
+      "negative": 0,
+      "score": 4,
+      "reliable": true
+    },
+    {
       "id": "byredo",
       "name": "Byredo",
       "total": 24,
@@ -2523,21 +2525,11 @@
       "reliable": true
     },
     {
-      "id": "diptyque",
-      "name": "Diptyque",
-      "total": 23,
-      "positive": 1,
-      "neutral": 22,
-      "negative": 0,
-      "score": 4,
-      "reliable": true
-    },
-    {
       "id": "nonfiction",
       "name": "NONFICTION",
-      "total": 49,
+      "total": 50,
       "positive": 3,
-      "neutral": 44,
+      "neutral": 45,
       "negative": 2,
       "score": 2,
       "reliable": true
@@ -2740,19 +2732,17 @@
       ],
       "median_norm_usd": 40.52,
       "avg_price_index": 203,
-      "news_count": 23,
+      "news_count": 24,
       "latest_news": {
-        "title": "From Dawn to Dusk: Diptyque Unveils Les Rituels de Soin - Prestige Online - Singapore",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPcWdxOFEyX3B4WUdPWnlYWG90ekx2Z2VILTRNaWRhVEt2R3RFWUV4R3BGRmd2d3JlYnhJVkZPZnhJeTJTQjBqVUlhdnhrUTIwVHB5aXZia0owZnB1VWY4MjVNNDU5Wk81bTRUMlRNWXJ5NTJpd0tBbS1kY2Y0NzMzWWx0OHJwZjhTWXhncUhEcE7SAZYBQVVfeXFMTndpdXQwaEowNkM4Z0ZKN2hJSUFIYW1hMG1pNlgtS1Y4dHpTdXFETTA3bFdXejM5SDVDU2ZrYzJZLTQxNlQzMjRpQzRDdFl0d0JyOVhUNXFlSXVqZWtfWF9QNzd4U2ZSemtKQjZoUEtOYXJXNUMxZFRxRUNtY3c0akstXzFFQmJnZXN6cDgzaGlXRFNTVnVB?oc=5",
-        "published": "2026-08-19",
+        "title": "Diptyque Turns the Ancient Bath Into Modern Luxury With Les Rituels de Soin - stupidDOPE",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdjJuZ09JQ1F6ZVlwVGg3RUpoSnVTWDBxMU9CNFhuRXRzcGdZQnBuV2hFSWhYNHotUl9DTDEwWTQxSm14VjQyb1p4LUk2OXdjaGN3UURnbHJkZTZkeTVZc3FhVlg4QlZYRjZrSVNINUNkT0ZyX3NBdERXcjlQWkpvbDM2MTZDU1NHVUdiOTgtR0dCYjNiMmtPV0VmclBiOWl2b2lRQUVvZkk5QjQ?oc=5",
+        "published": "2026-08-23",
         "brand": "diptyque",
-        "source": "Prestige Online - Singapore",
+        "source": "stupidDOPE",
         "region": "global",
         "scope": "brand",
-        "summary": "From Dawn to Dusk: Diptyque Unveils Les Rituels de Soin &nbsp;&nbsp; Prestige Online - Singapore",
-        "tags": [
-          "product_launch"
-        ],
+        "summary": "Diptyque Turns the Ancient Bath Into Modern Luxury With Les Rituels de Soin &nbsp;&nbsp; stupidDOPE",
+        "tags": [],
         "brand_name": "Diptyque",
         "tone": "neutral"
       }
@@ -3077,7 +3067,7 @@
       ],
       "median_norm_usd": 14.16,
       "avg_price_index": 86,
-      "news_count": 13,
+      "news_count": 14,
       "latest_news": {
         "title": "This Music Festival Had Its Own Grown Alchemist Spa - Hypebae",
         "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSlpTQ2tuQ1FkVmZHQWltSzg1TjFmM19QSGczQWJaSHhlNXBTWElkZUp6TDFhYkplSnYtRlo0dnY5OFVDa3ZjdjJqSE5BekozenVIMDBMOTdsYkNCbkEwUTRWVWRSNHh4TGNKa3BKUTlPUTVBVUx1cG1GSF9BR1NvUTJOTTVibEFM?oc=5",
@@ -3304,7 +3294,7 @@
       ],
       "median_norm_usd": 40.0,
       "avg_price_index": 159,
-      "news_count": 64,
+      "news_count": 65,
       "latest_news": {
         "title": "Jo Malone’s Fortnite test shows how beauty enters gaming - ContentGrip",
         "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ZTmNkejc3aWdfay1aRWxyc2ZsVWd1M0w1M0hQQUhEVW9sMTNma25CeU50S1Y1MjB5V29FU2lYVDlra1RRWXNoOVY3dkNLNzhhaTZadC1WRFo5MlU?oc=5",
@@ -4124,7 +4114,7 @@
       ],
       "median_norm_usd": 22.61,
       "avg_price_index": 59,
-      "news_count": 15,
+      "news_count": 16,
       "latest_news": {
         "title": "The Best New Fragrances in August, From Dior's Reimagined Miss Dior to Rare Beauty's Second Scent - NewBeauty",
         "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA1bmhJNFI0ZUVfaktpN1RRR2RJSlBfYmgydnhQOEZyckdpdmxTb2lWNFBpTnFLZ0ZWNDlFM1c3WkdQNjJuLXAyVTZmZE1JNVRLcW5Ucmhja1JTWktfSUxKV3B4SXJfNm9sVWVHenVqZw?oc=5",
@@ -4687,19 +4677,19 @@
       ],
       "median_norm_usd": 48.0,
       "avg_price_index": 363,
-      "news_count": 1,
+      "news_count": 2,
       "latest_news": {
-        "title": "From 'Pursuit of Jade' to 'The First Jasmine': Lin Muran's Rise as the New C-drama Crush - Metro.Style",
-        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSEJXYURjbmhRcDJucE83UFVMcS1Cekt4c05jMlBGUkRUVkVKaVBrcDRiOHhTTjgwSHZJYnRaOWpzQzZrdkUzS1RibnZmR3labkZuSjJsbGQ4b015akhRM29qbXlZdTZoZWNqYkNud0N5S3RYZlZrMjFrMHFyZlAySjF1ZnVVN2tKSDJHcnhYNUtfM1IwOG03bUllbmxyaGNWV094UlM3UHM3bnF5U05vejIybVFsZDJRMGhmRjJ3?oc=5",
-        "published": "2026-06-17",
+        "title": "9 best hair growth shampoos that deliver thicker, fuller roots and help minimise shedding - Harper's BAZAAR",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbXVoUk1NdEdkd001UnZLVVdYWWFnc2NNZkI3NWFiOU90Y3FwUWVoaVRRcnQ2cVFDOEtzRTBITU04a0xHWEktR1FnTXFfYjFzUUJSWkk3VE8yOHN4S1hFLWx5NlE2TEJmVEtIUExXSVZqTncxYVJ0OHQ1OHp2eTMzZndBRzdjTmJt?oc=5",
+        "published": "2026-08-18",
         "brand": "sisley",
-        "source": "Metro.Style",
+        "source": "Harper's BAZAAR",
         "region": "global",
         "scope": "brand",
-        "summary": "From 'Pursuit of Jade' to 'The First Jasmine': Lin Muran's Rise as the New C-drama Crush &nbsp;&nbsp; Metro.Style",
+        "summary": "9 best hair growth shampoos that deliver thicker, fuller roots and help minimise shedding &nbsp;&nbsp; Harper's BAZAAR",
         "tags": [],
         "brand_name": "Sisley Paris (Hair Rituel)",
-        "tone": "neutral"
+        "tone": "positive"
       }
     },
     {
@@ -5570,19 +5560,17 @@
       ],
       "median_norm_usd": 15,
       "avg_price_index": 10,
-      "news_count": 10,
+      "news_count": 12,
       "latest_news": {
-        "title": "Tangle Teezer launches first major innovation in a decade - Cosmetics Business",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE82MnA0dnlQb3R6SmtpOVMxTDBCTFF0emdFQ3QtWmRiaEJadXY5Ukp5S0h3NkxnLXZkbm9nUERod2VDUVUtSmxiaG9OalFULVBuMEZqQ3ZtVGFMWDlKUUFIZ1JYd1RsLURpVTlpZ2RaYXN2c0xPTlNVdzFLZw?oc=5",
-        "published": "2026-08-21",
+        "title": "I’m Shocked—This $23 Brush Is My New Secret to Prevent Fine-Hair Breakage - Marie Claire",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPVF9XQU5fMWpJYlhFMWdzbEVtNEZWOU1XRUtITDFUSUZ1ekFJUlZBay1mX0lLeF9WSjY3OWJ5R2pYVEJkZTJIbjU2RG5pREJadkdKaFkxRGhlbFpqdHR1Z25FWUZNSVVVa1lsMUN3MUItRFItYkFuR2hpS2htOTZfWmMzdlF6dFE?oc=5",
+        "published": "2026-08-23",
         "brand": "tangle-teezer",
-        "source": "Cosmetics Business",
+        "source": "Marie Claire",
         "region": "global",
         "scope": "brand",
-        "summary": "Tangle Teezer launches first major innovation in a decade &nbsp;&nbsp; Cosmetics Business",
-        "tags": [
-          "product_launch"
-        ],
+        "summary": "I’m Shocked—This $23 Brush Is My New Secret to Prevent Fine-Hair Breakage &nbsp;&nbsp; Marie Claire",
+        "tags": [],
         "brand_name": "Tangle Teezer",
         "tone": "neutral"
       }
@@ -5916,7 +5904,7 @@
       ],
       "median_norm_usd": 65.33,
       "avg_price_index": 416,
-      "news_count": 21,
+      "news_count": 22,
       "latest_news": {
         "title": "Jo Malone and Tom Ford are now 'billion-dollar brands' as the Estée Lauder Companies reports return to sales growth - glossy.co",
         "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOSDlkdk5pZ21Hd0lvVzcxcHhvS1Q0eHE3ZEc2eHpicGdBSk5XajE1dUktLWhaRmRvZnBNVXI0NU44al9RS21sU2Z6OHEwMTJYRU9LZWxzdFpHcVpIWmpBN3BIZ2Y3UUh2YXRQYWZRVDNBdmFZRjNLaWpJN2V4eHRSQ0ZVYUNZSjA2bVVjMGVORmFMVkRyTGFpQkZDNVBiVG5uQzJmcy11M2s0V0hZVkFISVpRZzBUUDEwUGxGdnA0SDd5MHhFRm54SGRWd1htLW1rVENyV2kyVVhCSTg?oc=5",
@@ -5965,16 +5953,16 @@
       ],
       "median_norm_usd": 89.04,
       "avg_price_index": 98,
-      "news_count": 38,
+      "news_count": 39,
       "latest_news": {
-        "title": "We Tried On and Ranked Every Single Summer Fridays Lip Butter Balm Flavor and Shade - Cosmopolitan",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNeHM1Z0Y1NjUwN2JlVVp0V2NueExVZzVDRWpQWjRuNDVxSzl4WGxXYXpIRGs2MEhpZ3FMV1VySjZjZlJCQlEzaXpzV01CdW10U2xITDYwdklJQmN3MmpESXlTYW5rNWVsUUVvbDNYQ3BDU3MxMnROczF3WDBhaDRQTnlHX0VGcXIzczZ4TFptVlFOakFsMUhSMU5ZaDhQYVU?oc=5",
-        "published": "2026-08-18",
+        "title": "We Tried On and Ranked Every Single Summer Fridays Lip Butter Balm Flavor and Shade - AOL.com",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbEowU0xHMnB2RnZ0c1ZHekdCMjRTM0U0WndQUmpmdHQ1Slk1UGRZcHFKV3dUWmUwMXdBYkRNTzlzNENJbXVRLThicWppNW0xZ1BjdDN6QmJmRG1sX0RxV0ozNUtCaUZOZHZJWkhsM3k2YU9XcFFVS0w4Ty10dDgyZzBR?oc=5",
+        "published": "2026-08-23",
         "brand": "summer-fridays",
-        "source": "Cosmopolitan",
+        "source": "AOL.com",
         "region": "global",
         "scope": "brand",
-        "summary": "We Tried On and Ranked Every Single Summer Fridays Lip Butter Balm Flavor and Shade &nbsp;&nbsp; Cosmopolitan",
+        "summary": "We Tried On and Ranked Every Single Summer Fridays Lip Butter Balm Flavor and Shade &nbsp;&nbsp; AOL.com",
         "tags": [],
         "brand_name": "Summer Fridays",
         "tone": "neutral"
@@ -6282,21 +6270,21 @@
       ],
       "median_norm_usd": 2.0,
       "avg_price_index": 10,
-      "news_count": 47,
+      "news_count": 49,
       "latest_news": {
-        "title": "Beiersdorf stock holds steady as Nivea expansion supports long term growth - Ad-hoc-news.de",
-        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNMV94ZllQTHV1cmdfLTl2OGNZaUxvT1VCaHNwcWNEVEFiQ1RrQ1ZuMW9lX0x5NExSRTV5R1EtQTdOcXIyWTN4cFhMa1V2VXU0eEVWdm1vcmNrbkZMYjk0R1JQYUJ6bGNMMFIxeVFldFNfU3NpVE5YNVRrYVhPaGF4Sm56TklmR2tRd2EycWNkTnF5TC1pVHNXNS1VeGxiOW14WnhmcDk1LWJqY1kzNTBEQjVGeEFBNlFoNnVNaW9TZkxJTFRYM2VfQTQ5WFJjX1dVcllV?oc=5",
-        "published": "2026-08-21",
+        "title": "Nivea launches its €17.99 anti-ageing night cream that works while you sleep - Paris Select Book",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPYzY4N3F3M3VCUmVYbmt0T09KZjNienpud080b2pISEtlQ2pBNXRCOVJPUUI5bDMwU2FnLTRTNlFFRERVSFJCdWx6cGh4MGczMlMtSk5VRjZ2ZnJ0Zzd3ZnpmMTZlZzRVVjB1LUhrOHhCTGdNS25WWVQxSVFydXE3eXpkSWdETHRvWG5zYkxNdzItbV9oXzRybjA0UXZsS2VSb21kbFdzUnQ5VVdZUkg2MjBQckFEWEpuSUhkYVljNU4?oc=5",
+        "published": "2026-08-23",
         "brand": "nivea",
-        "source": "Ad-hoc-news.de",
+        "source": "Paris Select Book",
         "region": "global",
         "scope": "brand",
-        "summary": "Beiersdorf stock holds steady as Nivea expansion supports long term growth &nbsp;&nbsp; Ad-hoc-news.de",
+        "summary": "Nivea launches its €17.99 anti-ageing night cream that works while you sleep &nbsp;&nbsp; Paris Select Book",
         "tags": [
-          "retail_expansion"
+          "product_launch"
         ],
         "brand_name": "NIVEA",
-        "tone": "positive"
+        "tone": "neutral"
       }
     },
     {
@@ -6696,7 +6684,7 @@
       ],
       "median_norm_usd": 15.33,
       "avg_price_index": 113,
-      "news_count": 49,
+      "news_count": 50,
       "latest_news": {
         "title": "UAE cuts Iran trade amid threats by Tehran, Trump - Yahoo",
         "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPX0IybnpLVVU1QUhFelJ2eFEzVWE1Z3lMY1JEZUFfdTBCdFBDZUNNYU1rQWNRdVdfQUNuMVNXMllYQWl0T3dvV0doUTBYUklRa3YzRlJuS1gzeDdkbWczUDM1S3RUWUF3cjliZ3Eyb2pady1zZ2ZZRW9RQXZEU09DYlhmaTVzdUJHdzNKaA?oc=5",
@@ -6750,7 +6738,7 @@
       ],
       "median_norm_usd": 73.2,
       "avg_price_index": 148,
-      "news_count": 26,
+      "news_count": 27,
       "latest_news": {
         "title": "Amouage Elsewhere: Oman, Singapore and the enduring spirit of maritime trade - Prestige Online - Singapore",
         "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNS0ZxdUNfX0hqbHRxT3V4WGhhTWdqWFFjTVNtYkxESFVrdnJBVXNCRDlxV3Z6VC1heFdxb1lvZXlvVURiV3laY3hvRDN0TDY1QU9ySGM1MEl5V3lTaS1lMHdyVFNEcWlrSUVuSHY3bms2NktqMnZfc2JXd3c3UVJBOG4yQlpicGxBN21YT3BCSU1YV0Voa2lhU00xTEh3OEtrR0RBekhnamxESmJvSEJsY2FBZHZQWjFaaVh3aGkxNUg1QVg30gHKAUFVX3lxTE5PRDZaeExCdWdUdmp4dTdVVEdDc0V5TEpfVGVpc2U0bUU4bzR2QVVOb0cxXzdvQ2o4T2loR3M3WENYNmlRaGRsNDhTSUthUEJSRVlHTkx1d2d6NTlFdlVNcVk1V2FTVmtQbk9WaW96V3I5QnA3VW9LZHowQ2FSRXVFSEpPWEVjYUV3bFRFeTNNM3R5eG9BMlRaTWpwZkdVdGpuMkRxWXBCcHBWWkZvQm95Z0tvQmhzaXFxcTkyUHZERU05RzA4Q0tqQUE?oc=5",
@@ -6944,7 +6932,7 @@
       ],
       "median_norm_usd": 12.0,
       "avg_price_index": 109,
-      "news_count": 7,
+      "news_count": 8,
       "latest_news": {
         "title": "Bold marketing move rescues The Camel Soap Factory - My Startup World",
         "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNNTVFSTBNZ3JXeXVhQTFCNmZZcjZ5VTFLQTg5azhZOGdNSGd5a1BSdGphR3NWcVJ0T1p0ejNsUGVoamhHSkJHSzF1ejRWVFBqc1RoRW9TU0R3TVlJMVNPVGxtVERTVl9iN2g2T3RJZHZLdENDQlVJMzZYSTJBMmxsamxxblU?oc=5",
@@ -16933,6 +16921,145 @@
   ],
   "news": [
     {
+      "title": "Walmart Raises FY27 Outlook as Q2 Revenue Reaches $187.9 Billion",
+      "url": "https://www.globalcosmeticsnews.com/walmart-raises-fy27-outlook-as-q2-revenue-reaches-187-9-billion/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Walmart has raised its fiscal 2027 outlook after delivering second-quarter revenue growth of 5.9 percent to $187.9 billion, supported by growth across its US and international businesses and continued expansion in e-commerce.  \n The post  Walmart Raises FY27 Outlook as Q2 Revenue Reaches $187.9 Billion  appeared first on  Global Cosmetics News .",
+      "tags": [
+        "retail_expansion",
+        "corporate"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Mary Kay accelerates digital transformation with e-commerce, AI and social commerce push",
+      "url": "https://www.globalcosmeticsnews.com/mary-kay-accelerates-digital-transformation-with-e-commerce-ai-and-social-commerce-push/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Mary Kay is accelerating the digital transformation of its direct-selling beauty model, expanding its My Shop e-commerce platform, AI-powered beauty technology and social-first initiatives as it seeks to engage a new generation of consumers and Independent Beauty Consultants. \n The post  Mary Kay accelerates digital transformation with e-commerce, AI and social commerce push  appeared first on  G",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Coty Appoints Soraya Benchikh as CFO Amid Business Transformation",
+      "url": "https://www.globalcosmeticsnews.com/coty-appoints-soraya-benchikh-as-cfo-amid-business-transformation/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Coty has appointed Soraya Benchikh as Chief Financial Officer, effective September 1, 2026, as the beauty group continues to reshape its leadership and operating structure. Benchikh succeeds Laurent Mercier. \n The post  Coty Appoints Soraya Benchikh as CFO Amid Business Transformation  appeared first on  Global Cosmetics News .",
+      "tags": [
+        "campaign_pr"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "South Korea passes landmark law to accelerate K-beauty industry growth",
+      "url": "https://www.globalcosmeticsnews.com/south-korea-passes-landmark-law-to-accelerate-k-beauty-industry-growth/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "South Korea’s National Assembly has passed the Act on the Fostering and Support of the Cosmetics Industry, establishing the country’s first dedicated legal framework for developing cosmetics as a strategic national growth and export industry. \n The post  South Korea passes landmark law to accelerate K-beauty industry growth  appeared first on  Global Cosmetics News .",
+      "tags": [],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Kiko Milano enters Uruguay with €8.55 million expansion plan",
+      "url": "https://www.globalcosmeticsnews.com/kiko-milano-enters-uruguay-with-e8-55-million-expansion-plan/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Kiko Milano is expanding its Latin American presence with its entry into Uruguay, committing €8.55 million over five years to establish a network of eight stores, with the market potentially serving as a springboard for further regional expansion. \n The post  Kiko Milano enters Uruguay with €8.55 million expansion plan  appeared first on  Global Cosmetics News .",
+      "tags": [
+        "retail_expansion"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "The Most-Loved Fashion and Beauty Brands by Gen Z on TikTok",
+      "url": "https://retailboss.co/reports/most-loved-gen-z-fashion-beauty-brands-tiktok/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Fashion and beauty brands ranked by Gen Z affinity, engagement and cultural visibility on TikTok.",
+      "tags": [],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "When Luxury Brands Split",
+      "url": "https://retailboss.co/reports/when-luxury-brands-split/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "The data behind two survival strategies in a fracturing global luxury market.",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Top 10 Luxury Brands Gaining Attention Before Paris Fashion Week",
+      "url": "https://retailboss.co/reports/luxury-brands-attention-before-paris-fashion-week/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Luxury brands ranked by composite attention ahead of Paris Fashion Week Men’s Spring-Summer 2027.",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Top 10 US Beauty Brands Launching in Dubai and the UAE",
+      "url": "https://retailboss.co/reports/us-beauty-brands-launching-dubai-uae/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "US beauty brands entering Dubai and the UAE through strategic retail and distribution partnerships.",
+      "tags": [
+        "collaboration"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Top 10 Most Popular Luxury Brands in the USA",
+      "url": "https://retailboss.co/reports/most-popular-luxury-brands-usa/",
+      "published": "2026-08-24",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Luxury fashion brands ranked by normalized online search interest in the United States.",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
       "title": "We asked 14 women for their best under-$30 beauty secret. They delivered. - Mamamia",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5oVi1FUUlJVzMwNnZ3RkNYbGFWUWNfWUFMVm9fVmtaRzc4MDlEM0lTRjVPVXh4ZzB3SHJCSkhVNmdXeGdNQk1UY1JwWXpPZzZKTjVBVXIzMF9TOS1WVE93VllPdlVLY2x6?oc=5",
       "published": "2026-08-23",
@@ -16944,6 +17071,89 @@
       "tags": [],
       "brand_name": "The Body Shop",
       "tone": "positive"
+    },
+    {
+      "title": "Diptyque Turns the Ancient Bath Into Modern Luxury With Les Rituels de Soin - stupidDOPE",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdjJuZ09JQ1F6ZVlwVGg3RUpoSnVTWDBxMU9CNFhuRXRzcGdZQnBuV2hFSWhYNHotUl9DTDEwWTQxSm14VjQyb1p4LUk2OXdjaGN3UURnbHJkZTZkeTVZc3FhVlg4QlZYRjZrSVNINUNkT0ZyX3NBdERXcjlQWkpvbDM2MTZDU1NHVUdiOTgtR0dCYjNiMmtPV0VmclBiOWl2b2lRQUVvZkk5QjQ?oc=5",
+      "published": "2026-08-23",
+      "brand": "diptyque",
+      "source": "stupidDOPE",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Diptyque Turns the Ancient Bath Into Modern Luxury With Les Rituels de Soin &nbsp;&nbsp; stupidDOPE",
+      "tags": [],
+      "brand_name": "Diptyque",
+      "tone": "neutral"
+    },
+    {
+      "title": "I’m Shocked—This $23 Brush Is My New Secret to Prevent Fine-Hair Breakage - Marie Claire",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPVF9XQU5fMWpJYlhFMWdzbEVtNEZWOU1XRUtITDFUSUZ1ekFJUlZBay1mX0lLeF9WSjY3OWJ5R2pYVEJkZTJIbjU2RG5pREJadkdKaFkxRGhlbFpqdHR1Z25FWUZNSVVVa1lsMUN3MUItRFItYkFuR2hpS2htOTZfWmMzdlF6dFE?oc=5",
+      "published": "2026-08-23",
+      "brand": "tangle-teezer",
+      "source": "Marie Claire",
+      "region": "global",
+      "scope": "brand",
+      "summary": "I’m Shocked—This $23 Brush Is My New Secret to Prevent Fine-Hair Breakage &nbsp;&nbsp; Marie Claire",
+      "tags": [],
+      "brand_name": "Tangle Teezer",
+      "tone": "neutral"
+    },
+    {
+      "title": "This New Hairbrush Detangles, Adds Shine and Volume, and Boosts Scalp Health—and It’s Less Than $25 - Women's Health",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQ2dHd21rdGtlSk5ua1NDalRNY2VzbnNsWTdydlZFbGtCMjJiZzd4VmFQTGZ2TFh1X0lBMU1EZi1Ea0otQ0YwclNlZk81bWxuZG5JY2QxWmFfZDlMejhPZ1Iyb1FxRTMyRXFzQUd0dW45eExPeDJzRjZSNlZuNjNYWnhvVlJQNFVoeGFndFFWaGdoYXc?oc=5",
+      "published": "2026-08-23",
+      "brand": "tangle-teezer",
+      "source": "Women's Health",
+      "region": "global",
+      "scope": "brand",
+      "summary": "This New Hairbrush Detangles, Adds Shine and Volume, and Boosts Scalp Health—and It’s Less Than $25 &nbsp;&nbsp; Women's Health",
+      "tags": [],
+      "brand_name": "Tangle Teezer",
+      "tone": "neutral"
+    },
+    {
+      "title": "We Tried On and Ranked Every Single Summer Fridays Lip Butter Balm Flavor and Shade - AOL.com",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbEowU0xHMnB2RnZ0c1ZHekdCMjRTM0U0WndQUmpmdHQ1Slk1UGRZcHFKV3dUWmUwMXdBYkRNTzlzNENJbXVRLThicWppNW0xZ1BjdDN6QmJmRG1sX0RxV0ozNUtCaUZOZHZJWkhsM3k2YU9XcFFVS0w4Ty10dDgyZzBR?oc=5",
+      "published": "2026-08-23",
+      "brand": "summer-fridays",
+      "source": "AOL.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "We Tried On and Ranked Every Single Summer Fridays Lip Butter Balm Flavor and Shade &nbsp;&nbsp; AOL.com",
+      "tags": [],
+      "brand_name": "Summer Fridays",
+      "tone": "neutral"
+    },
+    {
+      "title": "Nivea launches its €17.99 anti-ageing night cream that works while you sleep - Paris Select Book",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPYzY4N3F3M3VCUmVYbmt0T09KZjNienpud080b2pISEtlQ2pBNXRCOVJPUUI5bDMwU2FnLTRTNlFFRERVSFJCdWx6cGh4MGczMlMtSk5VRjZ2ZnJ0Zzd3ZnpmMTZlZzRVVjB1LUhrOHhCTGdNS25WWVQxSVFydXE3eXpkSWdETHRvWG5zYkxNdzItbV9oXzRybjA0UXZsS2VSb21kbFdzUnQ5VVdZUkg2MjBQckFEWEpuSUhkYVljNU4?oc=5",
+      "published": "2026-08-23",
+      "brand": "nivea",
+      "source": "Paris Select Book",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Nivea launches its €17.99 anti-ageing night cream that works while you sleep &nbsp;&nbsp; Paris Select Book",
+      "tags": [
+        "product_launch"
+      ],
+      "brand_name": "NIVEA",
+      "tone": "neutral"
+    },
+    {
+      "title": "Sunday Business: Environmental Matters",
+      "url": "https://www.globalcosmeticsnews.com/sunday-business-environmental-matters/",
+      "published": "2026-08-23",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "In this monthly roundup, sustainability remains firmly embedded in the beauty and personal care industry’s investment agenda, with companies moving beyond headline commitments toward practical changes in energy, packaging, materials and circularity. From carbon utilisation and renewable energy to refill systems and recycled materials, the focus is increasingly on building environmental improvemen",
+      "tags": [
+        "sustainability",
+        "corporate"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
     },
     {
       "title": "Global Cosmetics News – Weekly Review | Week 34, August 2026",
@@ -18619,6 +18829,19 @@
       "tone": "positive"
     },
     {
+      "title": "13 best Jo Malone perfumes that are fresh and addictive – from cult classics to brand new scents for 2026 - cosmopolitan.com",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQXFkTFN0ODYweEFtNk9IQ2EyMWUzRmp6a09taVNDOHZsYzdHNzVxSW1oY0h5RVdvc0ExSE02bTZGSDdvQnU1OGFwbmNrb192aUJVOER5TDFIdUxXRC1faHp5RmFES1pBU1hJZHRGVXFrRWRjTGRCTENxMWRYQWRIalpUSXVReVNqamxia1QwcHJuT2Zrd0ww?oc=5",
+      "published": "2026-08-20",
+      "brand": "jo-malone",
+      "source": "cosmopolitan.com",
+      "region": "global",
+      "scope": "brand",
+      "summary": "13 best Jo Malone perfumes that are fresh and addictive – from cult classics to brand new scents for 2026 &nbsp;&nbsp; cosmopolitan.com",
+      "tags": [],
+      "brand_name": "Jo Malone London",
+      "tone": "positive"
+    },
+    {
       "title": "Bath & Body Works Fragrances Don’t Have to Smell Like Everyone Else—Here’s How an Expert Layers Them - Real Simple",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOdXJGVkhHRGRjZWFCNkFvQmkwNTQ2MGhnOTRGdGpCNHd2U3lzcTlMSy1IVnBZZjlndl9zYzNwQ3E3ekF3dWlwR0VQc2kweXBuUURJVUxaaWpiTjNIT2dwSGltMHc1X01raDVOdEc3MTBVaXZudlNwSGFfOVhXczlBbjlHdFk5Sk84QU8wUmlHdmJnQTBSRG0zNA?oc=5",
       "published": "2026-08-19",
@@ -19324,6 +19547,19 @@
       "region": "uae",
       "scope": "brand",
       "summary": "Iran denies missile attack on UAE &nbsp;&nbsp; Yahoo",
+      "tags": [],
+      "brand_name": "NONFICTION",
+      "tone": "neutral"
+    },
+    {
+      "title": "UAE Suspends Trade With Iran After Reported Missile Strikes - Yahoo",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORWtEVUh3UU5zTnRhMGNfRi1YZ0pzT0lUcENiUDlnblRfOHU5eldpVzdURzNneUVfdkUwa2VON1hoQnVVUHpCVWZxbEs4MzNxcmJWODFIVHViYkoyLUR2V1lueFlXUEo4QmtpYUQ2NmJFbTBnTlFJM2NXZVpaYWxoX3pTU2hFNDVQd0NqYkNsdU82M1U?oc=5",
+      "published": "2026-08-19",
+      "brand": "nonfiction",
+      "source": "Yahoo",
+      "region": "uae",
+      "scope": "brand",
+      "summary": "UAE Suspends Trade With Iran After Reported Missile Strikes &nbsp;&nbsp; Yahoo",
       "tags": [],
       "brand_name": "NONFICTION",
       "tone": "neutral"
@@ -20215,6 +20451,32 @@
       "summary": "We Tried On and Ranked Every Single Summer Fridays Lip Butter Balm Flavor and Shade &nbsp;&nbsp; Yahoo",
       "tags": [],
       "brand_name": "Summer Fridays",
+      "tone": "neutral"
+    },
+    {
+      "title": "9 best hair growth shampoos that deliver thicker, fuller roots and help minimise shedding - Harper's BAZAAR",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbXVoUk1NdEdkd001UnZLVVdYWWFnc2NNZkI3NWFiOU90Y3FwUWVoaVRRcnQ2cVFDOEtzRTBITU04a0xHWEktR1FnTXFfYjFzUUJSWkk3VE8yOHN4S1hFLWx5NlE2TEJmVEtIUExXSVZqTncxYVJ0OHQ1OHp2eTMzZndBRzdjTmJt?oc=5",
+      "published": "2026-08-18",
+      "brand": "sisley",
+      "source": "Harper's BAZAAR",
+      "region": "global",
+      "scope": "brand",
+      "summary": "9 best hair growth shampoos that deliver thicker, fuller roots and help minimise shedding &nbsp;&nbsp; Harper's BAZAAR",
+      "tags": [],
+      "brand_name": "Sisley Paris (Hair Rituel)",
+      "tone": "positive"
+    },
+    {
+      "title": "du to empower 10,000 SMEs with Agentic AI capabilities - My Startup World",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQV2tGV09IYXJDWnlLbXl1SmZHY0pITVQ1SW9lSDFvUUNucWpaOTZOTWk5SUY4ck5yd3ZSVzZmM29DY2JPWDlaUmFzMm1tcW4wTFRRTmM4YlhNMkpLOVZ6dmFGb1hEM0NENkJoV3NsQ1RhOHNiWnpFTFpIdzM4UGREcW9wSldweGtI?oc=5",
+      "published": "2026-08-18",
+      "brand": "the-camel-soap-factory",
+      "source": "My Startup World",
+      "region": "uae",
+      "scope": "brand",
+      "summary": "du to empower 10,000 SMEs with Agentic AI capabilities &nbsp;&nbsp; My Startup World",
+      "tags": [],
+      "brand_name": "The Camel Soap Factory",
       "tone": "neutral"
     },
     {
@@ -24825,6 +25087,19 @@
       "summary": "Why Investors Are Finally Betting Big on Textured Hair Innovation &nbsp;&nbsp; BeautyMatter",
       "tags": [],
       "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Overnight Driver Jobs - Toimihenkilöliitto Erto",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE44QUx3QXFoeE0wVU95OW9jd3o0SGNyaFRxVFRfdWhTcnhaLVd4UWxFM0pxV1pDTWRCTzVubFZrTnJVSjhOM2haNzZ0aVQ1elQtU0piZmZqVmg4R3ZncVE?oc=5",
+      "published": "2026-08-11",
+      "brand": "grown-alchemist",
+      "source": "Toimihenkilöliitto Erto",
+      "region": "uae",
+      "scope": "brand",
+      "summary": "Overnight Driver Jobs &nbsp;&nbsp; Toimihenkilöliitto Erto",
+      "tags": [],
+      "brand_name": "Grown Alchemist",
       "tone": "neutral"
     },
     {
@@ -31126,6 +31401,19 @@
       "tone": "neutral"
     },
     {
+      "title": "Why Peony Is the Perfume Note You’ll Be Wearing Everywhere in 2026 - ELLE",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE54dkFlNjBjd0YyQXZaWDhnQlRKUnpUdEhFR0JZZERMVGJDVXJEbXdTOXJya1BnUEdCTEowVWlZNUUwaUFBeEhaRFZKYnloTkNkd3RxQlVQSW9LQm1Meld2cUJTWW9jUURWdnc?oc=5",
+      "published": "2026-07-29",
+      "brand": "nest-new-york",
+      "source": "ELLE",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Why Peony Is the Perfume Note You’ll Be Wearing Everywhere in 2026 &nbsp;&nbsp; ELLE",
+      "tags": [],
+      "brand_name": "NEST New York",
+      "tone": "neutral"
+    },
+    {
       "title": "The Nordstrom Anniversary Sale Is a Good Time to Buy Fancy Fragrances - New York Magazine",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTlRDYkpaREdfeE96Y1M3Ri1FdVZGRUVtazYzWExUS0p6d0hMRXhidlJrUm1aNnpZcjhYenJzV2xwaEJrcThOcjMwRGg2LW1PZ1RWR190a1hKRUxHOFJOZnNCRTlWaFlaclNUTDJ2eDBYd2xUd2c2dHJFeEEtUC01cFZYLUE3WjBiNXRCRVNiWXNMcjNrc3R6Zg?oc=5",
       "published": "2026-07-28",
@@ -35718,6 +36006,21 @@
       "tone": "neutral"
     },
     {
+      "title": "The chicest designer beach club pop-ups to visit this summer - Emirates Woman",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWUJPNkFjeEJGcmN3RHh3d055cU5OUXdaTlNOaFhVNm8yX241ZUdrWWRva0JZVjE2UTZsMk5YR3lnTHNhdU5MNGlvbkVhZzdqNV82bU5mVVdUOHRDczJpRldtZFNIcUh2V2hJM3pSQV85dnN5MU1RNnBLWkNqYm9HUWs2YUNYbUtzRmY2aFFTZGk?oc=5",
+      "published": "2026-06-30",
+      "brand": "amouage",
+      "source": "Emirates Woman",
+      "region": "uae",
+      "scope": "brand",
+      "summary": "The chicest designer beach club pop-ups to visit this summer &nbsp;&nbsp; Emirates Woman",
+      "tags": [
+        "experiential"
+      ],
+      "brand_name": "Amouage",
+      "tone": "neutral"
+    },
+    {
       "title": "I Ditched Dated Floral Fragrances for These Intoxicating Cool-Girl Scents—Shop Under-the-Radar Perfumes From $20 - instyle.com",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5qRTMwWnVNZGFISndhSHM0X09SWXRORU5xWGhTZmdYT29VdGhfMWotZ3pzRTRLY3F3Yml3STRIdEZqVkMwMTdydng4STk4UUtBT1pEVkFSS1ZfYldUd0sxdUtHNEEzS2NhdTcwYQ?oc=5",
       "published": "2026-06-29",
@@ -36321,6 +36624,19 @@
       "tags": [],
       "brand_name": "Crown Affair",
       "tone": "positive"
+    },
+    {
+      "title": "Shin Hae-sun at the Tom Ford Beauty Taormina Orange photo call - Aju Press",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Rd3hYUTI1RENKZGhXZExuV2tvaFRQcXlaWG9KM2R3RFVsRG4tSHNvNmNtZ3lIMFFqOHg4cDhwejRwS2VNbXBNMjBxNmRsVzhiQ215TmVWXzY1dkHSAVdBVV95cUxNMlY4bEJHU0VvWmZLTHlFc1pHYkx3dlNkVGpNZ1JhWkxCU2d0NjNLYjM1Sk5qMGdRZGVROWZ4dm1HSmZtTHRRN2hZODFpaHQ1dXVTaTNCcU0?oc=5",
+      "published": "2026-06-24",
+      "brand": "tom-ford-beauty",
+      "source": "Aju Press",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Shin Hae-sun at the Tom Ford Beauty Taormina Orange photo call &nbsp;&nbsp; Aju Press",
+      "tags": [],
+      "brand_name": "TOM FORD BEAUTY",
+      "tone": "neutral"
     },
     {
       "title": "Bath & Body Works expands beyond malls with Ulta Beauty partnership, revives fan-favorite scent - Fox Business",
@@ -38824,6 +39140,19 @@
       "tone": "neutral"
     },
     {
+      "title": "Summer-Ready Body Care Collections - Trend Hunter",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9DdlZ3MlVmODhyVlJiWE9CZnhCd3k3aUZWN2F2T1ZUSG51QUtfWWhwdlFaY2NrUm1fRDhoZVpxR1B0dVhSSERGOGd1UEhHZkxNSUl4MkNLNjBadUl4QXM3cEtFY9IBaEFVX3lxTE1Hak1kYm9RNWhMNUZWVUREbUZQbV9RWTVBZFZsNmE2dTcwalAtNFQySjlPN3V1NklWMVdWcWZwTi1CVTZXaTVQcnVrZlZzYTZoOEIxR1U3MV8teE95SDExcE5qWFhBVzVf?oc=5",
+      "published": "2026-05-29",
+      "brand": "nivea",
+      "source": "Trend Hunter",
+      "region": "global",
+      "scope": "brand",
+      "summary": "Summer-Ready Body Care Collections &nbsp;&nbsp; Trend Hunter",
+      "tags": [],
+      "brand_name": "NIVEA",
+      "tone": "neutral"
+    },
+    {
       "title": "Spanish Landscapes Inspire LOEWE Perfumes’ New Campaign - A&E Magazine",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOeEhua21fbG5yVFB0NkVOa3pRaFZXT2xmalJBNk9FMHRpOVNlMkNJdHRnQXBkby1Bc2htQWJjcnJMMGdWcnVTTUNPZGJLd29vbzVmSEtIMEpfR0VPeTVJcEZfYnBMSUxqSEV3WkhGQmlWSFF2aEtZMGFYM01qUnA3aF9ueVE5YmpmbXc?oc=5",
       "published": "2026-05-28",
@@ -40658,15 +40987,15 @@
       "tone": "neutral"
     }
   ],
-  "news_generated_at": "2026-08-23T05:38:24+00:00",
+  "news_generated_at": "2026-08-24T05:46:51+00:00",
   "tag_counts": {
-    "retail_expansion": 206,
-    "corporate": 107,
-    "product_launch": 158,
-    "campaign_pr": 76,
-    "collaboration": 76,
-    "experiential": 46,
-    "sustainability": 42,
+    "retail_expansion": 208,
+    "corporate": 109,
+    "campaign_pr": 77,
+    "collaboration": 77,
+    "product_launch": 159,
+    "sustainability": 43,
+    "experiential": 47,
     "awards_press": 14
   },
   "stats": {
@@ -40676,7 +41005,7 @@
     "verified_prices": 0,
     "verified_pct": 0,
     "aed_observed": 2,
-    "news_items": 1722,
+    "news_items": 1747,
     "watchlist": 17
   }
 }
