@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T10:28:46+00:00",
+  "generated_at": "2026-08-31T11:52:32+00:00",
   "findings": [
     {
       "kind": "same_tier_gap",
@@ -133,16 +133,16 @@
     },
     {
       "kind": "accelerating",
-      "headline": "NIVEA has taken 5.31× more share of category coverage in the last 30 days",
-      "detail": "6.3% of all headlines in the last 30 days, against 1.1% in the 30 before (43 vs 4 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 5 brands are gaining share on this measure. Volume is not sentiment.",
-      "metric": "5.31×",
+      "headline": "Jo Malone London has taken 14.58× more share of category coverage in the last 30 days",
+      "detail": "9.6% of all headlines in the last 30 days, against 0.5% in the 30 before (63 vs 2 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 7 brands are gaining share on this measure. Volume is not sentiment.",
+      "metric": "14.58×",
       "magnitude": 65.0,
       "refs": [
-        "nivea"
+        "jo-malone"
       ],
       "tab": "news",
       "focus": {
-        "brand": "nivea"
+        "brand": "jo-malone"
       },
       "rank": 9
     },
@@ -197,10 +197,10 @@
     },
     {
       "kind": "initiative",
-      "headline": "Retail expansion accounts for 29% of everything the category is talking about",
-      "detail": "255 of 894 tagged headlines. The quietest front is awards & press at 18 — a theme nobody has claimed is either irrelevant or unoccupied.",
-      "metric": "29%",
-      "magnitude": 36.40939597315436,
+      "headline": "Retail expansion accounts for 28% of everything the category is talking about",
+      "detail": "261 of 916 tagged headlines. The quietest front is awards & press at 21 — a theme nobody has claimed is either irrelevant or unoccupied.",
+      "metric": "28%",
+      "magnitude": 36.39737991266376,
       "refs": [],
       "tab": "pr",
       "focus": {
@@ -1281,7 +1281,7 @@
       "index": 148,
       "skus": 2,
       "uae": "boutique",
-      "news": 30,
+      "news": 32,
       "ownership": "corporate",
       "challenger": false
     },
@@ -1330,13 +1330,13 @@
       "id": "jo-malone",
       "name": "Jo Malone London",
       "tier": "luxury",
-      "recent": 64,
-      "prior": 1,
-      "delta": 63,
-      "share_recent": 9.4,
-      "share_prior": 0.3,
-      "ratio": 23.02,
-      "basis": "newly_covered"
+      "recent": 63,
+      "prior": 2,
+      "delta": 61,
+      "share_recent": 9.6,
+      "share_prior": 0.5,
+      "ratio": 14.58,
+      "basis": "gaining_share"
     },
     {
       "id": "the-body-shop",
@@ -1369,9 +1369,9 @@
       "recent": 43,
       "prior": 4,
       "delta": 39,
-      "share_recent": 6.3,
-      "share_prior": 1.1,
-      "ratio": 5.31,
+      "share_recent": 6.6,
+      "share_prior": 1.0,
+      "ratio": 5.66,
       "basis": "gaining_share"
     },
     {
@@ -1411,51 +1411,27 @@
       "basis": "newly_covered"
     },
     {
-      "id": "bath-body-works",
-      "name": "Bath & Body Works",
-      "tier": "mass",
-      "recent": 84,
-      "prior": 11,
-      "delta": 73,
-      "share_recent": 12.4,
-      "share_prior": 2.9,
-      "ratio": 4.04,
-      "basis": "gaining_share"
-    },
-    {
       "id": "act-acre",
       "name": "Act+Acre",
       "tier": "premium",
       "recent": 3,
       "prior": 0,
       "delta": 3,
-      "share_recent": 0.4,
+      "share_recent": 0.5,
       "share_prior": 0.0,
       "ratio": 4.0,
       "basis": "newly_covered"
     },
     {
-      "id": "tom-ford-beauty",
-      "name": "TOM FORD BEAUTY",
-      "tier": "luxury",
-      "recent": 15,
-      "prior": 3,
-      "delta": 12,
-      "share_recent": 2.2,
-      "share_prior": 0.8,
-      "ratio": 2.47,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "la-roche-posay",
-      "name": "La Roche-Posay",
-      "tier": "masstige",
-      "recent": 28,
-      "prior": 7,
-      "delta": 21,
-      "share_recent": 4.1,
-      "share_prior": 1.9,
-      "ratio": 2.11,
+      "id": "bath-body-works",
+      "name": "Bath & Body Works",
+      "tier": "mass",
+      "recent": 83,
+      "prior": 12,
+      "delta": 71,
+      "share_recent": 12.7,
+      "share_prior": 3.1,
+      "ratio": 3.94,
       "basis": "gaining_share"
     },
     {
@@ -1465,9 +1441,21 @@
       "recent": 56,
       "prior": 15,
       "delta": 41,
-      "share_recent": 8.2,
-      "share_prior": 4.0,
-      "ratio": 2.01,
+      "share_recent": 8.6,
+      "share_prior": 3.9,
+      "ratio": 2.16,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "la-roche-posay",
+      "name": "La Roche-Posay",
+      "tier": "masstige",
+      "recent": 27,
+      "prior": 8,
+      "delta": 19,
+      "share_recent": 4.1,
+      "share_prior": 2.1,
+      "ratio": 1.92,
       "basis": "gaining_share"
     },
     {
@@ -1477,9 +1465,9 @@
       "recent": 7,
       "prior": 2,
       "delta": 5,
-      "share_recent": 1.0,
+      "share_recent": 1.1,
       "share_prior": 0.5,
-      "ratio": 1.72,
+      "ratio": 1.82,
       "basis": "gaining_share"
     },
     {
@@ -1491,43 +1479,19 @@
       "delta": 7,
       "share_recent": 1.5,
       "share_prior": 0.8,
-      "ratio": 1.7,
+      "ratio": 1.81,
       "basis": "gaining_share"
     },
     {
-      "id": "chunks",
-      "name": "Chunks",
-      "tier": "premium",
-      "recent": 3,
-      "prior": 1,
-      "delta": 2,
-      "share_recent": 0.4,
-      "share_prior": 0.3,
-      "ratio": 1.42,
-      "basis": "newly_covered"
-    },
-    {
-      "id": "amouage",
-      "name": "Amouage",
+      "id": "tom-ford-beauty",
+      "name": "TOM FORD BEAUTY",
       "tier": "luxury",
-      "recent": 10,
+      "recent": 12,
       "prior": 4,
-      "delta": 6,
-      "share_recent": 1.5,
-      "share_prior": 1.1,
-      "ratio": 1.33,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "k18",
-      "name": "K18",
-      "tier": "premium",
-      "recent": 36,
-      "prior": 15,
-      "delta": 21,
-      "share_recent": 5.3,
-      "share_prior": 4.0,
-      "ratio": 1.31,
+      "delta": 8,
+      "share_recent": 1.8,
+      "share_prior": 1.0,
+      "ratio": 1.67,
       "basis": "gaining_share"
     },
     {
@@ -1537,9 +1501,21 @@
       "recent": 5,
       "prior": 2,
       "delta": 3,
-      "share_recent": 0.7,
+      "share_recent": 0.8,
       "share_prior": 0.5,
-      "ratio": 1.29,
+      "ratio": 1.37,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "k18",
+      "name": "K18",
+      "tier": "premium",
+      "recent": 35,
+      "prior": 16,
+      "delta": 19,
+      "share_recent": 5.4,
+      "share_prior": 4.1,
+      "ratio": 1.28,
       "basis": "gaining_share"
     },
     {
@@ -1549,9 +1525,9 @@
       "recent": 22,
       "prior": 10,
       "delta": 12,
-      "share_recent": 3.2,
-      "share_prior": 2.7,
-      "ratio": 1.2,
+      "share_recent": 3.4,
+      "share_prior": 2.6,
+      "ratio": 1.28,
       "basis": "gaining_share"
     },
     {
@@ -1561,33 +1537,21 @@
       "recent": 30,
       "prior": 14,
       "delta": 16,
-      "share_recent": 4.4,
-      "share_prior": 3.8,
-      "ratio": 1.17,
+      "share_recent": 4.6,
+      "share_prior": 3.6,
+      "ratio": 1.25,
       "basis": "gaining_share"
     },
     {
-      "id": "bioderma",
-      "name": "Bioderma",
-      "tier": "masstige",
-      "recent": 4,
-      "prior": 2,
-      "delta": 2,
-      "share_recent": 0.6,
-      "share_prior": 0.5,
-      "ratio": 1.08,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "marius-fabre",
-      "name": "Marius Fabre",
-      "tier": "premium",
-      "recent": 4,
-      "prior": 2,
-      "delta": 2,
-      "share_recent": 0.6,
-      "share_prior": 0.5,
-      "ratio": 1.08,
+      "id": "dove",
+      "name": "Dove",
+      "tier": "mass",
+      "recent": 17,
+      "prior": 8,
+      "delta": 9,
+      "share_recent": 2.6,
+      "share_prior": 2.1,
+      "ratio": 1.24,
       "basis": "gaining_share"
     },
     {
@@ -1599,30 +1563,30 @@
       "delta": 1,
       "share_recent": 0.3,
       "share_prior": 0.3,
-      "ratio": 1.06,
+      "ratio": 1.11,
       "basis": "newly_covered"
     },
     {
-      "id": "dove",
-      "name": "Dove",
-      "tier": "mass",
-      "recent": 17,
-      "prior": 9,
-      "delta": 8,
-      "share_recent": 2.5,
-      "share_prior": 2.4,
-      "ratio": 1.03,
+      "id": "amouage",
+      "name": "Amouage",
+      "tier": "luxury",
+      "recent": 10,
+      "prior": 6,
+      "delta": 4,
+      "share_recent": 1.5,
+      "share_prior": 1.6,
+      "ratio": 0.99,
       "basis": "gaining_share"
     },
     {
-      "id": "byredo",
-      "name": "Byredo",
+      "id": "le-labo",
+      "name": "Le Labo",
       "tier": "luxury",
-      "recent": 16,
-      "prior": 9,
-      "delta": 7,
-      "share_recent": 2.4,
-      "share_prior": 2.4,
+      "recent": 25,
+      "prior": 15,
+      "delta": 10,
+      "share_recent": 3.8,
+      "share_prior": 3.9,
       "ratio": 0.98,
       "basis": "gaining_share"
     },
@@ -1630,24 +1594,12 @@
       "id": "loccitane",
       "name": "L'Occitane en Provence",
       "tier": "premium",
-      "recent": 16,
-      "prior": 10,
+      "recent": 15,
+      "prior": 9,
       "delta": 6,
-      "share_recent": 2.4,
-      "share_prior": 2.7,
-      "ratio": 0.88,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "molton-brown",
-      "name": "Molton Brown",
-      "tier": "premium",
-      "recent": 3,
-      "prior": 2,
-      "delta": 1,
-      "share_recent": 0.4,
-      "share_prior": 0.5,
-      "ratio": 0.86,
+      "share_recent": 2.3,
+      "share_prior": 2.3,
+      "ratio": 0.98,
       "basis": "gaining_share"
     },
     {
@@ -1657,9 +1609,9 @@
       "recent": 3,
       "prior": 2,
       "delta": 1,
-      "share_recent": 0.4,
+      "share_recent": 0.5,
       "share_prior": 0.5,
-      "ratio": 0.86,
+      "ratio": 0.91,
       "basis": "gaining_share"
     },
     {
@@ -1669,9 +1621,21 @@
       "recent": 3,
       "prior": 2,
       "delta": 1,
-      "share_recent": 0.4,
+      "share_recent": 0.5,
       "share_prior": 0.5,
-      "ratio": 0.86,
+      "ratio": 0.91,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "molton-brown",
+      "name": "Molton Brown",
+      "tier": "premium",
+      "recent": 3,
+      "prior": 2,
+      "delta": 1,
+      "share_recent": 0.5,
+      "share_prior": 0.5,
+      "ratio": 0.91,
       "basis": "gaining_share"
     },
     {
@@ -1682,32 +1646,8 @@
       "prior": 4,
       "delta": 2,
       "share_recent": 0.9,
-      "share_prior": 1.1,
-      "ratio": 0.84,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "le-labo",
-      "name": "Le Labo",
-      "tier": "luxury",
-      "recent": 25,
-      "prior": 17,
-      "delta": 8,
-      "share_recent": 3.7,
-      "share_prior": 4.6,
-      "ratio": 0.81,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "ouai",
-      "name": "OUAI",
-      "tier": "premium",
-      "recent": 10,
-      "prior": 7,
-      "delta": 3,
-      "share_recent": 1.5,
-      "share_prior": 1.9,
-      "ratio": 0.8,
+      "share_prior": 1.0,
+      "ratio": 0.9,
       "basis": "gaining_share"
     },
     {
@@ -1718,8 +1658,8 @@
       "prior": 7,
       "delta": 3,
       "share_recent": 1.5,
-      "share_prior": 1.9,
-      "ratio": 0.8,
+      "share_prior": 1.8,
+      "ratio": 0.86,
       "basis": "gaining_share"
     },
     {
@@ -1731,19 +1671,19 @@
       "delta": 1,
       "share_recent": 0.6,
       "share_prior": 0.8,
-      "ratio": 0.77,
+      "ratio": 0.82,
       "basis": "gaining_share"
     },
     {
-      "id": "laneige",
-      "name": "LANEIGE",
-      "tier": "masstige",
-      "recent": 19,
-      "prior": 15,
-      "delta": 4,
-      "share_recent": 2.8,
-      "share_prior": 4.0,
-      "ratio": 0.71,
+      "id": "ouai",
+      "name": "OUAI",
+      "tier": "premium",
+      "recent": 9,
+      "prior": 8,
+      "delta": 1,
+      "share_recent": 1.4,
+      "share_prior": 2.1,
+      "ratio": 0.69,
       "basis": "gaining_share"
     },
     {
@@ -1755,7 +1695,43 @@
       "delta": 0,
       "share_recent": 0.3,
       "share_prior": 0.5,
-      "ratio": 0.65,
+      "ratio": 0.68,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "byredo",
+      "name": "Byredo",
+      "tier": "luxury",
+      "recent": 13,
+      "prior": 12,
+      "delta": 1,
+      "share_recent": 2.0,
+      "share_prior": 3.1,
+      "ratio": 0.66,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "bioderma",
+      "name": "Bioderma",
+      "tier": "masstige",
+      "recent": 3,
+      "prior": 3,
+      "delta": 0,
+      "share_recent": 0.5,
+      "share_prior": 0.8,
+      "ratio": 0.66,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "laneige",
+      "name": "LANEIGE",
+      "tier": "masstige",
+      "recent": 17,
+      "prior": 16,
+      "delta": 1,
+      "share_recent": 2.6,
+      "share_prior": 4.1,
+      "ratio": 0.64,
       "basis": "gaining_share"
     },
     {
@@ -1765,33 +1741,9 @@
       "recent": 5,
       "prior": 7,
       "delta": -2,
-      "share_recent": 0.7,
-      "share_prior": 1.9,
-      "ratio": 0.44,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "christophe-robin",
-      "name": "Christophe Robin",
-      "tier": "premium",
-      "recent": 1,
-      "prior": 2,
-      "delta": -1,
-      "share_recent": 0.1,
-      "share_prior": 0.5,
-      "ratio": 0.43,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "boy-smells",
-      "name": "Boy Smells",
-      "tier": "premium",
-      "recent": 1,
-      "prior": 2,
-      "delta": -1,
-      "share_recent": 0.1,
-      "share_prior": 0.5,
-      "ratio": 0.43,
+      "share_recent": 0.8,
+      "share_prior": 1.8,
+      "ratio": 0.47,
       "basis": "gaining_share"
     },
     {
@@ -1801,9 +1753,33 @@
       "recent": 1,
       "prior": 2,
       "delta": -1,
-      "share_recent": 0.1,
+      "share_recent": 0.2,
       "share_prior": 0.5,
-      "ratio": 0.43,
+      "ratio": 0.46,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "christophe-robin",
+      "name": "Christophe Robin",
+      "tier": "premium",
+      "recent": 1,
+      "prior": 2,
+      "delta": -1,
+      "share_recent": 0.2,
+      "share_prior": 0.5,
+      "ratio": 0.46,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "boy-smells",
+      "name": "Boy Smells",
+      "tier": "premium",
+      "recent": 1,
+      "prior": 2,
+      "delta": -1,
+      "share_recent": 0.2,
+      "share_prior": 0.5,
+      "ratio": 0.46,
       "basis": "gaining_share"
     },
     {
@@ -1814,8 +1790,8 @@
       "prior": 18,
       "delta": -6,
       "share_recent": 1.8,
-      "share_prior": 4.8,
-      "ratio": 0.38,
+      "share_prior": 4.7,
+      "ratio": 0.41,
       "basis": "gaining_share"
     },
     {
@@ -1825,9 +1801,9 @@
       "recent": 7,
       "prior": 11,
       "delta": -4,
-      "share_recent": 1.0,
-      "share_prior": 2.9,
-      "ratio": 0.38,
+      "share_recent": 1.1,
+      "share_prior": 2.8,
+      "ratio": 0.41,
       "basis": "gaining_share"
     },
     {
@@ -1838,8 +1814,8 @@
       "prior": 7,
       "delta": -3,
       "share_recent": 0.6,
-      "share_prior": 1.9,
-      "ratio": 0.36,
+      "share_prior": 1.8,
+      "ratio": 0.39,
       "basis": "gaining_share"
     },
     {
@@ -1849,9 +1825,21 @@
       "recent": 3,
       "prior": 6,
       "delta": -3,
-      "share_recent": 0.4,
+      "share_recent": 0.5,
       "share_prior": 1.6,
-      "ratio": 0.34,
+      "ratio": 0.36,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "aesop",
+      "name": "Aesop",
+      "tier": "luxury",
+      "recent": 5,
+      "prior": 11,
+      "delta": -6,
+      "share_recent": 0.8,
+      "share_prior": 2.8,
+      "ratio": 0.31,
       "basis": "gaining_share"
     },
     {
@@ -1861,33 +1849,9 @@
       "recent": 3,
       "prior": 7,
       "delta": -4,
-      "share_recent": 0.4,
-      "share_prior": 1.9,
-      "ratio": 0.29,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "aesop",
-      "name": "Aesop",
-      "tier": "luxury",
-      "recent": 5,
-      "prior": 12,
-      "delta": -7,
-      "share_recent": 0.7,
-      "share_prior": 3.2,
-      "ratio": 0.26,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "kiehls",
-      "name": "Kiehl's",
-      "tier": "premium",
-      "recent": 8,
-      "prior": 19,
-      "delta": -11,
-      "share_recent": 1.2,
-      "share_prior": 5.1,
-      "ratio": 0.25,
+      "share_recent": 0.5,
+      "share_prior": 1.8,
+      "ratio": 0.31,
       "basis": "gaining_share"
     },
     {
@@ -1899,7 +1863,7 @@
       "delta": -4,
       "share_recent": 0.3,
       "share_prior": 1.6,
-      "ratio": 0.25,
+      "ratio": 0.27,
       "basis": "gaining_share"
     },
     {
@@ -1909,9 +1873,21 @@
       "recent": 1,
       "prior": 4,
       "delta": -3,
-      "share_recent": 0.1,
-      "share_prior": 1.1,
-      "ratio": 0.24,
+      "share_recent": 0.2,
+      "share_prior": 1.0,
+      "ratio": 0.26,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "kiehls",
+      "name": "Kiehl's",
+      "tier": "premium",
+      "recent": 4,
+      "prior": 23,
+      "delta": -19,
+      "share_recent": 0.6,
+      "share_prior": 6.0,
+      "ratio": 0.13,
       "basis": "gaining_share"
     },
     {
@@ -1922,8 +1898,20 @@
       "prior": 4,
       "delta": -4,
       "share_recent": 0.0,
-      "share_prior": 1.1,
-      "ratio": 0.12,
+      "share_prior": 1.0,
+      "ratio": 0.13,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "chunks",
+      "name": "Chunks",
+      "tier": "premium",
+      "recent": 0,
+      "prior": 4,
+      "delta": -4,
+      "share_recent": 0.0,
+      "share_prior": 1.0,
+      "ratio": 0.13,
       "basis": "gaining_share"
     },
     {
@@ -1934,8 +1922,8 @@
       "prior": 14,
       "delta": -12,
       "share_recent": 0.3,
-      "share_prior": 3.8,
-      "ratio": 0.11,
+      "share_prior": 3.6,
+      "ratio": 0.12,
       "basis": "gaining_share"
     },
     {
@@ -1943,11 +1931,11 @@
       "name": "Crown Affair",
       "tier": "premium",
       "recent": 1,
-      "prior": 10,
-      "delta": -9,
-      "share_recent": 0.1,
-      "share_prior": 2.7,
-      "ratio": 0.1,
+      "prior": 9,
+      "delta": -8,
+      "share_recent": 0.2,
+      "share_prior": 2.3,
+      "ratio": 0.12,
       "basis": "gaining_share"
     },
     {
@@ -1955,11 +1943,11 @@
       "name": "Oribe",
       "tier": "luxury",
       "recent": 3,
-      "prior": 24,
-      "delta": -21,
-      "share_recent": 0.4,
-      "share_prior": 6.4,
-      "ratio": 0.09,
+      "prior": 21,
+      "delta": -18,
+      "share_recent": 0.5,
+      "share_prior": 5.4,
+      "ratio": 0.11,
       "basis": "gaining_share"
     },
     {
@@ -1971,7 +1959,19 @@
       "delta": -6,
       "share_recent": 0.0,
       "share_prior": 1.6,
-      "ratio": 0.08,
+      "ratio": 0.09,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "marius-fabre",
+      "name": "Marius Fabre",
+      "tier": "premium",
+      "recent": 0,
+      "prior": 6,
+      "delta": -6,
+      "share_recent": 0.0,
+      "share_prior": 1.6,
+      "ratio": 0.09,
       "basis": "gaining_share"
     }
   ],
@@ -2042,7 +2042,11 @@
     },
     {
       "week": "2026-W35",
-      "count": 262
+      "count": 274
+    },
+    {
+      "week": "2026-W36",
+      "count": 11
     }
   ],
   "tone": [
@@ -2199,11 +2203,11 @@
     {
       "id": "amouage",
       "name": "Amouage",
-      "total": 30,
-      "positive": 10,
-      "neutral": 20,
+      "total": 32,
+      "positive": 11,
+      "neutral": 21,
       "negative": 0,
-      "score": 33,
+      "score": 34,
       "reliable": true
     },
     {
@@ -6752,19 +6756,19 @@
       ],
       "median_norm_usd": 73.2,
       "avg_price_index": 148,
-      "news_count": 30,
+      "news_count": 32,
       "latest_news": {
-        "title": "Men's Perfumes Amouage Perfume Interlude Black Iris Amouage Interlude Black Iris Fragrance Sample Perfume Sample - fuelcarmagazine",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9ZNFNaZWlwSG1PM0xBUjVTcUNKZVBWcUdZU3VfVmJfMDZZTktZWkpiVWp1aGVlOE5fRWFENk93emxYSFNUVEtmd0JHQWdyaVVyaE1WaWpTRWE4VFRPTGc0ZFRwZHc4NHVqMEE?oc=5",
-        "published": "2026-08-26",
+        "title": "Omani Rose: Amouage builds a new fragrance raw material supply chain",
+        "url": "https://www.premiumbeautynews.com/en/omani-rose-amouage-builds-a-new,28099",
+        "published": "2026-08-30",
         "brand": "amouage",
-        "source": "fuelcarmagazine",
+        "source": "Premium Beauty News",
         "region": "global",
-        "scope": "brand",
-        "summary": "Men's Perfumes Amouage Perfume Interlude Black Iris Amouage Interlude Black Iris Fragrance Sample Perfume Sample &nbsp;&nbsp; fuelcarmagazine",
+        "scope": "trade",
+        "summary": "Amouage has long built its reputation on exceptional raw materials. Since its founding in 1983, the Omani brand's iconic fragrances such as Gold Man and Gold Woman have showcased noble ingredients, including roses — currently sourced from Grasse (Centifolia) and from Turkey and Bulgaria (Damascena). With the Omani rose, Amouage is laying the foundations for an entirely new supply chain designed t",
         "tags": [],
         "brand_name": "Amouage",
-        "tone": "neutral"
+        "tone": "positive"
       }
     },
     {
@@ -16937,6 +16941,166 @@
   ],
   "news": [
     {
+      "title": "EU small-parcels tax cuts import volumes from Asian platforms",
+      "url": "https://www.premiumbeautynews.com/en/eu-small-parcels-tax-cuts-import,28105",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "The European Union appears to be seeing the first effects of its new levy on low-value imports. Since its introduction, the tax on small parcels entering the EU has triggered a sharp decline in shipments from Asian e-commerce platforms such as Shein, Temu and AliExpress. Imports of these parcels have fallen by an estimated 30% to 40% across the bloc, according to figures from French customs cited",
+      "tags": [],
+      "brand_name": null,
+      "tone": "negative"
+    },
+    {
+      "title": "La taxe européenne sur les petits colis entraîne une chute des importations",
+      "url": "https://www.premiumbeautynews.com/fr/la-taxe-europeenne-sur-les-petits,28104",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "L'Union européenne semble avoir obtenu le résultat qu'elle visait ! Depuis son entrée en vigueur, la taxe sur le contenu des petits colis importés dans l'Union européenne a conduit à une baisse significative des importations en provenance de plateformes de vente en ligne asiatiques telles que Shein, Temu, ou AliExpress. Les importations de ces paquets ont chuté de l'ordre de 30% à 40% dans l'Unio",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Five beauty trends that defined summer 2026",
+      "url": "https://www.premiumbeautynews.com/en/five-beauty-trends-that-defined,28103",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "The fragrance and beauty industry never really slowed down this summer. From major corporate reshuffles and strategic acquisitions to standout product launches and preparations for the autumn season, July and August underscored the accelerating transformation of the sector. Against a backdrop of mixed half-year results and sweeping portfolio realignments, Premium Beauty News has identified five k",
+      "tags": [
+        "product_launch",
+        "corporate"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Les cinq tendances qui ont marqué l'été 2026 dans la beauté",
+      "url": "https://www.premiumbeautynews.com/fr/les-cinq-tendances-qui-ont-marque,28102",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "L'industrie des parfums et cosmétiques n'a pas vraiment connu de trêve estivale ! Avec de nombreux mouvements capitalistiques, des lancements notables et la préparation des campagnes de rentrée, les mois de juillet et août ont été marqués par une accélération des transformations. Derrière les résultats semestriels contrastés et les recompositions de portefeuilles, Premium Beauty News a identifié",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "At Sephora, a Fragrance Brand All About Perfumers Launches",
+      "url": "https://wwd.com/beauty-industry-news/fragrance/sephora-fragrance-launch-perfumer-anecdotes-by-artists-1239174231/",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "WWD Beauty",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Incubated by the company behind Fine'ry and Ashley Tisdale's Being Frenshe, Anecdotes by Artists will release fragrance collections inspired by their respective perfumers’ own stories.",
+      "tags": [
+        "product_launch"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "EXCLUSIVE: Laura Geller Returns to Brick-and-mortar With Nationwide Launch in Sephora at Kohl’s",
+      "url": "https://wwd.com/beauty-industry-news/beauty-features/laura-geller-enters-sephora-at-kohls-1239173072/",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "WWD Beauty",
+      "region": "global",
+      "scope": "trade",
+      "summary": "The brand will enter 854 doors and continue its expansion in the U.K. and Canada.",
+      "tags": [
+        "retail_expansion"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Oura Targets US$3 Billion IPO at More Than US$16 Billion Valuation",
+      "url": "https://www.globalcosmeticsnews.com/oura-targets-us3-billion-ipo-at-more-than-us16-billion-valuation/",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Smart ring maker Oura and some of its existing investors are reportedly seeking to raise up to US$3 billion through a US initial public offering, which could value the health and wellness technology company at more than US$16 billion. \n The post  Oura Targets US$3 Billion IPO at More Than US$16 Billion Valuation  appeared first on  Global Cosmetics News .",
+      "tags": [
+        "corporate"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Mao Geping Cosmetics Reports 26.2% Revenue Growth in First Half",
+      "url": "https://www.globalcosmeticsnews.com/mao-geping-cosmetics-reports-26-2-revenue-growth-in-first-half/",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Chinese beauty company Mao Geping Cosmetics has reported double-digit revenue and profit growth for the first half, with revenue increasing 26.2 percent year on year to RMB3.27 billion. \n The post  Mao Geping Cosmetics Reports 26.2% Revenue Growth in First Half  appeared first on  Global Cosmetics News .",
+      "tags": [
+        "corporate"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Cottonball Targets Prestige Beauty with Premium Prescription Skincare Model",
+      "url": "https://www.globalcosmeticsnews.com/cottonball-targets-prestige-beauty-with-premium-prescription-skincare-model/",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Cottonball is launching a premium prescription skincare business designed to bridge the gap between clinical dermatology and the prestige beauty market, combining personalised prescribing with luxury brand positioning. \n The post  Cottonball Targets Prestige Beauty with Premium Prescription Skincare Model  appeared first on  Global Cosmetics News .",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "OLAY Names Kelly Rowland Global Brand Ambassador for Super Collection",
+      "url": "https://www.globalcosmeticsnews.com/olay-names-kelly-rowland-global-brand-ambassador-for-super-collection/",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Procter &#038; Gamble-owned skincare brand OLAY has named Grammy Award-winning artist Kelly Rowland as Global Brand Ambassador, with the partnership centred on its Super Collection \n The post  OLAY Names Kelly Rowland Global Brand Ambassador for Super Collection  appeared first on  Global Cosmetics News .",
+      "tags": [
+        "collaboration",
+        "campaign_pr",
+        "awards_press"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Kao Expands Curél into Nordic Markets as European Growth Accelerates",
+      "url": "https://www.globalcosmeticsnews.com/kao-expands-curel-into-nordic-markets-as-european-growth-accelerates/",
+      "published": "2026-08-31",
+      "brand": null,
+      "source": "Global Cosmetics News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Kao is expanding its Curél sensitive skincare brand into Sweden, Norway, Denmark and Finland, strengthening the Japanese group’s European cosmetics business as part of its global growth strategy. \n The post  Kao Expands Curél into Nordic Markets as European Growth Accelerates  appeared first on  Global Cosmetics News .",
+      "tags": [
+        "retail_expansion"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
       "title": "Dove Men+Care Promotes Plant-Based Body Wash with Karl-Anthony Towns - Happi | Household And Personal Products Industry",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQXRyWVFRV0xvWXlkMXlocW9oNjhRWVh1elFqU2NaZHF4aUtXX0IwUDhXcHU4b1R2WExkdFZfX1JtQXYzSmhsQVhIdXEwcmNqeVEwTXBuYTdEMzFETWhpZEE5M29rbXFSMWNrX25McnIySUtoQ3F5eVdkT0NySFhRWlhUUG5ob04zcXUyb2FQckxkVlBoeDBVVVFQbl9aejNOeHhCS3FuMkNvX2lmYzZNbEVwR0E?oc=5",
       "published": "2026-08-30",
@@ -16959,6 +17123,154 @@
       "scope": "trade",
       "summary": "In this monthly roundup, leadership change is sweeping across beauty, luxury and retail, with companies appointing new executives to oversee everything from technology and supply chains to international growth and succession. While several businesses are bringing in new leadership to accelerate their next phase of development, a number of long-serving executives and founders are stepping aside, h",
       "tags": [],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Omani Rose: Amouage builds a new fragrance raw material supply chain",
+      "url": "https://www.premiumbeautynews.com/en/omani-rose-amouage-builds-a-new,28099",
+      "published": "2026-08-30",
+      "brand": "amouage",
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Amouage has long built its reputation on exceptional raw materials. Since its founding in 1983, the Omani brand's iconic fragrances such as Gold Man and Gold Woman have showcased noble ingredients, including roses — currently sourced from Grasse (Centifolia) and from Turkey and Bulgaria (Damascena). With the Omani rose, Amouage is laying the foundations for an entirely new supply chain designed t",
+      "tags": [],
+      "brand_name": "Amouage",
+      "tone": "positive"
+    },
+    {
+      "title": "Rose d'Oman : Amouage pose les bases d'une nouvelle matière première",
+      "url": "https://www.premiumbeautynews.com/fr/rose-d-oman-amouage-pose-les-bases,28098",
+      "published": "2026-08-30",
+      "brand": "amouage",
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "La marque omanaise Amouage doit, en partie, sa renommée aux matières premières d'exception qui composent ses parfums. En 1983 déjà, Gold Man et Gold Woman se distinguaient par des ingrédients nobles, dont la rose, aujourd'hui sourcée à Grasse (Centifolia), en Turquie et en Bulgarie (Damascena). Avec la rose d'Oman, la maison souhaite faire émerger une nouvelle filière au service de la créativité",
+      "tags": [],
+      "brand_name": "Amouage",
+      "tone": "neutral"
+    },
+    {
+      "title": "Mondi combine emballage souple et marquage laser pour le e-commerce",
+      "url": "https://www.premiumbeautynews.com/fr/mondi-combine-emballage-souple-et,28097",
+      "published": "2026-08-30",
+      "brand": null,
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Mondi a dévoilé un concept d'emballage souple avec marquage laser pour offrir aux marques davantage de flexibilité et de recyclabilité. Cette solution, récompensée par le German Packaging Award 2026 dans la catégorie \"solutions durables\", associe une boîte extérieure en carton ondulé à un emballage souple recyclable, pour des applications e-commerce et des formats bag-in-box.  \nAu lieu d'un tradi",
+      "tags": [
+        "sustainability",
+        "awards_press"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Mondi unveils laser-marked flexible e-commerce packaging concept",
+      "url": "https://www.premiumbeautynews.com/en/mondi-unveils-laser-marked,28096",
+      "published": "2026-08-30",
+      "brand": null,
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Mondi has unveiled a laser-marked flexible packaging concept designed to help brands combine greater packaging flexibility with improved recyclability. The solution, which recently won the German Packaging Award 2026 in the Sustainability category, pairs a corrugated outer box with recyclable flexible packaging for eCommerce and bag-in-box applications.  \nInstead of using conventional decorative",
+      "tags": [
+        "sustainability",
+        "product_launch",
+        "awards_press"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Patek Philippe Opens Its First Australian Boutique in Sydney After Four Decades",
+      "url": "https://retailboss.co/patek-philippe-opens-its-first-australian-boutique-in-sydney-after-four-decades/",
+      "published": "2026-08-30",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Located at 388 George Street, the boutique showcases Patek Philippe's world of fine watchmaking, enhancing the brand's presence in Australia's luxury retail market.",
+      "tags": [
+        "retail_expansion"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Nykaa Brings More Than 80 Beauty Brands to Its New Delhi Luxe Store",
+      "url": "https://retailboss.co/nykaa-brings-more-than-80-beauty-brands-to-its-new-delhi-luxe-store/",
+      "published": "2026-08-30",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Experience the immersive beauty journey at Nykaa Luxe, where personalized consultations and expert product recommendations await you.",
+      "tags": [
+        "retail_expansion",
+        "experiential"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Nespresso Reopens Sherway Gardens With a New Coffee Discovery Boutique",
+      "url": "https://retailboss.co/nespresso-reopens-sherway-gardens-with-a-new-coffee-discovery-boutique/",
+      "published": "2026-08-30",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Experience the latest retail concept at Nespresso, combining guided tastings and self-selection stations for a tailored coffee journey.",
+      "tags": [
+        "retail_expansion"
+      ],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Maybelline and Garnier Bring Concert Ready Beauty to Puerto Rico for Bad Bunny’s Final Tour Weekend",
+      "url": "https://retailboss.co/maybelline-and-garnier-bring-concert-ready-beauty-to-puerto-rico-for-bad-bunnys-final-tour-weekend/",
+      "published": "2026-08-30",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Beauty Meets Puerto Rican Culture: Maybelline's Old San Juan get-ready station and Garnier's Casita Fructis highlight the fusion of beauty and local culture.",
+      "tags": [],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Anthropologie Delivers 5% Revenue Growth With Beauty Leading the Way",
+      "url": "https://retailboss.co/anthropologie-delivers-5-revenue-growth-with-beauty-leading-the-way/",
+      "published": "2026-08-30",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "The quarter also marked Anthropologie’s 15th consecutive quarter with a double-digit operating income rate, driven by strong apparel and accessories performance.",
+      "tags": [
+        "corporate"
+      ],
+      "brand_name": null,
+      "tone": "positive"
+    },
+    {
+      "title": "Jessica McCormack Brings Day Diamonds to California With a New South Coast Plaza Store",
+      "url": "https://retailboss.co/jessica-mccormack-brings-day-diamonds-to-california-with-a-new-south-coast-plaza-store/",
+      "published": "2026-08-30",
+      "brand": null,
+      "source": "RetailBoss",
+      "region": "global",
+      "scope": "trade",
+      "summary": "The South Coast Plaza boutique opens on August 28, marking a significant step in Jessica McCormack’s United States expansion.",
+      "tags": [
+        "retail_expansion"
+      ],
       "brand_name": null,
       "tone": "positive"
     },
@@ -17156,6 +17468,34 @@
       ],
       "brand_name": null,
       "tone": "neutral"
+    },
+    {
+      "title": "Présidentielle : la plasturgie sonne l'alarme sur la souveraineté industrielle",
+      "url": "https://www.premiumbeautynews.com/fr/presidentielle-la-plasturgie-sonne,28095",
+      "published": "2026-08-29",
+      "brand": null,
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "Les plasturgistes français ont appelé vendredi 28 août les candidats à l'élection présidentielle à préserver la \"souveraineté industrielle\" du pays et de l'Europe, les prenant au mot au lendemain d'un débat devant des représentants du Medef au cours duquel la menace de la concurrence industrielle chinoise était sur toutes les lèvres.  \nLes producteurs et transformateurs de plastiques sont confron",
+      "tags": [],
+      "brand_name": null,
+      "tone": "neutral"
+    },
+    {
+      "title": "Galderma inaugurates new U.S. and Latin America headquarters in Miami",
+      "url": "https://www.premiumbeautynews.com/en/galderma-inaugurates-new-u-s-and,28094",
+      "published": "2026-08-29",
+      "brand": null,
+      "source": "Premium Beauty News",
+      "region": "global",
+      "scope": "trade",
+      "summary": "The Switzerland-based dermatology company has officially inaugurated its U.S. and Latin America headquarters in Miami. By bringing together key members of its leadership team in the new hub, Galderma aims to accelerate decision-making, strengthen collaboration, and support continued growth across both regions.  \nThe United States is Galderma's largest market, reflecting strong demand across its I",
+      "tags": [
+        "collaboration"
+      ],
+      "brand_name": null,
+      "tone": "positive"
     },
     {
       "title": "Bath & Body Works (BBWI) Unveils Reserve Collection For Home Fragrance - Yahoo Finance",
@@ -45380,16 +45720,16 @@
       "tone": "neutral"
     }
   ],
-  "news_generated_at": "2026-08-30T10:28:46+00:00",
+  "news_generated_at": "2026-08-31T11:52:32+00:00",
   "tag_counts": {
-    "retail_expansion": 255,
-    "corporate": 138,
-    "sustainability": 59,
-    "campaign_pr": 98,
-    "product_launch": 185,
-    "collaboration": 86,
-    "experiential": 55,
-    "awards_press": 18
+    "product_launch": 188,
+    "corporate": 142,
+    "retail_expansion": 261,
+    "collaboration": 88,
+    "campaign_pr": 99,
+    "awards_press": 21,
+    "sustainability": 61,
+    "experiential": 56
   },
   "stats": {
     "brands": 85,
@@ -45398,7 +45738,7 @@
     "verified_prices": 0,
     "verified_pct": 0,
     "aed_observed": 2,
-    "news_items": 2061,
+    "news_items": 2084,
     "watchlist": 17
   }
 }
