@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T09:50:13+00:00",
+  "generated_at": "2026-09-27T10:49:33+00:00",
   "findings": [
     {
       "kind": "same_tier_gap",
@@ -150,16 +150,16 @@
     },
     {
       "kind": "accelerating",
-      "headline": "Oribe has taken 4.47× more share of category coverage in the last 30 days",
-      "detail": "1.4% of all headlines in the last 30 days, against 0.2% in the 30 before (10 vs 2 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 9 brands are gaining share on this measure. Volume is not sentiment.",
-      "metric": "4.47×",
-      "magnitude": 62.349999999999994,
+      "headline": "Molton Brown has taken 4.5× more share of category coverage in the last 30 days",
+      "detail": "2.4% of all headlines in the last 30 days, against 0.4% in the 30 before (16 vs 4 articles). Measured as share, not raw count, because the collector returns denser recent coverage — raw counts would rise for everyone. 9 brands are gaining share on this measure. Volume is not sentiment.",
+      "metric": "4.5×",
+      "magnitude": 62.5,
       "refs": [
-        "oribe"
+        "molton-brown"
       ],
       "tab": "news",
       "focus": {
-        "brand": "oribe"
+        "brand": "molton-brown"
       },
       "rank": 10
     },
@@ -198,9 +198,9 @@
     {
       "kind": "initiative",
       "headline": "Retail expansion accounts for 26% of everything the category is talking about",
-      "detail": "436 of 1689 tagged headlines. The quietest front is awards & press at 49 — a theme nobody has claimed is either irrelevant or unoccupied.",
+      "detail": "436 of 1690 tagged headlines. The quietest front is awards & press at 49 — a theme nobody has claimed is either irrelevant or unoccupied.",
       "metric": "26%",
-      "magnitude": 35.32563647128478,
+      "magnitude": 35.319526627218934,
       "refs": [],
       "tab": "pr",
       "focus": {
@@ -1333,9 +1333,9 @@
       "recent": 17,
       "prior": 0,
       "delta": 17,
-      "share_recent": 2.4,
+      "share_recent": 2.6,
       "share_prior": 0.0,
-      "ratio": 22.11,
+      "ratio": 23.85,
       "basis": "newly_covered"
     },
     {
@@ -1345,9 +1345,9 @@
       "recent": 13,
       "prior": 0,
       "delta": 13,
-      "share_recent": 1.8,
+      "share_recent": 2.0,
       "share_prior": 0.0,
-      "ratio": 17.14,
+      "ratio": 18.47,
       "basis": "newly_covered"
     },
     {
@@ -1359,7 +1359,7 @@
       "delta": 4,
       "share_recent": 0.6,
       "share_prior": 0.0,
-      "ratio": 5.97,
+      "ratio": 6.38,
       "basis": "newly_covered"
     },
     {
@@ -1369,22 +1369,10 @@
       "recent": 3,
       "prior": 0,
       "delta": 3,
-      "share_recent": 0.4,
+      "share_recent": 0.5,
       "share_prior": 0.0,
-      "ratio": 4.72,
+      "ratio": 5.03,
       "basis": "newly_covered"
-    },
-    {
-      "id": "oribe",
-      "name": "Oribe",
-      "tier": "luxury",
-      "recent": 10,
-      "prior": 2,
-      "delta": 8,
-      "share_recent": 1.4,
-      "share_prior": 0.2,
-      "ratio": 4.47,
-      "basis": "gaining_share"
     },
     {
       "id": "santa-maria-novella",
@@ -1395,7 +1383,7 @@
       "delta": 5,
       "share_recent": 0.9,
       "share_prior": 0.1,
-      "ratio": 4.22,
+      "ratio": 4.53,
       "basis": "newly_covered"
     },
     {
@@ -1405,22 +1393,22 @@
       "recent": 16,
       "prior": 4,
       "delta": 12,
-      "share_recent": 2.3,
-      "share_prior": 0.5,
-      "ratio": 4.17,
+      "share_recent": 2.4,
+      "share_prior": 0.4,
+      "ratio": 4.5,
       "basis": "gaining_share"
     },
     {
-      "id": "aveda",
-      "name": "Aveda",
-      "tier": "premium",
-      "recent": 5,
-      "prior": 1,
-      "delta": 4,
-      "share_recent": 0.7,
-      "share_prior": 0.1,
-      "ratio": 3.6,
-      "basis": "newly_covered"
+      "id": "oribe",
+      "name": "Oribe",
+      "tier": "luxury",
+      "recent": 9,
+      "prior": 3,
+      "delta": 6,
+      "share_recent": 1.4,
+      "share_prior": 0.3,
+      "ratio": 3.27,
+      "basis": "gaining_share"
     },
     {
       "id": "la-mer",
@@ -1429,9 +1417,9 @@
       "recent": 43,
       "prior": 18,
       "delta": 25,
-      "share_recent": 6.1,
-      "share_prior": 2.1,
-      "ratio": 2.86,
+      "share_recent": 6.5,
+      "share_prior": 2.0,
+      "ratio": 3.09,
       "basis": "gaining_share"
     },
     {
@@ -1443,43 +1431,19 @@
       "delta": 4,
       "share_recent": 0.9,
       "share_prior": 0.2,
-      "ratio": 2.82,
+      "ratio": 3.02,
       "basis": "gaining_share"
     },
     {
       "id": "diptyque",
       "name": "Diptyque",
       "tier": "luxury",
-      "recent": 34,
-      "prior": 15,
-      "delta": 19,
-      "share_recent": 4.8,
-      "share_prior": 1.7,
-      "ratio": 2.7,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "kiehls",
-      "name": "Kiehl's",
-      "tier": "premium",
-      "recent": 26,
-      "prior": 14,
-      "delta": 12,
-      "share_recent": 3.7,
-      "share_prior": 1.6,
-      "ratio": 2.22,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "yankee-candle",
-      "name": "Yankee Candle",
-      "tier": "mass",
-      "recent": 16,
-      "prior": 9,
-      "delta": 7,
-      "share_recent": 2.3,
-      "share_prior": 1.0,
-      "ratio": 2.09,
+      "recent": 31,
+      "prior": 18,
+      "delta": 13,
+      "share_recent": 4.7,
+      "share_prior": 2.0,
+      "ratio": 2.25,
       "basis": "gaining_share"
     },
     {
@@ -1489,57 +1453,33 @@
       "recent": 11,
       "prior": 6,
       "delta": 5,
-      "share_recent": 1.6,
+      "share_recent": 1.7,
       "share_prior": 0.7,
-      "ratio": 2.09,
+      "ratio": 2.25,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "aveda",
+      "name": "Aveda",
+      "tier": "premium",
+      "recent": 4,
+      "prior": 2,
+      "delta": 2,
+      "share_recent": 0.6,
+      "share_prior": 0.2,
+      "ratio": 2.13,
       "basis": "gaining_share"
     },
     {
       "id": "laneige",
       "name": "LANEIGE",
       "tier": "masstige",
-      "recent": 34,
-      "prior": 20,
-      "delta": 14,
-      "share_recent": 4.8,
+      "recent": 33,
+      "prior": 21,
+      "delta": 12,
+      "share_recent": 5.0,
       "share_prior": 2.3,
       "ratio": 2.06,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "nest-new-york",
-      "name": "NEST New York",
-      "tier": "premium",
-      "recent": 9,
-      "prior": 6,
-      "delta": 3,
-      "share_recent": 1.3,
-      "share_prior": 0.7,
-      "ratio": 1.74,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "dr-bronners",
-      "name": "Dr. Bronner's",
-      "tier": "masstige",
-      "recent": 2,
-      "prior": 1,
-      "delta": 1,
-      "share_recent": 0.3,
-      "share_prior": 0.1,
-      "ratio": 1.74,
-      "basis": "newly_covered"
-    },
-    {
-      "id": "la-roche-posay",
-      "name": "La Roche-Posay",
-      "tier": "masstige",
-      "recent": 38,
-      "prior": 27,
-      "delta": 11,
-      "share_recent": 5.4,
-      "share_prior": 3.1,
-      "ratio": 1.72,
       "basis": "gaining_share"
     },
     {
@@ -1549,21 +1489,9 @@
       "recent": 24,
       "prior": 17,
       "delta": 7,
-      "share_recent": 3.4,
+      "share_recent": 3.6,
       "share_prior": 1.9,
-      "ratio": 1.71,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "loccitane",
-      "name": "L'Occitane en Provence",
-      "tier": "premium",
-      "recent": 26,
-      "prior": 19,
-      "delta": 7,
-      "share_recent": 3.7,
-      "share_prior": 2.2,
-      "ratio": 1.66,
+      "ratio": 1.85,
       "basis": "gaining_share"
     },
     {
@@ -1573,9 +1501,9 @@
       "recent": 20,
       "prior": 15,
       "delta": 5,
-      "share_recent": 2.8,
+      "share_recent": 3.0,
       "share_prior": 1.7,
-      "ratio": 1.61,
+      "ratio": 1.74,
       "basis": "gaining_share"
     },
     {
@@ -1585,9 +1513,21 @@
       "recent": 13,
       "prior": 10,
       "delta": 3,
-      "share_recent": 1.8,
+      "share_recent": 2.0,
       "share_prior": 1.1,
-      "ratio": 1.56,
+      "ratio": 1.68,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "kiehls",
+      "name": "Kiehl's",
+      "tier": "premium",
+      "recent": 20,
+      "prior": 17,
+      "delta": 3,
+      "share_recent": 3.0,
+      "share_prior": 1.9,
+      "ratio": 1.55,
       "basis": "gaining_share"
     },
     {
@@ -1597,9 +1537,45 @@
       "recent": 7,
       "prior": 6,
       "delta": 1,
-      "share_recent": 1.0,
+      "share_recent": 1.1,
       "share_prior": 0.7,
-      "ratio": 1.38,
+      "ratio": 1.49,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "nest-new-york",
+      "name": "NEST New York",
+      "tier": "premium",
+      "recent": 8,
+      "prior": 7,
+      "delta": 1,
+      "share_recent": 1.2,
+      "share_prior": 0.8,
+      "ratio": 1.47,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "loccitane",
+      "name": "L'Occitane en Provence",
+      "tier": "premium",
+      "recent": 23,
+      "prior": 22,
+      "delta": 1,
+      "share_recent": 3.5,
+      "share_prior": 2.5,
+      "ratio": 1.39,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "la-roche-posay",
+      "name": "La Roche-Posay",
+      "tier": "masstige",
+      "recent": 33,
+      "prior": 32,
+      "delta": 1,
+      "share_recent": 5.0,
+      "share_prior": 3.6,
+      "ratio": 1.37,
       "basis": "gaining_share"
     },
     {
@@ -1609,21 +1585,33 @@
       "recent": 3,
       "prior": 3,
       "delta": 0,
-      "share_recent": 0.4,
+      "share_recent": 0.5,
       "share_prior": 0.3,
-      "ratio": 1.18,
+      "ratio": 1.26,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "davines",
+      "name": "Davines",
+      "tier": "premium",
+      "recent": 2,
+      "prior": 2,
+      "delta": 0,
+      "share_recent": 0.3,
+      "share_prior": 0.2,
+      "ratio": 1.23,
       "basis": "gaining_share"
     },
     {
       "id": "jo-malone",
       "name": "Jo Malone London",
       "tier": "luxury",
-      "recent": 56,
-      "prior": 63,
-      "delta": -7,
-      "share_recent": 8.0,
+      "recent": 55,
+      "prior": 64,
+      "delta": -9,
+      "share_recent": 8.3,
       "share_prior": 7.2,
-      "ratio": 1.1,
+      "ratio": 1.15,
       "basis": "gaining_share"
     },
     {
@@ -1631,11 +1619,23 @@
       "name": "Amouage",
       "tier": "luxury",
       "recent": 12,
-      "prior": 16,
-      "delta": -4,
+      "prior": 15,
+      "delta": -3,
+      "share_recent": 1.8,
+      "share_prior": 1.7,
+      "ratio": 1.07,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "yankee-candle",
+      "name": "Yankee Candle",
+      "tier": "mass",
+      "recent": 11,
+      "prior": 14,
+      "delta": -3,
       "share_recent": 1.7,
-      "share_prior": 1.8,
-      "ratio": 0.94,
+      "share_prior": 1.6,
+      "ratio": 1.05,
       "basis": "gaining_share"
     },
     {
@@ -1645,9 +1645,9 @@
       "recent": 3,
       "prior": 4,
       "delta": -1,
-      "share_recent": 0.4,
-      "share_prior": 0.5,
-      "ratio": 0.94,
+      "share_recent": 0.5,
+      "share_prior": 0.4,
+      "ratio": 1.01,
       "basis": "gaining_share"
     },
     {
@@ -1657,9 +1657,9 @@
       "recent": 3,
       "prior": 4,
       "delta": -1,
-      "share_recent": 0.4,
-      "share_prior": 0.5,
-      "ratio": 0.94,
+      "share_recent": 0.5,
+      "share_prior": 0.4,
+      "ratio": 1.01,
       "basis": "gaining_share"
     },
     {
@@ -1669,9 +1669,21 @@
       "recent": 8,
       "prior": 11,
       "delta": -3,
-      "share_recent": 1.1,
-      "share_prior": 1.3,
-      "ratio": 0.91,
+      "share_recent": 1.2,
+      "share_prior": 1.2,
+      "ratio": 0.98,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "dove",
+      "name": "Dove",
+      "tier": "mass",
+      "recent": 15,
+      "prior": 21,
+      "delta": -6,
+      "share_recent": 2.3,
+      "share_prior": 2.3,
+      "ratio": 0.96,
       "basis": "gaining_share"
     },
     {
@@ -1681,33 +1693,45 @@
       "recent": 7,
       "prior": 10,
       "delta": -3,
-      "share_recent": 1.0,
+      "share_recent": 1.1,
       "share_prior": 1.1,
-      "ratio": 0.88,
+      "ratio": 0.95,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "byredo",
+      "name": "Byredo",
+      "tier": "luxury",
+      "recent": 14,
+      "prior": 22,
+      "delta": -8,
+      "share_recent": 2.1,
+      "share_prior": 2.5,
+      "ratio": 0.86,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "le-labo",
+      "name": "Le Labo",
+      "tier": "luxury",
+      "recent": 20,
+      "prior": 33,
+      "delta": -13,
+      "share_recent": 3.0,
+      "share_prior": 3.7,
+      "ratio": 0.82,
       "basis": "gaining_share"
     },
     {
       "id": "bath-body-works",
       "name": "Bath & Body Works",
       "tier": "mass",
-      "recent": 57,
-      "prior": 85,
-      "delta": -28,
-      "share_recent": 8.1,
-      "share_prior": 9.7,
-      "ratio": 0.83,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "dove",
-      "name": "Dove",
-      "tier": "mass",
-      "recent": 15,
-      "prior": 23,
-      "delta": -8,
-      "share_recent": 2.1,
-      "share_prior": 2.6,
-      "ratio": 0.82,
+      "recent": 53,
+      "prior": 89,
+      "delta": -36,
+      "share_recent": 8.0,
+      "share_prior": 9.9,
+      "ratio": 0.8,
       "basis": "gaining_share"
     },
     {
@@ -1717,9 +1741,9 @@
       "recent": 25,
       "prior": 42,
       "delta": -17,
-      "share_recent": 3.6,
-      "share_prior": 4.8,
-      "ratio": 0.75,
+      "share_recent": 3.8,
+      "share_prior": 4.7,
+      "ratio": 0.8,
       "basis": "gaining_share"
     },
     {
@@ -1729,45 +1753,9 @@
       "recent": 1,
       "prior": 2,
       "delta": -1,
-      "share_recent": 0.1,
+      "share_recent": 0.2,
       "share_prior": 0.2,
-      "ratio": 0.75,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "byredo",
-      "name": "Byredo",
-      "tier": "luxury",
-      "recent": 14,
-      "prior": 24,
-      "delta": -10,
-      "share_recent": 2.0,
-      "share_prior": 2.7,
-      "ratio": 0.74,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "le-labo",
-      "name": "Le Labo",
-      "tier": "luxury",
-      "recent": 20,
-      "prior": 35,
-      "delta": -15,
-      "share_recent": 2.8,
-      "share_prior": 4.0,
-      "ratio": 0.72,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "davines",
-      "name": "Davines",
-      "tier": "premium",
-      "recent": 2,
-      "prior": 4,
-      "delta": -2,
-      "share_recent": 0.3,
-      "share_prior": 0.5,
-      "ratio": 0.7,
+      "ratio": 0.78,
       "basis": "gaining_share"
     },
     {
@@ -1777,21 +1765,9 @@
       "recent": 3,
       "prior": 6,
       "delta": -3,
-      "share_recent": 0.4,
+      "share_recent": 0.5,
       "share_prior": 0.7,
-      "ratio": 0.67,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "neutrogena",
-      "name": "Neutrogena",
-      "tier": "mass",
-      "recent": 33,
-      "prior": 67,
-      "delta": -34,
-      "share_recent": 4.7,
-      "share_prior": 7.7,
-      "ratio": 0.62,
+      "ratio": 0.72,
       "basis": "gaining_share"
     },
     {
@@ -1803,43 +1779,19 @@
       "delta": -3,
       "share_recent": 0.3,
       "share_prior": 0.6,
-      "ratio": 0.58,
+      "ratio": 0.61,
       "basis": "gaining_share"
     },
     {
-      "id": "summer-fridays",
-      "name": "Summer Fridays",
-      "tier": "premium",
-      "recent": 11,
-      "prior": 25,
-      "delta": -14,
-      "share_recent": 1.6,
-      "share_prior": 2.9,
-      "ratio": 0.56,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "boy-smells",
-      "name": "Boy Smells",
-      "tier": "premium",
-      "recent": 1,
-      "prior": 3,
-      "delta": -2,
-      "share_recent": 0.1,
-      "share_prior": 0.3,
-      "ratio": 0.56,
-      "basis": "gaining_share"
-    },
-    {
-      "id": "montroi",
-      "name": "MONTROI",
-      "tier": "luxury",
-      "recent": 1,
-      "prior": 3,
-      "delta": -2,
-      "share_recent": 0.1,
-      "share_prior": 0.3,
-      "ratio": 0.56,
+      "id": "neutrogena",
+      "name": "Neutrogena",
+      "tier": "mass",
+      "recent": 30,
+      "prior": 69,
+      "delta": -39,
+      "share_recent": 4.5,
+      "share_prior": 7.7,
+      "ratio": 0.59,
       "basis": "gaining_share"
     },
     {
@@ -1849,9 +1801,33 @@
       "recent": 1,
       "prior": 3,
       "delta": -2,
-      "share_recent": 0.1,
+      "share_recent": 0.2,
       "share_prior": 0.3,
-      "ratio": 0.56,
+      "ratio": 0.59,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "montroi",
+      "name": "MONTROI",
+      "tier": "luxury",
+      "recent": 1,
+      "prior": 3,
+      "delta": -2,
+      "share_recent": 0.2,
+      "share_prior": 0.3,
+      "ratio": 0.59,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "boy-smells",
+      "name": "Boy Smells",
+      "tier": "premium",
+      "recent": 1,
+      "prior": 3,
+      "delta": -2,
+      "share_recent": 0.2,
+      "share_prior": 0.3,
+      "ratio": 0.59,
       "basis": "gaining_share"
     },
     {
@@ -1861,9 +1837,21 @@
       "recent": 17,
       "prior": 42,
       "delta": -25,
-      "share_recent": 2.4,
-      "share_prior": 4.8,
-      "ratio": 0.51,
+      "share_recent": 2.6,
+      "share_prior": 4.7,
+      "ratio": 0.55,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "summer-fridays",
+      "name": "Summer Fridays",
+      "tier": "premium",
+      "recent": 10,
+      "prior": 26,
+      "delta": -16,
+      "share_recent": 1.5,
+      "share_prior": 2.9,
+      "ratio": 0.53,
       "basis": "gaining_share"
     },
     {
@@ -1875,7 +1863,7 @@
       "delta": -4,
       "share_recent": 0.3,
       "share_prior": 0.7,
-      "ratio": 0.5,
+      "ratio": 0.53,
       "basis": "gaining_share"
     },
     {
@@ -1885,9 +1873,9 @@
       "recent": 5,
       "prior": 15,
       "delta": -10,
-      "share_recent": 0.7,
+      "share_recent": 0.8,
       "share_prior": 1.7,
-      "ratio": 0.45,
+      "ratio": 0.48,
       "basis": "gaining_share"
     },
     {
@@ -1899,7 +1887,7 @@
       "delta": -9,
       "share_recent": 0.6,
       "share_prior": 1.5,
-      "ratio": 0.43,
+      "ratio": 0.46,
       "basis": "gaining_share"
     },
     {
@@ -1909,14 +1897,14 @@
       "recent": 1,
       "prior": 7,
       "delta": -6,
-      "share_recent": 0.1,
+      "share_recent": 0.2,
       "share_prior": 0.8,
-      "ratio": 0.28,
+      "ratio": 0.29,
       "basis": "gaining_share"
     },
     {
-      "id": "act-acre",
-      "name": "Act+Acre",
+      "id": "chunks",
+      "name": "Chunks",
       "tier": "premium",
       "recent": 0,
       "prior": 3,
@@ -1939,8 +1927,8 @@
       "basis": "gaining_share"
     },
     {
-      "id": "chunks",
-      "name": "Chunks",
+      "id": "act-acre",
+      "name": "Act+Acre",
       "tier": "premium",
       "recent": 0,
       "prior": 3,
@@ -1951,15 +1939,15 @@
       "basis": "gaining_share"
     },
     {
-      "id": "virtue",
-      "name": "VIRTUE Labs",
-      "tier": "luxury",
+      "id": "dr-bronners",
+      "name": "Dr. Bronner's",
+      "tier": "masstige",
       "recent": 0,
-      "prior": 4,
-      "delta": -4,
+      "prior": 3,
+      "delta": -3,
       "share_recent": 0.0,
-      "share_prior": 0.5,
-      "ratio": 0.2,
+      "share_prior": 0.3,
+      "ratio": 0.25,
       "basis": "gaining_share"
     },
     {
@@ -1970,7 +1958,19 @@
       "prior": 4,
       "delta": -4,
       "share_recent": 0.0,
-      "share_prior": 0.5,
+      "share_prior": 0.4,
+      "ratio": 0.2,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "virtue",
+      "name": "VIRTUE Labs",
+      "tier": "luxury",
+      "recent": 0,
+      "prior": 4,
+      "delta": -4,
+      "share_recent": 0.0,
+      "share_prior": 0.4,
       "ratio": 0.2,
       "basis": "gaining_share"
     },
@@ -1987,26 +1987,14 @@
       "basis": "gaining_share"
     },
     {
-      "id": "crown-affair",
-      "name": "Crown Affair",
-      "tier": "premium",
-      "recent": 2,
-      "prior": 23,
-      "delta": -21,
-      "share_recent": 0.3,
-      "share_prior": 2.6,
-      "ratio": 0.15,
-      "basis": "gaining_share"
-    },
-    {
       "id": "tangle-teezer",
       "name": "Tangle Teezer",
       "tier": "mass",
       "recent": 1,
       "prior": 18,
       "delta": -17,
-      "share_recent": 0.1,
-      "share_prior": 2.1,
+      "share_recent": 0.2,
+      "share_prior": 2.0,
       "ratio": 0.12,
       "basis": "gaining_share"
     },
@@ -2020,6 +2008,18 @@
       "share_recent": 0.0,
       "share_prior": 0.9,
       "ratio": 0.11,
+      "basis": "gaining_share"
+    },
+    {
+      "id": "crown-affair",
+      "name": "Crown Affair",
+      "tier": "premium",
+      "recent": 1,
+      "prior": 24,
+      "delta": -23,
+      "share_recent": 0.2,
+      "share_prior": 2.7,
+      "ratio": 0.09,
       "basis": "gaining_share"
     },
     {
@@ -2039,11 +2039,11 @@
       "name": "NONFICTION",
       "tier": "luxury",
       "recent": 1,
-      "prior": 41,
-      "delta": -40,
-      "share_recent": 0.1,
-      "share_prior": 4.7,
-      "ratio": 0.05,
+      "prior": 37,
+      "delta": -36,
+      "share_recent": 0.2,
+      "share_prior": 4.1,
+      "ratio": 0.06,
       "basis": "gaining_share"
     }
   ],
@@ -17997,15 +17997,17 @@
       "tone": "positive"
     },
     {
-      "title": "GEKA and AXILONE Unveil “Symbiosis” at Luxe Pack Monaco",
-      "url": "https://www.globalcosmeticsnews.com/geka-and-axilone-unveil-symbiosis-at-luxe-pack-monaco/",
+      "title": "GEKA and AXILONE unveil “Symbiosis” at Luxe Pack Monaco",
+      "url": "https://cosmeticsbusiness.com/geka-and-axilone-unveil-symbiosis-at-luxe-pack",
       "published": "2026-09-24",
       "brand": null,
-      "source": "Global Cosmetics News",
+      "source": "Cosmetics Business",
       "region": "global",
       "scope": "trade",
-      "summary": "Published 24  September 2026 at 01:30 \n The post  GEKA and AXILONE Unveil “Symbiosis” at Luxe Pack Monaco  appeared first on  Global Cosmetics News .",
-      "tags": [],
+      "summary": "Innovative packaging solution combines advanced bottle technology with premium aluminium design",
+      "tags": [
+        "sustainability"
+      ],
       "brand_name": null,
       "tone": "neutral"
     },
@@ -67833,7 +67835,7 @@
       "tone": "neutral"
     }
   ],
-  "news_generated_at": "2026-09-26T09:50:13+00:00",
+  "news_generated_at": "2026-09-27T10:49:33+00:00",
   "tag_counts": {
     "campaign_pr": 205,
     "retail_expansion": 436,
@@ -67842,7 +67844,7 @@
     "awards_press": 49,
     "product_launch": 345,
     "experiential": 105,
-    "sustainability": 131
+    "sustainability": 132
   },
   "stats": {
     "brands": 85,
